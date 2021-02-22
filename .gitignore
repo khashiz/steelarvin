@@ -127,3 +127,5 @@
 /plugins/twofactorauth/
 /plugins/user/
 /plugins/index.html
+
+/templates/steelarvin/css/arvin.css.map

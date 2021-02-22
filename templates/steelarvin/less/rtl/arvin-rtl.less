@@ -1,0 +1,54 @@
+@primary: rgb(45, 60, 145);
+@secondary: rgb(30, 120, 190);
+@accent: rgb(255, 94, 21);
+@dark: rgb(65, 65, 65);
+@font-face {
+  font-family: arvin_v;
+  src: url("../../font/danawebGX.woff") format('woff-variations'), url("../../font/danawebGX.woff") format('woff');
+  font-display: fallback;
+}
+@font-face {
+  font-family: arvin;
+  src: url("../../font/dana-regular.woff") format('woff');
+  font-display: fallback;
+}
+@font-face {
+  font-family: arvin;
+  src: url("../../font/dana-bold.woff") format('woff');
+  font-weight: bold;
+  font-display: fallback;
+}
+.font {
+  font-family: arvin_v, arvin, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-variation-settings: "wght" 400, "wdth" 100, "slnt" 0, "DOTR" 1, "DOTS" 0, "KASH" 0;
+}
+a{
+  text-decoration: none;
+  color: initial;
+  &:hover{
+    text-decoration: none;
+  }
+  &.hover{
+    &:hover{
+      color: @accent;
+    }
+  }
+}
+footer{
+  div{
+    &.copyright{
+      background-color: @primary;
+    }
+  }
+}
+
+//UIKit Overrides
+.uk-text-zero{
+  font-size: 0;
+}
+.uk-text-tiny{
+  font-size: 12px;
+}
+.uk-text-white{
+  color: white;
+}
