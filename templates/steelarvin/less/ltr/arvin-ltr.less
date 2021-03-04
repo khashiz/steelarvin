@@ -1,3 +1,172 @@
-body{
-  background-color: red;
+@primary: rgb(45, 60, 145);
+@secondary: rgb(30, 120, 190);
+@accent: rgb(255, 94, 21);
+@dark: rgb(40, 40, 40);
+@font-face {
+  font-family: arvin;
+  src: url('../../font/roboto/Roboto-Thin-webfont.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
 }
+@font-face {
+  font-family: arvin;
+  src: url('../../font/roboto/Roboto-Light-webfont.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: arvin;
+  src: url('../../font/roboto/Roboto-Regular-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: arvin;
+  src: url('../../font/roboto/Roboto-Medium-webfont.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: arvin;
+  src: url('../../font/roboto/Roboto-Bold-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: arvin;
+  src: url('../../font/roboto/Roboto-Black-webfont.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+.font {
+  font-family: arvin, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+//Mixins
+.border-radius (@radius: 5px) {
+  border-radius: @radius;
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+}
+.transition (@transition: all .3s ease-out) {
+  transition: @transition;
+  -moz-transition: @transition;
+  -webkit-transition: @transition;
+}
+.transform (@transform) {
+  transform: @transform;
+  -moz-transform: @transform;
+  -webkit-transform: @transform;
+}
+.bgPrimary{background-color: @primary;}
+.bgSecondary{background-color: @secondary;}
+.bgAccent{background-color: @accent;}
+.bgDark{background-color: @dark;}
+.bgWhite{background-color: white;}
+a{
+  text-decoration: none;
+  color: initial;
+  &:hover{
+    text-decoration: none;
+  }
+  &.hoverPrimary{
+    &:hover{color: @primary;}
+  }
+  &.hoverSecondary{
+    &:hover{color: @secondary;}
+  }
+  &.hoverAccent{
+    &:hover{color: @accent;}
+  }
+  &.hoverWhite{
+    &:hover{color: white;}
+  }
+}
+
+footer{
+  div{
+    &.modulesWrapper{
+      @media(max-width: 639px){
+        padding: 0;
+      }
+    }
+    &.copyright{
+      background-color: @primary;
+    }
+    &.footerMenu{
+      ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li{
+          a{
+            font-size: 14px;
+            display: block;
+            color: #ccc;
+            padding: 5px 0 5px 15px;
+            position: relative;
+            .font;
+            .transition;
+            &:before{
+              content: '';
+              position: absolute;
+              width: 8px;
+              height: 2px;
+              background-color: #ccc;
+              left: 0;
+              top: 50%;
+              .transition;
+              .transform(translateY(-1px);)
+            }
+            &:hover{
+              color: white;
+              padding-left: 20px;
+              &:before{
+                background-color: @accent;
+                width: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+    &.enamadWrapper{
+      background-color: lighten(@dark, 5%);
+    }
+    &.contactFields{
+      .value{
+        font-variation-settings: "wght" 600, "wdth" 100, "slnt" 0, "DOTR" 1, "DOTS" 0, "KASH" 0;
+      }
+    }
+  }
+  a{
+    &.goToTop{
+      .transition;
+      span{
+        .transition;
+        color: #ccc;
+      }
+      &:hover{
+        span{
+          &:first-child{
+            color: @accent;
+          }
+          &:last-child{
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+//UIKit Overrides
+.uk-text-zero{
+  font-size: 0;
+}
+.uk-text-tiny{
+  font-size: 12px;
+}
+.uk-text-white{color: white;}
+.uk-text-primary{color: @primary !important;}
+.uk-text-secondary{color: @secondary;}
+.uk-text-accent{color: @accent;}

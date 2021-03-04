@@ -29,7 +29,7 @@ class JConfig {
 	public $ftp_pass = '';
 	public $ftp_root = '';
 	public $ftp_enable = '0';
-	public $offset = 'UTC';
+	public $offset = 'Asia/Tehran';
 	public $mailonline = '1';
 	public $mailer = 'mail';
 	public $mailfrom = 'pouradaby@gmail.com';
@@ -60,7 +60,7 @@ class JConfig {
 	public $log_path = 'F:\\steelarvin\\administrator/logs';
 	public $tmp_path = 'F:\\steelarvin/tmp';
 	public $lifetime = '15';
-	public $session_handler = 'database';
+	public $session_handler = 'none';
 	public $shared_session = '0';
 	public $memcache_persist = '1';
 	public $memcache_compress = '0';
@@ -92,7 +92,7 @@ class JConfig {
 	public $session_redis_server_host = 'localhost';
 	public $session_redis_server_port = '6379';
 	public $session_redis_server_db = '0';
-	public $frontediting = '1';
+	public $frontediting = '0';
 	public $cookie_domain = '';
 	public $cookie_path = '';
 	public $asset_id = '1';

@@ -20,38 +20,21 @@
 	<config>
 		<fields name="params">
 			<fieldset name="basic">
-				<field name="presetcolor" type="color" label="TPL_AJIN_PRESETCOLOR" />
-				<field name="sloganfa" type="text" label="TPL_AJIN_SLOGANFA" />
-				<field name="sloganen" type="text" label="TPL_AJIN_SLOGANEN" />
+				<field name="presetcolor" type="color" label="TPL_ARVIN_PRESETCOLOR" />
 			</fieldset>
-			<fieldset name="contact" label="TPL_AJIN_CONTACT">
-				<field name="email" type="text" label="TPL_AJIN_EMAIL" />
-				<field name="cellphone" type="text" label="TPL_AJIN_CELLPHONE" />
-				<field name="phone" type="textarea" label="TPL_AJIN_PHONE" />
-				<field name="fax" type="textarea" label="TPL_AJIN_FAX" />
-				<field name="addressfa" type="textarea" label="TPL_AJIN_ADDRESS_FA" />
-				<field name="addressen" type="textarea" label="TPL_AJIN_ADDRESS_EN" />
-				<field name="codeposti" type="text" label="TPL_AJIN_CODEPOSTI" />
-				<field name="socials" type="repeatable" icon="list" label="TPL_AJIN_SOCIALS">
+			<fieldset name="contact" label="TPL_ARVIN_CONTACT">
+				<field name="email" type="text" label="TPL_ARVIN_EMAIL" />
+				<field name="cellphone" type="text" label="TPL_ARVIN_CELLPHONE" />
+				<field name="phone" type="textarea" label="TPL_ARVIN_PHONE" />
+				<field name="fax" type="textarea" label="TPL_ARVIN_FAX" />
+				<field name="addressfa" type="textarea" label="TPL_ARVIN_ADDRESS_FA" />
+				<field name="addressen" type="textarea" label="TPL_ARVIN_ADDRESS_EN" />
+				<field name="socials" type="repeatable" icon="list" label="TPL_ARVIN_SOCIALS">
 					<fieldset hidden="true" name="slides" repeat="true">
-						<field name="icon" class="width-100" type="text" label="TPL_AJIN_ICON" />
-						<field name="link" type="text" label="TPL_AJIN_URL" />
-						<field name="title" type="text" label="TPL_AJIN_TITLE" />
-						<field name="code" type="text" label="TPL_AJIN_CODE" />
+						<field name="icon" class="width-100" type="text" label="TPL_ARVIN_ICON" />
+						<field name="link" type="text" label="TPL_ARVIN_URL" />
+						<field name="title" type="text" label="TPL_ARVIN_TITLE" />
 					</fieldset>
-				</field>
-			</fieldset>
-			<fieldset name="corporations" label="TPL_AJIN_CORPORATIONS">
-				<field name="corporations" type="repeatable" icon="list" label="TPL_AJIN_CORPORATIONS" maximum="5">
-					<fieldset hidden="true" name="corporation" repeat="true">
-						<field name="logo" type="media" label="TPL_AJIN_LOGO" />
-						<field name="title" type="text" label="TPL_AJIN_TITLE" />
-						<field name="price" type="number" label="TPL_AJIN_SHAREPRICE" />
-					</fieldset>
-				</field>
-				<field name="prices" type="radio" label="TPL_AJIN_PRICES" default="1" class="btn-group btn-group-yesno">
-					<option value="1">JYES</option>
-					<option value="0">JNO</option>
 				</field>
 			</fieldset>
 		</fields>
