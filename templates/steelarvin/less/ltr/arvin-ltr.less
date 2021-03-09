@@ -2,6 +2,7 @@
 @secondary: rgb(30, 120, 190);
 @accent: rgb(255, 94, 21);
 @dark: rgb(40, 40, 40);
+@gray: rgb(153, 153, 153);
 @font-face {
   font-family: arvin;
   src: url('../../font/roboto/Roboto-Thin-webfont.woff') format('woff');
@@ -81,16 +82,53 @@ a{
     &:hover{color: white;}
   }
 }
-
+header{
+  div{
+    &.topBar{
+      .uk-grid-divider{
+        *{
+          &:before{
+            border-color: rgba(255, 255, 255, .3);
+          }
+        }
+      }
+      ul{
+        &.userMenu{
+          padding: 10px 0;
+          > li{
+            > a{
+              font-size: 12px;
+              font-variation-settings: "wght" 400, "wdth" 100, "slnt" 0, "DOTR" 1, "DOTS" 0, "KASH" 0;
+              .font;
+            }
+          }
+        }
+        &.socials{
+          li{
+            a{
+              display: inline-block;
+            }
+          }
+        }
+        li{
+          a{
+            color: #ccc;
+            .transition;
+            &:hover{
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 footer{
   div{
     &.modulesWrapper{
       @media(max-width: 639px){
         padding: 0;
       }
-    }
-    &.copyright{
-      background-color: @primary;
     }
     &.footerMenu{
       ul{
@@ -158,8 +196,16 @@ footer{
     }
   }
 }
-
+svg{outline: none;}
 //UIKit Overrides
+.uk-tooltip{
+  font-size: 0;
+  .border-radius(3px);
+  > *{
+    font-size: 11px;
+    .font;
+  }
+}
 .uk-text-zero{
   font-size: 0;
 }
@@ -170,3 +216,4 @@ footer{
 .uk-text-primary{color: @primary !important;}
 .uk-text-secondary{color: @secondary;}
 .uk-text-accent{color: @accent;}
+.uk-text-gray{color: @gray;}

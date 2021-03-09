@@ -2,6 +2,7 @@
 @secondary: rgb(30, 120, 190);
 @accent: rgb(255, 94, 21);
 @dark: rgb(40, 40, 40);
+@gray: rgb(153, 153, 153);
 @font-face {
   font-family: arvin_v;
   src: url("../../font/danawebGX.woff") format('woff-variations'), url("../../font/danawebGX.woff") format('woff');
@@ -20,7 +21,7 @@
 }
 .font {
   font-family: arvin_v, arvin, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  font-variation-settings: "wght" 400, "wdth" 100, "slnt" 0, "DOTR" 1, "DOTS" 0, "KASH" 0;
+  //font-variation-settings: "wght" 400, "wdth" 100, "slnt" 0, "DOTR" 1, "DOTS" 0, "KASH" 0;
 }
 //Mixins
 .border-radius (@radius: 5px) {
@@ -62,15 +63,94 @@ a{
     &:hover{color: white;}
   }
 }
+header{
+  nav{
+    > ul{
+      >li{
+        >a{
+          font-size: 14px;
+          font-variation-settings: "wght" 500, "wdth" 100, "slnt" 0, "DOTR" 1, "DOTS" 0, "KASH" 0;
+          margin: 0 25px 0 0;
+          color: @dark;
+          position: relative;
+          .font;
+          .transition;
+          &:hover{
+            color: @accent;
+          }
+        }
+        &.active{
+          >a{
+            color: @accent;
+          }
+        }
+      }
+    }
+  }
+  div{
+    &.topBar{
+      .uk-grid-divider{
+        *{
+          &:before{
+            border-color: rgba(255, 255, 255, .3);
+          }
+        }
+      }
+      ul{
+        &.userMenu{
+          padding: 10px 0;
+          > li{
+            > a{
+              font-size: 12px;
+              font-variation-settings: "wght" 400, "wdth" 100, "slnt" 0, "DOTR" 1, "DOTS" 0, "KASH" 0;
+              .font;
+            }
+          }
+        }
+        &.socials{
+          li{
+            a{
+              display: inline-block;
+            }
+          }
+        }
+        li{
+          a{
+            color: #ccc;
+            .transition;
+            &:hover{
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+  [data-uk-sticky]{
+    &.uk-sticky-fixed{
+      div{
+        &.stickyEffect{
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+section{
+  &.pageHeading{
+    h1{
+      font-size: 32px;
+      font-variation-settings: "wght" 700, "wdth" 100, "slnt" 0, "DOTR" 1, "DOTS" 0, "KASH" 0;
+      padding-top: 10px;
+    }
+  }
+}
 footer{
   div{
     &.modulesWrapper{
       @media(max-width: 639px){
         padding: 0;
       }
-    }
-    &.copyright{
-      background-color: @primary;
     }
     &.footerMenu{
       h3{
@@ -142,8 +222,17 @@ footer{
     }
   }
 }
-
+svg{outline: none;}
 //UIKit Overrides
+.uk-tooltip{
+  font-size: 0;
+  .border-radius(3px);
+  > *{
+    font-size: 11px;
+    font-variation-settings: "wght" 600, "wdth" 100, "slnt" 0, "DOTR" 1, "DOTS" 0, "KASH" 0;
+    .font;
+  }
+}
 .uk-text-zero{
   font-size: 0;
 }
@@ -154,3 +243,4 @@ footer{
 .uk-text-primary{color: @primary !important;}
 .uk-text-secondary{color: @secondary;}
 .uk-text-accent{color: @accent;}
+.uk-text-gray{color: @gray;}

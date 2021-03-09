@@ -49,8 +49,59 @@ $total = count($socialsicons['icon']);
     <jdoc:include type="head" />
 </head>
 <body>
-<header id="header"><jdoc:include type="modules" name="header" style="xhtml" /></header>
-<main data-uk-height-viewport="expand: true"></main>
+<header id="header">
+    <div class="uk-text-zero topBar bgPrimary">
+        <div class="uk-container">
+            <div>
+                <div data-uk-grid>
+                    <div class="uk-width-expand"><jdoc:include type="modules" name="user" style="xhtml" /></div>
+                    <div class="uk-width-auto uk-flex uk-flex-middle">
+                        <div>
+                            <div class="uk-grid-small uk-grid-divider" data-uk-grid>
+                                <div class="uk-flex uk-flex-middle">
+                                    <ul class="uk-grid-small socials" data-uk-grid>
+                                        <?php for($i=0;$i<$total;$i++) { ?>
+                                            <?php if ($socialsicons['link'][$i] != '') { ?>
+                                                <li>
+                                                    <a href="<?php echo $socialsicons['link'][$i]; ?>" class="uk-text-white hoverWhite" target="_blank" title="<?php echo $socialsicons['title'][$i]; ?>"><img src="<?php echo JURI::base().'images/sprite.svg#'.$socialsicons['icon'][$i] ?>" width="18" height="18" data-uk-svg></a>
+                                                </li>
+                                            <?php } ?>
+                                        <?php } ?>
+                                    </ul>
+                                </div>
+                                <jdoc:include type="modules" name="lang" style="xhtml" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="uk-text-zero uk-box-shadow-small bgWhite" data-uk-sticky="top: 120; animation: uk-animation-slide-top;">
+        <div class="uk-container">
+            <div class="uk-padding-small uk-padding-remove-horizontal stickyEffect">
+                <div class="uk-padding-small uk-padding-remove-horizontal">
+                    <div class="uk-grid-small" data-uk-grid>
+                        <div class="uk-width-auto uk-flex uk-flex-middle">
+                            <a href="<?php echo JURI::base(); ?>" title="<?php echo $sitename; ?>" class="uk-display-inline-block uk-text-accent hoverAccent" target="_self"><img src="<?php echo JURI::base().'images/sprite.svg#logoShape'; ?>" width="98" height="40" alt="<?php echo $sitename; ?>" data-uk-svg></a>
+                        </div>
+                        <div class="uk-width-auto uk-flex uk-flex-middle">
+                            <a href="<?php echo JURI::base(); ?>" title="<?php echo $sitename; ?>" class="uk-display-inline-block uk-text-primary hoverPrimary" target="_self"><img src="<?php echo JURI::base().'images/sprite.svg#logo'.$languageCode; ?>" width="150" alt="<?php echo $sitename; ?>" data-uk-svg></a>
+                        </div>
+                        <div class="uk-width-expand uk-flex uk-flex-middle uk-flex-left">
+                            <div>
+                                <div class="uk-grid-divider uk-grid-small" data-uk-grid><jdoc:include type="modules" name="header" style="xhtml" /></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<?php if ($pageclass == 'home') { ?>
+    <main data-uk-height-viewport="expand: true"></main>
+<?php } ?>
 <jdoc:include type="modules" name="pagetop" style="xhtml" />
 <jdoc:include type="message" />
 <jdoc:include type="component" />
@@ -193,7 +244,7 @@ $total = count($socialsicons['icon']);
             </div>
         </div>
     </div>
-    <div class="copyright">
+    <div class="copyright bgPrimary">
         <div class="uk-container">
             <div class="uk-padding-small uk-padding-remove-horizontal">
                 <div class="uk-grid-small uk-text-white uk-text-center uk-text-<?php echo JFactory::getLanguage()->isRtl() ? 'right' : 'left' ?>@m font" data-uk-grid>
