@@ -177,8 +177,7 @@ window.localPage.setCookie = function (name,value,delay) {
 
 		foreach($this->rows as $row) {
 ?>
-		<div class="hkc-md-<?php echo (int)$span; ?> hikashop_product hikashop_product_column_<?php echo $current_column; ?> hikashop_product_row_<?php echo $current_row; ?>"
-			itemprop="itemList" itemscope="" itemtype="http://schema.org/ItemList">
+		<div class="uk-width-1-1 uk-width-1-4@m" itemprop="itemList" itemscope="" itemtype="http://schema.org/ItemList">
 			<div class="hikashop_container">
 				<div class="hikashop_subcontainer <?php echo $this->borderClass; ?>">
 <?php
@@ -201,7 +200,7 @@ window.localPage.setCookie = function (name,value,delay) {
 
 		echo '</div>';
 	}
-?> <div style="clear:both"></div>
+?>
 <?php
 
 	if($infinite_scroll && empty($this->tmpl_ajax) && $this->pageInfo->elements->page > 1) {
