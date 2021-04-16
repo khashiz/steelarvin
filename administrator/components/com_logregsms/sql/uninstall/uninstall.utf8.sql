@@ -1,0 +1,1 @@
+DROP TABLE IF EXISTS `#__logregsms_smsarchives`;

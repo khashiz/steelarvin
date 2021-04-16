@@ -14,9 +14,9 @@ class JConfig {
 	public $debug_lang_const = '1';
 	public $dbtype = 'mysqli';
 	public $host = 'localhost';
-	public $user = 'arvin';
+	public $user = 'steelarvin';
 	public $password = '12345';
-	public $db = 'arvin';
+	public $db = 'steelarvin';
 	public $dbprefix = 'yz4ph_';
 	public $live_site = '';
 	public $secret = 'nzlvXyF6xGWAv4Px';
@@ -57,8 +57,8 @@ class JConfig {
 	public $unicodeslugs = '1';
 	public $feed_limit = '10';
 	public $feed_email = 'none';
-	public $log_path = 'F:\\steelarvin\\administrator/logs';
-	public $tmp_path = 'F:\\steelarvin/tmp';
+	public $log_path = '/Applications/XAMPP/xamppfiles/htdocs/steelarvin/administrator/logs';
+	public $tmp_path = '/Applications/XAMPP/xamppfiles/htdocs/steelarvin/tmp';
 	public $lifetime = '15';
 	public $session_handler = 'none';
 	public $shared_session = '0';

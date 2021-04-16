@@ -33,4 +33,4 @@ if ($item->menu_image)
 }
 
 ?>
-<span class="nav-header <?php echo $anchor_css; ?>"<?php echo $title; ?>><?php echo $linktype; ?></span>
+<a class="nav-header <?php echo $anchor_css; ?>"<?php echo $title; ?>><?php echo $linktype; ?></a>

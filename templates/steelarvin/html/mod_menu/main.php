@@ -86,13 +86,13 @@ if ($tagId = $params->get('tag_id', ''))
                 // The next item is deeper.
                 if ($item->deeper)
                 {
-                    echo '<ul class="nav-child unstyled small">';
+                    echo '<div data-uk-drop="offset:0;delay-hide:200;animation:uk-animation-slide-bottom-small;duration:200;pos:bottom-right;"><div class="uk-card uk-card-body uk-card-default uk-padding-remove uk-box-shadow-small"><ul class="nav-child unstyled small">';
                 }
                 // The next item is shallower.
                 elseif ($item->shallower)
                 {
                     echo '</li>';
-                    echo str_repeat('</ul></li>', $item->level_diff);
+                    echo str_repeat('</ul></div></div></li>', $item->level_diff);
                 }
                 // The next item is on the same level.
                 else
