@@ -1,0 +1,32 @@
+/* Separators */
+
+label[id^="jform_params_separator_"],
+label[id^="jform_params_alert_"] {
+	display: none;
+}
+
+.mmSeparator {
+	color: #555;
+	margin: 10px 0 0;
+	padding: 0;
+	float: left;
+	width: 100%;
+	font-size: 12px;
+	box-sizing: border-box;
+}
+
+.mmSeparator h3 {
+	margin: 0;
+	padding: 10px;
+	background: none repeat scroll 0 0 #e8f3f9;
+}
+
+.mmSeparator h3 small {
+	font-weight: bold;
+}
+
+/* Backend */
+
+.controls .alert {
+	margin: 0;
+}

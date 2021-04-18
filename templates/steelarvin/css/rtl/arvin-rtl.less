@@ -6,9 +6,9 @@
 @success: #388e3c;
 @successBg: #e8f5e9;
 @danger: #c62828;
-@dangerBg: #ffcdd2;
+@dangerBg: #ffe4e6;
 @warning: #f9a825;
-@warningBg: #fff9c4;
+@warningBg: #fffcdd;
 @font-face {
   font-family: arvin_v;
   src: url("../../font/danawebGX.woff") format('woff-variations'), url("../../font/danawebGX.woff") format('woff');
@@ -385,6 +385,20 @@ span{
   }
 }
 //UIKit Overrides
+.uk-alert{
+  &.uk-alert-success{
+    background-color: @successBg;
+    color: @success;
+  }
+  &.uk-alert-danger{
+    background-color: @dangerBg;
+    color: @danger;
+  }
+  &.uk-alert-warning{
+    background-color: @warningBg;
+    color: @warning;
+  }
+}
 .uk-button{
   &.uk-button-success{
     background-color: @success;
