@@ -13,19 +13,6 @@ JHtml::_('behavior.keepalive');
 JHtml::_('behavior.formvalidator');
 
 ?>
-<?php if ($this->params->get('show_page_heading')) { ?>
-    <section class="bgPrimary uk-padding uk-padding-remove-horizontal uk-text-zero pageHeading">
-        <div class="uk-container">
-            <div>
-                <div class="uk-grid-small" data-uk-grid>
-                    <div class="uk-width-1-1">
-                        <h1 class="uk-margin-remove uk-text-white uk-text-center font"><?php echo $this->escape($this->params->get('page_heading')); ?></h1>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-<?php } ?>
 <main class="login <?php echo $this->pageclass_sfx; ?>" data-uk-height-viewport="expand: true">
     <div class="uk-padding uk-padding-remove-horizontal">
         <div>
@@ -86,7 +73,7 @@ JHtml::_('behavior.formvalidator');
                                                     <?php $usersConfig = JComponentHelper::getParams('com_users'); ?>
                                                     <?php if ($usersConfig->get('allowUserRegistration')) : ?>
                                                         <li>
-                                                            <a class="uk-flex uk-flex-middle uk-text-gray hoverAccent" href="<?php echo JRoute::_('index.php?option=com_users&view=registration'); ?>">
+                                                            <a class="uk-flex uk-flex-middle uk-text-gray hoverAccent" href="<?php echo JRoute::_("index.php?Itemid=165"); ?>">
                                                                 <span class="uk-margin-small-left"><img src="<?php echo JURI::base().'images/sprite.svg#user' ?>" width="16" height="16" data-uk-svg></span>
                                                                 <span class="uk-text-tiny font"><?php echo JText::_('COM_USERS_LOGIN_REGISTER'); ?></span>
                                                             </a>

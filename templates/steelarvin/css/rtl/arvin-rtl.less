@@ -323,7 +323,8 @@ div{
         color: @success;
         margin-bottom: 10px;
       }
-      &:nth-child(2){
+      &:nth-child(2),
+      &:nth-child(3){
         font-size: 18px;
         font-variation-settings: "wght" 400, "wdth" 100, "slnt" 0, "DOTR" 1, "DOTS" 0, "KASH" 0;
         color: @dark;
@@ -385,6 +386,22 @@ span{
   }
 }
 //UIKit Overrides
+.alert{
+  padding: 15px;
+  button,h4{
+    display: none;
+  }
+  div{
+    text-align: center;
+    font-variation-settings: "wght" 500, "wdth" 100, "slnt" 0, "DOTR" 1, "DOTS" 0, "KASH" 0;
+    font-size: 12px;
+    .font;
+  }
+  &.alert-danger{
+    background-color: @dangerBg;
+    color: @danger;
+  }
+}
 .uk-alert{
   &.uk-alert-success{
     background-color: @successBg;
