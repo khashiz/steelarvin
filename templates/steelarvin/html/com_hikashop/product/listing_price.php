@@ -32,7 +32,7 @@ if(isset($this->row->product_msrp) && $this->row->product_msrp > 0.0 && hikaInpu
 
 if(!empty($show_msrp)) {
 ?>
-	<span class="hikashop_product_msrp_price hikashop_product_price_full">
+	<span class="hikashop_product_msrp_price hikashop_product_price_full ggrgrgrg">
 		<span class="hikashop_product_msrp_price_title"><?php
 			echo JText::_('PRODUCT_MSRP_BEFORE');
 		?></span>
@@ -52,7 +52,8 @@ if(!empty($show_msrp)) {
 <?php
 }
 ?>
-	<span class="hikashop_product_price_full<?php echo $class; ?>"><?php
+	<span class="grggrtgrgrgrg hikashop_product_price_full uk-text-small uk-text-muted uk-display-block font <?php echo $class; ?>">
+        <?php
 
 	if(empty($this->row->prices)) {
 		echo JText::_('FREE_PRICE');
@@ -89,21 +90,21 @@ if(!empty($show_msrp)) {
 
 			$classes = array('hikashop_product_price hikashop_product_price_'.$i);
 			if(!empty($this->row->discount)) {
-				$classes[]='hikashop_product_price_with_discount';
+				$classes[]='hikashop_product_price_with_discount uk-text-success uk-text-bold uk-margin-small-right';
 			}
 
 			if(!empty($this->row->discount)) {
 				if(in_array($this->params->get('show_discount'), array(1, 4))) {
-					echo '<span class="hikashop_product_discount">'.JText::_('PRICE_DISCOUNT_START');
+					echo '<div class="uk-padding-small uk-position-top-left"><span class="hikashop_product_discount uk-label uk-label-success uk-text-tiny uk-text-bold ">'.JText::_('PRICE_DISCOUNT_START');
 					if(bccomp($this->row->discount->discount_flat_amount, 0, 5) !== 0) {
 						echo $this->currencyHelper->format( -1 * $this->row->discount->discount_flat_amount, $price->price_currency_id);
 					} elseif(bccomp($this->row->discount->discount_percent_amount, 0, 5) !== 0) {
 						echo -1*$this->row->discount->discount_percent_amount.'%';
 					}
-					echo JText::_('PRICE_DISCOUNT_END').'</span>';
+					echo JText::_('PRICE_DISCOUNT_END').'</span></div>';
 				}
 				if(in_array($this->params->get('show_discount'), array(2, 4))) {
-					echo '<span class="hikashop_product_price_before_discount">'.JText::_('PRICE_DISCOUNT_START');
+					echo '<span class="hikashop_product_price_before_discount uk-text-linethrough">'.JText::_('PRICE_DISCOUNT_START');
 					if($this->params->get('price_with_tax')){
 						echo $this->currencyHelper->format($price->price_value_without_discount_with_tax, $price->price_currency_id);
 					}

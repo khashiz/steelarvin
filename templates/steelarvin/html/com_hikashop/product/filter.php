@@ -83,7 +83,7 @@ if(!empty($this->filters)){
 
 
 	if($this->collapsable){
-		$content_classes .= ' hikashop_filter_collapsable_content';
+		$content_classes .= '';
 		$title_classes = 'hikashop_filter_collapsable_title';
 		$display_title_class = '_mobile';
 
@@ -92,16 +92,6 @@ if(!empty($this->filters)){
 			$extra_attributes .= ' style="display: none;"';
 		}
 ?>
-<div class="<?php echo $title_classes.$display_title_class; ?>">
-	<div
-		class="<?php echo $title_classes; ?>"
-		onclick="if(window.hikashop.toggleOverlayBlock('hikashop_filter_main_div_<?php echo $this->params->get('main_div_name'); ?>', 'toggle')) return false;">
-		<div class="<?php echo $title_classes.'_icon';?>"></div>
-		<div class="hikashop_filter_fieldset">
-			<h3><?php echo JText::_('FILTERS'); ?></h3>
-		</div>
-	</div>
-</div>
 <?php
 	}
 	if($this->ajax) {
@@ -121,118 +111,147 @@ if(!empty($this->filters)){
 		$form_attributes.=' data-scroll="1"';
 	}
 ?>
-<div id="hikashop_filter_main_div_<?php echo $this->params->get('main_div_name'); ?>" class="<?php echo $content_classes.$display_title_class; ?>" <?php echo $extra_attributes; ?>>
-<?php
-	if($this->params->get('module') == 'mod_hikashop_filter') {
-?>
-	<div class="hikashop_checkout_loading_elem"></div>
-	<div class="hikashop_checkout_loading_spinner"></div>
-<?php
-	}
-	$datas = array();
-	if(isset($this->listingQuery)){
-		$html=array();
-		$datas=$this->filterClass->getProductList($this, $filters);
-	}
+    <div class="uk-width-1-1 uk-width-1-4@m filtersContainer">
+        <div data-uk-sticky="offset: 110; bottom: true;">
+            <div class="uk-card uk-card-default uk-border-rounded uk-overflow-hidden uk-box-shadow-small">
+                <div id="filtersAccordion" data-uk-accordion>
+                    <div class="uk-open">
+                        <div onclick="UIkit.accordion('#filtersAccordion').toggle(0);" class="blockHeader">
+                            <h3 class="uk-h5 uk-margin-remove uk-padding-small uk-text-bold uk-text-center font"><img src="<?php echo JURI::base().'images/sprite.svg#filter'; ?>" width="16" height="16" alt="<?php echo $sitename; ?>" class="uk-margin-small-left" data-uk-svg><?php echo JText::_('FILTERPRODUCTS'); ?></h3>
+                        </div>
+                        <div class="uk-accordion-content uk-margin-remove">
+                            <div class="uk-padding-small">
+                                <div id="hikashop_filter_main_div_<?php echo $this->params->get('main_div_name'); ?>" class="<?php echo $content_classes.$display_title_class; ?>" <?php echo $extra_attributes; ?>>
+                                    <?php
+                                    if($this->params->get('module') == 'mod_hikashop_filter') {
+                                        ?>
+                                        <div class="hikashop_checkout_loading_elem"></div>
+                                        <div class="hikashop_checkout_loading_spinner"></div>
+                                        <?php
+                                    }
+                                    $datas = array();
+                                    if(isset($this->listingQuery)){
+                                        $html=array();
+                                        $datas=$this->filterClass->getProductList($this, $filters);
+                                    }
 
-	foreach($filters as $key => $filter){
-		$html[$key]=$this->filterClass->displayFilter($filter, $this->params->get('main_div_name'), $this, $datas);
-	}
+                                    foreach($filters as $key => $filter){
+                                        $html[$key]=$this->filterClass->displayFilter($filter, $this->params->get('main_div_name'), $this, $datas);
+                                    }
 
-	if($this->displayFieldset){ ?>
-	<div class="hikashop_filter_fieldset<?php echo $display_title_class ?>">
-		<h3><?php echo JText::_('FILTERS'); ?></h3>
-	<?php } ?>
+                                    if($this->displayFieldset){ ?>
 
-		<form action="<?php echo $url; ?>" method="post" name="hikashop_filter_form_<?php echo $this->params->get('main_div_name'); ?>" <?php echo $form_attributes; ?> enctype="multipart/form-data">
-<?php
-	while($count<$this->maxFilter+1){
-		$height='';
-		$activeClass = '';
-		if(!empty($filters[$count]->filter_height)){
-			$height='min-height:'.$filters[$count]->filter_height.'px;';
-		}else if(!empty($this->heightConfig)){
-			$height='min-height:'.$this->heightConfig.'px;';
-		}
-		if(!empty($filters[$count]->filterActive)){
-			$activeClass = 'filter_active ';
-		}
-		if(!empty($html[$count])){
-			if($filters[$count]->filter_options['column_width']>$this->maxColumn) $filters[$count]->filter_options['column_width'] = $this->maxColumn;
-			 ?>
-		<div class="hikashop_filter_main hikashop_filter_main_<?php echo $filters[$count]->filter_namekey; ?>" style="<?php echo $height; ?> float:left; width:<?php echo $widthPercent*$filters[$count]->filter_options['column_width']?>%;" >
-			<?php echo '<div class="'.$activeClass.'hikashop_filter_'.$filters[$count]->filter_namekey.'">'.$html[$count].'</div>'; ?>
-		</div>
-			<?php
-		}
-		$count++;
-	}
-	if($this->buttonPosition=='inside'){
-		if($this->showButton ){
-			$js = "
+                                    <div class="hikashop_filter_fieldset<?php echo $display_title_class ?>">
+                                        <?php } ?>
+
+                                        <form action="<?php echo $url; ?>" method="post" name="hikashop_filter_form_<?php echo $this->params->get('main_div_name'); ?>" <?php echo $form_attributes; ?> enctype="multipart/form-data" class="regForm">
+                                            <div class="uk-child-width-1-1 uk-grid-small uk-grid-divider" data-uk-grid>
+                                                <?php
+                                                while($count<$this->maxFilter+1){
+                                                    $height='';
+                                                    $activeClass = '';
+                                                    if(!empty($filters[$count]->filter_height)){
+                                                        $height='min-height:'.$filters[$count]->filter_height.'px;';
+                                                    }else if(!empty($this->heightConfig)){
+                                                        $height='min-height:'.$this->heightConfig.'px;';
+                                                    }
+                                                    if(!empty($filters[$count]->filterActive)){
+                                                        $activeClass = 'filter_active ';
+                                                    }
+                                                    if(!empty($html[$count])){
+                                                        if($filters[$count]->filter_options['column_width']>$this->maxColumn) $filters[$count]->filter_options['column_width'] = $this->maxColumn;
+                                                        ?>
+                                                        <div class="hikashop_filter_main hikashop_filter_main_<?php echo $filters[$count]->filter_namekey; ?>">
+                                                            <?php echo '<div class="uk-text=zero '.$activeClass.'hikashop_filter_'.$filters[$count]->filter_namekey.'">'.$html[$count].'</div>'; ?>
+                                                        </div>
+                                                        <?php
+                                                    }
+                                                    $count++;
+                                                }
+                                                if($this->buttonPosition=='inside'){
+                                                    if($this->showButton ){
+                                                        $js = "
 document.getElementById('hikashop_filtered_" . $this->params->get('main_div_name') . "').value='1';
 " . $submit . "
 return false;
 ";
-?>
-			<div class="hikashop_filter_button_inside" style="float:left; margin-right:10px;">
-				<input type="submit" id="hikashop_filter_button_<?php echo $this->params->get('main_div_name'); ?>" class="<?php echo $this->config->get('css_button', 'hikabtn'); ?>" <?php echo $attributes; ?> onclick="<?php echo $js; ?>" value="<?php echo JText::_('FILTER'); ?>" />
-			</div>
-<?php
-		}
-		if($this->showResetButton ){
-			$js = "
+                                                        ?>
+                                                        <div class="hikashop_filter_button_inside">
+                                                            <input type="submit" id="hikashop_filter_button_<?php echo $this->params->get('main_div_name'); ?>" class="<?php echo $this->config->get('css_button', 'hikabtn'); ?>" <?php echo $attributes; ?> onclick="<?php echo $js; ?>" value="<?php echo JText::_('FILTER'); ?>" />
+                                                        </div>
+                                                        <?php
+                                                    }
+                                                    if($this->showResetButton ){
+                                                        $js = "
 document.getElementById('hikashop_reseted_" . $this->params->get('main_div_name') . "').value='1';
 " . $submit . "
 return false;
 ";
-?>
-			<div class="hikashop_reset_button_inside" style="float:left;">
-				<a href="#" id="hikashop_reset_button_<?php echo $this->params->get('main_div_name'); ?>" class="<?php echo $this->config->get('css_button', 'hikabtn'); ?>" <?php echo $attributes; ?> onclick="<?php echo $js; ?>"><?php echo JText::_('RESET'); ?></a>
-			</div>
-<?php
-		}
-	}
-?>
-			<input type="hidden" name="return_url" value="<?php echo $url;?>"/>
-			<input type="hidden" name="filtered" id="hikashop_filtered_<?php echo $this->params->get('main_div_name');?>" value="1" />
-			<input type="hidden" name="reseted" id="hikashop_reseted_<?php echo $this->params->get('main_div_name');?>" value="0" />
-		</form>
-<?php
-	if($this->displayFieldset){
-?>
-	</div>
-<?php
-	}
-	if($this->buttonPosition!='inside'){
-		$style='style="margin-right:10px;"';
-		if($this->buttonPosition=='right'){ $style='style="float:right; margin-left:10px;"'; }
-		if($this->showButton){
-			$js = "
+                                                        ?>
+                                                        <div class="hikashop_reset_button_inside">
+                                                            <a href="#" id="hikashop_reset_button_<?php echo $this->params->get('main_div_name'); ?>" class="<?php echo $this->config->get('css_button', 'hikabtn'); ?>" <?php echo $attributes; ?> onclick="<?php echo $js; ?>"><?php echo JText::_('RESET'); ?></a>
+                                                        </div>
+                                                        <?php
+                                                    }
+                                                }
+                                                ?>
+                                                <input type="hidden" name="return_url" value="<?php echo $url;?>"/>
+                                                <input type="hidden" name="filtered" id="hikashop_filtered_<?php echo $this->params->get('main_div_name');?>" value="1" />
+                                                <input type="hidden" name="reseted" id="hikashop_reseted_<?php echo $this->params->get('main_div_name');?>" value="0" />
+                                            </div>
+                                        </form>
+                                        <?php
+                                        if($this->displayFieldset){
+                                        ?>
+                                    </div>
+                                <?php
+                                }
+                                if($this->buttonPosition!='inside'){
+                                    $style='';
+                                    if($this->buttonPosition=='right'){ $style=''; }
+                                    if($this->showButton){
+                                        $js = "
 document.getElementById('hikashop_filtered_" . $this->params->get('main_div_name') . "').value='1';
 " . $submit . "
 return false;
 ";
-?>
-	<span class="hikashop_filter_button_outside" <?php echo $style; ?>>
-		<input type="submit" id="hikashop_filter_button_<?php echo $this->params->get('main_div_name'); ?>" class="<?php echo $this->config->get('css_button', 'hikabtn'); ?>" onclick="<?php echo $js; ?>" <?php echo $attributes; ?> value="<?php echo JText::_('FILTER'); ?>" />
+                                        ?>
+                                        <span class="hikashop_filter_button_outside">
+                                            <div class="uk-padding-small uk-padding-remove-horizontal"><hr class="uk-margin-remove"></div>
+		<input type="submit" id="hikashop_filter_button_<?php echo $this->params->get('main_div_name'); ?>" class="uk-button uk-button-success uk-border-rounded uk-width-1-1 uk-display-block uk-box-shadow-small font <?php echo $this->config->get('css_button', 'hikabtn'); ?>" onclick="<?php echo $js; ?>" <?php echo $attributes; ?> value="<?php echo JText::_('FILTERPRODUCTS'); ?>" />
 	</span>
-<?php
-		}
-		if($this->showResetButton){
-			$js = "
+                                        <?php
+                                    }
+                                    if($this->showResetButton){
+                                        $js = "
 document.getElementById('hikashop_reseted_" . $this->params->get('main_div_name') . "').value='1';
 " . $submit . "
 return false;
 ";
-?>
-	<span class="hikashop_reset_button_outside" <?php echo $style; ?>>
+                                        ?>
+                                        <span class="hikashop_reset_button_outside" <?php echo $style; ?>>
 		<a href="#" id="hikashop_reset_button_<?php echo $this->params->get('main_div_name'); ?>" class="<?php echo $this->config->get('css_button', 'hikabtn'); ?>" onclick="<?php echo $js; ?>" <?php echo $attributes; ?> ><?php echo JText::_('RESET'); ?></a>
 	</span>
-<?php
-		}
-	}
-?>
-	<div style="clear:both"></div>
-</div>
+                                        <?php
+                                    }
+                                }
+                                ?>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 <?php } ?>
+<script type="text/javascript">
+    // if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+    //     // true for mobile device
+    //     document.write("mobile device");
+    // }else{
+    //     // false for not mobile device
+    //     document.write("not mobile device");
+    // }
+</script>

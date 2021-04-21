@@ -50,7 +50,7 @@ $total = count($socialsicons['icon']);
 </head>
 <body>
 <header id="header">
-    <div class="uk-text-zero topBar bgPrimary">
+    <div class="uk-text-zero uk-visible@m topBar bgPrimary">
         <div class="uk-container">
             <div>
                 <div data-uk-grid>
@@ -77,16 +77,27 @@ $total = count($socialsicons['icon']);
             </div>
         </div>
     </div>
-    <div class="uk-text-zero uk-box-shadow-small bgWhite" data-uk-sticky="top: 120; animation: uk-animation-slide-top;">
+    <div class="uk-text-zero uk-box-shadow-small bgWhite stickyHeader" data-uk-sticky="top: 120; animation: uk-animation-slide-top;">
         <div class="uk-container">
-            <div class="uk-padding-small uk-padding-remove-horizontal stickyEffect">
+            <div class="stickyEffect">
                 <div class="uk-padding-small uk-padding-remove-horizontal">
-                    <div class="uk-grid-small" data-uk-grid>
-                        <div class="uk-width-auto uk-flex uk-flex-middle">
-                            <a href="<?php echo JURI::base(); ?>" title="<?php echo $sitename; ?>" class="uk-display-inline-block uk-text-accent hoverAccent" target="_self"><img src="<?php echo JURI::base().'images/sprite.svg#logoShape'; ?>" width="98" height="40" alt="<?php echo $sitename; ?>" data-uk-svg></a>
+                    <div class="uk-grid-small uk-flex-middle" data-uk-grid>
+                        <div class="uk-width-auto uk-hidden@m">
+                            <div>
+                                <a href="#hamMenu" data-uk-toggle class="uk-text-muted uk-border-rounded uk-button uk-button-default uk-button-small uk-display-block uk-text-muted uk-text-zero hamMenuToggler"><img src="<?php echo JURI::base().'images/sprite.svg#bars'; ?>" width="20" height="20" alt="<?php echo $sitename; ?>" data-uk-svg></a>
+                            </div>
                         </div>
-                        <div class="uk-width-auto uk-flex uk-flex-middle">
-                            <a href="<?php echo JURI::base(); ?>" title="<?php echo $sitename; ?>" class="uk-display-inline-block uk-text-primary hoverPrimary" target="_self"><img src="<?php echo JURI::base().'images/sprite.svg#logo'.$languageCode; ?>" width="150" alt="<?php echo $sitename; ?>" data-uk-svg></a>
+                        <div class="uk-width-auto">
+                            <div>
+                                <div class="uk-grid-small logoContainer" data-uk-grid>
+                                    <div class="uk-width-auto uk-flex uk-flex-middle uk-visible@m">
+                                        <a href="<?php echo JURI::base(); ?>" title="<?php echo $sitename; ?>" class="uk-display-inline-block uk-text-accent hoverAccent" target="_self"><img src="<?php echo JURI::base().'images/sprite.svg#logoShape'; ?>" width="98" height="40" alt="<?php echo $sitename; ?>" data-uk-svg></a>
+                                    </div>
+                                    <div class="uk-width-auto uk-flex uk-flex-middle">
+                                        <a href="<?php echo JURI::base(); ?>" title="<?php echo $sitename; ?>" class="uk-display-inline-block uk-text-primary hoverPrimary" target="_self"><img src="<?php echo JURI::base().'images/sprite.svg#logo'.$languageCode; ?>" width="150" alt="<?php echo $sitename; ?>" data-uk-svg></a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="uk-width-expand uk-flex uk-flex-middle uk-flex-left">
                             <div>
@@ -272,5 +283,16 @@ $total = count($socialsicons['icon']);
         </div>
     </div>
 </footer>
+<div id="hamMenu" data-uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-card uk-card-default bgWhite">
+
+        <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+        <h3>Title</h3>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+    </div>
+</div>
 </body>
 </html>

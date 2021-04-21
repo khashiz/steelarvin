@@ -7,7 +7,7 @@
  * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
  */
 defined('_JEXEC') or die('Restricted access');
-?><span class="hikashop_product_price_full">
+?><span class="hikashop_product_price_full fdfdfdsdfsfdsfs">
 <?php
 
 if(empty($this->row->prices)){

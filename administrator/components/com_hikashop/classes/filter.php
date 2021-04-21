@@ -1117,10 +1117,10 @@ class hikashopFilterTypeClass extends hikashopClass {
 
 	function displayInList($filter, $divName, $selected, $tab=""){
 		$html='';
-		$br='<br/>';
+		$br='';
 
 		if($filter->filter_type=='text'){
-			$html.='<a class="hikashop_filter_list_selected" style="font-weight:bold">'.$selected[0].'</a>, ';
+			$html.='<a class="hikashop_filter_list_selected uk-text-bold font">'.$selected[0].'</a>, ';
 			$html=$this->getDeleteButton($filter, $divName, $selected[0].' ', $html, $br);
 		}
 
@@ -1220,10 +1220,10 @@ class hikashopFilterTypeClass extends hikashopClass {
 			if(!is_array($selected)){
 				$selected = explode(' - ', $selected[0]);
 			}
-			$html = '<a class="hikashop_filter_list_selected" style="font-weight:bold">'.@$selected[0].' - '.@$selected[1].'</a>, ';
+			$html = '<a class="hikashop_filter_list_selected uk-text-small font">'.JText::sprintf('TEXTFROMTO','<span class="uk-text-bold">'.number_format(substr(@$selected[0], 0, -3)).'</span>','<span class="uk-text-bold">'.number_format(substr(@$selected[1], 0, -3)).'</span>').'</a>, ';
 			$html = $this->getDeleteButton($filter, $divName, $selected, $html, $br);
 		}
-		$html = '<span id="filter_values_container_'.$filter->filter_namekey.'_'.$divName.'" class="filter_values_container">'.$html.'</span>';
+		$html = '<span id="filter_values_container_'.$filter->filter_namekey.'_'.$divName.'" class="filter_values_container uk-flex uk-flex-between uk-flex-middle uk-width-1-1">'.$html.'</span>';
 		$html = $this->titlePosition($filter, $html, true);
 		return $html;
 	}
@@ -1246,7 +1246,7 @@ class hikashopFilterTypeClass extends hikashopClass {
 					$empty .= 'document.getElementById(\''.$i.'\').value=\' \'; ';
 				}
 			}
-			return '<a href="#" style="cursor:pointer; text-decoration:none" data-container-div="hikashop_filter_form_'.$divName.'" onclick="'.$empty.$submitOnClick.'return false;" title="'.JText::_('REMOVE_THIS_SELECTION').'"><i class="fa fa-times-circle"></i></a>';
+			return '<a href="#" style="cursor:pointer; text-decoration:none" data-container-div="hikashop_filter_form_'.$divName.'" onclick="'.$empty.$submitOnClick.'return false;" title="'.JText::_('REMOVE_THIS_SELECTION').'">ffff</a>';
 		}
 		$html=trim($html,' ,');
 		$ids = array();
@@ -1295,7 +1295,7 @@ class hikashopFilterTypeClass extends hikashopClass {
 		foreach($ids as $i){
 			$empty .= 'document.getElementById(\''.$i.'\').value=\' \'; ';
 		}
-		$html.='  <a href="#" style="cursor:pointer; text-decoration:none" data-container-div="hikashop_filter_form_'.$divName.'" onclick="'.$empty.$submitOnClick.'return false;" title="'.JText::_('REMOVE_THIS_SELECTION').'"><i class="fa fa-times-circle"></i></a><br/>';
+		$html.='  <a href="#" data-container-div="hikashop_filter_form_'.$divName.'" onclick="'.$empty.$submitOnClick.'return false;" title="'.JText::_('REMOVE_THIS_SELECTION').'" data-uk-tooltip="offset: 0"><img src="'.JURI::base().'images/sprite.svg#chevron-circle-up" width="20" height="20" alt="" data-uk-svg></a>';
 		return $html;
 	}
 
@@ -1424,10 +1424,10 @@ class hikashopFilterTypeClass extends hikashopClass {
 		}
 		switch ($position){
 			case 'bottom':
-				$html=$html.'<br/>'.$name.' '.$opt;
+				$html=$html.''.$name.' '.$opt;
 				break;
 			case 'top':
-				$html=$name.' '.$opt.'<br/>'.$html;
+				$html=$name.' '.$opt.''.$html;
 				break;
 			case 'left':
 				$html=$name.' '.$opt.' '.$html;
@@ -1445,7 +1445,7 @@ class hikashopFilterTypeClass extends hikashopClass {
 		if($val==$trans){
 			$trans = $name;
 		}
-		return '<span class="hikashop_filter_title">'.$trans.'</span>';
+		return '<span class="hikashop_filter_title uk-display-block uk-text-bold uk-text-accent uk-margin-small-bottom font">'.$trans.'</span>';
 	}
 
 	function getCategories($filter, $datas=''){
@@ -1670,7 +1670,7 @@ class hikashopTextClass extends hikashopFilterTypeClass{
 		$attributes = '';
 
 		if($filter->filter_options['textBoxSize']){
-			$attributes .= ' style="width: 90%;"';
+			$attributes .= ' ';
 		}
 
 		if(!empty($selected)){
@@ -1695,7 +1695,7 @@ class hikashopTextClass extends hikashopFilterTypeClass{
 		if($filter->filter_options['title_position']=='inside' && empty($name)){
 			$attributes .= ' placeholder="'.strip_tags($this->trans($filter->filter_name)).'"';
 		}
-		$html = '<input name="filter_'.$filter->filter_namekey.'"'.$attributes.' type="text" id="filter_text_'.$filter->filter_namekey.'" value="'.$name.'">';
+		$html = '<input class="uk-width-1-1 uk-border-rounded uk-text-right font uk-input" name="filter_'.$filter->filter_namekey.'"'.$attributes.' type="text" id="filter_text_'.$filter->filter_namekey.'" value="'.$name.'">';
 		$html = '<span id="filter_values_container_'.$filter->filter_namekey.'_'.$divName.'" class="filter_values_container">'.$html.'</span>';
 		$html=parent::titlePosition($filter, $html);
 		return $html;
@@ -1917,7 +1917,7 @@ class hikashopRadioClass extends hikashopFilterTypeClass{
 
 		$html='';
 		$br='';
-		if(isset($filter->filter_options['button_align']) && $filter->filter_options['button_align']==0){ $br='<br/>'; }
+		if(isset($filter->filter_options['button_align']) && $filter->filter_options['button_align']==0){ $br=''; }
 		if(!empty($tab)){
 			$html.= '<input type="hidden" name="filter_'.$filter->filter_namekey.'"  id="filter_'.$filter->filter_namekey.'_'.$divName.'" value=" "/>';
 		}
@@ -2439,7 +2439,7 @@ document.getElementById('slider_".$filter->filter_namekey.'_'.$divName."_end').a
 			$value = 'values[handle]';
 			if(isset($currencies[$currency_id])) {
 				if($currencies[$currency_id]->currency_locale['p_cs_precedes']){
-					$before_input = '<span class="hikashop_filter_cursor_currency" >'.$currency.'</span>';
+					$before_input = '<span class="hikashop_filter_cursor_currency uk-text-tiny uk-text-secondary font" >'.$currency.'</span>';
 					$done = true;
 				}
 				$value = 'parseFloat(values[handle]).toFixed('.(int)$currencies[$currency_id]->currency_locale['int_frac_digits'].')';
@@ -2452,7 +2452,7 @@ else
 			";
 
 			if(!$done) {
-				$after_input = '<span class="hikashop_filter_cursor_currency" >'.$currency.'</span>';
+				$after_input = '<span class="hikashop_filter_cursor_currency uk-text-tiny uk-text-secondary font" >'.$currency.'</span>';
 			}
 		} else {
 
@@ -2536,27 +2536,21 @@ window.hikashop.ready(function(){
 		}
 
 		if($filter->filter_options['title_position'] == 'left') {
-			$float = 'float:left;';
+			$float = '';
 		}
 
-		$html = '<div style="'.$cursorWidth.' '.$float.' margin: 10px 20px;" id="slider_'.$filter->filter_namekey.'_'.$divName.'" data-container-div="hikashop_filter_form_'.$divName.'">'.$html.'</div>';
+		$html = '<div id="slider_'.$filter->filter_namekey.'_'.$divName.'" data-container-div="hikashop_filter_form_'.$divName.'">'.$html.'</div>';
 		if(!empty($js))
 			$html .= '<script>'.$js.'</script>';
 		if(!empty($filter->filter_options['input'])) {
-			$html = '
-<span class="slider_input_start_group">
-	<span class="slider_input_text slider_input_start_text">'.JText::_('CURSOR_FILTER_FROM').'</span>'.
+			$html = '<div class="uk-margin-bottom uk-text-zero uk-flex">
+<span class="slider_input_start_group uk-display-block uk-flex uk-flex-center">
+	<span class="slider_input_text slider_input_start_text uk-text-secondary uk-text-tiny font">'.JText::_('CURSOR_FILTER_FROM').'</span>'.
 	$before_input.
-	'<input class="slider_input slider_input_start" id="slider_'.$filter->filter_namekey.'_'.$divName.'_start" value="'.$minVal.'"/>'.
-	$after_input.
-'</span>
-<span class="slider_input_end_group">
-	<span class="slider_input_text slider_input_end_text">'. JText::_('CURSOR_FILTER_TO').'</span>'.
-	$before_input.
-	'<input class="slider_input slider_input_end" id="slider_'.$filter->filter_namekey.'_'.$divName.'_end" value="'.$maxVal.'"/>'.
-	$after_input.
-'</span>'.
-$html;
+	'<input class="font uk-text-center ltr slider_input slider_input_start" id="slider_'.$filter->filter_namekey.'_'.$divName.'_start" value="'.$minVal.'"/></span>
+<span class="slider_input_end_group uk-display-block uk-flex uk-flex-center">
+	<span class="slider_input_text slider_input_end_text uk-text-secondary uk-text-tiny font">'. JText::_('CURSOR_FILTER_TO').'</span>'.
+	$before_input.'<input class="font uk-text-center ltr slider_input slider_input_end" id="slider_'.$filter->filter_namekey.'_'.$divName.'_end" value="'.$maxVal.'"/>'.$after_input.'</span></div>'.$html;
 		}
 
 		$html = $this->cursorTitlePosition($filter, $html, $cursorWidth, $divName,$deleteButton,$hasValue);
@@ -2590,19 +2584,19 @@ $html;
 				$html=$name.JText::_('CURSOR_TITLE_SEPARATOR').$input.$html;
 				break;
 			case 'top_right':
-				$html='<div class="filter_'.$filter->filter_namekey.'_'.$divName.'_title_div" style="'.$width.' text-align:right;">'.$name.JText::_('CURSOR_TITLE_SEPARATOR').$input.''.$html.'</div>';
+				$html='<div class="filter_'.$filter->filter_namekey.'_'.$divName.'_title_div">'.$name.$input.''.$html.'</div>';
 				break;
 			case 'top_center':
-				$html='<div class="filter_'.$filter->filter_namekey.'_'.$divName.'_title_div" style="'.$width.' text-align:center;">'.$name.JText::_('CURSOR_TITLE_SEPARATOR').$input.' '.$html.'</div>';
+				$html='<div class="filter_'.$filter->filter_namekey.'_'.$divName.'_title_div">'.$name.JText::_('CURSOR_TITLE_SEPARATOR').$input.' '.$html.'</div>';
 				break;
 			case 'bottom_left':
 				$html=$html.$name.JText::_('CURSOR_TITLE_SEPARATOR').$input;
 				break;
 			case 'bottom_right':
-				$html='<div class="filter_'.$filter->filter_namekey.'_'.$divName.'_title_div" style="'.$width.' text-align:right;">'.$html.$name.JText::_('CURSOR_TITLE_SEPARATOR').$input.'</div>';
+				$html='<div class="filter_'.$filter->filter_namekey.'_'.$divName.'_title_div">'.$html.$name.JText::_('CURSOR_TITLE_SEPARATOR').$input.'</div>';
 				break;
 			case 'bottom_center':
-				$html='<div class="filter_'.$filter->filter_namekey.'_'.$divName.'_title_div" style="'.$width.' text-align:center;">'.$html.$name.JText::_('CURSOR_TITLE_SEPARATOR').$input.'</div>';
+				$html='<div class="filter_'.$filter->filter_namekey.'_'.$divName.'_title_div">'.$html.$name.JText::_('CURSOR_TITLE_SEPARATOR').$input.'</div>';
 				break;
 		}
 		return $html;
@@ -2667,8 +2661,8 @@ class hikashopInStockCheckboxClass extends hikashopFilterTypeClass{
 		}
 		$onClick = 'onchange="var hiddenInput = document.getElementById(\'filter_'.$filter->filter_namekey.$tab.'_hidden\');if(this.checked){ hiddenInput.value=\'in_stock\'; }else{ hiddenInput.value=\'\'; } '.$onClick.'"';
 
-		$html.= '<span class="hikashop_filter_checkbox"><input data-container-div="hikashop_filter_form_'.$divName.'"'.$onClick.' '.$checked.' type="checkbox" name="filter_'.$filter->filter_namekey.$tab.'_checkbox" value="in_stock"><input id="filter_'.$filter->filter_namekey.$tab.'_hidden" type="hidden" name="filter_'.$filter->filter_namekey.$tab.'" value="'.$value.'"></span>';
-		$html.='<span style="margin-left: 5px;">'.$filter->filter_name.'</span>';
+		$html.= '<label class="uk-flex uk-flex-middle uk-text-zero uk-text-secondary hoverBlack cursorPointer" for="filter_'.$filter->filter_namekey.$tab.'_checkbox"><span class="hikashop_filter_checkbox"><input data-container-div="hikashop_filter_form_'.$divName.'"'.$onClick.' '.$checked.' type="checkbox" id="filter_'.$filter->filter_namekey.$tab.'_checkbox" name="filter_'.$filter->filter_namekey.$tab.'_checkbox" value="in_stock" class="uk-checkbox"><input id="filter_'.$filter->filter_namekey.$tab.'_hidden" type="hidden" name="filter_'.$filter->filter_namekey.$tab.'" value="'.$value.'"></span>';
+		$html.= '<span class="uk-text-small uk-margin-small-right font">'.$filter->filter_name.'</span></label>';
 		return $html;
 	}
 }

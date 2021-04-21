@@ -7,33 +7,29 @@
  * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
  */
 defined('_JEXEC') or die('Restricted access');
-?><?php
+?>
+<?php
 $mainDivName = $this->params->get('main_div_name', '');
-
 $link = hikashop_contentLink('product&task=show&cid=' . (int)$this->row->product_id . '&name=' . $this->row->alias . $this->itemid . $this->category_pathway, $this->row);
 $haveLink = (int)$this->params->get('link_to_product_page', 1);
-
 if(!empty($this->row->extraData->top)) { echo implode("\r\n",$this->row->extraData->top); }
-
 ?>
 <div class="hikashop_listing_img_title" id="div_<?php echo $mainDivName.'_'.$this->row->product_id;  ?>">
-<?php
-if($this->config->get('thumbnail', 1)) {
-?>
-	<!-- PRODUCT IMG -->
-	<div class="hikashop_product_image">
-		<div class="hikashop_product_image_subdiv">
-<?php if($haveLink) { ?>
-			<a href="<?php echo $link;?>" title="<?php echo $this->escape($this->row->product_name); ?>">
-<?php } ?>
-<?php
+<?php if($this->config->get('thumbnail', 1)) { ?>
+    <!-- PRODUCT IMG -->
+	<div class="hikashop_product_image__">
+		<div class="hikashop_product_image_subdiv__">
+            <?php if ($haveLink) { ?>
+                <a class="uk-display-block" href="<?php echo $link;?>" title="<?php echo $this->escape($this->row->product_name); ?>">
+            <?php } ?>
+            <?php
 	$img = $this->image->getThumbnail(
 		@$this->row->file_path,
 		array('width' => $this->image->main_thumbnail_x, 'height' => $this->image->main_thumbnail_y),
 		array('default' => true,'forcesize'=>$this->config->get('image_force_size',true),'scale'=>$this->config->get('image_scale_mode','inside'))
 	);
 	if($img->success) {
-		$html = '<img class="hikashop_product_listing_image" title="'.$this->escape(@$this->row->file_description).'" alt="'.$this->escape(@$this->row->file_name).'" src="'.$img->url.'"/>';
+		$html = '<img class="uk-width-1-1 hikashop_product_listing_image" title="'.$this->escape(@$this->row->file_description).'" alt="'.$this->escape(@$this->row->file_name).'" src="'.$img->url.'"/>';
 		if($this->config->get('add_webp_images', 1) && function_exists('imagewebp') && !empty($img->webpurl)) {
 			$html = '
 			<picture>
@@ -59,6 +55,19 @@ if($this->config->get('thumbnail', 1)) {
 	<!-- EO PRODUCT IMG -->
 <?php } ?>
 
+    <!-- PRODUCT NAME -->
+    <span class="hikashop_product_name uk-display-block uk-margin-small-bottom">
+<?php if($haveLink) { ?>
+		<a class=" uk-display-block uk-text-small uk-text-bold uk-text-ddark hoverAccent font" href="<?php echo $link;?>">
+<?php } ?>
+<?php echo $this->row->product_name; ?>
+<?php if($haveLink) { ?>
+		</a>
+<?php } ?>
+	</span>
+    <meta itemprop="name" content="<?php echo $this->escape(strip_tags($this->row->product_name)); ?>">
+    <!-- EO PRODUCT NAME -->
+
 	<!-- PRODUCT PRICE -->
 <?php
 	if($this->params->get('show_price','-1')=='-1'){
@@ -71,19 +80,6 @@ if($this->config->get('thumbnail', 1)) {
 	}
 ?>
 	<!-- EO PRODUCT PRICE -->
-
-	<!-- PRODUCT NAME -->
-	<span class="hikashop_product_name">
-<?php if($haveLink) { ?>
-		<a href="<?php echo $link;?>">
-<?php } ?>
-			<?php echo $this->row->product_name; ?>
-<?php if($haveLink) { ?>
-		</a>
-<?php } ?>
-	</span>
-	<meta itemprop="name" content="<?php echo $this->escape(strip_tags($this->row->product_name)); ?>">
-	<!-- EO PRODUCT NAME -->
 
 	<!-- PRODUCT CODE -->
 		<span class='hikashop_product_code_list'>

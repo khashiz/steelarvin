@@ -10,6 +10,9 @@ defined('_JEXEC') or die('Restricted access');
 ?>
 
 <main data-uk-height-viewport="expand: true">
+    <div class="uk-padding uk-padding-remove-horizontal">
+        <div class="uk-container">
+            <div>
 <?php
 if(!$this->module && isset($this->element->category_canonical) && !empty($this->element->category_canonical)) {
 	$canonicalUrl = hikashop_cleanURL($this->element->category_canonical);
@@ -133,29 +136,8 @@ if((!$this->module || hikaInput::get()->getVar('hikashop_front_end_main', 0)) &&
 	$params = JComponentHelper::getParams('com_menus');
 	$title = $params->get('show_page_heading');
 }
-
-if(!empty($title) && hikaInput::get()->getVar('hikashop_front_end_main', 0) && (!$this->module || $this->pageInfo->elements->total)) {
-	$name = $this->params->get('page_title');
-	if($this->module) {
-		$name = $this->params->get('title');
-	} elseif($this->params->get('page_heading')) {
-		$name = $this->params->get('page_heading');
-	}
 ?>
-    <section class="bgPrimary uk-padding uk-padding-remove-horizontal uk-text-zero pageHeading">
-        <div class="uk-container">
-            <div>
-                <div class="uk-grid-small" data-uk-grid>
-                    <div class="uk-width-auto">
-                        <<?php echo $titleType; ?> class="uk-margin-remove uk-text-white font"><?php echo $name; ?></<?php echo $titleType; ?>>
-                    </div>
-                    <div class="uk-width-expand"></div>
-                </div>
-            </div>
-        </div>
-    </section>
 <?php
-}
 
 
 $val = hikaInput::get()->getVar('hikashop_front_end_main',0);
@@ -270,21 +252,26 @@ if($filter_type !== 3) {
 		if(!empty($htmlFilter) && $ctrl == 'category')
 			echo $htmlFilter;
 ?>
-	<div class="hikashop_products_listing fffff">
-        <div class="uk-padding uk-padding-remove-horizontal">
-            <?php
-            if(hikaInput::get()->getVar('hikashop_front_end_main',0) && hikaInput::get()->getVar('task') == 'listing' && $this->params->get('show_compare')) {
-			$css_button = $this->config->get('css_button', 'hikabtn');
-			$css_button_compare = $this->config->get('css_button_compare', 'hikabtn-compare');
-			?>
-			<div id="hikashop_compare_zone" class="hikashop_compare_zone">
-				<a class="<?php echo $css_button . ' ' . $css_button_compare; ?>" id="hikashop_compare_button" style="display:none;" href="#" data-compare-href="<?php echo hikashop_completeLink('product&task=compare'.$this->itemid, false, true); ?>" onclick="if(window.hikashop.compareProducts) { return window.hikashop.compareProducts(this); }"><span><?php
-					echo JText::_('COMPARE_PRODUCTS');
-				?></span></a>
-			</div>
-        <?php } echo $html; ?>
+        <div class="uk-width-1-1 uk-width-expand@m productsContainer">
+            <div class="hikashop_products_listing fffff">
+                <div>
+                    <div class="uk-card uk-card-default uk-border-rounded uk-overflow-hidden uk-box-shadow-small">
+                        <div>
+                            <?php if(hikaInput::get()->getVar('hikashop_front_end_main',0) && hikaInput::get()->getVar('task') == 'listing' && $this->params->get('show_compare')) {
+                                $css_button = $this->config->get('css_button', 'hikabtn');
+                                $css_button_compare = $this->config->get('css_button_compare', 'hikabtn-compare');
+                                ?>
+                                <div id="hikashop_compare_zone" class="hikashop_compare_zone">
+                                    <a class="<?php echo $css_button . ' ' . $css_button_compare; ?>" id="hikashop_compare_button" style="display:none;" href="#" data-compare-href="<?php echo hikashop_completeLink('product&task=compare'.$this->itemid, false, true); ?>" onclick="if(window.hikashop.compareProducts) { return window.hikashop.compareProducts(this); }">
+                                        <span><?php echo JText::_('COMPARE_PRODUCTS'); ?></span>
+                                    </a>
+                                </div>
+                            <?php } echo $html; ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-	</div>
 <?php
 	} elseif(( !$this->module || hikaInput::get()->getVar('hikashop_front_end_main',0) ) && ($ctrl == 'product'  || $ctrl == 'category') && $task == 'listing' && !empty($this->filters) && is_array($this->filters) && count($this->filters) && !empty($this->filter_set)) {
 		if(!empty($htmlFilter))
@@ -378,12 +365,12 @@ if($filter_type !== 3) {
 $html = ob_get_clean();
 if(!empty($html) || hikaInput::get()->getVar('hikashop_front_end_main',0)) {
 ?>
-	<div id="<?php echo $this->params->get('main_div_name');?>" class="<?php echo $classes; ?>" <?php echo $attributes; ?>>
+	<div data-uk-grid id="<?php echo $this->params->get('main_div_name');?>" class="<?php echo $classes; ?>" <?php echo $attributes; ?>>
 <?php
 	if(hikaInput::get()->getVar('hikashop_front_end_main',0)) {
 ?>
-		<div class="hikashop_checkout_loading_elem"></div>
-		<div class="hikashop_checkout_loading_spinner"></div>
+		<div class="hikashop_checkout_loading_elem uk-hidden"></div>
+		<div class="hikashop_checkout_loading_spinner uk-hidden"></div>
 <?php
 	}
 	echo $html;
@@ -391,20 +378,21 @@ if(!empty($html) || hikaInput::get()->getVar('hikashop_front_end_main',0)) {
 	</div>
 <?php
 }
+?>
 
-if(!$this->module){
-?>
-<div class="hikashop_submodules">
-<?php
-	if(!empty($this->modules)){
-		jimport('joomla.application.module.helper');
-		foreach($this->modules as $module) {
-			echo JModuleHelper::renderModule($module);
-		}
-	}
-?>
-</div>
-<?php
-}
-?>
+            <?php if(!$this->module) { ?>
+                <div class="hikashop_submodules">
+                    <?php
+                        if(!empty($this->modules)){
+                            jimport('joomla.application.module.helper');
+                            foreach($this->modules as $module) {
+                                echo JModuleHelper::renderModule($module);
+                            }
+                        }
+                    ?>
+                </div>
+            <?php } ?>
+        </div>
+    </div>
+    </div>
 </main>

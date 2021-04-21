@@ -396,7 +396,7 @@ if(!empty($shows['taxes']) && isset($this->total->prices[0])) {
 						$total_price .= JText::_('PRICE_AFTER_TAX');
 					}
 					?>
-					<span class="hikashop_product_price_full">
+					<span class="hikashop_product_price_full qqqeeqeqe">
 						<span class="hikashop_product_price hikashop_product_price_0">
 							<?php echo $total_price; ?>
 						</span>

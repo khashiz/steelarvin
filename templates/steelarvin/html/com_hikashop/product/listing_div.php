@@ -88,7 +88,7 @@ if(!empty($this->rows)) {
 
 	if(empty($this->tmpl_ajax)) {
 ?>
-<div id="hikashop_products_switcher_<?php echo $mainDivName; ?>" class="uk-container hikashop_products <?php echo @$cookie_value; ?>"<?php echo $attributes; ?> itemscope="" itemtype="https://schema.org/itemListElement">
+<div id="hikashop_products_switcher_<?php echo $mainDivName; ?>" class="hikashop_products <?php echo @$cookie_value; ?>"<?php echo $attributes; ?> itemscope="" itemtype="https://schema.org/itemListElement">
 <?php
 	}
 	if ($switchMode) {
@@ -167,9 +167,9 @@ window.localPage.setCookie = function (name,value,delay) {
 		}
 
 		if($row_fluid == 12)
-			echo '<div data-uk-grid>';
+			echo '<div class="uk-grid-collapse uk-flex uk-flex-wrap uk-child-width-1-1 uk-child-width-1-3@m productGridWrapper">';
 		else
-			echo '<div data-uk-grid>';
+			echo '<div class="uk-grid-collapse uk-flex uk-flex-wrap uk-child-width-1-1 uk-child-width-1-3@m productGridWrapper">';
 
 		$itemLayoutType = $this->params->get('div_item_layout_type');
 		if(empty($itemLayoutType))
@@ -177,8 +177,8 @@ window.localPage.setCookie = function (name,value,delay) {
 
 		foreach($this->rows as $row) {
 ?>
-		<div class="uk-width-1-1 uk-width-1-4@m" itemprop="itemList" itemscope="" itemtype="http://schema.org/ItemList">
-			<div class="hikashop_container">
+		<div class="gridItem" itemprop="itemList" itemscope="" itemtype="http://schema.org/ItemList">
+			<div class="hikashop_container uk-padding-small uk-margin-remove uk-position-relative">
 				<div class="hikashop_subcontainer <?php echo $this->borderClass; ?>">
 <?php
 			$this->quantityLayout = $this->getProductQuantityLayout($row);
@@ -236,9 +236,9 @@ window.localPage.setCookie = function (name,value,delay) {
 			$cid = '&cid='.(int)(is_array($this->pageInfo->filter->cid) ? reset($this->pageInfo->filter->cid) : $this->pageInfo->filter->cid);
 
 ?>
-		<div class="hikashop_infinite_scroll" id="<?php echo $mainDivName; ?>_infinite_scroll">
-			<a href="#" onclick="return window.localPage.infiniteScroll('<?php echo $mainDivName; ?>');">
-				<span><?php echo JText::_('HIKA_LOAD_MORE'); ?></span>
+		<div class="uk-padding uk-text-center hikashop_infinite_scroll" id="<?php echo $mainDivName; ?>_infinite_scroll">
+			<a class="uk-display-inline-block uk-text-accent hoverAccent" href="#" onclick="return window.localPage.infiniteScroll('<?php echo $mainDivName; ?>');">
+				<span data-uk-spinner></span>
 			</a>
 		</div>
 <script type="text/javascript">

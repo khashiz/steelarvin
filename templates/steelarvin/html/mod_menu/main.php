@@ -18,7 +18,7 @@ if ($tagId = $params->get('tag_id', ''))
 
 // The menu class is deprecated. Use nav instead
 ?>
-<div>
+<div class="uk-visible@m">
     <nav class="uk-height-1-1 uk-flex uk-flex uk-flex-middle">
         <ul class="uk-padding-remove uk-margin-remove uk-flex uk-flex-center nav menu<?php echo $class_sfx; ?> mod-list"<?php echo $id; ?>>
             <?php foreach ($list as $i => &$item)
@@ -86,7 +86,7 @@ if ($tagId = $params->get('tag_id', ''))
                 // The next item is deeper.
                 if ($item->deeper)
                 {
-                    echo '<div data-uk-drop="offset:0;delay-hide:200;animation:uk-animation-slide-bottom-small;duration:200;pos:bottom-right;"><div class="uk-card uk-card-body uk-card-default uk-padding-remove uk-box-shadow-small"><ul class="nav-child unstyled small">';
+                    echo '<div data-uk-drop="offset:24;delay-hide:200;animation:uk-animation-slide-bottom-small;duration:200;pos:bottom-right;"><div class="uk-card uk-card-body uk-card-default uk-padding-remove uk-box-shadow-small"><ul class="uk-padding-remove uk-margin-remove nav-child unstyled small">';
                 }
                 // The next item is shallower.
                 elseif ($item->shallower)
