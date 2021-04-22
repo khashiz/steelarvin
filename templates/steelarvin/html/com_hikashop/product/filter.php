@@ -112,11 +112,14 @@ if(!empty($this->filters)){
 	}
 ?>
     <div class="uk-width-1-1 uk-width-1-4@m filtersContainer">
-        <div data-uk-sticky="offset: 110; bottom: true;">
+        <div data-uk-sticky="offset: 110; bottom: true; media: @m">
             <div class="uk-card uk-card-default uk-border-rounded uk-overflow-hidden uk-box-shadow-small">
                 <div id="filtersAccordion" data-uk-accordion>
                     <div class="uk-open">
-                        <div onclick="UIkit.accordion('#filtersAccordion').toggle(0);" class="blockHeader">
+                        <div class="uk-visible@m blockHeader">
+                            <h3 class="uk-h5 uk-margin-remove uk-padding-small uk-text-bold uk-text-center font"><img src="<?php echo JURI::base().'images/sprite.svg#filter'; ?>" width="16" height="16" alt="<?php echo $sitename; ?>" class="uk-margin-small-left" data-uk-svg><?php echo JText::_('FILTERPRODUCTS'); ?></h3>
+                        </div>
+                        <div onclick="UIkit.accordion('#filtersAccordion').toggle(0);" class="uk-hidden@m blockHeader">
                             <h3 class="uk-h5 uk-margin-remove uk-padding-small uk-text-bold uk-text-center font"><img src="<?php echo JURI::base().'images/sprite.svg#filter'; ?>" width="16" height="16" alt="<?php echo $sitename; ?>" class="uk-margin-small-left" data-uk-svg><?php echo JText::_('FILTERPRODUCTS'); ?></h3>
                         </div>
                         <div class="uk-accordion-content uk-margin-remove">
@@ -247,11 +250,9 @@ return false;
     </div>
 <?php } ?>
 <script type="text/javascript">
-    // if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-    //     // true for mobile device
-    //     document.write("mobile device");
-    // }else{
-    //     // false for not mobile device
-    //     document.write("not mobile device");
-    // }
+    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+        jQuery(document).ready(function () {
+            UIkit.accordion('#filtersAccordion').toggle(0, false);
+        });
+    }
 </script>

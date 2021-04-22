@@ -176,13 +176,17 @@ window.localPage.setCookie = function (name,value,delay) {
 			$itemLayoutType = 'img_title';
 
 		foreach($this->rows as $row) {
+
+            $this->quantityLayout = $this->getProductQuantityLayout($row);
+            $this->row =& $row;
 ?>
-		<div class="gridItem" itemprop="itemList" itemscope="" itemtype="http://schema.org/ItemList">
+
+
+            <div class="gridItem <?php if($this->row->product_quantity != '-1') echo JText::_('outOfStock'); ?>" itemprop="itemList" itemscope="" itemtype="http://schema.org/ItemList">
 			<div class="hikashop_container uk-padding-small uk-margin-remove uk-position-relative">
 				<div class="hikashop_subcontainer <?php echo $this->borderClass; ?>">
 <?php
-			$this->quantityLayout = $this->getProductQuantityLayout($row);
-			$this->row =& $row;
+
 			$this->setLayout('listing_' . $itemLayoutType);
 			echo $this->loadTemplate();
 			unset($this->row);

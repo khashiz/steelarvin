@@ -95,7 +95,7 @@ if(!empty($show_msrp)) {
 
 			if(!empty($this->row->discount)) {
 				if(in_array($this->params->get('show_discount'), array(1, 4))) {
-					echo '<div class="uk-padding-small uk-position-top-left"><span class="hikashop_product_discount uk-label uk-label-success uk-text-tiny uk-text-bold ">'.JText::_('PRICE_DISCOUNT_START');
+					echo '<div class="uk-position-top-left"><span class="hikashop_product_discount uk-label uk-label-success uk-text-tiny uk-text-bold ">'.JText::_('PRICE_DISCOUNT_START');
 					if(bccomp($this->row->discount->discount_flat_amount, 0, 5) !== 0) {
 						echo $this->currencyHelper->format( -1 * $this->row->discount->discount_flat_amount, $price->price_currency_id);
 					} elseif(bccomp($this->row->discount->discount_percent_amount, 0, 5) !== 0) {
@@ -191,9 +191,9 @@ if(!empty($show_msrp)) {
 			echo '</span> ';
 			if(isset($price->price_min_quantity) && empty($this->cart_product_price) && $this->params->get('per_unit', 1)) {
 				if($price->price_min_quantity > 1) {
-					echo '<span class="hikashop_product_price_per_unit_x">'.JText::sprintf('PER_UNIT_AT_LEAST_X_BOUGHT',$price->price_min_quantity).'</span>';
+//					echo '<span class="hikashop_product_price_per_unit_x">'.JText::sprintf('PER_UNIT_AT_LEAST_X_BOUGHT',$price->price_min_quantity).'</span>';
 				} else {
-					echo '<span class="hikashop_product_price_per_unit">'.JText::_('PER_UNIT').'</span>';
+//					echo '<span class="hikashop_product_price_per_unit">'.JText::_('PER_UNIT').'</span>';
 				}
 			}
 			if($this->params->get('show_price_weight')){

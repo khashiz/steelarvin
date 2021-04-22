@@ -8,13 +8,14 @@
  */
 defined('_JEXEC') or die('Restricted access');
 ?>
+
 <?php
 $mainDivName = $this->params->get('main_div_name', '');
 $link = hikashop_contentLink('product&task=show&cid=' . (int)$this->row->product_id . '&name=' . $this->row->alias . $this->itemid . $this->category_pathway, $this->row);
 $haveLink = (int)$this->params->get('link_to_product_page', 1);
 if(!empty($this->row->extraData->top)) { echo implode("\r\n",$this->row->extraData->top); }
 ?>
-<div class="hikashop_listing_img_title" id="div_<?php echo $mainDivName.'_'.$this->row->product_id;  ?>">
+<div class="hikashop_listing_img_title <?php if($this->row->product_quantity != '-1') echo JText::_('outOfStock'); ?>" id="div_<?php echo $mainDivName.'_'.$this->row->product_id;  ?>">
 <?php if($this->config->get('thumbnail', 1)) { ?>
     <!-- PRODUCT IMG -->
 	<div class="hikashop_product_image__">

@@ -29,6 +29,8 @@
 				<field name="fax" type="textarea" label="TPL_ARVIN_FAX" />
 				<field name="addressfa" type="textarea" label="TPL_ARVIN_ADDRESS_FA" />
 				<field name="addressen" type="textarea" label="TPL_ARVIN_ADDRESS_EN" />
+				<field name="lat" type="text" label="TPL_ARVIN_LAT" />
+				<field name="lng" type="text" label="TPL_ARVIN_LNG" />
 				<field name="socials" type="repeatable" icon="list" label="TPL_ARVIN_SOCIALS">
 					<fieldset hidden="true" name="slides" repeat="true">
 						<field name="icon" class="width-100" type="text" label="TPL_ARVIN_ICON" />

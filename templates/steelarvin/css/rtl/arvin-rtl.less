@@ -358,6 +358,9 @@ div{
         font-variation-settings: "wght" 400, "wdth" 100, "slnt" 0, "DOTR" 1, "DOTS" 0, "KASH" 0;
         color: @dark;
         margin: 0;
+        @media (max-width:959px){
+          font-size: 14px;
+        }
       }
     }
   }
@@ -377,6 +380,9 @@ div{
               z-index: 1;
             }
           }
+        }
+        &.outOfStock{
+          filter: grayscale(100%);
         }
       }
     }
@@ -418,6 +424,24 @@ div{
     margin: 0 0 10px;
     .noUi-connect{
       background-color: @primary;
+    }
+  }
+  &.searchDrop{
+    width: 250px;
+    div{
+      &.uk-card{
+        overflow: hidden;
+        .border-radius(0 0 5px 5px);
+        div{
+          &.searchModContainer{
+            border-top: 4px solid @accent;
+            input{
+              border: none;
+              outline: none;
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -472,6 +496,12 @@ span{
       }
     }
   }
+  &.hikashop_product_discount{
+    padding: 4px 10px;
+    direction: ltr;
+    font-family: Arial, Helvetica, sans-serif;
+    .border-radius(0 0 5px 0);
+  }
 }
 .cursorPointer{
   cursor: pointer;
@@ -504,7 +534,20 @@ span{
   background: #fff;
   border-bottom: 1px dashed #ccc;
 }
+.hikashop_filter_list_selected{
+  .transform(translateY(3px);)
+}
+.searchToggler{
+  &[aria-expanded="true"]{
+  color: @accent;
+}
+}
 //UIKit Overrides
+.uk-label{
+  &.uk-label-success{
+    background-color: @success;
+  }
+}
 .uk-checkbox{
   .border-radius(3px);
 }
@@ -551,6 +594,46 @@ span{
     &:active,
     &:focus{
       background-color: #1b5e20;
+    }
+  }
+  &.uk-button-instagram{
+    background-color: #e1306c;
+    border: 1px solid darken(#e1306c, 5%);
+    color: #fff;
+    &:hover{
+      background-color: darken(#e1306c, 5%);
+    }
+  }
+  &.uk-button-facebook{
+    background-color: #3b5998;
+    border: 1px solid darken(#3b5998, 5%);
+    color: #fff;
+    &:hover{
+      background-color: darken(#3b5998, 5%);
+    }
+  }
+  &.uk-button-telegram{
+    background-color: #179cde;
+    border: 1px solid darken(#179cde, 5%);
+    color: #fff;
+    &:hover{
+      background-color: darken(#179cde, 5%);
+    }
+  }
+  &.uk-button-whatsapp{
+    background-color: #128c7e;
+    border: 1px solid darken(#128c7e, 5%);
+    color: #fff;
+    &:hover{
+      background-color: darken(#128c7e, 5%);
+    }
+  }
+  &.uk-button-twitter{
+    background-color: #1da1f2;
+    border: 1px solid darken(#1da1f2, 5%);
+    color: #fff;
+    &:hover{
+      background-color: darken(#1da1f2, 5%);
     }
   }
 }
@@ -603,12 +686,89 @@ span{
 .uk-text-zero{
   font-size: 0;
 }
+.uk-lineheight-zero{
+  line-height: 0;
+}
 .uk-text-tiny{
   font-size: 12px;
 }
 .uk-text-white{color: white;}
 .uk-text-primary{color: @primary !important;}
 .uk-text-success{color: @success !important;}
+.uk-text-danger{color: @danger !important;;}
 .uk-text-secondary{color: @secondary;}
 .uk-text-accent{color: @accent;}
 .uk-text-gray{color: @gray;}
+
+div{
+  &.uk-offcanvas{
+    &:before{
+      background-color: rgba(0, 0, 0, .5);
+    }
+    div{
+      &.uk-offcanvas-bar{
+        background-color: #fff;
+        a{
+          &.logo{
+            color: #e0e0e0;
+          }
+        }
+        div{
+          &.offcanvasTop{
+            background-color: @accent;
+            height: 70px;
+            a{
+              color: #fff;
+            }
+            &.active{
+              height: 60px;
+            }
+          }
+        }
+        ul{
+          &.uk-nav{
+            >li{
+              > a{
+                font-variation-settings: "wght" 500, "wdth" 100, "slnt" 0, "DOTR" 1, "DOTS" 0, "KASH" 0;
+                font-size: 16px;
+                padding: 15px 0;
+                color: @primary;
+                .font;
+              }
+              ul{
+                >li{
+                  >a{
+                    font-variation-settings: "wght" 500, "wdth" 100, "slnt" 0, "DOTR" 1, "DOTS" 0, "KASH" 0;
+                    font-size: 14px;
+                    display: block;
+                    padding: 0 15px 20px 0;
+                    color: @secondary;
+                    .font;
+                  }
+                }
+              }
+              &.uk-parent{
+                > a{
+                  &:after{
+                    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2213%22%20height%3D%2213%22%20viewBox%3D%220%200%2013%2013%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Crect%20fill%3D%22%23666%22%20width%3D%2213%22%20height%3D%221%22%20x%3D%220%22%20y%3D%226%22%20%2F%3E%0A%20%20%20%20%3Crect%20fill%3D%22%23666%22%20width%3D%221%22%20height%3D%2213%22%20x%3D%226%22%20y%3D%220%22%20%2F%3E%0A%3C%2Fsvg%3E");
+                    opacity: .3;
+                  }
+                }
+                &.uk-open{
+                  > a{
+                    &:after{
+                      background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2213%22%20height%3D%2213%22%20viewBox%3D%220%200%2013%2013%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Crect%20fill%3D%22%23666%22%20width%3D%2213%22%20height%3D%221%22%20x%3D%220%22%20y%3D%226%22%20%2F%3E%0A%3C%2Fsvg%3E");
+                    }
+                  }
+                }
+              }
+              &:not(:first-child){
+                border-top: 1px solid #f0f0f0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

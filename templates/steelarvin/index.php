@@ -283,15 +283,24 @@ $total = count($socialsicons['icon']);
         </div>
     </div>
 </footer>
+
 <div id="hamMenu" data-uk-offcanvas="overlay: true">
-    <div class="uk-offcanvas-bar uk-card uk-card-default bgWhite">
-
-        <button class="uk-offcanvas-close" type="button" uk-close></button>
-
-        <h3>Title</h3>
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-
+    <div class="uk-offcanvas-bar uk-card uk-card-default uk-padding-remove bgWhite">
+        <div class="uk-flex uk-flex-column uk-height-1-1">
+            <div class="uk-width-expand">
+                <div class="offcanvasTop uk-box-shadow-small uk-position-relative uk-flex-stretch">
+                    <div class="uk-grid-collapse uk-height-1-1 uk-grid uk-grid-stack" data-uk-grid="">
+                        <div class="uk-flex uk-width-1-3 uk-flex uk-flex-center uk-flex-middle"><a onclick="UIkit.offcanvas('#hamMenu').hide();" class="uk-flex uk-flex-center uk-flex-middle uk-height-1-1 uk-width-1-1 uk-margin-remove"><img src="<?php echo JURI::base().'images/sprite.svg#chevron-right'; ?>" width="24" height="24" data-uk-svg></a></div>
+                        <div class="uk-flex uk-width-1-3 uk-flex uk-flex-center uk-flex-middle"><a href="<?php echo JRoute::_("index.php?Itemid=167"); ?>" class="uk-flex uk-flex-center uk-flex-middle uk-height-1-1 uk-width-1-1 uk-margin-remove"><img src="<?php echo JURI::base().'images/sprite.svg#shopping-cart'; ?>" width="24" height="24" data-uk-svg></a></div>
+                        <div class="uk-flex uk-width-1-3 uk-flex uk-flex-center uk-flex-middle"><a href="" class="uk-flex uk-flex-center uk-flex-middle uk-height-1-1 uk-width-1-1 uk-margin-remove"><img src="<?php echo JURI::base().'images/sprite.svg#phone'; ?>" width="24" height="24" data-uk-svg></a></div>
+                    </div>
+                </div>
+                <div class="uk-padding-small"><jdoc:include type="modules" name="offcanvas" style="xhtml" /></div>
+            </div>
+            <div class="uk-text-center uk-padding">
+                <a href="<?php echo JURI::base(); ?>" title="<?php echo $sitename; ?>" class="uk-display-inline-block logo" target="_self"><img src="<?php echo JURI::base().'images/sprite.svg#logo'.$languageCode; ?>" width="150" alt="<?php echo $sitename; ?>" data-uk-svg></a>
+            </div>
+        </div>
     </div>
 </div>
 </body>

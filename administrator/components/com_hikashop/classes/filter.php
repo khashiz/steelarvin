@@ -1120,7 +1120,7 @@ class hikashopFilterTypeClass extends hikashopClass {
 		$br='';
 
 		if($filter->filter_type=='text'){
-			$html.='<a class="hikashop_filter_list_selected uk-text-bold font">'.$selected[0].'</a>, ';
+			$html.='<a class="hikashop_filter_list_selected uk-text-small uk-text-bold font">'.$selected[0].'</a>, ';
 			$html=$this->getDeleteButton($filter, $divName, $selected[0].' ', $html, $br);
 		}
 
@@ -1223,7 +1223,7 @@ class hikashopFilterTypeClass extends hikashopClass {
 			$html = '<a class="hikashop_filter_list_selected uk-text-small font">'.JText::sprintf('TEXTFROMTO','<span class="uk-text-bold">'.number_format(substr(@$selected[0], 0, -3)).'</span>','<span class="uk-text-bold">'.number_format(substr(@$selected[1], 0, -3)).'</span>').'</a>, ';
 			$html = $this->getDeleteButton($filter, $divName, $selected, $html, $br);
 		}
-		$html = '<span id="filter_values_container_'.$filter->filter_namekey.'_'.$divName.'" class="filter_values_container uk-flex uk-flex-between uk-flex-middle uk-width-1-1">'.$html.'</span>';
+		$html = '<span id="filter_values_container_'.$filter->filter_namekey.'_'.$divName.'" class="filter_values_container uk-text-zero uk-flex uk-flex-between uk-flex-middle uk-width-1-1">'.$html.'</span>';
 		$html = $this->titlePosition($filter, $html, true);
 		return $html;
 	}
@@ -1295,7 +1295,7 @@ class hikashopFilterTypeClass extends hikashopClass {
 		foreach($ids as $i){
 			$empty .= 'document.getElementById(\''.$i.'\').value=\' \'; ';
 		}
-		$html.='  <a href="#" data-container-div="hikashop_filter_form_'.$divName.'" onclick="'.$empty.$submitOnClick.'return false;" title="'.JText::_('REMOVE_THIS_SELECTION').'" data-uk-tooltip="offset: 0"><img src="'.JURI::base().'images/sprite.svg#chevron-circle-up" width="20" height="20" alt="" data-uk-svg></a>';
+		$html.='  <a class="uk-text-danger" href="#" data-container-div="hikashop_filter_form_'.$divName.'" onclick="'.$empty.$submitOnClick.'return false;" title="'.JText::_('REMOVE_THIS_SELECTION').'" data-uk-tooltip="offset: 5"><img src="'.JURI::base().'images/sprite.svg#times-circle" width="16" height="16" alt="" data-uk-svg></a>';
 		return $html;
 	}
 
@@ -1445,7 +1445,7 @@ class hikashopFilterTypeClass extends hikashopClass {
 		if($val==$trans){
 			$trans = $name;
 		}
-		return '<span class="hikashop_filter_title uk-display-block uk-text-bold uk-text-accent uk-margin-small-bottom font">'.$trans.'</span>';
+		return '<span class="hikashop_filter_title uk-display-block uk-text-bold uk-text-accent uk-margin-small-bottom uk-text-tiny font">'.$trans.'</span>';
 	}
 
 	function getCategories($filter, $datas=''){

@@ -57,7 +57,7 @@ class RSFormProFieldSubmitButton extends RSFormProFieldButton
 		
 		// Start building the HTML input
 		if ($buttonType == 'button') {
-			$html .= '<div><button';
+			$html .= '<div class="uk-flex-first uk-flex-last@m"><button';
 		} else {
 			$html .= '<input';
 		}
