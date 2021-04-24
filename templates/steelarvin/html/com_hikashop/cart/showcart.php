@@ -40,6 +40,7 @@ if(!isset($this->fullCart->prices[0])) {
 }
 
 ?>
+t4t5t54tt54t54t54t54
 <form method="POST" id="hikashop_show_cart_form" name="hikashop_show_cart_form" action="<?php echo hikashop_completeLink('cart'.$url_itemid);?>">
 	<div onload="document.getElementById('task').value='savecart'" id="hikashop_cart_listing">
 <?php

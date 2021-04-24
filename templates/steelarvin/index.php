@@ -128,7 +128,35 @@ $total = count($socialsicons['icon']);
 <?php } ?>
 <jdoc:include type="modules" name="pagetop" style="xhtml" />
 <jdoc:include type="message" />
-<jdoc:include type="component" />
+<main data-uk-height-viewport="expand: true">
+    <div class="uk-padding uk-padding-remove-horizontal">
+        <div>
+            <div class="uk-container">
+                <div class="hikashop_cpanel_main_interface">
+                    <div class="hikashop_dashboard" id="hikashop_dashboard" data-uk-grid>
+                        <?php if ($this->countModules( 'sidestart' )) { ?>
+                            <div class="uk-width-1-1 uk-width-1-4@m">
+                                <div data-uk-sticky="offset: 110; bottom: true;">
+                                    <div class="uk-card uk-card-default uk-border-rounded uk-overflow-hidden">
+                                        <div><jdoc:include type="modules" name="sidestart" style="xhtml" /></div>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php } ?>
+                        <div class="uk-width-1-1 uk-width-expand@m">
+                            <div><jdoc:include type="component" /></div>
+                        </div>
+                        <?php if ($this->countModules( 'sideend' )) { ?>
+                            <div class="uk-width-1-1 uk-width-1-4@m">
+                                <div><jdoc:include type="modules" name="sideend" style="xhtml" /></div>
+                            </div>
+                        <?php } ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
 <jdoc:include type="modules" name="pagebottom" style="xhtml" />
 <footer class="uk-text-zero">
     <div class="socials">

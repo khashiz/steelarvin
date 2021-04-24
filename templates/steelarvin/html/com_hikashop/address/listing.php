@@ -17,15 +17,16 @@ if(empty($this->ajax)) {
 <?php
 echo $this->toolbarHelper->process($this->toolbar, $this->title);
 ?>
-<div class="hikashop_address_listing_div">
-<form action="<?php echo hikashop_completeLink('address'); ?>" name="hikashop_user_address" method="post">
-
+<div class="hikashop_address_listing_div uk-card uk-card-default uk-border-rounded uk-overflow-hidden uk-padding">
+<form action="<?php echo hikashop_completeLink('address'); ?>" name="hikashop_user_address" method="post" class="regForm">
+    <div class="uk-form-stacked">
+    <div class="uk-child-width-1-1 uk-grid-divider" data-uk-grid>
 <div id="hikashop_user_addresses_default">
 	<div class="hikashop_checkout_loading_elem"></div>
 	<div class="hikashop_checkout_loading_spinner"></div>
-	<dl class="hika_options large hikashop_default_billing_address">
-		<dt><label for="hikashop_default_billing_address_selector"><?php echo JText::_('HIKASHOP_SELECT_DEFAULT_BILLING_ADDRESS'); ?></label></dt>
-		<dd><?php
+	<div class="default_billing_address">
+		<label for="hikashop_default_billing_address_selector" class="uk-form-label"><?php echo JText::_('HIKASHOP_SELECT_DEFAULT_BILLING_ADDRESS'); ?></label>
+		<div><?php
 			$current = 0;
 			$values = array();
 			if(!empty($this->addresses)) {
@@ -44,12 +45,12 @@ echo $this->toolbarHelper->process($this->toolbar, $this->title);
 			}
 			if(empty($values))
 				$values = array(JHTML::_('select.option', '', JText::_('HIKA_NO_ADDRESS')));
-			echo JHTML::_('select.genericlist', $values, 'data[user][default_billing]', 'class="hikashop_default_address_dropdown" onchange="window.addressMgr.setDefault(this, \'billing\');"', 'value', 'text', $current, 'hikashop_default_billing_address_selector');
-		?></dd>
-	</dl>
-	<dl class="hika_options large hikashop_default_shipping_address">
-		<dt><label for="hikashop_default_shipping_address_selector"><?php echo JText::_('HIKASHOP_SELECT_DEFAULT_SHIPPING_ADDRESS'); ?></label></dt>
-		<dd><?php
+			echo JHTML::_('select.genericlist', $values, 'data[user][default_billing]', 'class="uk-width-1-1 uk-border-rounded uk-select font hikashop_default_address_dropdown" onchange="window.addressMgr.setDefault(this, \'billing\');"', 'value', 'text', $current, 'hikashop_default_billing_address_selector');
+		?></div>
+	</div>
+	<div class="hika_options large hikashop_default_shipping_address uk-hidden">
+		<label for="hikashop_default_shipping_address_selector"><?php echo JText::_('HIKASHOP_SELECT_DEFAULT_SHIPPING_ADDRESS'); ?></label>
+		<div><?php
 			$current = 0;
 			$values = array();
 			if(!empty($this->addresses)) {
@@ -69,8 +70,8 @@ echo $this->toolbarHelper->process($this->toolbar, $this->title);
 			if(empty($values))
 				$values = array(JHTML::_('select.option', '', JText::_('HIKA_NO_ADDRESS')));
 			echo JHTML::_('select.genericlist', $values, 'data[user][default_shipping]', 'class="hikashop_default_address_dropdown" onchange="window.addressMgr.setDefault(this, \'shipping\');"', 'value', 'text', $current, 'hikashop_default_shipping_address_selector');
-		?></dd>
-	</dl>
+		?></div>
+	</div>
 </div>
 
 <div id="hikashop_user_addresses_show">
@@ -82,9 +83,10 @@ echo $this->toolbarHelper->process($this->toolbar, $this->title);
 <?php
 if(!empty($this->two_columns)) {
 ?>
-<div class="hk-row-fluid">
-	<div class="hkc-md-6 hikashop_billing_addresses">
-		<h3><?php echo JText::_('HIKASHOP_BILLING_ADDRESSES'); ?></h3>
+<div>
+	<div class="hikashop_billing_addresses">
+		<h3 class="uk-margin-bottom uk-text-accent uk-text-bold uk-h4 font"><?php echo JText::_('HIKASHOP_BILLING_ADDRESSES'); ?></h3>
+<div class="uk-margin-medium-bottom uk-text-zero uk-child-width-1-1 uk-grid-small" data-uk-grid>
 <?php
 }
 
@@ -92,7 +94,7 @@ foreach($this->addresses as $address) {
 	if($this->two_columns && $address->address_type != 'billing')
 		continue;
 ?>
-	<div class="hikashop_user_address address_selection" id="hikashop_user_address_<?php echo $address->address_id; ?>">
+	<div class="hikashop_user_address address_selection uk-position-relative" id="hikashop_user_address_<?php echo $address->address_id; ?>">
 <?php
 		$this->address_id = (int)$address->address_id;
 		$this->address = $address;
@@ -105,14 +107,16 @@ foreach($this->addresses as $address) {
 
 if(!empty($this->two_columns)) {
 ?>
-		<div class="" style="margin-top:6px;">
-			<a class="hikabtn hikabtn-success" href="#newAddress" onclick="return window.addressMgr.new('billing');"><i class="fa fa-plus"></i> <?php echo JText::_('HIKASHOP_NEW_BILLING_ADDRESS'); ?></a>
+    </div>
+		<div>
+			<a class="uk-button uk-button-success uk-border-rounded uk-box-shadow-small uk-width-1-1 uk-width-auto@m font" href="#newAddress" onclick="return window.addressMgr.new('billing');"><?php echo JText::_('HIKASHOP_NEW_BILLING_ADDRESS'); ?></a>
 		</div>
 	</div>
-	<div class="hkc-md-6 hikashop_shipping_addresses">
-		<h3><?php echo JText::_('HIKASHOP_SHIPPING_ADDRESSES'); ?></h3>
+	<div class="hikashop_shipping_addresses uk-hidden">
+		<h3 class="uk-margin-bottom uk-text-accent uk-text-bold uk-h4 font"><?php echo JText::_('HIKASHOP_SHIPPING_ADDRESSES'); ?></h3>
 <?php
 	foreach($this->addresses as $address) {
+
 		if($address->address_type != 'shipping')
 			continue;
 ?>
@@ -125,6 +129,7 @@ if(!empty($this->two_columns)) {
 ?>
 	</div>
 <?php
+
 	}
 ?>
 		<div class="" style="margin-top:6px;">
@@ -135,7 +140,7 @@ if(!empty($this->two_columns)) {
 <?php
 } else {
 ?>
-	<div class="" style="margin-top:6px;">
+	<div>
 		<a class="hikabtn hikabtn-success" href="#newAddress" onclick="return window.addressMgr.new('billing');"><i class="fa fa-plus"></i> <?php echo JText::_('HIKASHOP_NEW_BILLING_ADDRESS'); ?></a>
 		<a class="hikabtn hikabtn-success" href="#newAddress" onclick="return window.addressMgr.new('shipping');"><i class="fa fa-plus"></i> <?php echo JText::_('HIKASHOP_NEW_SHIPPING_ADDRESS'); ?></a>
 	</div>
@@ -174,6 +179,10 @@ if(empty($this->ajax)) {
 ?>
 </div>
 
+    </div>
+
+    </div>
+
 	<input type="hidden" name="option" value="<?php echo HIKASHOP_COMPONENT; ?>" />
 	<input type="hidden" name="ctrl" value="address" />
 	<input type="hidden" name="task" value="setdefault" />
@@ -199,7 +208,7 @@ window.addressMgr.get = function(elem, target) {
 	window.Oby.xRequest(elem.getAttribute('href'), {update: target}, function(){
 		t.loading(false);
 	});
-	document.getElementById('hikashop_address_listing').scrollIntoView();
+	// document.getElementById('hikashop_address_listing').scrollIntoView();
 	return false;
 };
 window.addressMgr.setDefault = function(elem, type) {
@@ -226,7 +235,7 @@ window.addressMgr.new = function(type) {
 	o.xRequest('<?php echo hikashop_completeLink('address&task=edit&cid=0', 'ajax'); ?>', {update: 'hikashop_user_addresses_show', mode: 'POST', data: data}, function(){
 		t.loading(false);
 	});
-	document.getElementById('hikashop_address_listing').scrollIntoView();
+	// document.getElementById('hikashop_address_listing').scrollIntoView();
 	return false;
 };
 window.addressMgr.delete = function(el, cid) {
@@ -294,3 +303,13 @@ window.addressMgr.addEntry = function(type, cid, text) {
 <div class="clear_both"></div>
 <?php
 }
+
+
+
+
+
+
+
+
+
+

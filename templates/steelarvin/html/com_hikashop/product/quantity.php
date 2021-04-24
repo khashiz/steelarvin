@@ -7,7 +7,8 @@
  * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
  */
 defined('_JEXEC') or die('Restricted access');
-?><?php
+?>
+<?php
 if($this->config->get('add_to_cart_legacy', true)) {
 	$this->setLayout('quantity_legacy');
 	echo $this->loadTemplate();

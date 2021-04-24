@@ -21,7 +21,7 @@ class JConfig {
 	public $live_site = '';
 	public $secret = 'nzlvXyF6xGWAv4Px';
 	public $gzip = '0';
-	public $error_reporting = 'default';
+	public $error_reporting = 'simple';
 	public $helpurl = 'https://help.joomla.org/proxy?keyref=Help{major}{minor}:{keyref}&lang={langcode}';
 	public $ftp_host = '';
 	public $ftp_port = '';
@@ -57,8 +57,8 @@ class JConfig {
 	public $unicodeslugs = '1';
 	public $feed_limit = '10';
 	public $feed_email = 'none';
-	public $log_path = 'F:\steelarvin\administrator\logs';
-	public $tmp_path = 'F:\steelarvin\tmp';
+	public $log_path = 'F:\\steelarvin\\administrator\\logs';
+	public $tmp_path = 'F:\\steelarvin\\tmp';
 	public $lifetime = '15';
 	public $session_handler = 'none';
 	public $shared_session = '0';
@@ -96,4 +96,5 @@ class JConfig {
 	public $cookie_domain = '';
 	public $cookie_path = '';
 	public $asset_id = '1';
+	public $behind_loadbalancer = '0';
 }

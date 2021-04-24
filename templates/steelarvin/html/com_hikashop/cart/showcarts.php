@@ -202,4 +202,3 @@ $config = hikashop_config();
 		</tbody>
 	</table>
 </div>
-<div class="clear_both"></div>

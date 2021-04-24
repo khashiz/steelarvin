@@ -2673,7 +2673,7 @@ class hikashopFieldDropdown extends hikashopFieldItem {
 			$arg = 'multiple="multiple"';
 			if(!empty($field->field_options['size'])) $arg .= ' size="'.intval($field->field_options['size']).'"';
 		}else{
-			$arg = 'size="1"';
+			$arg = '';
 			if(is_string($value)&& empty($value) && !empty($field->field_value) && (!isset($field->field_default) || !isset($field->field_value[$field->field_default]))){
 				$found = false;
 				$first = false;
@@ -2692,9 +2692,9 @@ class hikashopFieldDropdown extends hikashopFieldItem {
 			}
 		}
 		if(strpos($options, 'class="') === false) {
-			$options .= ' class="hikashop_field_dropdown"';
+			$options .= ' class="uk-width-1-1 uk-border-rounded font uk-select hikashop_field_dropdown"';
 		} else {
-			$options = str_replace('class="', 'class="hikashop_field_dropdown ', $options);
+			$options = str_replace('class="', 'class="uuuu hikashop_field_dropdown ', $options);
 		}
 		$options .= empty($field->field_options['attribute']) ? '' : ' '.$field->field_options['attribute'];
 		$string .= '<select id="'.$this->prefix.$field->field_namekey.$this->suffix.'" name="'.$map.'" '.$arg.$options.'>';

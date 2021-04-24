@@ -329,8 +329,8 @@ defined('_JEXEC') or die('Restricted access');
 <?php
 	if(!empty($this->manage)) {
 ?>
-				<a onclick="return window.hikashop.submitform('apply','hikashop_show_cart_form');"><i class="fa fa-sync"></i></a>
-				<a title="<?php echo JText::_('HIKA_DELETE'); ?>" class="hikashop_no_print" href="#delete" onclick="var qtyField = document.getElementById('<?php echo $this->last_quantity_field_id; ?>'); if(!qtyField) return false; qtyField.value = 0; return window.hikashop.submitform('apply','hikashop_show_cart_form');" title="<?php echo JText::_('HIKA_DELETE'); ?>">
+				<a gttrgrtgtrgt onclick="return window.hikashop.submitform('apply','hikashop_show_cart_form');"><i class="fa fa-sync"></i></a>
+				<a gtrgtrgrgtrgrgtrg title="<?php echo JText::_('HIKA_DELETE'); ?>" class="hikashop_no_print" href="#delete" onclick="var qtyField = document.getElementById('<?php echo $this->last_quantity_field_id; ?>'); if(!qtyField) return false; qtyField.value = 0; return window.hikashop.submitform('apply','hikashop_show_cart_form');" title="<?php echo JText::_('HIKA_DELETE'); ?>">
 					<i class="fas fa-trash"></i>
 				</a>
 <?php

@@ -444,6 +444,18 @@ div{
       }
     }
   }
+  &.cartActionIcons{
+    margin-top: 20px !important;
+    &:before{
+      top: -10px !important;
+      @media (max-width:959px){
+        display: none;
+      }
+    }
+  }
+  &.ellipsisDrop{
+    width: 150px;
+  }
 }
 form{
   &.regForm{
@@ -502,6 +514,11 @@ span{
     font-family: Arial, Helvetica, sans-serif;
     .border-radius(0 0 5px 0);
   }
+  &.result-created,
+  &.result-category{
+    padding: 2px 10px;
+    .border-radius(3px);
+  }
 }
 .cursorPointer{
   cursor: pointer;
@@ -539,10 +556,55 @@ span{
 }
 .searchToggler{
   &[aria-expanded="true"]{
-  color: @accent;
+    color: @accent;
+  }
 }
+.dashboardMenu{
+  li{
+    a{
+      font-size: 14px;
+      font-variation-settings: "wght" 500, "wdth" 100, "slnt" 0, "DOTR" 1, "DOTS" 0, "KASH" 0;
+      display: block;
+      padding: 15px;
+      .transition;
+      .font;
+    }
+    &.current,
+    &:hover{
+      a{
+        background-color: #fafafa;
+        color: @accent;
+      }
+    }
+    &:not(:first-child){
+      a{
+        border-top: 1px solid #f5f5f5;
+      }
+    }
+  }
 }
-//UIKit Overrides
+@media (max-width:959px){
+  .hikashop_cart_products{
+    tr{
+      &:first-child{
+        border-top: none;
+        td{
+          &:first-child{
+            padding-top: 0;
+          }
+        }
+      }
+      &:last-child{
+        td{
+          &:last-child{
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+  //UIKit Overrides
 .uk-label{
   &.uk-label-success{
     background-color: @success;
@@ -588,12 +650,25 @@ span{
   &.uk-button-success{
     background-color: @success;
     color: white;
+    border: none;
     &:hover{
-      background-color: #2e7d32;
+      background-color: darken(@success, 5%);
     }
     &:active,
     &:focus{
-      background-color: #1b5e20;
+      background-color: darken(@success, 10%);
+    }
+  }
+  &.uk-button-danger{
+    background-color: @danger;
+    color: white;
+    border: none;
+    &:hover{
+      background-color: darken(@danger, 5%);
+    }
+    &:active,
+    &:focus{
+      background-color: darken(@danger, 10%);
     }
   }
   &.uk-button-instagram{
@@ -699,6 +774,7 @@ span{
 .uk-text-secondary{color: @secondary;}
 .uk-text-accent{color: @accent;}
 .uk-text-gray{color: @gray;}
+.uk-text-lightgray{color: #e0e0e0;}
 
 div{
   &.uk-offcanvas{

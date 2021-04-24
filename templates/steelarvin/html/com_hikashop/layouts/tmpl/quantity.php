@@ -78,6 +78,7 @@ switch($quantityLayout) {
 
 	case 'show_regrouped':
 ?>
+    gggg
 		<div class="input-append hikashop_product_quantity_div hikashop_product_quantity_input_div_regrouped">
 			<input id="<?php echo $id; ?>" type="text" value="<?php echo $current_quantity; ?>" onfocus="this.select()" class="hikashop_product_quantity_field" name="<?php echo $quantity_fieldname; ?>" data-hk-qty-old="<?php echo $current_quantity; ?>" data-hk-qty-min="<?php echo $min_quantity; ?>" data-hk-qty-max="<?php echo $max_quantity; ?>"<?php echo $extra_data_attribute; ?> onchange="<?php echo $script; ?>" <?php echo $extra_data; ?> />
 			<div class="add-on hikashop_product_quantity_div hikashop_product_quantity_change_div_regrouped">
