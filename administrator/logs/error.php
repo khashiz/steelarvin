@@ -13,3 +13,6 @@
 2021-04-19T00:44:00+00:00	INFO ::1	joomlafailure	کاربر موجود نیست
 2021-04-19T00:45:08+00:00	INFO ::1	joomlafailure	کاربر موجود نیست
 2021-04-19T00:45:43+00:00	INFO ::1	joomlafailure	کاربر موجود نیست
+2021-04-24T12:48:53+00:00	INFO ::1	joomlafailure	رمز عبور اشتباه
+2021-04-24T12:49:13+00:00	INFO ::1	joomlacanceled	
+2021-04-24T12:50:12+00:00	INFO ::1	joomlacanceled	

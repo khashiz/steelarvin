@@ -48,7 +48,8 @@ $total = count($socialsicons['icon']);
     <meta name="theme-color" content="<?php echo $params->get('presetcolor'); ?>">
     <jdoc:include type="head" />
 </head>
-<body>
+<body class="<?php echo $view.' '.$layout.' '.$task; ?>">
+<?php if ($pageclass != 'checkout') { ?>
 <header id="header">
     <div class="uk-text-zero uk-visible@m topBar bgPrimary">
         <div class="uk-container">
@@ -110,6 +111,44 @@ $total = count($socialsicons['icon']);
         </div>
     </div>
 </header>
+<?php } ?>
+<?php if ($pageclass == 'checkout') { ?>
+    <header>
+        <div class="uk-text-zero uk-box-shadow-small bgWhite stickyHeader" data-uk-sticky="top: 120; animation: uk-animation-slide-top;">
+            <div class="uk-container">
+                <div class="stickyEffect">
+                    <div class="uk-padding-small uk-padding-remove-horizontal">
+                        <div class="uk-grid-small uk-flex-middle uk-flex-center" data-uk-grid>
+                            <div class="uk-width-auto uk-hidden@m">
+                                <div>
+                                    <a href="#hamMenu" data-uk-toggle class="uk-text-muted uk-border-rounded uk-button uk-button-default uk-button-small uk-display-block uk-text-muted uk-text-zero hamMenuToggler"><img src="<?php echo JURI::base().'images/sprite.svg#bars'; ?>" width="20" height="20" alt="<?php echo $sitename; ?>" data-uk-svg></a>
+                                </div>
+                            </div>
+                            <div class="uk-width-auto">
+                                <div>
+                                    <div class="uk-grid-small logoContainer" data-uk-grid>
+                                        <div class="uk-width-auto uk-flex uk-flex-middle uk-visible@m">
+                                            <a href="<?php echo JURI::base(); ?>" title="<?php echo $sitename; ?>" class="uk-display-inline-block uk-text-accent hoverAccent" target="_self"><img src="<?php echo JURI::base().'images/sprite.svg#logoShape'; ?>" width="98" height="40" alt="<?php echo $sitename; ?>" data-uk-svg></a>
+                                        </div>
+                                        <div class="uk-width-auto uk-flex uk-flex-middle">
+                                            <a href="<?php echo JURI::base(); ?>" title="<?php echo $sitename; ?>" class="uk-display-inline-block uk-text-primary hoverPrimary" target="_self"><img src="<?php echo JURI::base().'images/sprite.svg#logo'.$languageCode; ?>" width="150" alt="<?php echo $sitename; ?>" data-uk-svg></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-expand uk-flex uk-flex-middle uk-flex-left uk-hidden">
+                                <a href="<?php echo JURI::base(); ?>" title="" class="uk-text-tiny uk-text-bold uk-text-muted font">
+                                    <span><?php echo JText::sprintf('BACK'); ?></span>
+                                    <span class="uk-visible@m"><?php echo JText::sprintf('TOSHOP'); ?></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+<?php } ?>
 <?php if ($pageparams->get('show_page_heading')) : ?>
     <section class="bgPrimary uk-padding uk-padding-remove-horizontal uk-text-zero pageHeading">
         <div class="uk-container">
@@ -131,7 +170,7 @@ $total = count($socialsicons['icon']);
 <main data-uk-height-viewport="expand: true">
     <div class="uk-padding uk-padding-remove-horizontal">
         <div>
-            <div class="uk-container">
+            <div class="uk-container<?php if ($pageclass == 'checkout') { echo ' uk-container-xsmall';} ?>">
                 <div class="hikashop_cpanel_main_interface">
                     <div class="hikashop_dashboard" id="hikashop_dashboard" data-uk-grid>
                         <?php if ($this->countModules( 'sidestart' )) { ?>
@@ -158,6 +197,7 @@ $total = count($socialsicons['icon']);
     </div>
 </main>
 <jdoc:include type="modules" name="pagebottom" style="xhtml" />
+<?php if ($pageclass != 'checkout') { ?>
 <footer class="uk-text-zero">
     <div class="socials">
         <div class="uk-container">
@@ -311,6 +351,59 @@ $total = count($socialsicons['icon']);
         </div>
     </div>
 </footer>
+<?php } ?>
+<?php if ($pageclass == 'checkout') { ?>
+    <footer class="uk-text-zero uk-padding-small uk-padding-remove-horizontal">
+        <div class="copyright">
+            <div class="uk-container">
+                <div class="uk-padding-small uk-padding-remove-horizontal uk-padding-remove-top">
+                    <div class="uk-grid-small uk-text-white uk-text-center font" data-uk-grid>
+                        <div class="uk-width-1-1">
+                            <div>
+                                <div class="uk-child-width-auto uk-grid-small uk-flex-center uk-grid-divider" data-uk-grid>
+                                    <?php if (!empty($params->get('phone'))) { ?>
+                                        <div>
+                                            <div>
+                                                <div class="uk-grid-small contactFields" data-uk-grid>
+                                                    <div class="uk-width-auto uk-text-accent"><img src="<?php echo JURI::base().'images/sprite.svg#phone' ?>" width="20" height="20" alt="" data-uk-svg></div>
+                                                    <div class="uk-width-expand"><span class="uk-text-small uk-text-gray value font"><?php echo $params->get('phone'); ?></span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <?php } ?>
+                                    <?php if (!empty($params->get('email'))) { ?>
+                                        <div>
+                                            <div>
+                                                <div class="uk-grid-small contactFields" data-uk-grid>
+                                                    <div class="uk-width-auto uk-text-accent"><img src="<?php echo JURI::base().'images/sprite.svg#envelope' ?>" width="20" height="20" alt="" data-uk-svg></div>
+                                                    <div class="uk-width-expand uk-flex uk-flex-middle"><span class="uk-text-small uk-text-gray value font"><?php echo $params->get('email'); ?></span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <?php } ?>
+                                    <?php if (!empty($params->get('cellphone'))) { ?>
+                                        <div>
+                                            <div class="uk-grid-small contactFields" data-uk-grid>
+                                                <div class="uk-width-auto uk-text-accent"><img src="<?php echo JURI::base().'images/sprite.svg#mobile' ?>" width="20" height="20" alt="" data-uk-svg></div>
+                                                <div class="uk-width-expand uk-flex uk-flex-middle"><span class="uk-text-small uk-text-gray value font"><?php echo $params->get('cellphone'); ?></span></div>
+                                            </div>
+                                        </div>
+                                    <?php } ?>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="uk-width-1-1">
+                            <p class="uk-text-tiny uk-text-gray"><?php echo JTEXT::sprintf('COPYRIGHT', $sitename); ?></p>
+                        </div>
+                        <div class="uk-width-1-1">
+                            <p class="uk-text-tiny uk-text-gray uk-margin-bottom"><?php echo JTEXT::sprintf('DESIGNER', '<a href="https://netparsi.com" class="uk-text-gray hoverAccent" target="_blank" title="'.$netparsi.'">'.$netparsi.'</a>'); ?></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+<?php } ?>
 
 <div id="hamMenu" data-uk-offcanvas="overlay: true">
     <div class="uk-offcanvas-bar uk-card uk-card-default uk-padding-remove bgWhite">

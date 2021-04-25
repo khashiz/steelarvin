@@ -7,8 +7,9 @@
  * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
  */
 defined('_JEXEC') or die('Restricted access');
-?><div class="hikashop_wizardbar">
-	<ul>
+?>
+<div class="stepsWrapper uk-margin-medium-bottom">
+	<div class="uk-child-width-1-3 uk-text-center uk-grid-collapse uk-text-zero" data-uk-grid>
 <?php
 	$workflow = $this->checkoutHelper->checkout_workflow;
 	foreach($workflow['steps'] as $k => $step) {
@@ -16,7 +17,7 @@ defined('_JEXEC') or die('Restricted access');
 			continue;
 
 		$stepClass = ($k == $this->workflow_step) ? 'hikashop_cart_step_current' : ($k < $this->workflow_step ? 'hikashop_cart_step_finished' : '');
-		$badgeClass = ($k == $this->workflow_step) ? 'hkbadge-current' : ($k < $this->workflow_step ? 'hkbadge-past' : '');
+		$badgeClass = ($k == $this->workflow_step) ? 'current' : ($k < $this->workflow_step ? 'past' : '');
 		if(!empty($step['name'])){
 			$key = strtoupper($step['name']);
 			$trans = JText::_($key);
@@ -31,13 +32,20 @@ defined('_JEXEC') or die('Restricted access');
 		if($k < $this->workflow_step) {
 			$name = '<a href="'.$this->checkoutHelper->completeLink('&cid='.($k+1).$this->cartIdParam, false, false, false, $this->itemid).'">'.$name.'</a>';
 		}
+
+        if($k == 0){$icon = 'shipping-fast';}
+        if($k == 1){$icon = 'receipt';}
+        if($k == 2){$icon = 'clipboard-check';}
 ?>
-		<li class="<?php echo $stepClass; ?>">
-			<span class="hkbadge <?php echo $badgeClass; ?>"><?php echo ($k + 1); ?></span><?php echo $name; ?>
-			<span class="hikashop_chevron"></span>
-		</li>
+		<div class="stepIconWrapper <?php echo $stepClass; ?> <?php echo $badgeClass; ?>">
+            <div class="uk-position-relative item">
+                <span class="uk-position-absolute uk-position-z-index uk-border-circle circle"></span>
+                <span class="uk-display-block uk-margin-small-bottom <?php echo $badgeClass; ?>" data-step="<?php echo ($k + 1); ?>"><img src="<?php echo JURI::base().'images/sprite.svg#'.$icon; ?>" width="48" height="48" data-uk-svg></span>
+                <span class="uk-text-small uk-text-bold font"><?php echo $name; ?></span>
+            </div>
+		</div>
 <?php
 	}
 ?>
-	</ul>
+	</div>
 </div>

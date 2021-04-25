@@ -456,6 +456,98 @@ div{
   &.ellipsisDrop{
     width: 150px;
   }
+  &.stepsWrapper{
+    div{
+      &.stepIconWrapper{
+        div{
+          &.item{
+            padding-bottom: 20px;
+            color: #aaa;
+            span{
+              &.circle{
+                width: 14px;
+                height: 14px;
+                background-color: #e0e0e0;
+                bottom: 0;
+                left: 50%;
+                .transform(translateX(-50%) translateY(6px));
+              }
+            }
+            &:before{
+              content: '';
+              position: absolute;
+              height: 2px;
+              bottom: 0;
+              left: 0;
+              right: 50%;
+              background-color: #e0e0e0;
+            }
+            &:after{
+              content: '';
+              position: absolute;
+              height: 2px;
+              bottom: 0;
+              right: 0;
+              left: 50%;
+              background-color: #e0e0e0;
+            }
+          }
+        }
+        &:first-child{
+          div{
+            &.item{
+              &:after{
+                display: none;
+              }
+            }
+          }
+        }
+        &:last-child{
+          div{
+            &.item{
+              &:before{
+                display: none;
+              }
+            }
+          }
+        }
+        &.past{
+          div{
+            &.item{
+              color: @success;
+              a{
+                color: @success;
+              }
+              span{
+                &.circle{
+                  background-color: @success;
+                }
+              }
+              &:before,
+              &:after{
+                background-color: @success;
+              }
+            }
+          }
+        }
+        &.current{
+          div{
+            &.item{
+              color: #000;
+              span{
+                &.circle{
+                  background-color: #000;
+                }
+              }
+              &:after{
+                background-color: @success;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 form{
   &.regForm{

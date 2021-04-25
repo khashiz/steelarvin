@@ -87,6 +87,12 @@ if(!empty($this->two_columns)) {
 	<div class="hikashop_billing_addresses">
 		<h3 class="uk-margin-bottom uk-text-accent uk-text-bold uk-h4 font"><?php echo JText::_('HIKASHOP_BILLING_ADDRESSES'); ?></h3>
 <div class="uk-margin-medium-bottom uk-text-zero uk-child-width-1-1 uk-grid-small" data-uk-grid>
+    <?php if (count($this->addresses) == 0) { ?>
+        <div class="uk-text-center">
+            <div class="uk-margin-medium-bottom"><img src="<?php echo JURI::base().'images/sprite.svg#map-marked-alt'; ?>" width="128" height="128" alt="<?php echo $sitename; ?>" data-uk-svg></div>
+            <p class="uk-margin-remove uk-text-danger uk-text-small uk-text-bold font"><?php echo JTEXT::_('HIKA_CPANEL_NO_ADDRESSES'); ?></p>
+        </div>
+    <?php } ?>
 <?php
 }
 
@@ -108,7 +114,7 @@ foreach($this->addresses as $address) {
 if(!empty($this->two_columns)) {
 ?>
     </div>
-		<div>
+		<div class="uk-text-<?php echo (count($this->addresses) == 0) ? 'center' : ''; ?>">
 			<a class="uk-button uk-button-success uk-border-rounded uk-box-shadow-small uk-width-1-1 uk-width-auto@m font" href="#newAddress" onclick="return window.addressMgr.new('billing');"><?php echo JText::_('HIKASHOP_NEW_BILLING_ADDRESS'); ?></a>
 		</div>
 	</div>
@@ -132,7 +138,7 @@ if(!empty($this->two_columns)) {
 
 	}
 ?>
-		<div class="" style="margin-top:6px;">
+		<div>
 			<a class="hikabtn hikabtn-success" href="#newAddress" onclick="return window.addressMgr.new('shipping');"><i class="fa fa-plus"></i> <?php echo JText::_('HIKASHOP_NEW_SHIPPING_ADDRESS'); ?></a>
 		</div>
 	</div>

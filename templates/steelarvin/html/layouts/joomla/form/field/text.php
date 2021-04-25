@@ -59,7 +59,7 @@ $autocomplete = !$autocomplete ? ' autocomplete="off"' : ' autocomplete="' . $au
 $autocomplete = $autocomplete === ' autocomplete="on"' ? '' : $autocomplete;
 
 $attributes = array(
-	!empty($class) ? 'class="uk-width-1-1 uk-border-rounded font uk-input ' . $class . '"' : '',
+	!empty($class) ? 'class="uk-width-1-1 uk-border-rounded font uk-input ' . $class . '"' : 'class="uk-width-1-1 uk-border-rounded font uk-input"',
 	!empty($size) ? 'size="' . $size . '"' : '',
 	$disabled ? 'disabled' : '',
 	$readonly ? 'readonly' : '',

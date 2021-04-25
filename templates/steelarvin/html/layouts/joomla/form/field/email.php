@@ -67,7 +67,7 @@ JHtml::_('jquery.framework');
 JHtml::_('script', 'system/html5fallback.js', array('version' => 'auto', 'relative' => true, 'conditional' => 'lt IE 9'));
 
 ?>
-<input type="email" name="<?php
+<input class="uk-width-1-1 uk-border-rounded font uk-input" type="email" name="<?php
 echo $name; ?>"<?php
 echo !empty($class) ? ' class="validate-email ' . $class . '"' : ' class="validate-email"'; ?> id="<?php
 echo $id; ?>" value="<?php

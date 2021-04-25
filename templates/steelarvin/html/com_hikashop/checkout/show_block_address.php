@@ -13,7 +13,7 @@ $inputcolumnclass = 'hkc-sm-8';
 
 if(empty($this->ajax)) {
 ?>
-<div id="hikashop_checkout_address_<?php echo $this->step; ?>_<?php echo $this->module_position; ?>" data-checkout-step="<?php echo $this->step; ?>" data-checkout-pos="<?php echo $this->module_position; ?>" class="hikashop_checkout_address">
+<div id="hikashop_checkout_address_<?php echo $this->step; ?>_<?php echo $this->module_position; ?>" data-checkout-step="<?php echo $this->step; ?>" data-checkout-pos="<?php echo $this->module_position; ?>" class="hikashop_checkout_address uk-margin-medium-bottom fffff">
 <?php
 }
 ?>
@@ -147,14 +147,14 @@ if(!empty($this->options['display'])) {
 <?php
 		}
 ?>
-			<div style="clear:both"></div>
-<?php
+
+        <?php
 	}
 
 	if(empty($this->options['edit_address']) && !empty($this->options['show_billing'])) {
 ?>
 
-			<fieldset class="hika_address_field hikashop_checkout_billing_address_block">
+			<fieldset class="hika_address_field hikashop_checkout_billing_address_block uk-padding-remove uk-margin-remove">
 				<legend><?php echo JText::_('HIKASHOP_BILLING_ADDRESS'); ?></legend>
 <?php
 		if(!empty($this->options['read_only'])) {

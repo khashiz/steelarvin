@@ -7,7 +7,13 @@
  * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
  */
 defined('_JEXEC') or die('Restricted access');
-?><form action="<?php echo $this->checkoutHelper->completeLink('cid='. $this->step, false, false, false, $this->itemid); ?>" method="post" id="hikashop_checkout_form" name="hikashop_checkout_form" enctype="multipart/form-data" onsubmit="if(window.checkout.onFormSubmit){ return window.checkout.onFormSubmit(this); }">
+?>
+<form action="<?php echo $this->checkoutHelper->completeLink('cid='. $this->step, false, false, false, $this->itemid); ?>" method="post" id="hikashop_checkout_form" name="hikashop_checkout_form" enctype="multipart/form-data" onsubmit="if(window.checkout.onFormSubmit){ return window.checkout.onFormSubmit(this); }">
+    <div class="uk-form-stacked">
+        <div>
+            <div class="uk-card uk-card-default uk-border-rounded uk-overflow-hidden uk-box-shadow-small">
+                <div class="uk-padding">
+                    <div>
 <input type="hidden" name="task" value="submitstep"/>
 <input type="hidden" name="<?php echo hikashop_getFormToken(); ?>" id="hikashop_checkout_token" value="1"/>
 <input type="hidden" name="cart_id" value="<?php echo $this->cart_id; ?>"/>
@@ -61,4 +67,9 @@ window.hikashop.ready(function(){
 $doc->addScriptDeclaration($js);
 ?>
 </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </form>

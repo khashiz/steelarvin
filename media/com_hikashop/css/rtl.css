@@ -100,61 +100,6 @@ div#hikashop_social {
 #hikashop_checkout_page .hikashop_product_price_full {
 	text-align: right;
 }
-.hikashop_cart_product_quantity_value .hikashop_product_quantity_field,.hikashop_cart_product_quantity_value .hikashop_cart_product_quantity_refresh,.hikashop_cart_product_quantity_value .hikashop_cart_product_quantity_delete {
-	float: right;
-}
-#hikashop_checkout_next_button{
-	float: left;
-}
-#hikashop_checkout_shopping_button,
-.hikashop_header_title {
-	float: right;
-}
-.hikashop_header_buttons, 
-.hikashop_order_left_part{
-	float: left;
-}
-#hikashop_vote_listing span.hikashop_sort_listing_comment,
-#hikashop_order_main .hikashop_order_right_part, 
-#hikashop_order_main .hikashop_order_left_part {
-    float: left !important;
-	margin-top: 5px !important;
-}
-img.hikashop_cart_product_image {
-    float: right !important;
-    height: 100% !important;
-}
-.hikashop_listing_comment span:first-child,
-.hk-card-order .hika_cpanel_product_image_link, 
-.hk-card-order .hika_order_product_image_link {
-    float: right;
-    margin-left: 0.5em;
-}
-
-.hk-card-order .hika_cpanel_price {
-    text-align: left !important;
-}
-#hikashop_order_listing  .hikashop_search_block,
-#hikashop_order_listing select#filter_order_range, 
-#hikashop_order_listing select#filter_order_status {
-    float: left;
-}
-ul.hkdropdown-menu.hkdropdown-menu-right li {
-    float: right;
-    clear: both;
-}
-.hika_options dt {
-    float: right !important;
-}
-#hikashop_order_main .hikashop_order_left_part {
-    clear: left;
-}
-
-.hikashop_wizardbar ul li{
-	direction: rtl;
-	float: right;
-}
-
 .hikashop_wizardbar ul li .hikashop_chevron{
 	-moz-transform: scaleX(-1);
 	-o-transform: scaleX(-1);
@@ -178,15 +123,6 @@ ul.hkdropdown-menu.hkdropdown-menu-right li {
 .hikashop_checkout_page{
 	direction: rtl;
 }
-
-.hikashop_filter_cursor_span{
-	float: none !important;
-	direction: ltr;
-}
-.hika_toolbar .hika_toolbar_btn.hika_btn_32 {
-    float: left;
-}
-
 .oTree { text-align:right !important; }
 .oTree .oTreeNode img { -moz-transform: scaleX(-1); -o-transform: scaleX(-1); -webkit-transform: scaleX(-1); transform: scaleX(-1); filter: FlipH; -ms-filter: "FlipH"; }
 .oTree .e1 { margin-left:0px; margin-right:18px; }

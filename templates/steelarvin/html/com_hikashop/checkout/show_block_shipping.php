@@ -8,7 +8,7 @@
  */
 defined('_JEXEC') or die('Restricted access');
 ?><?php if(empty($this->ajax)) { ?>
-<div id="hikashop_checkout_shipping_<?php echo $this->step; ?>_<?php echo $this->module_position; ?>" data-checkout-step="<?php echo $this->step; ?>" data-checkout-pos="<?php echo $this->module_position; ?>" class="hikashop_checkout_shipping">
+<div id="hikashop_checkout_shipping_<?php echo $this->step; ?>_<?php echo $this->module_position; ?>" data-checkout-step="<?php echo $this->step; ?>" data-checkout-pos="<?php echo $this->module_position; ?>" class="hikashop_checkout_shipping uk-margin-medium-bottom gtgtg">
 <?php } ?>
 	<div class="hikashop_checkout_loading_elem"></div>
 	<div class="hikashop_checkout_loading_spinner"></div>
@@ -32,7 +32,7 @@ if(!empty($cart->usable_methods->shipping)) {
 <?php
 		if(!empty($this->options['show_title'])) {
 ?>
-	<legend><?php echo JText::_('HIKASHOP_SHIPPING_METHOD');?></legend>
+	<h3 class="uk-margin-bottom uk-text-accent uk-text-bold uk-text-small font"><?php echo JText::_('HIKASHOP_SHIPPING_METHOD');?></h3>
 <?php
 		}
 		if(!empty($group->name) || $several_groups) {
@@ -119,7 +119,7 @@ if(!empty($cart->usable_methods->shipping)) {
 		}
 		else {
 ?>
-	<table style="width:100%" class="hikashop_shipping_methods_table table table-bordered table-striped table-hover">
+	<table class="hikashop_shipping_methods_table table table-bordered table-striped table-hover">
 <?php
 		}
 		foreach($cart->usable_methods->shipping as $shipping) {

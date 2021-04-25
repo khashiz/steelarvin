@@ -7,7 +7,9 @@
  * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
  */
 defined('_JEXEC') or die('Restricted access');
-?><div id="hikashop_checkout_page" class="hikashop_checkout_page hikashop_checkout_page_step<?php echo $this->step; ?>">
+?>
+
+    <div id="hikashop_checkout_page" class="hikashop_checkout_page hikashop_checkout_page_step<?php echo $this->step; ?>">
 	<?php
 	if(hikashop_level(1)){
 		$open_hour = $this->config->get('store_open_hour',0);
@@ -139,6 +141,9 @@ defined('_JEXEC') or die('Restricted access');
 	if(empty($this->noform)){
 		?>
 		<form action="<?php echo hikashop_completeLink('checkout&task=step&step='.($this->step+1).$url_itemid); ?>" method="post" name="hikashop_checkout_form" enctype="multipart/form-data" onsubmit="if('function' == typeof(hikashopSubmitForm)) { hikashopSubmitForm('hikashop_checkout_form'); return false; } else { return true; }">
+
+
+
 		<?php
 	}
 	$app = JFactory::getApplication();
@@ -171,7 +176,6 @@ defined('_JEXEC') or die('Restricted access');
 		<input type="hidden" id="hikashop_validate" name="validate" value="0"/>
 		<?php echo JHTML::_( 'form.token' ); ?>
 		<input type="hidden" name="unique_id" value="[<?php echo md5(uniqid())?>]"/>
-		<br style="clear:both"/>
 		<?php
 
 		if(!empty($this->extra_data))
@@ -191,6 +195,7 @@ defined('_JEXEC') or die('Restricted access');
 					echo '<input type="submit" style="position: absolute; left: -9999px; width: 1px; height: 1px;"/></input>';
 		}
 		?>
+
 		</form>
 		<?php
 		if($this->continueShopping){
@@ -205,7 +210,7 @@ defined('_JEXEC') or die('Restricted access');
 	}
 	?>
 </div>
-<div class="clear_both"></div>
+
 <?php
 
 if(hikaInput::get()->getWord('tmpl','')=='component'){

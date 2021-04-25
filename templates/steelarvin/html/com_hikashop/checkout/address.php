@@ -44,7 +44,7 @@ if($this->identified) {
 ?>
 		</fieldset>
 	</div>
-	<div id="hikashop_checkout_address_right_part" class="hikashop_checkout_address_right_part<?php if(HIKASHOP_RESPONSIVE){ echo ' '.HK_GRID_COL_6;} ?>">
+	<div ytyyyytyty id="hikashop_checkout_address_right_part" class="hikashop_checkout_address_right_part<?php if(HIKASHOP_RESPONSIVE){ echo ' '.HK_GRID_COL_6;} ?>">
 		<fieldset class="hika_address_field" id="hikashop_checkout_shipping_address">
 			<legend><?php echo JText::_('HIKASHOP_SHIPPING_ADDRESS'); ?></legend>
 <?php
