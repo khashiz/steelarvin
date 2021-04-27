@@ -119,7 +119,7 @@ if(!empty($cart->usable_methods->shipping)) {
 		}
 		else {
 ?>
-	<table class="hikashop_shipping_methods_table table table-bordered table-striped table-hover">
+	<div class="hikashop_shipping_methods uk-child-width-1-1 uk-child-width-1-3@m uk-grid-small uk-text-center" data-uk-grid>
 <?php
 		}
 		foreach($cart->usable_methods->shipping as $shipping) {
@@ -153,50 +153,23 @@ if(!empty($cart->usable_methods->shipping)) {
 			);
 			if($this->options['shipping_selector'] != 2) {
 ?>
-<tr><td>
-<?php
-				if(empty($this->options['read_only'])){
-?>
-		<input class="hikashop_checkout_shipping_radio" type="radio" name="checkout[shipping][<?php echo $shipping_group_key; ?>][id]" id="<?php echo $input_id; ?>" data-hk-checkout="<?php echo $this->escape(json_encode($input_data)); ?>" onchange="window.checkout.shippingSelected(this);" value="<?php echo $shipping->shipping_id;?>"<?php echo ($selected ? ' checked="checked"' : ''); ?>/>
-<?php
-				}
-?>
-		<label for="<?php echo $input_id; ?>" style="cursor:pointer;">
-			<span class="hikashop_checkout_shipping_name"><?php echo $shipping->shipping_name;?></span>
-		</label>
-		<span class="hikashop_checkout_shipping_cost"><?php
-			echo $this->checkoutHelper->getDisplayPrice($shipping, 'shipping', $this->options);
-		?></span>
-<?php
-				if(!empty($shipping->shipping_images)) {
-?>
-		<span class="hikashop_checkout_shipping_images">
-<?php
-					$images = explode(',', $shipping->shipping_images);
-					foreach($images as $image) {
-						$img = $this->checkoutHelper->getPluginImage($image, 'shipping');
-						if(empty($img))
-							continue;
-?>
-			<img src="<?php echo $img->url; ?>" alt=""/>
-<?php
-					}
-?>
-		</span>
-<?php
-				}
-?>
-<?php
-				if(!empty($shipping->shipping_description)) {
-?>
-		<div class="hikashop_checkout_shipping_description"><?php
-			echo $this->getDescription($shipping);
-		?></div>
-<?php
-				}
-			}
-			if(empty($this->options['read_only']) && !empty($shipping->custom_html)) {
-?>
+                <div>
+                <?php if(empty($this->options['read_only'])) { ?>
+                    <input class="uk-hidden boxInput rsform-radio uk-radio hikashop_checkout_shipping_radio" type="radio" name="checkout[shipping][<?php echo $shipping_group_key; ?>][id]" id="<?php echo $input_id; ?>" data-hk-checkout="<?php echo $this->escape(json_encode($input_data)); ?>" onchange="window.checkout.shippingSelected(this);" value="<?php echo $shipping->shipping_id;?>"<?php echo ($selected ? ' checked="checked"' : ''); ?>/>
+                <?php } ?>
+                <label for="<?php echo $input_id; ?>" class="uk-flex uk-flex-column uk-flex-center uk-flex-middle uk-padding uk-border-rounded">
+                    <span><img src="<?php echo JURI::base().'images/sprite.svg#shipping-'.$shipping->shipping_id; ?>" width="32" height="32" data-uk-svg></span>
+                    <span class="hikashop_checkout_shipping_name uk-text-tiny uk-margin-small-top font"><?php echo $shipping->shipping_name;?></span>
+                    <span class="hikashop_checkout_shipping_cost uk-text-tiny uk-margin-small-top font"><?php echo $this->checkoutHelper->getDisplayPrice($shipping, 'shipping', $this->options); ?></span>
+                    <?php if(!empty($shipping->shipping_description)) { ?>
+                        <div class="hikashop_checkout_shipping_description uk-hidden">
+                            <?php echo $this->getDescription($shipping); ?>
+                        </div>
+                    <?php } ?>
+                </label>
+            <?php } ?>
+
+            <?php if(empty($this->options['read_only']) && !empty($shipping->custom_html)) { ?>
 	<div id="<?php echo $container_id; ?>__custom" class="hikashop_checkout_shipping_custom" style="<?php echo $selected ? '' : ' display:none;'; ?>">
 <?php
 				echo $this->checkoutHelper->getCustomHtml($shipping->custom_html, 'checkout[shipping]['.$shipping_group_key.'][custom]['.$shipping->shipping_id.']');
@@ -214,12 +187,12 @@ if(!empty($cart->usable_methods->shipping)) {
 			}
 			if($this->options['shipping_selector'] != 2) {
 ?>
-	</td></tr>
+	</div>
 <?php		}
 		}
 		if($this->options['shipping_selector'] != 2) {
 ?>
-	</table>
+	</div>
 <?php
 		}
 

@@ -1907,7 +1907,7 @@ class hikashopFieldItem {
 		$options = '';
 		$for = '';
 		if($requiredDisplay && !empty($field->field_required))
-			$required = '<span class="hikashop_field_required_label">*</span>';
+			$required = '&ensp;<span class="uk-text-danger hikashop_field_required_label">*</span>';
 		if(!empty($classname))
 			$options = ' class="'.str_replace('"','',$classname).'"';
 		if($this->displayFor)

@@ -162,9 +162,6 @@ $total = count($socialsicons['icon']);
         </div>
     </section>
 <?php endif; ?>
-<?php if ($pageclass == 'home') { ?>
-    <main data-uk-height-viewport="expand: true"></main>
-<?php } ?>
 <jdoc:include type="modules" name="pagetop" style="xhtml" />
 <jdoc:include type="message" />
 <main data-uk-height-viewport="expand: true">

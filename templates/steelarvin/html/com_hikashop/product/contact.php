@@ -120,7 +120,7 @@ if(!empty($this->product->product_id)) {
 			</dd>
 <?php
 	if(!empty($this->privacy)) {
-		$text = JText::_( 'PLG_CONTENT_CONFIRMCONSENT_CONSENTBOX_LABEL' ) . ' <span class="hikashop_field_required_label">*</span>';
+		$text = JText::_( 'PLG_CONTENT_CONFIRMCONSENT_CONSENTBOX_LABEL' ) . ' <span class="ffffff hikashop_field_required_label">*</span>';
 		if(!empty($this->privacy['id'])) {
 			$popupHelper = hikashop_get('helper.popup');
 			$text = $popupHelper->display(

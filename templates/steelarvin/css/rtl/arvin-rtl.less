@@ -564,6 +564,7 @@ input{
       cursor: pointer;
       .transition;
       span{
+        font-variation-settings: "wght" 600, "wdth" 100, "slnt" 0, "DOTR" 1, "DOTS" 0, "KASH" 0;
         color: @gray;
         .transition;
       }
@@ -577,9 +578,14 @@ input{
         box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, .15), 0 0 0 1px @primary;
         span{
           color: @accent;
-          font-variation-settings: "wght" 500, "wdth" 100, "slnt" 0, "DOTR" 1, "DOTS" 0, "KASH" 0;
+          &.hikashop_checkout_shipping_name{
+            color: #000;
+          }
           &:last-child{
             color: @dark;
+          }
+          &.hikashop_checkout_shipping_price{
+            color: #999;
           }
         }
       }
