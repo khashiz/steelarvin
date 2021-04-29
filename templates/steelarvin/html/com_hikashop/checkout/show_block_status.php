@@ -29,7 +29,7 @@ defined('_JEXEC') or die('Restricted access');
 	if(!empty($cart->payment))
 		$array[] = JText::sprintf('HIKASHOP_PAYMENT_METHOD_CHOSEN', '<span class="uk-text-success">'.$cart->payment->payment_name.'</span>');
 
-	echo implode(JText::sprintf('AND'), $array);
+	echo JText::sprintf('YOUR_ORDER').implode(JText::sprintf('AND'), $array);
 	?>
     </div>
     </div>

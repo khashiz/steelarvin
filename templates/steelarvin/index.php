@@ -113,7 +113,7 @@ $total = count($socialsicons['icon']);
 </header>
 <?php } ?>
 <?php if ($pageclass == 'checkout') { ?>
-    <header>
+    <header class="uk-position-relative uk-position-z-index">
         <div class="uk-text-zero uk-box-shadow-small bgWhite stickyHeader" data-uk-sticky="top: 120; animation: uk-animation-slide-top;">
             <div class="uk-container">
                 <div class="stickyEffect">
