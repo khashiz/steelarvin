@@ -10,7 +10,7 @@ defined('_JEXEC') or die('Restricted access');
 ?>
 
 <?php $labelcolumnclass = ''; $inputcolumnclass = ''; if(empty($this->ajax)) { ?>
-    <div id="hikashop_checkout_address_<?php echo $this->step; ?>_<?php echo $this->module_position; ?>" data-checkout-step="<?php echo $this->step; ?>" data-checkout-pos="<?php echo $this->module_position; ?>" class="hikashop_checkout_address uk-margin-medium-bottom fffff">
+    <div id="hikashop_checkout_address_<?php echo $this->step; ?>_<?php echo $this->module_position; ?>" data-checkout-step="<?php echo $this->step; ?>" data-checkout-pos="<?php echo $this->module_position; ?>" class="hikashop_checkout_address uk-margin-medium-bottom uk-text-zero">
 <?php } ?>
 	<div class="hikashop_checkout_loading_elem"></div>
 	<div class="hikashop_checkout_loading_spinner"></div>

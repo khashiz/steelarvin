@@ -8,7 +8,7 @@
  */
 defined('_JEXEC') or die('Restricted access');
 ?><?php if(empty($this->ajax)) { ?>
-<div id="hikashop_checkout_payment_<?php echo $this->step; ?>_<?php echo $this->module_position; ?>" data-checkout-step="<?php echo $this->step; ?>" data-checkout-pos="<?php echo $this->module_position; ?>" class="hikashop_checkout_payment">
+<div id="hikashop_checkout_payment_<?php echo $this->step; ?>_<?php echo $this->module_position; ?>" data-checkout-step="<?php echo $this->step; ?>" data-checkout-pos="<?php echo $this->module_position; ?>" class="hikashop_checkout_payment uk-margin-medium-bottom">
 <?php } ?>
 	<div class="hikashop_checkout_loading_elem"></div>
 	<div class="hikashop_checkout_loading_spinner"></div>
@@ -21,7 +21,7 @@ $cart = $this->checkoutHelper->getCart();
 if(!empty($cart->usable_methods->payment)) {
 	if(!empty($this->options['show_title'])) {
 ?>
-<legend><?php echo JText::_('HIKASHOP_PAYMENT_METHOD');?></legend>
+<h3 class="uk-margin-bottom uk-text-accent uk-text-bold uk-text-small font"><?php echo JText::_('HIKASHOP_PAYMENT_METHOD');?></h3>
 <?php
 	}
 
@@ -57,7 +57,7 @@ if(!empty($cart->usable_methods->payment)) {
 	}
 	else {
 ?>
-<table style="width:100%" class="hikashop_payment_methods_table table table-bordered table-striped table-hover">
+<div class="hikashop_payment_methods_table uk-grid-small uk-child-width-1-1 uk-child-width-1-3@m uk-grid-small uk-text-center" data-uk-grid>
 <?php
 	}
 	foreach($cart->usable_methods->payment as $payment) {
@@ -75,46 +75,36 @@ if(!empty($cart->usable_methods->payment)) {
 			'id' => (int)$payment->payment_id,
 		);
 ?>
-<tr><td>
+<div>
+    <div>
 <?php
 		if($this->options['payment_selector'] != 2) {
 			if(empty($this->options['read_only'])) {
 ?>
-	<input class="hikashop_checkout_payment_radio" type="radio" name="checkout[payment][id]" id="<?php echo $input_id; ?>" data-hk-checkout="<?php echo $this->escape(json_encode($input_data)); ?>" onchange="window.checkout.paymentSelected(this);" value="<?php echo $payment->payment_id;?>"<?php echo ($selected ? ' checked="checked"' : ''); ?>/>
+	<input class="hikashop_checkout_payment_radio uk-hidden boxInput" type="radio" name="checkout[payment][id]" id="<?php echo $input_id; ?>" data-hk-checkout="<?php echo $this->escape(json_encode($input_data)); ?>" onchange="window.checkout.paymentSelected(this);" value="<?php echo $payment->payment_id;?>"<?php echo ($selected ? ' checked="checked"' : ''); ?>/>
 <?php
 			}
 ?>
-	<label for="<?php echo $input_id; ?>" style="cursor:pointer;">
-		<span class="hikashop_checkout_payment_name"><?php echo $payment->payment_name;?></span>
-	</label>
-	<span class="hikashop_checkout_payment_cost"><?php
-		echo $this->checkoutHelper->getDisplayPrice($payment, 'payment', $this->options);
-	?></span>
-<?php
-			if(!empty($payment->payment_images)) {
-?>
-	<span class="hikashop_checkout_payment_images">
-<?php
-				$images = explode(',', $payment->payment_images);
-				foreach($images as $image) {
-					$img = $this->checkoutHelper->getPluginImage($image, 'payment');
-					if(empty($img))
-						continue;
-?>
-		<img src="<?php echo $img->url; ?>" alt=""/>
-<?php
-				}
-?>
-	</span>
-<?php
-			}
-?>
+	<label for="<?php echo $input_id; ?>" class="uk-flex uk-flex-column uk-flex-center uk-flex-middle uk-border-rounded">
+        <span class="hikashop_checkout_payment_images">
+            <img src="<?php echo JURI::base().'images/sprite.svg#shippingmethod'.$payment->payment_type; ?>" width="32" height="32" data-uk-svg>
+        </span>
+		<span class="hikashop_checkout_payment_name uk-text-small uk-display-block font boxInputTitle"><?php echo $payment->payment_name;?></span>
+
+	<span class="hikashop_checkout_payment_cost uk-text-tiny font uk-hidden">
+        <?php echo $this->checkoutHelper->getDisplayPrice($payment, 'payment', $this->options); ?>
+    </span>
+
+
+
+
+
 <?php
 			if(!empty($payment->payment_description)) {
 ?>
-	<div class="hikashop_checkout_payment_description"><?php
-		echo $this->getDescription($payment);
-	?></div>
+	<span class="hikashop_checkout_payment_description uk-text-tiny uk-display-block font boxInputDesc">
+        <?php echo strip_tags($this->getDescription($payment)); ?>
+    </span>
 <?php
 			}
 		}
@@ -263,11 +253,12 @@ if(!empty($cart->usable_methods->payment)) {
 <?php
 		}
 ?>
-</td></tr>
+    </label>
+</div></div>
 <?php
 		}
 ?>
-</table>
+</div>
 <?php
 }
 

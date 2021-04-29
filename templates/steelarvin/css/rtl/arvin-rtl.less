@@ -548,6 +548,24 @@ div{
       }
     }
   }
+  &.checkoutCartQuantity{
+    padding: 5px;
+    span{
+      width: 20px;
+      height: 20px;
+      padding: 0;
+      background-color: @success;
+      font-family: Arial, Helvetica, sans-serif;
+      .border-radius(3px);
+    }
+  }
+  &.checkoutCartPrice{
+    span{
+      &.hikashop_product_discount{
+        display: none;
+      }
+    }
+  }
 }
 form{
   &.regForm{
@@ -562,30 +580,37 @@ input{
     + label{
       border: 1px solid #f0f0f0;
       cursor: pointer;
+      padding: 20px 20px 15px;
       .transition;
       span{
-        font-variation-settings: "wght" 600, "wdth" 100, "slnt" 0, "DOTR" 1, "DOTS" 0, "KASH" 0;
         color: @gray;
         .transition;
+        &.boxInputTitle{
+          font-variation-settings: "wght" 700, "wdth" 100, "slnt" 0, "DOTR" 1, "DOTS" 0, "KASH" 0;
+          margin: 10px 0 4px;
+        }
+        &.boxInputDesc{
+          font-variation-settings: "wght" 500, "wdth" 100, "slnt" 0, "DOTR" 1, "DOTS" 0, "KASH" 0;
+        }
       }
       &:hover{
-        border-color: #ccc;
+        border-color: @gray;
+        background-color: #f9f9f9;
+        span{}
       }
     }
     &:checked{
       + label{
         border-color: @primary;
         box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, .15), 0 0 0 1px @primary;
+        background-color: #f7f8ff;
         span{
           color: @accent;
-          &.hikashop_checkout_shipping_name{
+          &.boxInputTitle{
             color: #000;
           }
-          &:last-child{
+          &.boxInputDesc{
             color: @dark;
-          }
-          &.hikashop_checkout_shipping_price{
-            color: #999;
           }
         }
       }
@@ -735,6 +760,7 @@ span{
     background-color: @successBg;
     color: @success;
   }
+  &.uk-alert-error,
   &.uk-alert-danger{
     background-color: @dangerBg;
     color: @danger;
@@ -755,6 +781,11 @@ span{
     &:active,
     &:focus{
       background-color: darken(@success, 10%);
+    }
+    &[disabled]{
+      opacity: .5;
+      filter: grayscale(1);
+      .transition;
     }
   }
   &.uk-button-danger{

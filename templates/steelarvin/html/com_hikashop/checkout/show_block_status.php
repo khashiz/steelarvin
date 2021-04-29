@@ -8,10 +8,12 @@
  */
 defined('_JEXEC') or die('Restricted access');
 ?><?php if(empty($this->ajax)) { ?>
-<div id="hikashop_checkout_status_<?php echo $this->step; ?>_<?php echo $this->module_position; ?>" data-checkout-step="<?php echo $this->step; ?>" data-checkout-pos="<?php echo $this->module_position; ?>" class="hikashop_checkout_status">
+<div id="hikashop_checkout_status_<?php echo $this->step; ?>_<?php echo $this->module_position; ?>" data-checkout-step="<?php echo $this->step; ?>" data-checkout-pos="<?php echo $this->module_position; ?>" class="hikashop_checkout_status uk-margin-medium-bottom">
 <?php } ?>
 	<div class="hikashop_checkout_loading_elem"></div>
 	<div class="hikashop_checkout_loading_spinner small_spinner"></div>
+    <div>
+        <div class="uk-text-center uk-text-tiny uk-text-bold uk-text-secondary uk-background-muted uk-padding-small uk-border-rounded font">
 <?php
 	$cart = $this->checkoutHelper->getCart();
 
@@ -21,15 +23,18 @@ defined('_JEXEC') or die('Restricted access');
 		foreach($cart->shipping as $shipping) {
 			$names[] = $shipping->shipping_name;
 		}
-		$array[] = JText::sprintf('HIKASHOP_SHIPPING_METHOD_CHOSEN', '<span class="label label-info">'.implode('</span> <span class="label label-info">', $names).'</span>');
+		$array[] = JText::sprintf('HIKASHOP_SHIPPING_METHOD_CHOSEN', '<span class="uk-text-success">'.implode('</span> <span class="label label-info">', $names).'</span>');
 	}
 
 	if(!empty($cart->payment))
-		$array[] = JText::sprintf('HIKASHOP_PAYMENT_METHOD_CHOSEN', '<span class="label label-info">'.$cart->payment->payment_name.'</span>');
+		$array[] = JText::sprintf('HIKASHOP_PAYMENT_METHOD_CHOSEN', '<span class="uk-text-success">'.$cart->payment->payment_name.'</span>');
 
-	echo implode('<br/>', $array);
+	echo implode(JText::sprintf('AND'), $array);
+	?>
+    </div>
+    </div>
 
-	if(empty($this->ajax)) { ?>
+    <?php if(empty($this->ajax)) { ?>
 </div>
 <script type="text/javascript">
 if(!window.checkout) window.checkout = {};
@@ -38,4 +43,4 @@ window.Oby.registerAjax(['checkout.shipping.updated','checkout.payment.updated']
 });
 window.checkout.refreshStatus = function(step, id) { return window.checkout.refreshBlock('status', step, id); };
 </script>
-<?php }
+<?php } ?>

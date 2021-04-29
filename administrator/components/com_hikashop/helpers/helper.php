@@ -912,7 +912,7 @@ if(!function_exists('hikashop_display')) {
 		}
 		$app = JFactory::getApplication();
 		if((hikashop_isClient('administrator') && !HIKASHOP_BACK_RESPONSIVE) || (!hikashop_isClient('administrator') && !HIKASHOP_RESPONSIVE)) {
-			$html = '<div id="hikashop_messages_'.$type.'" class="hikashop_messages hikashop_'.$type.'"><ul><li>'.implode('</li><li>',$display_messages).'</li></ul></div>';
+			$html = '<div id="hikashop_messages_'.$type.'" class="uk-alert uk-alert-'.$type.' uk-text-center uk-border-rounded uk-padding-small uk-text-tiny font"><p class="uk-margin-remove">'.implode('</p><p class="uk-margin-remove">',$display_messages).'</p></div>';
 		} else {
 			$html = '<div class="alert alert-'.$type.' alert-block">'.($close?'<button type="button" class="close" data-dismiss="alert">×</button>':'').'<p>'.implode('</p><p>',$display_messages).'</p></div>';
 		}
