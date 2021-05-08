@@ -24,9 +24,9 @@ if(!isset($this->edit) || $this->edit !== true ) {
 ?>
 		<div class="hika_edit uk-position-top-left">
             <div class="uk-text-muted cursorPointer"><img src="<?php echo JURI::base().'images/sprite.svg#ellipsis-v'; ?>" width="20" height="20" alt="" data-uk-svg></div>
-            <div data-uk-drop="pos: bottom-left" class="ellipsisDrop">
+            <div data-uk-drop="pos: right-center" class="ellipsisDrop">
                 <div class="uk-card uk-card-default uk-box-shadow-small uk-border-rounded uk-padding-small">
-                    <ul class="uk-list uk-margin-remove uk-padding-removee">
+                    <ul class="uk-list uk-margin-remove uk-padding-remove">
                         <li>
                             <a class="uk-button uk-button-small uk-text-tiny uk-button-default uk-border-rounded uk-display-block uk-width-1-1 font" href="<?php echo hikashop_completeLink($update_url, 'ajax');?>" onclick="return window.addressMgr.get(this,'<?php echo $dest; ?>');"><?php echo JText::_('HIKA_EDIT'); ?></a>
                         </li>

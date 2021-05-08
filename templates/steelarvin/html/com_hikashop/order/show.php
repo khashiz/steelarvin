@@ -7,95 +7,105 @@
  * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
  */
 defined('_JEXEC') or die('Restricted access');
-?><div id="hikashop_order_main">
-<?php
-$colspan = 4;
-if($this->invoice_type == 'order') {
-	echo $this->toolbarHelper->process($this->toolbar, $this->title);
 ?>
-<form action="<?php echo hikashop_completeLink('order'.$this->url_itemid); ?>" method="post" name="adminForm" id="adminForm">
-<?php
-}
-?>
-	<table class="hikashop_order_main_table">
-		<tr>
-			<td>
-				<div id="hikashop_order_right_part" class="hikashop_order_right_part">
-<?php
-		if($this->invoice_type == 'order' || empty($this->element->order_invoice_created)) {
-			echo JText::_('DATE').': '.hikashop_getDate($this->element->order_created, '%d %B %Y');
-		} else {
-			echo JText::_('DATE').': '.hikashop_getDate($this->element->order_invoice_created, '%d %B %Y');
-		}
-?>
-				<br/>
-<?php
-		if($this->invoice_type == 'order' || empty($this->element->order_invoice_number)) {
-			echo JText::_('HIKASHOP_ORDER').': '.@$this->element->order_number;
-		} else {
-			echo JText::_(strtoupper($this->invoice_type)).': '.@$this->element->order_invoice_number;
-		}
-?>
-				</div>
-				<div id="hikashop_order_left_part" class="hikashop_order_left_part"><?php
-					echo $this->store_address;
-				?></div>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<table>
-					<tr>
-<?php
-	$params = null;
-	$js = '';
-?>
-<?php
-	if(!empty($this->element->billing_address)) {
-?>
-						<td>
-							<fieldset class="adminform" id="htmlfieldset_billing">
-							<legend style="background-color: #FFFFFF;"><?php echo JText::_('HIKASHOP_BILLING_ADDRESS'); ?></legend>
-<?php
-		$addressClass = hikashop_get('class.address');
-		echo $addressClass->displayAddress($this->element->fields,$this->element->billing_address,'address');
-?>
-							</fieldset>
-						</td>
-<?php
-	}
+<div id="hikashop_order_main" class="uk-card uk-card-default uk-border-rounded uk-overflow-hidden uk-box-shadow-small">
+    <div class="uk-padding">
+        <?php $colspan = 4; if($this->invoice_type == 'order') { echo $this->toolbarHelper->process($this->toolbar, $this->title); ?>
+        <form action="<?php echo hikashop_completeLink('order'.$this->url_itemid); ?>" method="post" name="adminForm" id="adminForm">
+            <?php } ?>
+            <div id="hikashop_order_right_part" class="hikashop_order_right_part">
+                <?php
+                if($this->invoice_type == 'order' || empty($this->element->order_invoice_created)) {
+                    echo JText::_('DATE').': '.hikashop_getDate($this->element->order_created, '%d %B %Y');
+                } else {
+                    echo JText::_('DATE').': '.hikashop_getDate($this->element->order_invoice_created, '%d %B %Y');
+                }
+                ?>
+                <br/>
+                <?php
+                if($this->invoice_type == 'order' || empty($this->element->order_invoice_number)) {
+                    echo JText::_('HIKASHOP_ORDER').': '.@$this->element->order_number;
+                } else {
+                    echo JText::_(strtoupper($this->invoice_type)).': '.@$this->element->order_invoice_number;
+                }
+                ?>
+            </div>
+            <div id="hikashop_order_left_part" class="hikashop_order_left_part"><?php
+                echo $this->store_address;
+                ?></div>
 
-	if(!empty($this->element->order_shipping_id) && !empty($this->element->shipping_address)) {
-?>
-						<td>
-							<fieldset class="adminform" id="htmlfieldset_shipping">
-								<legend style="background-color: #FFFFFF;"><?php echo JText::_('HIKASHOP_SHIPPING_ADDRESS'); ?></legend>
-<?php
-		$override = false;
-		if(method_exists($this->currentShipping, 'getShippingAddress')) {
-			$override = $this->currentShipping->getShippingAddress($this->element->order_shipping_id);
-		}
-		if($override !== false ) {
-			echo $override;
-		} else {
-			$addressClass = hikashop_get('class.address');
-			echo $addressClass->displayAddress($this->element->fields, $this->element->shipping_address, 'address');
-		}
-?>
-							</fieldset>
-						</td>
-<?php
-	}
-?>
-					</tr>
-				</table>
-			</td>
-		</tr>
+
+
+
+
+            <?php
+            $params = null;
+            $js = '';
+            ?>
+            <?php
+            if(!empty($this->element->billing_address)) {
+                ?>
+                <div>
+                    <div class="adminform" id="htmlfieldset_billing">
+                        <legend><?php echo JText::_('HIKASHOP_BILLING_ADDRESS'); ?></legend>
+                        <?php
+                        $addressClass = hikashop_get('class.address');
+                        echo $addressClass->displayAddress($this->element->fields,$this->element->billing_address,'address');
+                        ?>
+                    </div>
+                </div>
+                <?php
+            }
+
+            ?>
+
+
+
+
+
+            <?php
+
+            if(!empty($this->element->order_shipping_id) && !empty($this->element->shipping_address)) {
+                ?>
+                <div>
+                    <div class="adminform" id="htmlfieldset_shipping">
+                        <legend style="background-color: #FFFFFF;"><?php echo JText::_('HIKASHOP_SHIPPING_ADDRESS'); ?></legend>
+                        <?php
+                        $override = false;
+                        if(method_exists($this->currentShipping, 'getShippingAddress')) {
+                            $override = $this->currentShipping->getShippingAddress($this->element->order_shipping_id);
+                        }
+                        if($override !== false ) {
+                            echo $override;
+                        } else {
+                            $addressClass = hikashop_get('class.address');
+                            echo $addressClass->displayAddress($this->element->fields, $this->element->shipping_address, 'address');
+                        }
+                        ?>
+                    </div>
+                </div>
+                <?php
+            }
+            ?>
+
+
+
+
+
+
+
+
+
+
+
+            <table class="hikashop_order_main_table">
+
+
 		<tr>
 			<td>
 				<fieldset class="adminform" id="htmlfieldset_products">
 					<legend style="background-color: #FFFFFF;"><?php echo JText::_('PRODUCT_LIST'); ?></legend>
-					<table cellpadding="1" width="100%">
+					<table>
 						<thead>
 							<tr>
 								<th class="hikashop_order_item_name_title title" colspan="2"><?php
@@ -707,6 +717,7 @@ if($this->invoice_type == 'order') {
 if($this->invoice_type == 'order') {
 ?>
 </form>
+    </div>
 <?php } ?>
 </div>
 <div style="page-break-after:always"></div>

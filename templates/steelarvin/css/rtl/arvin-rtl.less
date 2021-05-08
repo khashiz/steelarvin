@@ -642,6 +642,25 @@ span{
     padding: 2px 10px;
     .border-radius(3px);
   }
+  &.myOrderMetaItem{
+    &.status{
+      font-variation-settings: "wght" 600, "wdth" 100, "slnt" 0, "DOTR" 1, "DOTS" 0, "KASH" 0;
+      &.uk-text-pending{
+        color: @warning;
+      }
+      &.uk-text-cancelled,
+      &.uk-text-refunded{
+        color: @danger;
+      }
+      &.uk-text-created{
+        color: #000;
+      }
+      &.uk-text-confirmed,
+      &.uk-text-shipped{
+        color: @success;
+      }
+    }
+  }
 }
 .cursorPointer{
   cursor: pointer;
