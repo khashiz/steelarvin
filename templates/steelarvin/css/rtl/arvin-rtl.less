@@ -645,20 +645,6 @@ span{
   &.myOrderMetaItem{
     &.status{
       font-variation-settings: "wght" 600, "wdth" 100, "slnt" 0, "DOTR" 1, "DOTS" 0, "KASH" 0;
-      &.uk-text-pending{
-        color: @warning;
-      }
-      &.uk-text-cancelled,
-      &.uk-text-refunded{
-        color: @danger;
-      }
-      &.uk-text-created{
-        color: #000;
-      }
-      &.uk-text-confirmed,
-      &.uk-text-shipped{
-        color: @success;
-      }
     }
   }
 }
@@ -923,6 +909,21 @@ span{
 .uk-text-accent{color: @accent;}
 .uk-text-gray{color: @gray;}
 .uk-text-lightgray{color: #e0e0e0;}
+
+.uk-text-pending{
+  color: @warning;
+}
+.uk-text-cancelled,
+.uk-text-refunded{
+  color: @danger;
+}
+.uk-text-created{
+  color: #222;
+}
+.uk-text-confirmed,
+.uk-text-shipped{
+  color: @success;
+}
 
 div{
   &.uk-offcanvas{

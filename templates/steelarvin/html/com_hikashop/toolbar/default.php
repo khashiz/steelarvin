@@ -11,8 +11,8 @@ defined('_JEXEC') or die('Restricted access');
 <?php if(empty($this->data)) return; ?>
 <?php $toolbar_classname = $this->config->get('front_toolbar_btn_classname', 'hikabtn'); ?>
 <?php if (empty($toolbar_classname)) $toolbar_classname = 'hikabtn'; ?>
-<div class="uk-text-zero" data-ee>
-    <div>
+<div class="uk-text-zero">
+    <div class="uk-grid-small" data-uk-grid>
         <?php foreach($this->data as $key => $tool) { ?>
             <?php if (empty($tool['url']) && !empty($tool['sep'])) { ?>
                 <?php continue; ?>
@@ -40,10 +40,10 @@ defined('_JEXEC') or die('Restricted access');
 				$tool['linkattribs'] = '';
 			if(!empty($tool['javascript']))
 				$tool['linkattribs'].= ' onclick="' . $tool['javascript'] . '"';
-			echo '<a class="uk-button '.$tool['class'].' uk-border-rounded uk-width-1-1 uk-width-medium@m font" href="'.$tool['url'].'" '.$tool['linkattribs'].'>' . $content . '</a>';
+			echo '<div class="'.$tool['grid'].'"><a class="uk-button '.$tool['class'].' uk-border-rounded uk-width-1-1 uk-width-medium@m font" href="'.$tool['url'].'" '.$tool['linkattribs'].'>' . $content . '</a></div>';
 		} else {
-			$attr = $this->popupHelper->getAttr(@$tool['linkattribs'], 'hikabtn');
-			echo $this->popupHelper->display(
+			$attr = $this->popupHelper->getAttr(@$tool['linkattribs'], 'uk-button uk-button uk-button-default uk-width-1-1 uk-border-rounded font uk-border-rounded uk-width-1-1 uk-width-medium@m font');
+			echo '<div class="uk-width-1-1 uk-width-1-3@m">'.$this->popupHelper->display(
 				$content,
 				@$tool['name'],
 				$tool['url'],
@@ -51,7 +51,7 @@ defined('_JEXEC') or die('Restricted access');
 				$tool['popup']['width'],
 				$tool['popup']['height'],
 				$attr, '', 'link'
-			);
+			).'</div>';
 		}
 	}elseif(!empty($tool['dropdown'])) {
 		if(is_array($tool['dropdown'])) {

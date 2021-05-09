@@ -86,7 +86,7 @@ t4t5t54tt54t54t54t54
 					'HIKA_PRINT',
 					hikashop_completeLink('cart&task=showcart&cart_type='.$cart->cart_type.'&cart_id='.$cart->cart_id,true),
 					'hikashop_print_cart',
-					760, 480, '', '', 'link'
+					1200, 480, '', '', 'link'
 				);
 			?></td>
 <?php

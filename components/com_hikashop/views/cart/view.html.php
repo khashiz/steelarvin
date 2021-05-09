@@ -397,7 +397,8 @@ class CartViewCart extends HikaShopView {
 					'name' => JText::_('CHECKOUT'),
 					'url' => $url_checkout,
 					'fa' => array('html' => '<i class="fas fa-shopping-cart"></i>'),
-                    'class' => 'uk-button-success uk-button-large uk-box-shadow-small'
+                    'class' => 'uk-button-success uk-button-large uk-box-shadow-small',
+                    'grid' => 'uk-width-1-1',
 				);
 			} else {
 				$toolbar['cart'] = array(
@@ -486,7 +487,8 @@ class CartViewCart extends HikaShopView {
 				'name' => JText::_('HIKA_SAVE_CART'),
 				'javascript' => "return window.hikashop.submitform('apply','hikashop_show_cart_form');",
 				'fa' => array('html' => '<i class="far fa-save"></i>'),
-                'class' => 'uk-button-default uk-margin-small-top'
+                'class' => 'uk-button-default',
+                'grid' => 'uk-width-1-1',
 			);
 		}
 		if(!$juser->guest) {
@@ -503,7 +505,8 @@ class CartViewCart extends HikaShopView {
 				'name' => JText::_('HIKA_BACK'),
 				'url' => $link,
 				'fa' => array('html' => '<i class="fas fa-arrow-circle-left"></i>'),
-                'class' => 'uk-button-default uk-margin-small-top uk-hidden'
+                'class' => 'uk-button-default',
+                'grid' => 'uk-width-1-1 uk-hidden',
 			);
 		}
 		$this->toolbar = $toolbar;

@@ -377,9 +377,11 @@ class OrderViewOrder extends hikashopView {
 				$url = str_replace('http://','https://', $url);
 			$pay = array(
 				'icon' => 'pay',
+                'class' => 'uk-button-success uk-height-1-1 uk-width-1-1 uk-border-rounded font',
+                'grid' => 'uk-width-1-1 uk-width-1-3@m',
 				'name' => JText::_('PAY_NOW'),
 				'url' => $url,
-				'fa' => array('html' => '<i class="far fa-credit-card"></i>')
+				'fa' => array('html' => '')
 			);
 			$toolbar_array['pay'] = $pay;
 		}
@@ -392,14 +394,16 @@ class OrderViewOrder extends hikashopView {
 					$url .= '&order_token='.urlencode($token);
 				$toolbar_array['invoice'] = array(
 					'icon' => 'print',
+					'class' => 'uk-button uk-button-default uk-width-1-1 uk-border-rounded font',
+                    'grid' => 'uk-width-1-1 uk-width-1-3@m',
 					'name' => JText::_('PRINT_INVOICE'),
 					'url' => hikashop_completeLink($url,true),
 					'popup' => array(
 						'id' => 'hikashop_print_cart',
-						'width' => 760,
+						'width' => 1200,
 						'height' => 480
 					),
-					'fa' => array('html' => '<i class="fas fa-print"></i>')
+					'fa' => array('html' => '')
 				);
 			}
 			$user = JFactory::getUser();
@@ -409,6 +413,8 @@ class OrderViewOrder extends hikashopView {
 				if(!empty($redirect) || !empty($url)) {
 					$back = array(
 						'icon' => 'back',
+                        'class' => 'uk-button uk-button-default uk-width-1-1 uk-border-rounded font',
+                        'grid' => 'uk-width-1-1 uk-width-1-3@m',
 						'name' => JText::_('HIKA_BACK'),
 						'javascript' =>  "submitbutton('cancel'); return false;",
 						'fa' => array('html' => '<i class="fas fa-arrow-circle-left"></i>')
