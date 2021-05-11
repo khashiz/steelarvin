@@ -79,24 +79,25 @@ if($end_date > 0 && $end_date < $now) {
 
 if($start_date > 0 && $start_date > $now) {
 ?>
-	<span class="hikashop_product_sale_start"><?php
-		echo JText::sprintf('ITEM_SOLD_ON_DATE', hikashop_getDate($start_date, $this->params->get('date_format', '%d %B %Y')));
-	?></span>
-<?php
-}
+	<span class="hikashop_product_sale_start uk-display-block">
+        <?php echo JText::sprintf('ITEM_SOLD_ON_DATE', hikashop_getDate($start_date, $this->params->get('date_format', '%d %B %Y'))); ?>
+    </span>
+<?php } ?>
 
-$stock_class = ($stock != 0) ? "" : " hikashop_product_no_stock";
-?>
-<span class="hikashop_product_stock_count<?php echo $stock_class; ?>">
-<?php
-	if(!empty($this->row->product_stock_message))
-		echo JText::_($this->row->product_stock_message);
-	elseif($stock > 0)
-		echo (($stock == 1 && JText::_('X_ITEM_IN_STOCK') != 'X_ITEM_IN_STOCK') ? JText::sprintf('X_ITEM_IN_STOCK', $stock) : JText::sprintf('X_ITEMS_IN_STOCK', $stock));
-	elseif(!$in_stock)
-		echo JText::_('NO_STOCK');
-?>
-</span>
+<div class="hikashop_product_stock_count uk-width-1-1">
+<?php if(!empty($this->row->product_stock_message)) { ?>
+    <span class="uk-text-tiny uk-text-secondary uk-display-block font stockAvailability"><?php echo JText::_($this->row->product_stock_message); ?></span>
+<?php } elseif($stock > 0) { ?>
+    <?php if ($stock == 1) { ?>
+        <span class="uk-text-tiny uk-text-danger uk-display-block font stockAvailability"><?php echo JText::sprintf('ONLYONEINSTOCK'); ?></span>
+    <?php } elseif ($stock > 1 && $stock < 6) { ?>
+        <span class="uk-text-tiny uk-text-danger uk-display-block font stockAvailability"><?php echo JText::sprintf('LESSTHANFIVEINSTOCK'); ?></span>
+    <?php } ?>
+<?php } elseif(!$in_stock) { ?>
+    <span class="uk-text-tiny uk-text-danger uk-display-block font stockAvailability"><?php echo JText::_('NO_STOCK'); ?></span>
+<?php } ?>
+</div>
+
 <?php
 
 if($waitlist_btn) {
@@ -114,14 +115,16 @@ if(($add_to_cart || $add_to_wishlist) && $display_quantity_field) {
 
 if($add_to_cart) {
 ?>
-	<a class="<?php echo $css_button . ' ' . $css_button_cart; ?>" rel="nofollow" href="<?php echo hikashop_completeLink($classical_url); ?>" onclick="if(window.hikashop.addToCart) { return window.hikashop.addToCart(this); }" data-addToCart="<?php echo $this->row->product_id; ?>" data-addTo-div="hikashop_product_form" data-addTo-class="add_in_progress"><span><?php
+    <div>
+	<a class="uk-button uk-button-success uk-button-larg uk-border-rounded uk-box-shadow-small font" rel="nofollow" href="<?php echo hikashop_completeLink($classical_url); ?>" onclick="if(window.hikashop.addToCart) { return window.hikashop.addToCart(this); }" data-addToCart="<?php echo $this->row->product_id; ?>" data-addTo-div="hikashop_product_form" data-addTo-class="add_in_progress">
+        <span><?php
 		if(!empty($this->row->product_addtocart_message))
 			echo JText::_($this->row->product_addtocart_message);
 		else if(!empty($this->row->main->product_addtocart_message))
 		        echo JText::_($this->row->main->product_addtocart_message);
 		else
 			echo JText::_('ADD_TO_CART');
-	?></span></a>
+	?></span></a></div>
 <?php
 }
 

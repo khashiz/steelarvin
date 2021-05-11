@@ -7,41 +7,31 @@
  * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
  */
 defined('_JEXEC') or die('Restricted access');
-?><?php
-if(!empty($this->canonical)) {
-	$doc = JFactory::getDocument();
-	$doc->addHeadLink(hikashop_cleanURL($this->canonical), 'canonical');
-}
-$classes = array();
-if(!empty($this->categories)) {
-	foreach($this->categories as $category) {
-		$classes[] = 'hikashop_product_of_category_'.$category->category_id;
-	}
-}
 ?>
+<?php if(!empty($this->canonical)) { ?>
+    <?php
+    $doc = JFactory::getDocument();
+    $doc->addHeadLink(hikashop_cleanURL($this->canonical), 'canonical');
+    ?>
+<?php } ?>
+<?php $classes = array(); if(!empty($this->categories)) { ?>
+    <?php foreach($this->categories as $category) { ?>
+        <?php $classes[] = 'hikashop_product_of_category_'.$category->category_id; ?>
+    <?php } ?>
+<?php } ?>
 <div itemscope itemtype="https://schema.org/Product" id="hikashop_product_<?php echo preg_replace('#[^a-z0-9]#i','_',@$this->element->product_code); ?>_page" class="hikashop_product_page <?php echo implode(' ',$classes); ?>">
-<?php
-$app = JFactory::getApplication();
-if(empty($this->element)) {
-	if($this->config->get('404_when_product_not_found',1)){
-		throw new Exception(JText::_('PRODUCT_NOT_FOUND'), 404);
-		echo '</div>';
-		return;
-	}
-	$app->enqueueMessage(JText::_('PRODUCT_NOT_FOUND'));
-	hikashop_setPageTitle(JText::_('PRODUCT_NOT_FOUND'));
-	echo '</div>';
-	return;
-}
-
-if(!empty($this->links->previous))
-	echo '<a title="'.JText::_('PREVIOUS_PRODUCT').'" href="'.$this->links->previous.'"><span class="hikashop_previous_product"></span></a>';
-if(!empty($this->links->next))
-	echo '<a title="'.JText::_('NEXT_PRODUCT').'" href="'.$this->links->next.'"><span class="hikashop_next_product"></span></a>';
-
-?>
-	<div class='clear_both'></div>
-<script type="text/javascript">
+    <?php $app = JFactory::getApplication(); ?>
+    <?php if(empty($this->element)) { ?>
+        <?php if($this->config->get('404_when_product_not_found',1)) { throw new Exception(JText::_('PRODUCT_NOT_FOUND'), 404); echo '</div>'; return; } ?>
+        <?php $app->enqueueMessage(JText::_('PRODUCT_NOT_FOUND')); hikashop_setPageTitle(JText::_('PRODUCT_NOT_FOUND')); echo '</div>'; return; ?>
+    <?php } ?>
+    <?php
+    if(!empty($this->links->previous))
+        echo '<a title="'.JText::_('PREVIOUS_PRODUCT').'" href="'.$this->links->previous.'"><span class="hikashop_previous_product"></span></a>';
+    if(!empty($this->links->next))
+        echo '<a title="'.JText::_('NEXT_PRODUCT').'" href="'.$this->links->next.'"><span class="hikashop_next_product"></span></a>';
+    ?>
+    <script type="text/javascript">
 function hikashop_product_form_check() {
 	var d = document, el = d.getElementById('hikashop_product_quantity_main');
 	if(!el)
@@ -55,32 +45,31 @@ function hikashop_product_form_check() {
 	return false;
 }
 </script>
-	<form action="<?php echo hikashop_completeLink('product&task=updatecart'); ?>" method="post" name="hikashop_product_form" onsubmit="return hikashop_product_form_check();" enctype="multipart/form-data">
-<?php
-
-$this->variant_name ='';
-if(!empty($this->element->variants) && $this->config->get('variant_increase_perf', 1) && !empty($this->element->main)) {
-	foreach(get_object_vars($this->element->main) as $name => $value) {
-		if(!is_array($name) && !is_object($name)) {
-			if(empty($this->element->$name)) {
-				if($name == 'product_quantity' && $this->element->$name == 0) {
-					continue;
-				}
-				$this->element->$name = $this->element->main->$name;
-				continue;
-			}
-		}
-		if($this->params->get('characteristic_display') == 'list' && !empty($this->element->characteristics) && !empty($this->element->main->characteristics)) {
-			$this->element->$name = $this->element->main->$name;
-		}
-	}
-}
-
-$this->setLayout($this->productlayout);
-echo $this->loadTemplate();
-
-if($this->productlayout != 'show_tabular') {
-?>
+    <form action="<?php echo hikashop_completeLink('product&task=updatecart'); ?>" method="post" name="hikashop_product_form" onsubmit="return hikashop_product_form_check();" enctype="multipart/form-data" class="uk-margin-medium-bottom">
+        <?php
+        $this->variant_name ='';
+        if(!empty($this->element->variants) && $this->config->get('variant_increase_perf', 1) && !empty($this->element->main)) {
+            foreach(get_object_vars($this->element->main) as $name => $value) {
+                if(!is_array($name) && !is_object($name)) {
+                    if(empty($this->element->$name)) {
+                        if($name == 'product_quantity' && $this->element->$name == 0) {
+                            continue;
+                        }
+                        $this->element->$name = $this->element->main->$name;
+                        continue;
+                    }
+                }
+                if($this->params->get('characteristic_display') == 'list' && !empty($this->element->characteristics) && !empty($this->element->main->characteristics)) {
+                    $this->element->$name = $this->element->main->$name;
+                }
+            }
+        }
+        ?>
+        <?php
+        $this->setLayout($this->productlayout);
+        echo $this->loadTemplate();
+        if($this->productlayout != 'show_tabular') {
+            ?>
 		<input type="hidden" name="cart_type" id="type" value="cart"/>
 		<input type="hidden" name="add" value="1"/>
 		<input type="hidden" name="ctrl" value="product"/>
@@ -99,38 +88,82 @@ if($this->productlayout != 'show_tabular') {
 	$enable_status_vote = $this->config->get('enable_status_vote', '');
 	if(in_array($enable_status_vote, array('comment', 'two', 'both'))) {
 ?>
-	<form action="<?php echo hikashop_currentURL() ?>" method="post" name="adminForm_hikashop_comment_form" id="hikashop_comment_form">
-		<div id="hikashop_vote_listing" data-votetype="product" class="hikashop_product_vote_listing">
-<?php
-		if($this->params->get('show_vote_product')) {
-			$js = '';
-			if(isset($this->element->main)) {
-				$product_id = $this->element->main->product_id;
-			} else {
-				$product_id = $this->element->product_id;
-			}
-			$this->params->set('product_id',$product_id);
-			echo hikashop_getLayout('vote', 'listing', $this->params, $js);
-?>
-		</div>
-		<div id="hikashop_vote_form" data-votetype="product" class="hikashop_product_vote_form">
-<?php
-			$js = '';
-			if(isset($this->element->main)) {
-				$product_id = $this->element->main->product_id;
-			} else {
-				$product_id = $this->element->product_id;
-			}
-			$this->params->set('product_id',$product_id);
-			echo hikashop_getLayout('vote', 'form', $this->params, $js);
-		}
-?>
-		</div>
-		<input type="hidden" name="add" value="1"/>
-		<input type="hidden" name="ctrl" value="product"/>
-		<input type="hidden" name="task" value="show"/>
-		<input type="hidden" name="return_url" value="<?php echo urlencode(base64_encode(urldecode($this->redirect_url))); ?>"/>
-	</form>
+
+        <div class="uk-margin-medium-bottom">
+        <ul class="uk-tab uk-margin-remove-top" data-uk-switcher="animation: uk-animation-fade">
+            <li><a href="#"><?php echo JText::sprintf('PRODUCT_DESCRIPTION'); ?></a></li>
+            <li><a href="#"><?php echo JText::sprintf('PRODUCT_SPECIFICATIONS'); ?></a></li>
+            <li><a href="#"><?php echo JText::sprintf('PRODUCT_COMMENTS'); ?></a></li>
+            <?php if(!empty($this->fields['aparat_id'])) { ?>
+                <li><a href="#"><?php echo JText::sprintf('PRODUCT_VIDEO'); ?></a></li>
+            <?php } ?>
+            <li><a href="#"><?php echo JText::sprintf('PRODUCT_DOWNLOADS'); ?></a></li>
+        </ul>
+        <div class="uk-switcher">
+            <div>
+                <div id="hikashop_product_bottom_part">
+                    <?php if(!empty($this->element->extraData->bottomBegin)) { echo implode("\r\n",$this->element->extraData->bottomBegin); } ?>
+                    <div id="hikashop_product_description_main" class="uk-text-justify uk-text-small uk-text-secondary font" itemprop="description">
+                        <?php echo JHTML::_('content.prepare',preg_replace('#<hr *id="system-readmore" */>#i','',$this->element->product_description)); ?>
+                    </div>
+                    <span id="hikashop_product_url_main" class="hikashop_product_url_main">
+                        <?php
+                        if(!empty($this->element->product_url)) {
+                            echo JText::sprintf('MANUFACTURER_URL', '<a href="' . $this->element->product_url . '" target="_blank">' . $this->element->product_url . '</a>');
+                        }
+                        ?>
+                    </span>
+                    <?php if(!empty($this->element->extraData->bottomMiddle)) { echo implode("\r\n",$this->element->extraData->bottomMiddle); } ?>
+                    <?php if(!empty($this->element->extraData->bottomEnd)) { echo implode("\r\n",$this->element->extraData->bottomEnd); } ?>
+                </div>
+            </div>
+            <div>
+                <?php if(!empty($this->fields)) { $this->setLayout('show_block_custom_main'); echo $this->loadTemplate(); } ?>
+            </div>
+            <div>
+                <form action="<?php echo hikashop_currentURL() ?>" method="post" name="adminForm_hikashop_comment_form" id="hikashop_comment_form">
+                    <div>
+                        <div data-uk-grid>
+                            <div id="hikashop_vote_listing" data-votetype="product" class="uk-width-1-1 uk-width-expand@m">
+                                <?php
+                                if($this->params->get('show_vote_product')) {
+                                $js = '';
+                                if(isset($this->element->main)) {
+                                    $product_id = $this->element->main->product_id;
+                                } else {
+                                    $product_id = $this->element->product_id;
+                                }
+                                $this->params->set('product_id',$product_id);
+                                echo hikashop_getLayout('vote', 'listing', $this->params, $js);
+                                ?>
+                            </div>
+                            <div id="hikashop_vote_form" data-votetype="product" class="uk-width-1-1 uk-width-2-5@m">
+                                <?php
+                                $js = '';
+                                if(isset($this->element->main)) {
+                                    $product_id = $this->element->main->product_id;
+                                } else {
+                                    $product_id = $this->element->product_id;
+                                }
+                                $this->params->set('product_id',$product_id);
+                                echo hikashop_getLayout('vote', 'form', $this->params, $js);
+                                }
+                                ?>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="hidden" name="add" value="1"/>
+                    <input type="hidden" name="ctrl" value="product"/>
+                    <input type="hidden" name="task" value="show"/>
+                    <input type="hidden" name="return_url" value="<?php echo urlencode(base64_encode(urldecode($this->redirect_url))); ?>"/>
+                </form>
+            </div>
+            <?php if(!empty($this->fields['aparat_id'])) { ?>
+                <div><?php $this->setLayout('show_block_video'); echo $this->loadTemplate(); ?></div>
+            <?php } ?>
+            <div><?php $this->setLayout('show_block_product_files'); echo $this->loadTemplate(); ?></div>
+        </div>
+        </div>
 <?php
 	}
 }
@@ -195,7 +228,7 @@ if(empty($this->element->variants) || $this->params->get('characteristic_display
 ?>
 	<div id="hikashop_product_name_<?php echo $variant_name; ?>" style="display:none;"><?php
 		echo $variant->product_name;
-	?></div>
+	?>gtgrgrgrtggtrgrgrgrtgrgtrg</div>
 <?php
 		}
 
@@ -433,4 +466,10 @@ if($this->config->get('comments_feature') == 'jcomments') {
 }
 ?>
 	</div>
+    <?php
+    if(HIKASHOP_J30) {
+        $this->setLayout('show_block_tags');
+        echo $this->loadTemplate();
+    }
+    ?>
 </div>

@@ -20,18 +20,18 @@ foreach ($this->fields as $fieldName => $oneExtraField) {
 	if(!empty($value) || $value === '0' || $oneExtraField->field_type == 'customtext') {
 		$displayTitle = true;
 	?>
-		<tr class="hikashop_product_custom_<?php echo $oneExtraField->field_namekey;?>_line">
-			<td class="key">
-				<span id="hikashop_product_custom_name_<?php echo $oneExtraField->field_id;?>" class="hikashop_product_custom_name">
-					<?php echo $this->fieldsClass->getFieldName($oneExtraField);?>
-				</span>
-			</td>
-			<td>
-				<span id="hikashop_product_custom_value_<?php echo $oneExtraField->field_id;?>" class="hikashop_product_custom_value">
-					<?php echo $this->fieldsClass->show($oneExtraField,$value); ?>
-				</span>
-			</td>
-		</tr>
+        <?php if ($oneExtraField->field_namekey != 'short_desc' && $oneExtraField->field_namekey != 'aparat_id' && $oneExtraField->field_namekey != 'sell_unit') { ?>
+        <div>
+            <div class="hikashop_product_custom_<?php echo $oneExtraField->field_namekey;?>_line uk-grid-small" data-uk-grid>
+                <div class="uk-width-expand uk-text-tiny font" data-uk-leader>
+                    <span id="hikashop_product_custom_name_<?php echo $oneExtraField->field_id;?>"><?php echo $this->fieldsClass->getFieldName($oneExtraField);?></span>
+                </div>
+                <div class="uk-text-small uk-text-bold uk-text-secondary font hikashop_cart_total_value">
+                    <span class="uk-text-accent" id="hikashop_product_custom_value_<?php echo $oneExtraField->field_id;?>"><?php echo $this->fieldsClass->show($oneExtraField,$value); ?></span>
+                </div>
+            </div>
+        </div>
+        <?php } ?>
 	<?php
 	}
 }
@@ -40,15 +40,6 @@ if($displayTitle){
 ?>
 
 <div id="hikashop_product_custom_info_main" class="hikashop_product_custom_info_main">
-<?php
-	if($this->productlayout != 'show_tabular') {
-?>
-	<h4><?php echo JText::_('SPECIFICATIONS');?></h4>
-<?php
-	}
-?>
-	<table class="hikashop_product_custom_info_main_table">
-		<?php echo $specifFields; ?>
-	</table>
+    <div class="uk-child-width-1-1 uk-child-width-1-2@m uk-grid-small uk-grid-divider" data-uk-grid><?php echo $specifFields; ?></div>
 </div>
-<?php }
+<?php } ?>

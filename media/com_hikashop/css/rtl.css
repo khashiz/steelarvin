@@ -64,10 +64,6 @@ div#hikashop_social {
 .hikashop_wizardbar ul li .hkbadge {
     margin-left: 8px;
 }
-.hikashop_product_msrp_price_title, .hikashop_product_msrp_price_value, .hikashop_product_our_price_title, .hikashop_product_page .hikashop_product_price_0, .hikashop_product_page .hikashop_product_price_per_unit, .hikashop_product_page .hikashop_product_price_with_min_qty, .hikashop_option_price_title, .hikashop_option_price_value{
-	display: block;
-	float: right;
-}
 .hikashop_product_our_price_title{
 	text-align: right;
 	clear: both;

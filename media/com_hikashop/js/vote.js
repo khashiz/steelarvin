@@ -84,6 +84,7 @@ hikaVote.vote = function(val, from){
 	window.Oby.xRequest(hikaVote.options.urls.save, {mode: "POST", data: data}, function(xhr) {
 		response = window.Oby.evalJSON(xhr.response);
 		if(response.error) {
+			UIkit.notification({message: response.error.message, status: 'danger', pos: 'bottom-left'});
 			el.innerHTML = response.error.message;
 			return;
 		}
@@ -91,6 +92,7 @@ hikaVote.vote = function(val, from){
 		if(!response.success)
 			return;
 
+		UIkit.notification({message: response.success.message, status: 'success', pos: 'bottom-left'});
 		el.innerHTML = response.success.message;
 		setTimeout(function(){ el.innerHTML = ''; }, 3500);
 		if(comment_task) {

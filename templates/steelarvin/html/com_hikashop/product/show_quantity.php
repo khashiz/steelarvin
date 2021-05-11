@@ -68,20 +68,19 @@ switch($quantityLayout) {
 
 	case 'show_regrouped':
 ?>
-		<div class="input-append hikashop_product_quantity_div hikashop_product_quantity_input_div_regrouped">
-			<input id="<?php echo $id; ?>" type="text" onfocus="this.select()" value="<?php echo $current_quantity; ?>" class="hikashop_product_quantity_field" name="<?php echo $name; ?>" data-hk-qty-min="<?php echo $min_quantity; ?>" data-hk-qty-max="<?php echo $max_quantity; ?>" onchange="window.hikashop.checkQuantity(this);" />
-			<div class="add-on hikashop_product_quantity_div hikashop_product_quantity_change_div_regrouped">
-				<div class="hikashop_product_quantity_change_div_plus_regrouped">
-					<a class="hikashop_product_quantity_field_change_plus hikashop_product_quantity_field_change" href="#" data-hk-qty-mod="1" onclick="return window.hikashop.updateQuantity(this, '<?php echo $id; ?>');">+</a>
-				</div>
-				<div class="hikashop_product_quantity_change_div_plus_regrouped">
-					<a class="hikashop_product_quantity_field_change_minus hikashop_product_quantity_field_change" href="#" data-hk-qty-mod="-1" onclick="return window.hikashop.updateQuantity(this, '<?php echo $id; ?>');">&ndash;</a>
-				</div>
-			</div>
+		<div class="input-append hikashop_product_quantity_div hikashop_product_quantity_input_div_regrouped uk-text-zero uk-grid-small uk-flex-center uk-child-width-auto uk-flex-middle" data-uk-grid>
+            <div class="hikashop_product_quantity_change_div_plus_regrouped">
+                <a data-uk-tooltip="offset:15;" title="<?php echo JText::sprintf('QTYINCREASE'); ?>" class="hikashop_product_quantity_field_change_plus hikashop_product_quantity_field_change uk-text-success" href="#" data-hk-qty-mod="1" onclick="return window.hikashop.updateQuantity(this, '<?php echo $id; ?>');"><img src="http://localhost/steelarvin/images/sprite.svg#plus-circle" alt="" width="16" height="16" data-uk-svg></a>
+            </div>
+            <div>
+                <input id="<?php echo $id; ?>" type="text" onfocus="this.select()" value="<?php echo $current_quantity; ?>" class="uk-input uk-form-width-xsmall uk-form-small uk-border-rounded uk-text-center uk-text-bold hikashop_product_quantity_field" name="<?php echo $name; ?>" data-hk-qty-min="<?php echo $min_quantity; ?>" data-hk-qty-max="<?php echo $max_quantity; ?>" onchange="window.hikashop.checkQuantity(this);" />
+            </div>
+            <div class="hikashop_product_quantity_change_div_plus_regrouped">
+                <a data-uk-tooltip="offset:15;" title="<?php echo JText::sprintf('QTYDECREASE'); ?>" class="hikashop_product_quantity_field_change_minus hikashop_product_quantity_field_change uk-text-danger" href="#" data-hk-qty-mod="-1" onclick="return window.hikashop.updateQuantity(this, '<?php echo $id; ?>');"><img src="http://localhost/steelarvin/images/sprite.svg#minus-circle" alt="" width="16" height="16" data-uk-svg></a>
+            </div>
+			<div class="add-on hikashop_product_quantity_div hikashop_product_quantity_change_div_regrouped uk-hidden"></div>
 		</div>
-		<div class="hikashop_product_quantity_div hikashop_product_quantity_add_to_cart_div hikashop_product_quantity_add_to_cart_div_regrouped"><?php
-			echo $html;
-		?></div>
+		<div class="hikashop_product_quantity_div hikashop_product_quantity_add_to_cart_div hikashop_product_quantity_add_to_cart_div_regrouped uk-hidden"><?php echo $html; ?></div>
 <?php
 		break;
 
