@@ -23,6 +23,7 @@ setTimeout( 'window.parent.hikashop.closeBox()', <?php echo (int)$this->config->
 <?php
 if($cart_type == 'cart' || hikashop_loadUser() != null){
 ?>
+    fffff
 <div id="hikashop_notice_box_content" class="hikashop_notice_box_content" >
 	<div id="hikashop_notice_box_message" >
 		<?php

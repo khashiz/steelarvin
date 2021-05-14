@@ -88,7 +88,8 @@ if(!empty($this->rows)) {
 
 	if(empty($this->tmpl_ajax)) {
 ?>
-<div id="hikashop_products_switcher_<?php echo $mainDivName; ?>" class="hikashop_products <?php echo @$cookie_value; ?>"<?php echo $attributes; ?> itemscope="" itemtype="https://schema.org/itemListElement">
+
+    <div id="hikashop_products_switcher_<?php echo $mainDivName; ?>" class="gggggg hikashop_products <?php echo @$cookie_value; ?>"<?php echo $attributes; ?> itemscope="" itemtype="https://schema.org/itemListElement">
 <?php
 	}
 	if ($switchMode) {
@@ -166,10 +167,15 @@ window.localPage.setCookie = function (name,value,delay) {
 				break;
 		}
 
-		if($row_fluid == 12)
-			echo '<div class="uk-grid-collapse uk-flex uk-flex-wrap uk-child-width-1-1 uk-child-width-1-3@m productGridWrapper">';
+
+
+		if (strpos($mainDivName, 'module')) {
+            echo '<div data-uk-slider="autoplay: true; autoplay-interval: 3000;">';
+        }
+        if($row_fluid == 12)
+			echo '<div class="'.(strpos($mainDivName, 'module') ? "uk-slider-items uk-grid " : "").'uk-grid-collapse uk-flex uk-flex-wrap uk-child-width-1-1 uk-child-width-1-'.(strpos($mainDivName, 'module') ? 4 : 3).'@m productGridWrapper">';
 		else
-			echo '<div class="uk-grid-collapse uk-flex uk-flex-wrap uk-child-width-1-1 uk-child-width-1-3@m productGridWrapper">';
+			echo '<div class="'.(strpos($mainDivName, 'module') ? "uk-slider-items uk-grid " : "").'uk-slider-items uk-grid uk-grid-collapse uk-flex uk-flex-wrap uk-child-width-1-1 uk-child-width-1-'.(strpos($mainDivName, 'module') ? 4 : 3).'@m productGridWrapper">';
 
 		$itemLayoutType = $this->params->get('div_item_layout_type');
 		if(empty($itemLayoutType))
@@ -202,9 +208,15 @@ window.localPage.setCookie = function (name,value,delay) {
 			$current_column++;
 		}
 
-		echo '</div>';
+        echo '</div>';
+
+    if (strpos($mainDivName, 'module')) {
+        echo '<ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul></div>';
+    }
+
 	}
-?>
+
+	?>
 <?php
 
 	if($infinite_scroll && empty($this->tmpl_ajax) && $this->pageInfo->elements->page > 1) {
@@ -364,7 +376,7 @@ if(empty($this->tmpl_ajax)) {
 if(in_array($pagination, array('bottom', 'both')) && $this->params->get('show_limit') && $this->pageInfo->elements->total && !$infinite_scroll) {
 	$this->pagination->form = '_bottom';
 ?>
-<form action="<?php echo str_replace('&tmpl=raw', '', hikashop_currentURL()); ?>" method="post" name="adminForm_<?php echo $mainDivName . $this->category_selected; ?>_bottom">
+<form class="uk-hidden" action="<?php echo str_replace('&tmpl=raw', '', hikashop_currentURL()); ?>" method="post" name="adminForm_<?php echo $mainDivName . $this->category_selected; ?>_bottom">
 	<div class="hikashop_products_pagination hikashop_products_pagination_bottom">
 		<?php echo str_replace('&tmpl=raw','', $this->pagination->getListFooter($this->params->get('limit'))); ?>
 		<span class="hikashop_results_counter"><?php echo $this->pagination->getResultsCounter(); ?></span>

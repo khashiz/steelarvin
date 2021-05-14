@@ -31,8 +31,9 @@ $afterDisplayContent = trim(implode("\n", $results));
 ?>
 <div class="uk-card uk-card-default uk-border-rounded uk-overflow-hidden uk-box-shadow-small">
     <div>
-        <div class="uk-padding">
-            <div class="blog<?php echo $this->pageclass_sfx; ?>" itemscope itemtype="https://schema.org/Blog">
+        <div>
+            <div class="<?php if (!empty($this->lead_items)) { ?>uk-padding <?php } ?> blog<?php echo $this->pageclass_sfx; ?>" itemscope itemtype="https://schema.org/Blog">
+
                 <?php if ($this->params->get('show_category_title', 1) or $this->params->get('page_subheading')) : ?>
                     <h2> <?php echo $this->escape($this->params->get('page_subheading')); ?>
                         <?php if ($this->params->get('show_category_title')) : ?>
@@ -69,17 +70,15 @@ $afterDisplayContent = trim(implode("\n", $results));
                 <?php $leadingcount = 0; ?>
                 <?php if (!empty($this->lead_items)) : ?>
                     <div class="items-leading clearfix">
-                        <?php foreach ($this->lead_items as &$item) : ?>
-                            <div class="leading-<?php echo $leadingcount; ?><?php echo $item->state == 0 ? ' system-unpublished' : null; ?>"
-                                 itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-                                <?php
-                                $this->item = &$item;
-                                echo $this->loadTemplate('item');
-                                ?>
-                            </div>
-                            <?php $leadingcount++; ?>
-                        <?php endforeach; ?>
-                    </div><!-- end items-leading -->
+                        <div class="uk-margin-remove" data-uk-accordion>
+                            <?php foreach ($this->lead_items as &$item) : ?>
+                                <div class="leading-<?php echo $leadingcount; ?><?php echo $item->state == 0 ? ' system-unpublished' : null; ?>" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+                                    <?php $this->item = &$item; echo $this->loadTemplate('item'); ?>
+                                </div>
+                                <?php $leadingcount++; ?>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
                 <?php endif; ?>
 
                 <?php

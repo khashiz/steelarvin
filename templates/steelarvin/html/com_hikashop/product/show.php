@@ -90,7 +90,7 @@ if($this->productlayout != 'show_tabular') {
 ?>
 
         <div class="uk-margin-medium-bottom">
-        <ul class="uk-tab uk-margin-remove-top" data-uk-switcher="animation: uk-animation-fade">
+        <ul class="uk-tab uk-margin-remove-top" data-uk-switcher="animation: uk-animation-fade; connect: .productsTabs">
             <li><a href="#"><?php echo JText::sprintf('PRODUCT_DESCRIPTION'); ?></a></li>
             <li><a href="#"><?php echo JText::sprintf('PRODUCT_SPECIFICATIONS'); ?></a></li>
             <li><a href="#"><?php echo JText::sprintf('PRODUCT_COMMENTS'); ?></a></li>
@@ -99,7 +99,7 @@ if($this->productlayout != 'show_tabular') {
             <?php } ?>
             <li><a href="#"><?php echo JText::sprintf('PRODUCT_DOWNLOADS'); ?></a></li>
         </ul>
-        <div class="uk-switcher">
+        <div class="uk-switcher productsTabs">
             <div>
                 <div id="hikashop_product_bottom_part">
                     <?php if(!empty($this->element->extraData->bottomBegin)) { echo implode("\r\n",$this->element->extraData->bottomBegin); } ?>
@@ -419,17 +419,25 @@ $this->params->set('show_price_weight', 0);
 $this->product = $this->element;
 
 ?>
-	<div class="hikashop_submodules" id="hikashop_submodules" style="clear:both">
-<?php
-	if(!empty ($this->modules) && is_array($this->modules)) {
-		jimport('joomla.application.module.helper');
-		foreach($this->modules as $module) {
-			echo JModuleHelper::renderModule($module);
-		}
-	}
-?>
-	</div>
-	<div class="hikashop_external_comments" id="hikashop_external_comments" style="clear:both">
+
+    <div class="uk-margin-medium-bottom">
+        <ul class="uk-tab uk-margin-remove-top" data-uk-switcher="animation: uk-animation-fade; connect: .productsSubmodules">
+            <li><a href="#"><?php echo JText::sprintf('RELATED_PRODUCTS'); ?></a></li>
+            <li><a href="#"><?php echo JText::sprintf('SAME_CATEGORY'); ?></a></li>
+        </ul>
+        <div class="hikashop_submodules uk-switcher productsSubmodules" id="hikashop_submodules">
+            <?php
+            if(!empty ($this->modules) && is_array($this->modules)) {
+                jimport('joomla.application.module.helper');
+                foreach($this->modules as $module) {
+                    echo JModuleHelper::renderModule($module);
+                }
+            }
+            ?>
+        </div>
+    </div>
+
+	<div class="hikashop_external_comments" id="hikashop_external_comments">
 <?php
 if($this->config->get('comments_feature') == 'jcomments') {
 	$comments = HIKASHOP_ROOT . 'components' . DS . 'com_jcomments' . DS . 'jcomments.php';

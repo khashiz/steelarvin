@@ -577,6 +577,16 @@ div{
       }
     }
   }
+  &.commentText{
+    font-variation-settings: "wght" 500, "wdth" 100, "slnt" 0, "DOTR" 1, "DOTS" 0, "KASH" 0;
+  }
+  &[itemprop="articleBody"]{
+    p{
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 form{
   &.regForm{
@@ -666,6 +676,9 @@ span{
   &.stockAvailability{
     font-variation-settings: "wght" 600, "wdth" 100, "slnt" 0, "DOTR" 1, "DOTS" 0, "KASH" 0;
   }
+  &.commentMeta{
+    font-variation-settings: "wght" 500, "wdth" 100, "slnt" 0, "DOTR" 1, "DOTS" 0, "KASH" 0;
+  }
 }
 .cursorPointer{
   cursor: pointer;
@@ -715,6 +728,11 @@ span{
       padding: 15px;
       .transition;
       .font;
+      span{
+        &.uk-label{
+          font-family: Arial, Helvetica, sans-serif;
+        }
+      }
     }
     &.current,
     &:hover{
@@ -757,6 +775,72 @@ span{
   }
 }
 //UIKit Overrides
+.uk-accordion-title{
+  position: relative;
+  &:before{
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    .transform(translateY(-50%));
+  }
+  a{
+    font-variation-settings: "wght" 500, "wdth" 100, "slnt" 0, "DOTR" 1, "DOTS" 0, "KASH" 0;
+    .transition(.2s);
+  }
+  &[aria-expanded="true"]{
+    a{
+      color: @accent;
+    }
+  }
+}
+.uk-notification{
+  text-align: center;
+  overflow: hidden;
+  font-size: 0;
+  .border-radius;
+  > div{
+    &.uk-notification-message{
+      color: white;
+      font-size: 12px;
+      padding: 20px;
+      .font;
+      a{
+        color: white;
+        font-size: 12px;
+        .font;
+      }
+      .uk-notification-close{
+        top: 50%;
+        .transform(translateY(-50%));
+      }
+      &.uk-notification-message-success{
+        background-color: @success;
+      }
+      &.uk-notification-message-warning{
+        background-color: @warning;
+      }
+      &.uk-notification-message-danger{
+        background-color: @danger;
+      }
+    }
+  }
+}
+.uk-dotnav{
+  >*{
+    >*{
+      border: none;
+      background-color: #e0e0e0;
+      .border-radius(10px);
+      .transition();
+    }
+  }
+  >.uk-active{
+    >*{
+      background-color: @accent;
+      width: 20px;
+    }
+  }
+}
 .uk-tab{
   &:before{
     border-bottom-width: 3px;
@@ -890,6 +974,9 @@ span{
     &:hover{
       background-color: darken(#1da1f2, 5%);
     }
+  }
+  &.uk-button-small{
+    font-variation-settings: "wght" 500,"wdth" 100,"slnt" 0,"DOTR" 1,"DOTS" 0,"KASH" 0;
   }
 }
 .uk-form-label{

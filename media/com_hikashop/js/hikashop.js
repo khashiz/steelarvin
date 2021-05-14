@@ -1184,6 +1184,7 @@ var hikashop = {
 			el.value = max;
 			if(hkjQuery.notify) {
 				this.translate(['QUANTITY_CHANGE_IMPOSSIBLE', 'MAXIMUM_FOR_PRODUCT_IS_X'], function(trans){
+					UIkit.notification('My message');
 					hkjQuery(el).notify({title:trans[0],text:trans[1].replace('%s', max), image:'<i class="fa fa-3x fa-exclamation-circle"></i>'},{style:"metro",className:"warning",arrowShow:true});
 				});
 			}
@@ -1191,7 +1192,8 @@ var hikashop = {
 			el.value = min;
 			if(hkjQuery.notify) {
 				this.translate(['QUANTITY_CHANGE_IMPOSSIBLE', 'MINIMUM_FOR_PRODUCT_IS_X'], function(trans){
-					hkjQuery(el).notify({title:trans[0],text:trans[1].replace('%s', min), image:'<i class="fa fa-3x fa-exclamation-circle"></i>'},{style:"metro",className:"warning",arrowShow:true});
+					UIkit.notification({message: trans[1].replace('%s', min), pos: 'bottom-left', status: 'warning'});
+					//hkjQuery(el).notify({title:trans[0],text:trans[1].replace('%s', min), image:''},{style:"metro",className:"warning",arrowShow:true});
 				});
 			}
 		}

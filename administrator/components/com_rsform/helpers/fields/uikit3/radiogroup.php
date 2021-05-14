@@ -15,7 +15,7 @@ class RSFormProFieldUikit3RadioGroup extends RSFormProFieldRadioGroup
 		// For convenience
 		extract($data);
 		
-		return $this->buildInput($data).'<label class="uk-flex uk-flex-column uk-flex-center uk-flex-middle uk-padding uk-border-rounded" for="'.$this->escape($id).$i.'"><span><img src="'.JURI::base().'images/sprite.svg#'.$this->escape($id).$i.'" width="32" height="32" data-uk-svg></span><span class="uk-text-tiny uk-margin-small-top font">'.$item->label.'</span></label> ';
+		return $this->buildInput($data).'<label class="uk-flex uk-flex-column uk-flex-center uk-flex-middle uk-border-rounded" for="'.$this->escape($id).$i.'"><span class="hikashop_checkout_payment_images"><img src="'.JURI::base().'images/sprite.svg#'.$this->escape($id).$i.'" width="32" height="32" data-uk-svg></span><span class="hikashop_checkout_payment_name uk-text-small uk-display-block font boxInputTitle">'.$item->label.'</span></label> ';
 	}
 	
 	public function buildItem($data) {

@@ -250,9 +250,9 @@ class OrderViewOrder extends hikashopView {
 		$leftFilters = array();
 		$this->assignRef('leftFilters', $leftFilters);
 		$rightFilters = array();
-		$rightFilters['order_range_text'] = JText::sprintf('X_ORDERS_DONE', $this->pageInfo->elements->total);
+		/* $rightFilters['order_range_text'] = JText::sprintf('X_ORDERS_DONE', $this->pageInfo->elements->total);
 		$rightFilters['order_range'] = hikashop_get('type.order_range');
-		$rightFilters['separator'] = '<br/>';
+		$rightFilters['separator'] = '<br/>'; */
 		$rightFilters['order_status'] = hikashop_get('type.order_status');
 		$this->assignRef('rightFilters', $rightFilters);
 

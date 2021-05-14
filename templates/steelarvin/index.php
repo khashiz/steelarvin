@@ -167,14 +167,14 @@ $total = count($socialsicons['icon']);
 <main data-uk-height-viewport="expand: true">
     <div class="uk-padding uk-padding-remove-horizontal">
         <div>
-            <div class="uk-container<?php if ($pageclass == 'checkout') { echo ' uk-container-xsmall';} ?>">
+            <div class="<?php echo $pageparams->get('gridsize', 'uk-container'); if ($pageclass == 'checkout') { echo ' uk-container-xsmall';} ?> ">
                 <div class="hikashop_cpanel_main_interface">
                     <div class="hikashop_dashboard" id="hikashop_dashboard" data-uk-grid>
                         <?php if ($this->countModules( 'sidestart' )) { ?>
                             <div class="uk-width-1-1 uk-width-1-4@m">
                                 <div data-uk-sticky="offset: 110; bottom: true;">
-                                    <div class="uk-card uk-card-default uk-border-rounded uk-overflow-hidden">
-                                        <div><jdoc:include type="modules" name="sidestart" style="xhtml" /></div>
+                                    <div>
+                                        <div class="uk-child-width-1-1 uk-grid-small" data-uk-grid><jdoc:include type="modules" name="sidestart" style="xhtml" /></div>
                                     </div>
                                 </div>
                             </div>

@@ -11,17 +11,25 @@ defined('_JEXEC') or die('Restricted access');
 <?php if(empty($this->row->comment_enabled) || $this->row->comment_enabled == 0) return; ?>
 <?php $row =& $this->row; ?>
 <?php if($row->access_vote == 'registered' && hikashop_loadUser() == null) { ?>
-    <div class="uk-text-center">
-        <div class="uk-margin-bottom"><img src="<?php echo JURI::base().'images/sprite.svg#user-lock'; ?>" width="128" height="128" alt="<?php echo $sitename; ?>" data-uk-svg></div>
-        <p class="uk-text-danger uk-text-small uk-text-bold font"><?php echo JTEXT::_('ONLY_REGISTERED_CAN_COMMENT'); ?></p>
-        <div><a href="<?php echo JRoute::_("index.php?Itemid=166"); ?>" class="uk-width-1-1 uk-border-rounded uk-box-shadow-small font uk-button uk-button-success uk-height-1-1"><?php echo JText::sprintf('JLOGIN'); ?></a></div>
+    <div class="uk-card uk-card-default uk-border-rounded uk-overflow-hidden uk-box-shadow-small">
+        <div class="uk-padding">
+            <div class="uk-text-center">
+                <div class="uk-margin-bottom"><img src="<?php echo JURI::base().'images/sprite.svg#user-lock'; ?>" width="128" height="128" alt="<?php echo $sitename; ?>" data-uk-svg></div>
+                <p class="uk-text-danger uk-text-small uk-text-bold font"><?php echo JTEXT::_('ONLY_REGISTERED_CAN_COMMENT'); ?></p>
+                <div><a href="<?php echo JRoute::_("index.php?Itemid=166"); ?>" class="uk-width-1-1 uk-border-rounded uk-box-shadow-small font uk-button uk-button-success uk-height-1-1"><?php echo JText::sprintf('JLOGIN'); ?></a></div>
+            </div>
+        </div>
     </div>
     <?php return; ?>
 <?php } ?>
 <?php if($row->access_vote == 'buyed' && $row->purchased == 0) { ?>
-    <div class="uk-text-center">
-        <div class="uk-margin-bottom"><img src="<?php echo JURI::base().'images/sprite.svg#user-lock'; ?>" width="128" height="128" alt="<?php echo $sitename; ?>" data-uk-svg></div>
-        <p class="uk-margin-remove uk-text-danger uk-text-small uk-text-bold font"><?php echo JTEXT::_('MUST_HAVE_BUY_TO_VOTE'); ?></p>
+    <div class="uk-card uk-card-default uk-border-rounded uk-overflow-hidden uk-box-shadow-small">
+        <div class="uk-padding">
+            <div class="uk-text-center">
+                <div class="uk-margin-bottom"><img src="<?php echo JURI::base().'images/sprite.svg#user-lock'; ?>" width="128" height="128" alt="<?php echo $sitename; ?>" data-uk-svg></div>
+                <p class="uk-margin-remove uk-text-danger uk-text-small uk-text-bold font"><?php echo JTEXT::_('MUST_HAVE_BUY_TO_VOTE'); ?></p>
+            </div>
+        </div>
     </div>
     <?php return; ?>
 <?php } ?>
@@ -54,7 +62,7 @@ if($row->hikashop_vote_total_vote == '0') {
                 <?php } else { ?>
                     <input type="hidden" name="hikashop_vote_rating" data-votetype="<?php echo $row->type_item; ?>" data-ref="<?php echo $row->vote_ref_id; ?>" id="hikashop_vote_rating_id" />
                 <?php } ?>
-                <div id='hikashop_vote_status_form' class="hikashop_vote_notification uk-hidde"></div>
+                <div id='hikashop_vote_status_form' class="hikashop_vote_notification uk-hidden"></div>
                 <?php if(hikashop_loadUser() == null) { ?>
                     <table class="hikashop_comment_form">
                         <tr class="hikashop_comment_form_name">

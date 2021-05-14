@@ -18,7 +18,7 @@ if ($tagId = $params->get('tag_id', ''))
 
 // The menu class is deprecated. Use nav instead
 ?>
-<ul class="uk-padding-remove uk-margin-remove dashboardMenu nav menu<?php echo $class_sfx; ?> mod-list"<?php echo $id; ?>>
+<ul class="uk-padding-remove uk-margin-remove uk-list dashboardMenu nav menu<?php echo $class_sfx; ?> mod-list"<?php echo $id; ?>>
 <?php foreach ($list as $i => &$item)
 {
 	$class = 'item-' . $item->id;
@@ -66,7 +66,7 @@ if ($tagId = $params->get('tag_id', ''))
 		$class .= ' parent';
 	}
 
-	echo '<li class="' . $class . '">';
+	echo '<li class="uk-margin-remove ' . $class . '">';
 
 	switch ($item->type) :
 		case 'separator':
