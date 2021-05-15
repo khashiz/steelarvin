@@ -1,7 +1,7 @@
 window.cartNotifyParams = {
 	img_url: null,
 	title:"Product added to cart",
-	text:"Product successfully added to the cart",
+	text:"Product successfully added to the cart yhyyhyhhyhyh",
 	wishlist_title:"Product added to wishlist",
 	wishlist_text:"Product successfully added to the wishlist",
 	err_title:"Error",

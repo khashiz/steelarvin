@@ -172,11 +172,11 @@ $total = count($socialsicons['icon']);
                     <div class="hikashop_dashboard" id="hikashop_dashboard" data-uk-grid>
                         <?php if ($this->countModules( 'sidestart' )) { ?>
                             <div class="uk-width-1-1 uk-width-1-4@m">
-                                <div data-uk-sticky="offset: 110; bottom: true;">
+                                <aside data-uk-sticky="offset: 110; bottom: true;">
                                     <div>
                                         <div class="uk-child-width-1-1 uk-grid-small" data-uk-grid><jdoc:include type="modules" name="sidestart" style="xhtml" /></div>
                                     </div>
-                                </div>
+                                </aside>
                             </div>
                         <?php } ?>
                         <div class="uk-width-1-1 uk-width-expand@m">
@@ -184,7 +184,11 @@ $total = count($socialsicons['icon']);
                         </div>
                         <?php if ($this->countModules( 'sideend' )) { ?>
                             <div class="uk-width-1-1 uk-width-1-4@m">
-                                <div><jdoc:include type="modules" name="sideend" style="xhtml" /></div>
+                                <aside data-uk-sticky="offset: 110; bottom: true;">
+                                    <div>
+                                        <div class="uk-child-width-1-1 uk-grid-small" data-uk-grid><jdoc:include type="modules" name="sideend" style="xhtml" /></div>
+                                    </div>
+                                </aside>
                             </div>
                         <?php } ?>
                     </div>

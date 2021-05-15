@@ -25,6 +25,12 @@
   font-weight: bold;
   font-display: fallback;
 }
+.f500{
+  font-variation-settings: "wght" 500,"wdth" 100,"slnt" 0,"DOTR" 1,"DOTS" 0,"KASH" 0;
+}
+.f600{
+  font-variation-settings: "wght" 600,"wdth" 100,"slnt" 0,"DOTR" 1,"DOTS" 0,"KASH" 0;
+}
 .font {
   font-family: arvin_v, arvin, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   //font-variation-settings: "wght" 400, "wdth" 100, "slnt" 0, "DOTR" 1, "DOTS" 0, "KASH" 0;
@@ -58,23 +64,6 @@ a{
   color: initial;
   &:hover{
     text-decoration: none;
-  }
-}
-*{
-  &.hoverPrimary{
-    &:hover{color: @primary;}
-  }
-  &.hoverSecondary{
-    &:hover{color: @secondary;}
-  }
-  &.hoverAccent{
-    &:hover{color: @accent;}
-  }
-  &.hoverWhite{
-    &:hover{color: #fff;}
-  }
-  &.hoverBlack{
-    &:hover{color: #000;}
   }
 }
 body{
@@ -444,6 +433,24 @@ div{
       }
     }
   }
+  &.cartDrop{
+    width: 300px;
+    div{
+      &.uk-card{
+        overflow: hidden;
+        .border-radius(0 0 5px 5px);
+        div{
+          &.cartContainer{
+            border-top: 4px solid @accent;
+            input{
+              border: none;
+              outline: none;
+            }
+          }
+        }
+      }
+    }
+  }
   &.cartActionIcons{
     margin-top: 20px !important;
     &:before{
@@ -587,6 +594,31 @@ div{
       }
     }
   }
+  &.aboutPageTitle{
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+    h2{
+      padding: 200px 40px 0;
+      font-variation-settings: "wght" 700,"wdth" 100,"slnt" 0,"DOTR" 1,"DOTS" 0,"KASH" 20;
+    }
+  }
+  &.blogItem{
+    div{
+      &.blogItemBody{
+        i{
+          font-size: 32px;
+          color: rgba(255, 255, 255, 1);
+        }
+      }
+      &.blogItemBody{
+        p{
+          font-size: 12px;
+          &:only-child{
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
 }
 form{
   &.regForm{
@@ -679,6 +711,16 @@ span{
   &.commentMeta{
     font-variation-settings: "wght" 500, "wdth" 100, "slnt" 0, "DOTR" 1, "DOTS" 0, "KASH" 0;
   }
+  &.cartIndicator {
+    background: @accent;
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    border-radius: 10px;
+    top: 0px;
+    right: -4px;
+    box-shadow: 0 0 0 2px #fff;
+  }
 }
 .cursorPointer{
   cursor: pointer;
@@ -713,6 +755,11 @@ span{
 }
 .hikashop_filter_list_selected{
   .transform(translateY(3px);)
+}
+.hikashop_small_cart_checkout_link{
+  &[aria-expanded="true"]{
+    color: @accent;
+  }
 }
 .searchToggler{
   &[aria-expanded="true"]{
@@ -775,6 +822,14 @@ span{
   }
 }
 //UIKit Overrides
+.uk-lightbox{
+  .uk-lightbox-button{
+    .transform(rotate(180deg));
+  }
+  .uk-lightbox-caption{
+    .font;
+  }
+}
 .uk-accordion-title{
   position: relative;
   &:before{
@@ -1042,6 +1097,23 @@ span{
 .uk-text-accent{color: @accent;}
 .uk-text-gray{color: @gray;}
 .uk-text-lightgray{color: #e0e0e0;}
+*{
+  &.hoverPrimary{
+    &:hover{color: @primary;}
+  }
+  &.hoverSecondary{
+    &:hover{color: @secondary;}
+  }
+  &.hoverAccent{
+    &:hover{color: @accent !important;}
+  }
+  &.hoverWhite{
+    &:hover{color: #fff;}
+  }
+  &.hoverBlack{
+    &:hover{color: #000;}
+  }
+}
 
 .uk-text-pending{
   color: @warning;
