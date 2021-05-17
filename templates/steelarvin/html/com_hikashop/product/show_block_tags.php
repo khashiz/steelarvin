@@ -19,23 +19,22 @@ if(!$tagHelper->isCompatible())
 	return;
 
 ?>
-<hr class="uk-margin-remove-top uk-margin-medium-bottom">
-<div id="hikashop_product_tags_main" class="hikashop_product_tags uk-card uk-card-default uk-border-rounded uk-overflow-hidden uk-box-shadow-small">
-    <div class="uk-padding-small">
-        <?php
-        if(!empty($this->element->main)){
-            $main_prod =& $this->element->main;
-        }else{
-            $main_prod =& $this->element;
-        }
-        if(!empty($main_prod->product_id)) {
-            $main_prod->tags = new JHelperTags;
-            $main_prod->tags->getItemTags('com_hikashop.product', $main_prod->product_id);
-            if(!empty($main_prod->tags)) {
-                $main_prod->tagLayout = new JLayoutFile('joomla.content.tags');
-                echo $main_prod->tagLayout->render($main_prod->tags->itemTags);
-            }
-        }
-        ?>
-    </div>
-</div>
+<?php
+if(!empty($this->element->main)){
+    $main_prod =& $this->element->main;
+}else{
+    $main_prod =& $this->element;
+}
+if(!empty($main_prod->product_id)) {
+    $main_prod->tags = new JHelperTags;
+    $main_prod->tags->getItemTags('com_hikashop.product', $main_prod->product_id);
+    if(!empty($main_prod->tags)) { $main_prod->tagLayout = new JLayoutFile('joomla.content.tags'); ?>
+        <?php if (!empty($main_prod->tags->itemTags)) { ?>
+        <div id="hikashop_product_tags_main" class="hikashop_product_tags uk-card uk-card-default uk-border-rounded uk-overflow-hidden uk-box-shadow-small uk-margin-medium-top">
+            <div class="uk-padding-small">
+                <?php echo $main_prod->tagLayout->render($main_prod->tags->itemTags); ?>
+            </div>
+        </div>
+        <?php } ?>
+    <?php } ?>
+<?php } ?>

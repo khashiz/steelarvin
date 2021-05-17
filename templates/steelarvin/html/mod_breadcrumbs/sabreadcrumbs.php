@@ -9,16 +9,12 @@
 
 defined('_JEXEC') or die;
 ?>
-<div aria-label="<?php echo htmlspecialchars($module->title, ENT_QUOTES, 'UTF-8'); ?>" role="navigation">
+<div class="uk-text-zero" aria-label="<?php echo htmlspecialchars($module->title, ENT_QUOTES, 'UTF-8'); ?>" role="navigation">
 	<ul itemscope itemtype="https://schema.org/BreadcrumbList" class="uk-breadcrumb breadcrumb<?php echo $moduleclass_sfx; ?>">
 		<?php if ($params->get('showHere', 1)) : ?>
-			<li>
-				<?php echo JText::_('MOD_BREADCRUMBS_HERE'); ?>&#160;
-			</li>
+			<li><span class="uk-text-tiny font f500 uk-text-muted"><?php echo JText::_('MOD_BREADCRUMBS_HERE'); ?></span></li>
 		<?php else : ?>
-			<li class="active">
-				<span class="divider icon-location"></span>
-			</li>
+			<li class="active"><span class="divider icon-location"></span></li>
 		<?php endif; ?>
 
 		<?php
@@ -46,26 +42,20 @@ defined('_JEXEC') or die;
 				// Render all but last item - along with separator ?>
 				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
 					<?php if (!empty($item->link)) : ?>
-						<a itemprop="item" href="<?php echo $item->link; ?>" class="pathway"><span itemprop="name"><?php echo $item->name; ?></span></a>
+						<a itemprop="item" href="<?php echo $item->link; ?>" class="pathway"><span itemprop="name" class="uk-text-tiny f500 uk-text-secondary font hoverAccent"><?php echo $item->name; ?></span></a>
 					<?php else : ?>
-						<span itemprop="name">
-							<?php echo $item->name; ?>
-						</span>
+						<span itemprop="name" class="uk-text-tiny f500 uk-text-secondary font"><?php echo $item->name; ?></span>
 					<?php endif; ?>
 
 					<?php if (($key !== $penult_item_key) || $show_last) : ?>
-						<span class="divider">
-							<?php echo $separator; ?>
-						</span>
+						<span class="divider uk-hidden"><?php echo $separator; ?></span>
 					<?php endif; ?>
 					<meta itemprop="position" content="<?php echo $key + 1; ?>">
 				</li>
 			<?php elseif ($show_last) :
 				// Render last item if reqd. ?>
 				<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
-					<span itemprop="name">
-						<?php echo $item->name; ?>
-					</span>
+					<span itemprop="name" class="uk-text-tiny f500 uk-text-secondary font"><?php echo $item->name; ?></span>
 					<meta itemprop="position" content="<?php echo $key + 1; ?>">
 				</li>
 			<?php endif;

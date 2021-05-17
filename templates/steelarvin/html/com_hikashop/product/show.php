@@ -420,7 +420,7 @@ $this->product = $this->element;
 
 ?>
 
-    <div class="uk-margin-medium-bottom">
+    <div>
         <ul class="uk-tab uk-margin-remove-top" data-uk-switcher="animation: uk-animation-fade; connect: .productsSubmodules">
             <li><a href="#"><?php echo JText::sprintf('RELATED_PRODUCTS'); ?></a></li>
             <li><a href="#"><?php echo JText::sprintf('SAME_CATEGORY'); ?></a></li>
