@@ -666,7 +666,7 @@ window.hikashop.ready(function(){
 			return false;
 		}
 
-		$translation = $addto_type == 'wishlist' ? 'PRODUCT_SUCCESSFULLY_ADDED_TO_WISHLIST' : 'PRODUCT_SUCCESSFULLY_ADDED_TO_CART';
+		$translation = $addto_type == 'wishlist' ? 'PRODUCT_SUCCESSFULLY_ADDED_TO_WISHLIST' : 'frefrfrefefefefPRODUCT_SUCCESSFULLY_ADDED_TO_CART';
 		$app->enqueueMessage(JText::_($translation));
 
 		$app->redirect( hikashop_completeLink('cart&task=show&cid='.$ret, false, true) );

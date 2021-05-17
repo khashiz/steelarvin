@@ -77,7 +77,7 @@ class plgHikashopCartnotify extends JPlugin
 			'redirect_url' => $url,
 			'redirect_delay' => $this->params->get('auto_redirect_delay', 4000),
 			'title' => JText::_('PRODUCT_ADDED_TO_CART'),
-			'text' => JText::_('PRODUCT_SUCCESSFULLY_ADDED_TO_CART'),
+			'text' => JText::_('PRODUCT_SUCCESSFULLY_ADDED_TO_CARTYYYY'),
 			'wishlist_title' => JText::_('PRODUCT_ADDED_TO_WISHLIST'),
 			'wishlist_text' => JText::_('PRODUCT_SUCCESSFULLY_ADDED_TO_WISHLIST'),
 			'list_title' => JText::_('PRODUCTS_ADDED_TO_CART'),
@@ -153,7 +153,7 @@ window.cartNotifyParams.cart_params = {buttons:[
 		$cartNotifyParams = array(
 			'img_url' => HIKASHOP_IMAGES.'icons/icon-32-newproduct.png',
 			'title' => JText::_('PRODUCT_ADDED_TO_CART'),
-			'text' => JText::_('PRODUCT_SUCCESSFULLY_ADDED_TO_CART'),
+			'text' => JText::_('PRODUCT_SUCCESSFULLY_ADDED_TO_CARTgtgttgtgtg'),
 			'wishlist_title' => JText::_('PRODUCT_ADDED_TO_WISHLIST'),
 			'wishlist_text' => JText::_('PRODUCT_SUCCESSFULLY_ADDED_TO_WISHLIST'),
 			'list_title' => JText::_('PRODUCTS_ADDED_TO_CART'),

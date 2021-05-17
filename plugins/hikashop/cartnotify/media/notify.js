@@ -1,7 +1,7 @@
 window.cartNotifyParams = {
 	img_url: null,
 	title:"Product added to cart",
-	text:"Product successfully added to the cart",
+	text:"Product successfully added to the cart frfffrfrfrfrfxxxxx",
 	wishlist_title:"Product added to wishlist",
 	wishlist_text:"Product successfully added to the wishlist",
 	err_title:"Error",
@@ -16,7 +16,7 @@ window.Oby.registerAjax(["cart.updated","wishlist.updated"],function(params){
 		img_url = p.img_url,
 		title = cart ? p.title : p.wishlist_title,
 		text = cart ? p.text : p.wishlist_text,
-		class_name = "info", success = true;
+		class_name = "success", success = true;
 
 	if(params.notify === false)
 		return;
@@ -47,10 +47,14 @@ window.Oby.registerAjax(["cart.updated","wishlist.updated"],function(params){
 
 	if(p && p.reference && p.reference == 'button' && params.el) {
 		jQuery(params.el).notify({title:title,text:text,image:"<img src=\""+img_url+"\" width=\"50\" height=\"50\" alt=\"\"/>"},{style:"metro",className:class_name,arrowShow:true});
+		alert('ffff');
 	}else if(img_url == null) {
 		jQuery.notify({title:title,text:text},{style:"metro-lite",className:class_name});
+		alert('gtgttgg');
 	} else {
-		jQuery.notify({title:title,text:text,image:"<img src=\""+img_url+"\" alt=\"\"/>"},{style:"metro",className:class_name});
+		UIkit.notification({message: text, status: class_name, pos: 'bottom-left'});
+		// jQuery.notify({title:title,text:text,image:"<img src=\""+img_url+"\" alt=\"\"/>"},{style:"metro",className:class_name});
+		// alert('yyyyy');
 	}
 
 	if(success && p.redirect_url) {

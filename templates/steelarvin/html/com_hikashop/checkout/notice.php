@@ -30,7 +30,7 @@ if($cart_type == 'cart' || hikashop_loadUser() != null){
 		if($cart_type == 'wishlist'){
 			echo hikashop_display(JText::_('PRODUCT_SUCCESSFULLY_ADDED_TO_WISHLIST'),'success',true);
 		}else{
-			echo hikashop_display(JText::_('PRODUCT_SUCCESSFULLY_ADDED_TO_CART'),'success',true);
+			echo hikashop_display(JText::_('PRODUCT_SUCCESSFULLY_ADDED_TO_CARTgrggtrggtrgtrg'),'success',true);
 		}
 		?>
 	</div>

@@ -29,9 +29,9 @@ window.Oby.registerAjax(["cart.updated","wishlist.updated"],function(params){
 
 	var content = "";
 	if(img_url == null) {
-		content = "<div class=\"notifyjs-metro-lite-base\"><div class=\"text-wrapper\"><div class=\"title\">"+title+"</div><div class=\"text\">"+text+"</div></div></div>";
+		content = "<div class=\"notifyjs-metro-lite-base\"><div class=\"text-wrapper\">jujujujjujjujujuj<div class=\"title\">"+title+"</div><div class=\"text\">"+text+"</div></div></div>";
 	} else {
-		content = "<div class=\"notifyjs-metro-base\"><div class=\"image\"><img src=\""+img_url+"\" width=\"50\" height=\"50\" alt=\"\"/></div><div class=\"text-wrapper\"><div class=\"title\">"+title+"</div><div class=\"text\">"+text+"</div></div></div>";
+		content = "<div class=\"notifyjs-metro-base\"><div class=\"image\">ythyttyhyththtyhythyhththtyhyt<img src=\""+img_url+"\" width=\"50\" height=\"50\" alt=\"\"/></div><div class=\"text-wrapper\"><div class=\"title\">"+title+"</div><div class=\"text\">"+text+"</div></div></div>";
 	}
 	var vex_params = {message: content},
 		params_key = params.type + (params.resp.ret == 0 ? '_err' : '') + '_params';
