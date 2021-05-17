@@ -188,7 +188,7 @@ window.localPage.setCookie = function (name,value,delay) {
 ?>
 
 
-            <div class="gridItem <?php if($this->row->product_quantity != '-1') echo JText::_('outOfStock'); ?>" itemprop="itemList" itemscope="" itemtype="http://schema.org/ItemList">
+            <div class="gridItem <?php if($this->row->product_quantity == '0') echo JText::_('outOfStock'); ?>" itemprop="itemList" itemscope="" itemtype="http://schema.org/ItemList">
 			<div class="hikashop_container uk-padding-small uk-margin-remove uk-position-relative">
 				<div class="hikashop_subcontainer <?php echo $this->borderClass; ?>">
 <?php

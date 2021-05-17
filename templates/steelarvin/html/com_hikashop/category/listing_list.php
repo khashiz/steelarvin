@@ -54,7 +54,8 @@ switch($this->params->get('child_display_type')){
 	case 'nochild':
 	default:
 ?>
-	<ul class="hikashop_category_list <?php echo $this->params->get('ul_class_name'); ?>">
+<div class="uk-container uk-text-zero">
+	<ul class="uk-child-width-1-2 uk-child-width-1-6@m uk-text-center uk-grid-medium <?php echo $this->params->get('ul_class_name'); ?>" data-uk-grid data-uk-scrollspy="cls: uk-animation-slide-left-small; target: > li; delay: 200;">
 <?php
 		$columns = $this->params->get('columns');
 		if(empty($columns)|| $columns == 0)
@@ -63,9 +64,9 @@ switch($this->params->get('child_display_type')){
 		$current_column = 1;
 
 		if(empty($width))
-			$width='style="float:left;"';
+			$width='';
 		else
-			$width='style="float:left;width:'.$width.'%;"';
+			$width='';
 
 		$found = 0;
 		if($in_hikashop_context) {
@@ -86,13 +87,12 @@ switch($this->params->get('child_display_type')){
 			$link = $this->getLink($row);
 			$class = ($found == $row->category_id) ? ' current active' : '';
 ?>
-		<li class="hikashop_category_list_item<?php echo $class; ?>" <?php echo $width; ?>>
-			<a href="<?php echo $link; ?>"><?php
-				echo $row->category_name;
-				if($this->params->get('number_of_products', 0)) {
-					echo $before_nb_products . $row->number_of_products . $after_nb_products;
-				}
-			?></a>
+		<li>
+			<a class="uk-padding-small uk-card uk-card-default uk-box-shadow-small uk-border-rounded uk-display-block uk-text-secondary hoverAccent" href="<?php echo $link; ?>">
+                <span class="uk-display-block uk-margin-bottom uk-text-secondary"><img class="uk-margin-top" src="<?php echo JURI::base().'images/sprite.svg#'.$row->category_alias; ?>" width="48" height="48" data-uk-svg></span>
+                <span class="uk-display-block uk-margin-remove-top uk-margin-small-bottom uk-text-small font f700"><?php echo $row->category_name; ?></span>
+                <?php if($this->params->get('number_of_products', 0)) { echo $before_nb_products . $row->number_of_products . $after_nb_products; } ?>
+            </a>
 		</li>
 <?php
 			if($current_column >= $columns) {
@@ -102,6 +102,7 @@ switch($this->params->get('child_display_type')){
 		}
 ?>
 	</ul>
+</div>
 <?php
 		break;
 

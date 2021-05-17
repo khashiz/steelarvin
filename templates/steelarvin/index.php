@@ -164,10 +164,11 @@ $total = count($socialsicons['icon']);
 <?php endif; ?>
 <jdoc:include type="modules" name="pagetop" style="xhtml" />
 <jdoc:include type="message" />
-<main data-uk-height-viewport="expand: true">
+<main>
     <div class="uk-padding uk-padding-remove-horizontal">
+        <jdoc:include type="modules" name="bodytop" style="xhtml" />
         <div>
-            <div class="<?php echo $pageparams->get('gridsize', 'uk-container'); if ($pageclass == 'checkout') { echo ' uk-container-xsmall';} ?> ">
+            <iv class="<?php echo $pageparams->get('gridsize', 'uk-container'); if ($pageclass == 'checkout') { echo ' uk-container-xsmall';} ?> ">
                 <div class="hikashop_cpanel_main_interface">
                     <div class="hikashop_dashboard" id="hikashop_dashboard" data-uk-grid>
                         <?php if ($this->countModules( 'sidestart' )) { ?>
@@ -193,8 +194,9 @@ $total = count($socialsicons['icon']);
                         <?php } ?>
                     </div>
                 </div>
-            </div>
+            </iv>
         </div>
+        <jdoc:include type="modules" name="bodybottom" style="xhtml" />
     </div>
 </main>
 <jdoc:include type="modules" name="pagebottom" style="xhtml" />
@@ -203,9 +205,9 @@ $total = count($socialsicons['icon']);
     <div class="socials">
         <div class="uk-container">
             <div>
-                <div class="uk-child-width-1-1 uk-child-width-1-3@m" data-uk-grid>
-                    <div>
-                        <div class="uk-padding-small bgAccent">
+                <div data-uk-grid>
+                    <div class="uk-width-1-1 uk-width-1-3@m">
+                        <div class="uk-padding-small bgAccent footerSocials">
                             <div class="uk-grid-small uk-child-width-auto uk-flex-center" data-uk-grid>
                                 <div class="uk-flex uk-flex-middle"><span class="uk-text-white uk-text-small font"><?php echo JTEXT::_('FOLLOWUS'); ?></span></div>
                                 <div>
@@ -224,6 +226,9 @@ $total = count($socialsicons['icon']);
                             </div>
                         </div>
                     </div>
+                    <?php if ($this->countModules( 'breadcrumbs' )) { ?>
+                        <div class="uk-width-1-1 uk-width-expand@m uk-text-small uk-flex uk-flex-left"><jdoc:include type="modules" name="breadcrumbs" style="xhtml" /></div>
+                    <?php } ?>
                 </div>
             </div>
         </div>
@@ -233,7 +238,7 @@ $total = count($socialsicons['icon']);
             <div data-uk-grid>
                 <div class="uk-width-1-1 uk-width-1-3@m">
                     <div>
-                        <div class="uk-padding bgWhite">
+                        <div class="uk-padding bgWhite footerContact">
                             <div>
                                 <div class="uk-child-width-1-1 uk-grid-medium" data-uk-grid>
                                     <div>
@@ -321,7 +326,7 @@ $total = count($socialsicons['icon']);
                                 <div class="uk-child-width-1-1 uk-child-width-1-4@m" data-uk-grid>
                                     <jdoc:include type="modules" name="footer" style="xhtml" />
                                     <div class="uk-flex uk-flex-column uk-flex-between">
-                                        <div class="uk-padding-small uk-text-center enamadWrapper"><img src="images/enamad.png" width="125" height="136"></div>
+                                        <div class="uk-padding-small uk-text-center uk-border-rounded uk-box-shadow-small enamadWrapper"><img src="images/enamad.png" width="125" height="136"></div>
                                         <div class="uk-text-left uk-visible@m">
                                             <a class="transition uk-flex uk-flex-middle uk-flex-left font goToTop" href="#header" data-uk-scroll>
                                                 <span><img src="<?php echo JURI::base().'images/sprite.svg#chevron-circle-up' ?>" width="12" height="12" alt="" data-uk-svg></span>
