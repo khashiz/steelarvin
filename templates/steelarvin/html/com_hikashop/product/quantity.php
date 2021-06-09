@@ -86,15 +86,15 @@ if($start_date > 0 && $start_date > $now) {
 
 <div class="hikashop_product_stock_count uk-width-1-1">
 <?php if(!empty($this->row->product_stock_message)) { ?>
-    <span class="uk-text-tiny uk-text-secondary uk-display-block font stockAvailability"><?php echo JText::_($this->row->product_stock_message); ?></span>
+    <span class="uk-text-tiny uk-text-secondary uk-display-block uk-margin-small-bottom font stockAvailability"><?php echo JText::_($this->row->product_stock_message); ?></span>
 <?php } elseif($stock > 0) { ?>
     <?php if ($stock == 1) { ?>
-        <span class="uk-text-tiny uk-text-danger uk-display-block font stockAvailability"><?php echo JText::sprintf('ONLYONEINSTOCK'); ?></span>
+        <span class="uk-text-tiny uk-text-danger uk-display-block uk-margin-small-bottom font stockAvailability"><?php echo JText::sprintf('ONLYONEINSTOCK'); ?></span>
     <?php } elseif ($stock > 1 && $stock < 6) { ?>
-        <span class="uk-text-tiny uk-text-danger uk-display-block font stockAvailability"><?php echo JText::sprintf('LESSTHANFIVEINSTOCK'); ?></span>
+        <span class="uk-text-tiny uk-text-danger uk-display-block uk-margin-small-bottom font stockAvailability"><?php echo JText::sprintf('LESSTHANFIVEINSTOCK'); ?></span>
     <?php } ?>
 <?php } elseif(!$in_stock) { ?>
-    <span class="uk-text-tiny uk-text-danger uk-display-block font stockAvailability"><?php echo JText::_('NO_STOCK'); ?></span>
+    <span class="uk-text-tiny uk-text-danger uk-display-block uk-margin-small-bottom font stockAvailability"><?php echo JText::_('NO_STOCK'); ?></span>
 <?php } ?>
 </div>
 
@@ -115,8 +115,8 @@ if(($add_to_cart || $add_to_wishlist) && $display_quantity_field) {
 
 if($add_to_cart) {
 ?>
-    <div>
-	<a class="uk-button uk-button-success uk-button-larg uk-border-rounded uk-box-shadow-small font" rel="nofollow" href="<?php echo hikashop_completeLink($classical_url); ?>" onclick="if(window.hikashop.addToCart) { return window.hikashop.addToCart(this); }" data-addToCart="<?php echo $this->row->product_id; ?>" data-addTo-div="hikashop_product_form" data-addTo-class="add_in_progress">
+    <div class="uk-width-expand">
+	<a class="uk-button uk-button-success uk-button-larg uk-border-rounded uk-box-shadow-small uk-height-1-1 uk-width-1-1 uk-width-auto@m font" rel="nofollow" href="<?php echo hikashop_completeLink($classical_url); ?>" onclick="if(window.hikashop.addToCart) { return window.hikashop.addToCart(this); }" data-addToCart="<?php echo $this->row->product_id; ?>" data-addTo-div="hikashop_product_form" data-addTo-class="add_in_progress">
         <span><?php
 		if(!empty($this->row->product_addtocart_message))
 			echo JText::_($this->row->product_addtocart_message);

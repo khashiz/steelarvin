@@ -265,7 +265,7 @@ defined('_JEXEC') or die('Restricted access');
 	echo $this->loadTemplate();
 			?></td>
 			<td class="uk-text-zero" data-title="<?php echo JText::_('PRODUCT_QUANTITY'); ?>">
-                <div class="uk-child-width-1-1 uk-grid-small uk-grid-divider uk-grid-collapse" data-uk-grid>
+                <div class="uk-grid-small uk-grid-divider uk-grid-collapse" data-uk-grid>
 <?php
 	if(!empty($this->manage)) {
 		if($this->cart->cart_type == 'wishlist') {
@@ -288,15 +288,9 @@ defined('_JEXEC') or die('Restricted access');
 ?>
 <?php if(!empty($this->manage)) { ?>
     <div class="cartActionIcons">
-        <div>
-            <div class="uk-grid-small uk-flex-center uk-flex-middle" data-uk-grid>
-                <div>
-                    <a title="<?php echo JText::_('HIKA_DELETE_CART'); ?>" data-uk-tooltip="offset:15;" class="hikashop_no_print uk-text-secondary" href="#delete" onclick="var qtyField = document.getElementById('<?php echo $this->last_quantity_field_id; ?>'); if(!qtyField) return false; qtyField.value = 0; return window.hikashop.submitform('apply','hikashop_show_cart_form');"><img src="<?php echo JURI::base().'images/sprite.svg#trash'; ?>" alt="" width="16" height="16" data-uk-svg></a>
-                </div>
-                <div>
-                    <a title="<?php echo JText::_('HIKA_REFRESH_CART'); ?>" data-uk-tooltip="offset:15;" class="uk-text-secondary" onclick="return window.hikashop.submitform('apply','hikashop_show_cart_form');"><img src="<?php echo JURI::base().'images/sprite.svg#refresh'; ?>" alt="" width="16" height="16" data-uk-svg></a>
-                </div>
-            </div>
+        <div class="uk-height-1-1 uk-flex uk-flex-middle">
+            <div><a title="<?php echo JText::_('HIKA_DELETE_CART'); ?>" data-uk-tooltip="offset:15;" class="hikashop_no_print uk-text-secondary" href="#delete" onclick="var qtyField = document.getElementById('<?php echo $this->last_quantity_field_id; ?>'); if(!qtyField) return false; qtyField.value = 0; return window.hikashop.submitform('apply','hikashop_show_cart_form');"><img src="<?php echo JURI::base().'images/sprite.svg#trash'; ?>" alt="" width="16" height="16" data-uk-svg></a></div>
+            <div class="uk-hidden"><a id="cartQty" title="<?php echo JText::_('HIKA_REFRESH_CART'); ?>" data-uk-tooltip="offset:15;" class="uk-text-secondary" onclick="return window.hikashop.submitform('apply','hikashop_show_cart_form');"><img src="<?php echo JURI::base().'images/sprite.svg#refresh'; ?>" alt="" width="16" height="16" data-uk-svg></a></div>
         </div>
     </div>
 <?php } ?>

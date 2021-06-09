@@ -18,7 +18,7 @@ if(!empty($this->row->extraData->top)) { echo implode("\r\n",$this->row->extraDa
 <div class="hikashop_listing_img_title <?php if($this->row->product_quantity == '0') echo JText::_('outOfStock'); ?>" id="div_<?php echo $mainDivName.'_'.$this->row->product_id;  ?>">
 <?php if($this->config->get('thumbnail', 1)) { ?>
     <!-- PRODUCT IMG -->
-	<div class="hikashop_product_image__">
+	<div class="uk-margin-small-bottom hikashop_product_image__">
 		<div class="hikashop_product_image_subdiv__">
             <?php if ($haveLink) { ?>
                 <a class="uk-display-block" href="<?php echo $link;?>" title="<?php echo $this->escape($this->row->product_name); ?>">

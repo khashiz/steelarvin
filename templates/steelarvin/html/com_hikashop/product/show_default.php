@@ -141,7 +141,7 @@ defined('_JEXEC') or die('Restricted access');
                     }
                     if(empty($this->element->characteristics) || $this->params->get('characteristic_display') != 'list') {
                         ?>
-                        <div id="hikashop_product_quantity_main" class="hikashop_product_quantity_main uk-grid-medium uk-child-width-auto" data-uk-grid>
+                        <div id="hikashop_product_quantity_main" class="hikashop_product_quantity_main uk-grid-small uk-child-width-auto" data-uk-grid>
                             <?php
                             $this->row =& $this->element;
                             $this->ajax = 'if(hikashopCheckChangeForm(\'item\',\'hikashop_product_form\')){ return hikashopModifyQuantity(\'' . (int)$this->element->product_id . '\',field,1' . $form . ',\'cart\'); } else { return false; }';

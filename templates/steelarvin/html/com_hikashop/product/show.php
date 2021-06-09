@@ -90,14 +90,39 @@ if($this->productlayout != 'show_tabular') {
 ?>
 
         <div class="uk-margin-medium-bottom">
-        <ul class="uk-tab uk-margin-remove-top" data-uk-switcher="animation: uk-animation-fade; connect: .productsTabs">
-            <li><a href="#"><?php echo JText::sprintf('PRODUCT_DESCRIPTION'); ?></a></li>
-            <li><a href="#"><?php echo JText::sprintf('PRODUCT_SPECIFICATIONS'); ?></a></li>
-            <li><a href="#"><?php echo JText::sprintf('PRODUCT_COMMENTS'); ?></a></li>
+        <ul class="uk-tab uk-margin-remove-top uk-child-width-1-5 uk-child-width-auto@m" data-uk-switcher="animation: uk-animation-fade; connect: .productsTabs">
+            <li>
+                <a href="#">
+                    <span class="uk-visible@m"><?php echo JText::sprintf('PRODUCT_DESCRIPTION'); ?></span>
+                    <span class="uk-hidden@m"><img src="<?php echo JUri::base().'images/sprite.svg#home'; ?>" width="16" height="16" data-uk-svg></span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="uk-visible@m"><?php echo JText::sprintf('PRODUCT_SPECIFICATIONS'); ?></span>
+                    <span class="uk-hidden@m"><img src="<?php echo JUri::base().'images/sprite.svg#home'; ?>" width="16" height="16" data-uk-svg></span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="uk-visible@m"><?php echo JText::sprintf('PRODUCT_COMMENTS'); ?></span>
+                    <span class="uk-hidden@m"><img src="<?php echo JUri::base().'images/sprite.svg#commentTab'; ?>" width="16" height="16" data-uk-svg></span>
+                </a>
+            </li>
             <?php if(!empty($this->fields['aparat_id'])) { ?>
-                <li><a href="#"><?php echo JText::sprintf('PRODUCT_VIDEO'); ?></a></li>
+                <li>
+                    <a href="#">
+                        <span class="uk-visible@m"><?php echo JText::sprintf('PRODUCT_VIDEO'); ?></span>
+                        <span class="uk-hidden@m"><img src="<?php echo JUri::base().'images/sprite.svg#videoTab'; ?>" width="16" height="16" data-uk-svg></span>
+                    </a>
+                </li>
             <?php } ?>
-            <li><a href="#"><?php echo JText::sprintf('PRODUCT_DOWNLOADS'); ?></a></li>
+            <li>
+                <a href="#">
+                    <span class="uk-visible@m"><?php echo JText::sprintf('PRODUCT_DOWNLOADS'); ?></span>
+                    <span class="uk-hidden@m"><img src="<?php echo JUri::base().'images/sprite.svg#home'; ?>" width="16" height="16" data-uk-svg></span>
+                </a>
+            </li>
         </ul>
         <div class="uk-switcher productsTabs">
             <div>
@@ -421,7 +446,7 @@ $this->product = $this->element;
 ?>
 
     <div>
-        <ul class="uk-tab uk-margin-remove-top" data-uk-switcher="animation: uk-animation-fade; connect: .productsSubmodules">
+        <ul class="uk-tab uk-margin-remove-top uk-child-width-1-2 uk-child-width-auto@m" data-uk-switcher="animation: uk-animation-fade; connect: .productsSubmodules">
             <li><a href="#"><?php echo JText::sprintf('RELATED_PRODUCTS'); ?></a></li>
             <li><a href="#"><?php echo JText::sprintf('SAME_CATEGORY'); ?></a></li>
         </ul>

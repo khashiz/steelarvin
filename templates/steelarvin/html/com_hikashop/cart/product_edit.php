@@ -666,7 +666,7 @@ if(!empty($this->options)) {
 				$r = range(1, (int)$this->show_option_quantity, 1);
 				$values = array_combine($r, $r);
 				ksort($values);
-				echo JHTML::_('select.genericlist', $values, 'hikashop_product_option_qty['.$i.']', 'style="width:auto;" class="no-chzn" onchange="hikaProductOptions.change();"', 'value', 'text', 1, 'hikashop_product_option_qty_'.$i);
+				echo JHTML::_('select.genericlist', $values, 'hikashop_product_option_qty['.$i.']', ' class="no-chzn uk-select" onchange="hikaProductOptions.change();"', 'value', 'text', 1, 'hikashop_product_option_qty_'.$i);
 			}
 		}
 ?>

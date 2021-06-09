@@ -107,7 +107,7 @@ switch($quantityLayout) {
 				$r[] = $max_quantity;
 			$values = array_combine($r, $r);
 			ksort($values);
-			echo JHTML::_('select.genericlist', $values, '', 'style="width:auto;" class="no-chzn" onchange="var el = document.getElementById(\''.$id.'\'); el.value = this.value; el.onchange();"', 'value', 'text', $current_quantity, $id.'_select');
+			echo JHTML::_('select.genericlist', $values, '', ' class="no-chzn uk-select uk-border-rounded cartQtySelect qtySelect" onchange="var el = document.getElementById(\''.$id.'\'); el.value = this.value; el.onchange(); document.getElementById(\'cartQty\').click();"', 'value', 'text', $current_quantity, $id.'_select');
 			?>
 			<input id="<?php echo $id; ?>" type="hidden" value="<?php echo $current_quantity; ?>" class="hikashop_product_quantity_field" name="<?php echo $quantity_fieldname; ?>" data-hk-qty-old="<?php echo $current_quantity; ?>" data-hk-qty-min="<?php echo $min_quantity; ?>" data-hk-qty-max="<?php echo $max_quantity; ?>"<?php echo $extra_data_attribute; ?> onchange="<?php echo $script; ?>" <?php echo $extra_data; ?> />
 		</div>
@@ -136,7 +136,7 @@ switch($quantityLayout) {
 						$current_quantity = $min_quantity;
 				}
 				ksort($values);
-				echo JHTML::_('select.genericlist', $values, '', 'onchange="var el = document.getElementById(\''.$id.'\'); el.value = this.value; el.onchange();"', 'value', 'text', $current_quantity);
+				echo JHTML::_('select.genericlist', $values, '', 'onchange="var el = document.getElementById(\''.$id.'\'); el.value = this.value; el.onchange();" data-kkkk', 'value', 'text', $current_quantity);
 			?>
 			<input id="<?php echo $id; ?>" type="hidden" value="<?php echo $current_quantity; ?>" class="hikashop_product_quantity_field" name="<?php echo $quantity_fieldname; ?>" data-hk-qty-old="<?php echo $current_quantity; ?>" data-hk-qty-min="<?php echo $min_quantity; ?>" data-hk-qty-max="<?php echo $max_quantity; ?>"<?php echo $extra_data_attribute; ?> onchange="<?php echo $script; ?>" <?php echo $extra_data; ?> />
 		</div>

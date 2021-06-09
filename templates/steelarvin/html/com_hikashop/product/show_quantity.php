@@ -96,11 +96,11 @@ switch($quantityLayout) {
 				$r[] = $max_quantity;
 			$values = array_combine($r, $r);
 			ksort($values);
-			echo JHTML::_('select.genericlist', $values, '', 'onchange="document.getElementById(\''.$id.'\').value = this.value;"', 'value', 'text', $current_quantity, $id.'_select');
+			echo JHTML::_('select.genericlist', $values, '', 'onchange="document.getElementById(\''.$id.'\').value = this.value;" class="uk-select uk-border-rounded productQtySelect qtySelect"', 'value', 'text', $current_quantity, $id.'_select');
 			?>
 			<input id="<?php echo $id; ?>" type="hidden" value="<?php echo $current_quantity; ?>" class="hikashop_product_quantity_field" name="<?php echo $name; ?>" data-hk-qty-min="<?php echo $min_quantity; ?>" data-hk-qty-max="<?php echo $max_quantity; ?>" onchange="window.hikashop.checkQuantity(this);" />
 		</div>
-		<div class="hikashop_product_quantity_div hikashop_product_quantity_add_to_cart_div hikashop_product_quantity_add_to_cart_div_select"><?php
+		<div class="hikashop_product_quantity_div hikashop_product_quantity_add_to_cart_div hikashop_product_quantity_add_to_cart_div_select uk-hidden"><?php
 			echo $html;
 		?></div>
 <?php

@@ -18,7 +18,7 @@ defined('_JEXEC') or die('Restricted access');
             <?php if(empty($file->file_name)) { ?>
                 <?php $file->file_name = $file->file_path; ?>
             <?php } ?>
-            <?php $files[] = '<a class="hikashop_product_file_link uk-button uk-button-default uk-button-large uk-border-rounded uk-box-shadow-small font" href="' .  $file->download_link . '">' . $file->file_name . '</a>'; ?>
+            <?php $files[] = '<a class="hikashop_product_file_link uk-button uk-button-default uk-button-large uk-border-rounded uk-box-shadow-small uk-width-1-1 uk-width-auto@m font" href="' .  $file->download_link . '">' . $file->file_name . '</a>'; ?>
         <?php } ?>
         <?php if(count($files)) { ?>
             <?php echo implode('<br/>', $files); ?>

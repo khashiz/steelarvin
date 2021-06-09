@@ -235,7 +235,7 @@ window.productMgr.closeVariantEditor = function() { <?php echo $this->editor->js
 					?></span>
 					<input size="10" style="width:50px" type="text" name="data[variant][product_height]" value="<?php echo $this->escape(@$this->product->product_height); ?>"/>
 				</div>
-				<?php echo $this->volume->display('data[variant][product_dimension_unit]', @$this->product->product_dimension_unit, 'dimension', '', 'class="no-chzn" style="width:70px;"'); ?>
+				<?php echo $this->volume->display('data[variant][product_dimension_unit]', @$this->product->product_dimension_unit, 'dimension', '', 'class="no-chzn uk-select uk-border-rounded"'); ?>
 			</dd>
 <?php
 	}

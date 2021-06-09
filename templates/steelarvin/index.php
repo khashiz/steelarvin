@@ -206,7 +206,7 @@ $total = count($socialsicons['icon']);
         <div class="uk-container">
             <div>
                 <div data-uk-grid>
-                    <div class="uk-width-1-1 uk-width-1-3@m">
+                    <div class="uk-width-1-1 uk-width-1-3@m uk-flex-last uk-flex-first@m">
                         <div class="uk-padding-small bgAccent footerSocials">
                             <div class="uk-grid-small uk-child-width-auto uk-flex-center" data-uk-grid>
                                 <div class="uk-flex uk-flex-middle"><span class="uk-text-white uk-text-small font"><?php echo JTEXT::_('FOLLOWUS'); ?></span></div>
@@ -227,7 +227,7 @@ $total = count($socialsicons['icon']);
                         </div>
                     </div>
                     <?php if ($this->countModules( 'breadcrumbs' )) { ?>
-                        <div class="uk-width-1-1 uk-width-expand@m uk-text-small uk-flex uk-flex-left"><jdoc:include type="modules" name="breadcrumbs" style="xhtml" /></div>
+                        <div class="uk-width-1-1 uk-width-expand@m uk-text-small uk-flex uk-flex-left uk-visible@m"><jdoc:include type="modules" name="breadcrumbs" style="xhtml" /></div>
                     <?php } ?>
                 </div>
             </div>
