@@ -308,11 +308,22 @@ class RsformControllerComponents extends RsformController
 
 		$cids = array_map('intval', $cids);
 
-		foreach ($cids as $cid) {
-			$model->copyComponent($cid, $toFormId);
+		$count = count($cids);
+		foreach ($cids as $cid)
+		{
+			try
+			{
+				$model->copyComponent($cid, $toFormId);
+			}
+			catch (Exception $e)
+			{
+				JFactory::getApplication()->enqueueMessage($e->getMessage(), 'warning');
+
+				$count--;
+			}
 		}
 
-		$this->setRedirect('index.php?option=com_rsform&view=forms&layout=edit&formId='.$toFormId, JText::sprintf('RSFP_COMPONENTS_COPIED', count($cids)));
+		$this->setRedirect('index.php?option=com_rsform&view=forms&layout=edit&formId='.$toFormId, JText::sprintf('RSFP_COMPONENTS_COPIED', $count));
 	}
 
     public function copy()
@@ -348,11 +359,22 @@ class RsformControllerComponents extends RsformController
 		$model 	= $this->getModel('forms');
 
 		$cids = array_map('intval', $cids);
-		foreach ($cids as $cid) {
-			$model->copyComponent($cid, $formId);
+		$count = count($cids);
+		foreach ($cids as $cid)
+		{
+			try
+			{
+				$model->copyComponent($cid, $formId);
+			}
+			catch (Exception $e)
+			{
+				JFactory::getApplication()->enqueueMessage($e->getMessage(), 'warning');
+
+				$count--;
+			}
 		}
 
-		$this->setRedirect('index.php?option=com_rsform&view=forms&layout=edit&formId='.$formId, JText::sprintf('RSFP_COMPONENTS_COPIED', count($cids)));
+		$this->setRedirect('index.php?option=com_rsform&view=forms&layout=edit&formId='.$formId, JText::sprintf('RSFP_COMPONENTS_COPIED', $count));
 	}
 
     public function changeStatus()
@@ -522,6 +544,8 @@ class RsformControllerComponents extends RsformController
 				$i++;
 			}
 		}
+
+		$app->triggerEvent('onRsformBackendAfterComponentDeleted', array($componentIds, $formId));
 
 		if ($ajax)
 		{

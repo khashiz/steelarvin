@@ -21,15 +21,15 @@ class RSFormProFieldSubmitButton extends RSFormProFieldButton
 		$html 		= '';
 
 		if ($buttonType == 'button') {
-			$html .= '<button type="button" class="btn btn-primary">'.$this->escape($label).'</button>';
+			$html .= '<div class="uk-flex-first uk-flex-last@m"><button type="button" class="btn btn-primary">'.$this->escape($label).'</button></div>';
 		} else {
 			$html .= '<input type="button" class="btn btn-primary" value="'.$this->escape($label).'" />';
 		}
 		if ($reset) {
 			if ($buttonType == 'button') {
-				$html .= '<button type="reset" class="btn btn-danger">'.$this->escape($resetLabel).'</button>';
+				$html .= '&nbsp;&nbsp;<button type="reset" class="btn btn-danger">'.$this->escape($resetLabel).'</button>';
 			} else {
-				$html .= '<input type="reset" class="btn btn-danger" value="'.$this->escape($resetLabel).'"/>';
+				$html .= '&nbsp;&nbsp;<input type="reset" class="btn btn-danger" value="'.$this->escape($resetLabel).'"/>';
 			}
 		}
 		

@@ -281,8 +281,6 @@ class RSFormProFieldFileUpload extends RSFormProField
 				$file = $realpath . $prefix . $actualFile['name'];
 			}
 
-			jimport('joomla.filesystem.file');
-
 			// Upload File
 			if (JFile::upload($actualFile['tmp_name'], $file, false, (bool) RSFormProHelper::getConfig('allow_unsafe')))
 			{
@@ -324,7 +322,7 @@ class RSFormProFieldFileUpload extends RSFormProField
 				}
 
 				// Trigger Event - onBeforeStoreSubmissions
-				JFactory::getApplication()->triggerEvent('rsfp_f_onAfterFileUpload', array(array('formId' => $this->formId, 'fieldname' => $this->name, 'file' => $file, 'name' => $prefix . $actualFile['name'])));
+				JFactory::getApplication()->triggerEvent('onRsformFrontendAfterFileUpload', array(array('formId' => $this->formId, 'submissionId' => $submissionId, 'fieldname' => $this->name, 'file' => $file, 'name' => $prefix . $actualFile['name'], 'addToDb' => $addToDb)));
 
 				$allFiles[] = $file;
 			}

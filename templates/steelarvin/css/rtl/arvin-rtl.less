@@ -1105,21 +1105,35 @@ span{
 .uk-input,
 .uk-textarea,
 .uk-select{
-  font-size: 14px;
-  font-variation-settings: "wght" 500, "wdth" 100, "slnt" 0, "DOTR" 1, "DOTS" 0, "KASH" 0;
-  color: @dark;
-  .transition;
-  &:focus{
+  &:not(.uk-form-blank){
+    font-size: 14px;
+    font-variation-settings: "wght" 500, "wdth" 100, "slnt" 0, "DOTR" 1, "DOTS" 0, "KASH" 0;
     color: @dark;
-    border-color: @primary;
-    box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, .1), 0 0 0 1px @primary;
-  }
-  &.uk-form-danger{
-    border-color: @danger;
-    box-shadow: 0 0 0 1px @danger;
+    .transition;
     &:focus{
-      box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, .1), 0 0 0 1px @danger;
+      color: @dark;
+      border-color: @primary;
+      box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, .1), 0 0 0 1px @primary;
     }
+    &.uk-form-danger{
+      border-color: @danger;
+      box-shadow: 0 0 0 1px @danger;
+      &:focus{
+        box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, .1), 0 0 0 1px @danger;
+      }
+    }
+  }
+}
+.priceCalcInput{
+  font-size: 24px;
+  color: #222;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-variation-settings: "wght" 900, "wdth" 100, "slnt" 0, "DOTR" 1, "DOTS" 0, "KASH" 0;
+  .box-shadow(none);
+  &:focus{
+    color: #222;
   }
 }
 .uk-select{
