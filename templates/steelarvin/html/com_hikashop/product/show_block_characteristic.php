@@ -49,7 +49,7 @@ if($this->params->get('characteristic_display') != 'list') {
 				$firstCharacteristic = reset($this->characteristics);
 				$secondCharacteristic = end($this->characteristics);
 
-				$html.= '<table class="hikashop_product_characteristic_chooser"><tr><td></td>';
+				$html.= 'ffff<table class="hikashop_product_characteristic_chooser"><tr><td></td>';
 				if(!empty($secondCharacteristic->values)){
 					foreach($secondCharacteristic->values as $value){
 						$html.='<td>'.hikashop_translate($value->characteristic_value).'</td>';
@@ -107,7 +107,7 @@ if($this->params->get('characteristic_display') != 'list') {
 					for($i = 0; $i <= $size; $i++) {
 						$space .= '&nbsp;&nbsp;';
 					}
-					$html = '<table class="hikashop_product_characteristic_chooser"><tr><td></td><td class="hikashop_charactersitic_name">'.$space.@$secondCharacteristic->characteristic_value.'</td></tr><tr><td class="hikashop_charactersitic_name">'.$firstCharacteristic->characteristic_value.'</td><td>'.$html.'</td></table>';
+					$html = 'eeee<table class="hikashop_product_characteristic_chooser"><tr><td></td><td class="hikashop_charactersitic_name">'.$space.@$secondCharacteristic->characteristic_value.'</td></tr><tr><td class="hikashop_charactersitic_name">'.$firstCharacteristic->characteristic_value.'</td><td>'.$html.'</td></table>';
 				}
 				break;
 			}

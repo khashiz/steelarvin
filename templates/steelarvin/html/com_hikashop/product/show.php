@@ -45,7 +45,7 @@ function hikashop_product_form_check() {
 	return false;
 }
 </script>
-    <form action="<?php echo hikashop_completeLink('product&task=updatecart'); ?>" method="post" name="hikashop_product_form" onsubmit="return hikashop_product_form_check();" enctype="multipart/form-data" class="uk-margin-medium-bottom">
+    <form action="<?php echo hikashop_completeLink('product&task=updatecart'); ?>" method="post" name="hikashop_product_form" onsubmit="return hikashop_product_form_check();" enctype="multipart/form-data" class="uk-margin-medium-bottom regForm">
         <?php
         $this->variant_name ='';
         if(!empty($this->element->variants) && $this->config->get('variant_increase_perf', 1) && !empty($this->element->main)) {
