@@ -1,14 +1,22 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.7
+-- version 4.9.5
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jul 01, 2021 at 09:56 AM
--- Server version: 5.7.32
--- PHP Version: 7.4.12
+-- Generation Time: Jul 02, 2021 at 10:57 AM
+-- Server version: 5.7.24
+-- PHP Version: 7.4.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Database: `arvin`
@@ -1917,7 +1925,21 @@ INSERT INTO `yz4ph_action_logs` (`id`, `message_language_key`, `message`, `log_d
 (1863, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"65\",\"username\":\"developer\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=65\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2021-06-30 21:16:39', 'com_users', 65, 0, 'COM_ACTIONLOGS_DISABLED'),
 (1864, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"108\",\"username\":\"09223815503\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=108\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE\"}', '2021-06-30 23:36:54', 'com_users', 108, 0, 'COM_ACTIONLOGS_DISABLED'),
 (1865, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"65\",\"title\":\"developer\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=65\",\"userid\":\"65\",\"username\":\"developer\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=65\",\"table\":\"#__menu\"}', '2021-07-01 00:16:10', 'com_checkin', 65, 65, 'COM_ACTIONLOGS_DISABLED'),
-(1866, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"65\",\"title\":\"developer\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=65\",\"userid\":\"65\",\"username\":\"developer\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=65\",\"table\":\"#__menu\"}', '2021-07-01 00:17:49', 'com_checkin', 65, 65, 'COM_ACTIONLOGS_DISABLED');
+(1866, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"65\",\"title\":\"developer\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=65\",\"userid\":\"65\",\"username\":\"developer\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=65\",\"table\":\"#__menu\"}', '2021-07-01 00:17:49', 'com_checkin', 65, 65, 'COM_ACTIONLOGS_DISABLED'),
+(1867, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"65\",\"username\":\"developer\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=65\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2021-07-01 11:53:27', 'com_users', 65, 0, 'COM_ACTIONLOGS_DISABLED'),
+(1868, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"65\",\"title\":\"developer\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=65\",\"userid\":\"65\",\"username\":\"developer\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=65\",\"table\":\"#__menu\"}', '2021-07-01 11:53:48', 'com_checkin', 65, 65, 'COM_ACTIONLOGS_DISABLED'),
+(1869, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_TRASHED', '{\"action\":\"trash\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MENU_ITEM\",\"id\":226,\"title\":\"\\u0641\\u0631\\u0648\\u0634 \\u0648\\u0632\\u0646\\u06cc\",\"itemlink\":\"index.php?option=com_menus&task=item.edit&id=226\",\"userid\":\"65\",\"username\":\"developer\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=65\"}', '2021-07-01 11:53:48', 'com_menus.item', 65, 226, 'COM_ACTIONLOGS_DISABLED'),
+(1870, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_DELETED', '{\"action\":\"delete\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MENU_ITEM\",\"id\":\"226\",\"title\":\"\\u0641\\u0631\\u0648\\u0634 \\u0648\\u0632\\u0646\\u06cc\",\"userid\":\"65\",\"username\":\"developer\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=65\"}', '2021-07-01 11:54:04', 'com_menus.item', 65, 226, 'COM_ACTIONLOGS_DISABLED'),
+(1871, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"65\",\"title\":\"developer\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=65\",\"userid\":\"65\",\"username\":\"developer\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=65\",\"table\":\"#__modules\"}', '2021-07-01 12:25:43', 'com_checkin', 65, 65, 'COM_ACTIONLOGS_DISABLED'),
+(1872, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"108\",\"username\":\"09223815503\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=108\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE\"}', '2021-07-01 12:29:24', 'com_users', 108, 0, 'COM_ACTIONLOGS_DISABLED'),
+(1873, 'PLG_ACTIONLOG_JOOMLA_EXTENSION_INSTALLED', '{\"action\":\"install\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MODULE\",\"id\":10133,\"name\":\"RSForm! Pro Module\",\"extension_name\":\"RSForm! Pro Module\",\"userid\":\"65\",\"username\":\"developer\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=65\"}', '2021-07-01 12:48:10', 'com_installer', 65, 10133, 'COM_ACTIONLOGS_DISABLED'),
+(1874, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MODULE\",\"id\":131,\"title\":\"\\u0645\\u0627\\u0634\\u06cc\\u0646 \\u062d\\u0633\\u0627\\u0628 \\u0645\\u06cc\\u0644\\u06af\\u0631\\u062f\",\"extension_name\":\"\\u0645\\u0627\\u0634\\u06cc\\u0646 \\u062d\\u0633\\u0627\\u0628 \\u0645\\u06cc\\u0644\\u06af\\u0631\\u062f\",\"itemlink\":\"index.php?option=com_modules&task=module.edit&id=131\",\"userid\":\"65\",\"username\":\"developer\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=65\"}', '2021-07-01 12:48:41', 'com_modules.module', 65, 131, 'COM_ACTIONLOGS_DISABLED'),
+(1875, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"65\",\"title\":\"developer\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=65\",\"userid\":\"65\",\"username\":\"developer\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=65\",\"table\":\"#__modules\"}', '2021-07-01 12:48:41', 'com_checkin', 65, 65, 'COM_ACTIONLOGS_DISABLED'),
+(1876, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":\"65\",\"username\":\"developer\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=65\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2021-07-01 13:07:21', 'com_users', 65, 0, 'COM_ACTIONLOGS_DISABLED'),
+(1877, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"65\",\"title\":\"developer\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=65\",\"userid\":\"65\",\"username\":\"developer\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=65\",\"table\":\"#__modules\"}', '2021-07-01 13:26:03', 'com_checkin', 65, 65, 'COM_ACTIONLOGS_DISABLED'),
+(1878, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MODULE\",\"id\":132,\"title\":\"\\u0645\\u0627\\u0634\\u06cc\\u0646 \\u062d\\u0633\\u0627\\u0628 \\u0645\\u06cc\\u0644\\u06af\\u0631\\u062f (2)\",\"extension_name\":\"\\u0645\\u0627\\u0634\\u06cc\\u0646 \\u062d\\u0633\\u0627\\u0628 \\u0645\\u06cc\\u0644\\u06af\\u0631\\u062f (2)\",\"itemlink\":\"index.php?option=com_modules&task=module.edit&id=132\",\"userid\":\"65\",\"username\":\"developer\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=65\"}', '2021-07-01 13:26:03', 'com_modules.module', 65, 132, 'COM_ACTIONLOGS_DISABLED'),
+(1879, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MODULE\",\"id\":132,\"title\":\"\\u0645\\u0627\\u0634\\u06cc\\u0646 \\u062d\\u0633\\u0627\\u0628 \\u067e\\u0631\\u0648\\u0641\\u06cc\\u0644\",\"extension_name\":\"\\u0645\\u0627\\u0634\\u06cc\\u0646 \\u062d\\u0633\\u0627\\u0628 \\u067e\\u0631\\u0648\\u0641\\u06cc\\u0644\",\"itemlink\":\"index.php?option=com_modules&task=module.edit&id=132\",\"userid\":\"65\",\"username\":\"developer\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=65\"}', '2021-07-01 13:26:16', 'com_modules.module', 65, 132, 'COM_ACTIONLOGS_DISABLED'),
+(1880, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":\"65\",\"title\":\"developer\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=65\",\"userid\":\"65\",\"username\":\"developer\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=65\",\"table\":\"#__modules\"}', '2021-07-01 13:26:16', 'com_checkin', 65, 65, 'COM_ACTIONLOGS_DISABLED');
 
 -- --------------------------------------------------------
 
@@ -2029,7 +2051,7 @@ CREATE TABLE `yz4ph_assets` (
 --
 
 INSERT INTO `yz4ph_assets` (`id`, `parent_id`, `lft`, `rgt`, `level`, `name`, `title`, `rules`) VALUES
-(1, 0, 0, 297, 0, 'root.1', 'Root Asset', '{\"core.login.site\":{\"6\":1,\"2\":1,\"10\":1,\"11\":1},\"core.login.admin\":{\"6\":1},\"core.login.offline\":{\"6\":1},\"core.admin\":{\"8\":1},\"core.manage\":{\"7\":1},\"core.create\":{\"6\":1,\"3\":1},\"core.delete\":{\"6\":1},\"core.edit\":{\"6\":1,\"4\":1},\"core.edit.state\":{\"6\":1,\"5\":1},\"core.edit.own\":{\"6\":1,\"3\":1}}'),
+(1, 0, 0, 301, 0, 'root.1', 'Root Asset', '{\"core.login.site\":{\"6\":1,\"2\":1,\"10\":1,\"11\":1},\"core.login.admin\":{\"6\":1},\"core.login.offline\":{\"6\":1},\"core.admin\":{\"8\":1},\"core.manage\":{\"7\":1},\"core.create\":{\"6\":1,\"3\":1},\"core.delete\":{\"6\":1},\"core.edit\":{\"6\":1,\"4\":1},\"core.edit.state\":{\"6\":1,\"5\":1},\"core.edit.own\":{\"6\":1,\"3\":1}}'),
 (2, 1, 1, 2, 1, 'com_admin', 'com_admin', '{}'),
 (3, 1, 3, 6, 1, 'com_banners', 'com_banners', '{\"core.admin\":{\"7\":1},\"core.manage\":{\"6\":1}}'),
 (4, 1, 7, 8, 1, 'com_cache', 'com_cache', '{\"core.admin\":{\"7\":1},\"core.manage\":{\"7\":1}}'),
@@ -2046,25 +2068,25 @@ INSERT INTO `yz4ph_assets` (`id`, `parent_id`, `lft`, `rgt`, `level`, `name`, `t
 (15, 1, 115, 116, 1, 'com_media', 'com_media', '{\"core.admin\":{\"7\":1},\"core.manage\":{\"6\":1},\"core.create\":{\"3\":1},\"core.delete\":{\"5\":1}}'),
 (16, 1, 117, 134, 1, 'com_menus', 'com_menus', '{\"core.admin\":{\"7\":1}}'),
 (17, 1, 135, 136, 1, 'com_messages', 'com_messages', '{\"core.admin\":{\"7\":1},\"core.manage\":{\"7\":1}}'),
-(18, 1, 137, 232, 1, 'com_modules', 'com_modules', '{\"core.admin\":{\"7\":1}}'),
-(19, 1, 233, 236, 1, 'com_newsfeeds', 'com_newsfeeds', '{\"core.admin\":{\"7\":1},\"core.manage\":{\"6\":1}}'),
-(20, 1, 237, 238, 1, 'com_plugins', 'com_plugins', '{\"core.admin\":{\"7\":1}}'),
-(21, 1, 239, 240, 1, 'com_redirect', 'com_redirect', '{\"core.admin\":{\"7\":1}}'),
-(22, 1, 241, 242, 1, 'com_search', 'com_search', '{\"core.admin\":{\"7\":1},\"core.manage\":{\"6\":1}}'),
-(23, 1, 243, 244, 1, 'com_templates', 'com_templates', '{\"core.admin\":{\"7\":1}}'),
-(24, 1, 245, 268, 1, 'com_users', 'com_users', '{\"core.admin\":{\"7\":1}}'),
-(26, 1, 269, 270, 1, 'com_wrapper', 'com_wrapper', '{}'),
+(18, 1, 137, 236, 1, 'com_modules', 'com_modules', '{\"core.admin\":{\"7\":1}}'),
+(19, 1, 237, 240, 1, 'com_newsfeeds', 'com_newsfeeds', '{\"core.admin\":{\"7\":1},\"core.manage\":{\"6\":1}}'),
+(20, 1, 241, 242, 1, 'com_plugins', 'com_plugins', '{\"core.admin\":{\"7\":1}}'),
+(21, 1, 243, 244, 1, 'com_redirect', 'com_redirect', '{\"core.admin\":{\"7\":1}}'),
+(22, 1, 245, 246, 1, 'com_search', 'com_search', '{\"core.admin\":{\"7\":1},\"core.manage\":{\"6\":1}}'),
+(23, 1, 247, 248, 1, 'com_templates', 'com_templates', '{\"core.admin\":{\"7\":1}}'),
+(24, 1, 249, 272, 1, 'com_users', 'com_users', '{\"core.admin\":{\"7\":1}}'),
+(26, 1, 273, 274, 1, 'com_wrapper', 'com_wrapper', '{}'),
 (27, 8, 18, 19, 2, 'com_content.category.2', 'Uncategorised', '{}'),
 (28, 3, 4, 5, 2, 'com_banners.category.3', 'Uncategorised', '{}'),
 (29, 7, 14, 15, 2, 'com_contact.category.4', 'Uncategorised', '{}'),
-(30, 19, 234, 235, 2, 'com_newsfeeds.category.5', 'Uncategorised', '{}'),
-(32, 24, 246, 247, 2, 'com_users.category.7', 'Uncategorised', '{}'),
-(33, 1, 271, 272, 1, 'com_finder', 'com_finder', '{\"core.admin\":{\"7\":1},\"core.manage\":{\"6\":1}}'),
-(34, 1, 273, 274, 1, 'com_joomlaupdate', 'com_joomlaupdate', '{}'),
-(35, 1, 275, 276, 1, 'com_tags', 'com_tags', '{}'),
-(36, 1, 277, 278, 1, 'com_contenthistory', 'com_contenthistory', '{}'),
-(37, 1, 279, 280, 1, 'com_ajax', 'com_ajax', '{}'),
-(38, 1, 281, 282, 1, 'com_postinstall', 'com_postinstall', '{}'),
+(30, 19, 238, 239, 2, 'com_newsfeeds.category.5', 'Uncategorised', '{}'),
+(32, 24, 250, 251, 2, 'com_users.category.7', 'Uncategorised', '{}'),
+(33, 1, 275, 276, 1, 'com_finder', 'com_finder', '{\"core.admin\":{\"7\":1},\"core.manage\":{\"6\":1}}'),
+(34, 1, 277, 278, 1, 'com_joomlaupdate', 'com_joomlaupdate', '{}'),
+(35, 1, 279, 280, 1, 'com_tags', 'com_tags', '{}'),
+(36, 1, 281, 282, 1, 'com_contenthistory', 'com_contenthistory', '{}'),
+(37, 1, 283, 284, 1, 'com_ajax', 'com_ajax', '{}'),
+(38, 1, 285, 286, 1, 'com_postinstall', 'com_postinstall', '{}'),
 (39, 18, 138, 139, 2, 'com_modules.module.1', 'Main Menu', '{}'),
 (40, 18, 140, 141, 2, 'com_modules.module.2', 'Login', '{}'),
 (41, 18, 142, 143, 2, 'com_modules.module.3', 'Popular Articles', '{}'),
@@ -2082,8 +2104,8 @@ INSERT INTO `yz4ph_assets` (`id`, `parent_id`, `lft`, `rgt`, `level`, `name`, `t
 (53, 18, 166, 167, 2, 'com_modules.module.86', 'Joomla Version', '{}'),
 (54, 16, 118, 119, 2, 'com_menus.menu.1', 'Main Menu', '{}'),
 (55, 18, 168, 169, 2, 'com_modules.module.87', 'Sample Data', '{}'),
-(56, 1, 283, 284, 1, 'com_privacy', 'com_privacy', '{}'),
-(57, 1, 285, 286, 1, 'com_actionlogs', 'com_actionlogs', '{}'),
+(56, 1, 287, 288, 1, 'com_privacy', 'com_privacy', '{}'),
+(57, 1, 289, 290, 1, 'com_actionlogs', 'com_actionlogs', '{}'),
 (58, 18, 170, 171, 2, 'com_modules.module.88', 'Latest Actions', '{}'),
 (59, 18, 172, 173, 2, 'com_modules.module.89', 'Privacy Dashboard', '{}'),
 (60, 11, 104, 105, 2, 'com_languages.language.2', 'فارسی', '{}'),
@@ -2092,11 +2114,11 @@ INSERT INTO `yz4ph_assets` (`id`, `parent_id`, `lft`, `rgt`, `level`, `name`, `t
 (63, 18, 176, 177, 2, 'com_modules.module.91', 'Main Menu', '{}'),
 (64, 16, 122, 123, 2, 'com_menus.menu.3', 'Main Menu FA', '{}'),
 (65, 18, 178, 179, 2, 'com_modules.module.92', 'منوی اصلی', '{}'),
-(66, 1, 287, 288, 1, 'com_hikashop', 'HikaShop', '{}'),
+(66, 1, 291, 292, 1, 'com_hikashop', 'HikaShop', '{}'),
 (67, 11, 106, 107, 2, 'com_languages.language.1', 'English', '{}'),
-(68, 1, 289, 290, 1, 'com_rsform', 'com_rsform', '{}'),
-(69, 1, 291, 292, 1, 'com_fields', 'com_fields', '{}'),
-(70, 1, 293, 294, 1, 'com_associations', 'com_associations', '{}'),
+(68, 1, 293, 294, 1, 'com_rsform', 'com_rsform', '{}'),
+(69, 1, 295, 296, 1, 'com_fields', 'com_fields', '{}'),
+(70, 1, 297, 298, 1, 'com_associations', 'com_associations', '{}'),
 (71, 16, 124, 125, 2, 'com_menus.menu.5', 'Footer Categories', '{}'),
 (72, 16, 126, 127, 2, 'com_menus.menu.6', 'Footer Applications', '{}'),
 (73, 18, 180, 181, 2, 'com_modules.module.108', 'دسته بندی محصولات', '{}'),
@@ -2107,20 +2129,20 @@ INSERT INTO `yz4ph_assets` (`id`, `parent_id`, `lft`, `rgt`, `level`, `name`, `t
 (80, 18, 188, 189, 2, 'com_modules.module.113', 'Applications', '{}'),
 (81, 18, 190, 191, 2, 'com_modules.module.114', 'Other Links', '{}'),
 (82, 16, 130, 131, 2, 'com_menus.menu.8', 'User Menu', '{}'),
-(83, 24, 248, 251, 2, 'com_users.fieldgroup.1', 'Account Type', '{}'),
-(84, 24, 252, 255, 2, 'com_users.fieldgroup.2', 'Individual Account', '{}'),
-(85, 24, 256, 261, 2, 'com_users.fieldgroup.3', 'Business Account', '{}'),
-(86, 83, 249, 250, 3, 'com_users.field.1', 'نوع حساب کاربری', '{\"core.edit.value\":{\"1\":1,\"10\":1}}'),
-(87, 84, 253, 254, 3, 'com_users.field.2', 'کد ملی', '{\"core.edit.value\":{\"1\":1}}'),
-(88, 101, 263, 264, 3, 'com_users.field.3', 'شماره همراه', '{\"core.edit.value\":{\"1\":1}}'),
-(89, 101, 265, 266, 3, 'com_users.field.4', 'شماره ثابت', '{\"core.edit.value\":{\"1\":1}}'),
-(91, 85, 257, 258, 3, 'com_users.field.6', 'شناسه ملی', '{\"core.edit.value\":{\"1\":1}}'),
-(92, 85, 259, 260, 3, 'com_users.field.7', 'کد اقتصادی', '{\"core.edit.value\":{\"1\":1}}'),
+(83, 24, 252, 255, 2, 'com_users.fieldgroup.1', 'Account Type', '{}'),
+(84, 24, 256, 259, 2, 'com_users.fieldgroup.2', 'Individual Account', '{}'),
+(85, 24, 260, 265, 2, 'com_users.fieldgroup.3', 'Business Account', '{}'),
+(86, 83, 253, 254, 3, 'com_users.field.1', 'نوع حساب کاربری', '{\"core.edit.value\":{\"1\":1,\"10\":1}}'),
+(87, 84, 257, 258, 3, 'com_users.field.2', 'کد ملی', '{\"core.edit.value\":{\"1\":1}}'),
+(88, 101, 267, 268, 3, 'com_users.field.3', 'شماره همراه', '{\"core.edit.value\":{\"1\":1}}'),
+(89, 101, 269, 270, 3, 'com_users.field.4', 'شماره ثابت', '{\"core.edit.value\":{\"1\":1}}'),
+(91, 85, 261, 262, 3, 'com_users.field.6', 'شناسه ملی', '{\"core.edit.value\":{\"1\":1}}'),
+(92, 85, 263, 264, 3, 'com_users.field.7', 'کد اقتصادی', '{\"core.edit.value\":{\"1\":1}}'),
 (97, 18, 192, 193, 2, 'com_modules.module.115', 'User Menu', '{}'),
 (98, 18, 194, 195, 2, 'com_modules.module.116', 'منوی کاربری', '{}'),
 (99, 18, 196, 197, 2, 'com_modules.module.103', 'سبد خرید', '{}'),
 (100, 18, 198, 199, 2, 'com_modules.module.117', 'Search', '{}'),
-(101, 24, 262, 267, 2, 'com_users.fieldgroup.4', 'Contact', '{}'),
+(101, 24, 266, 271, 2, 'com_users.fieldgroup.4', 'Contact', '{}'),
 (103, 8, 20, 33, 2, 'com_content.category.8', 'FAQ', '{}'),
 (104, 8, 34, 53, 2, 'com_content.category.9', 'سوالات متداول', '{}'),
 (105, 104, 35, 42, 3, 'com_content.category.10', 'ورود و ثبت نام', '{}'),
@@ -2138,7 +2160,7 @@ INSERT INTO `yz4ph_assets` (`id`, `parent_id`, `lft`, `rgt`, `level`, `name`, `t
 (117, 16, 132, 133, 2, 'com_menus.menu.9', 'Mobile Menu', '{}'),
 (118, 18, 202, 203, 2, 'com_modules.module.118', 'منوی موبایل', '{}'),
 (119, 18, 204, 205, 2, 'com_modules.module.119', 'منوی داشبورد', '{}'),
-(120, 1, 295, 296, 1, '#__ucm_content.1', '#__ucm_content.1', '{}'),
+(120, 1, 299, 300, 1, '#__ucm_content.1', '#__ucm_content.1', '{}'),
 (122, 18, 206, 207, 2, 'com_modules.module.120', 'Related Products', '{}'),
 (123, 18, 208, 209, 2, 'com_modules.module.121', 'Same Category', '{}'),
 (124, 104, 51, 52, 3, 'com_content.category.21', 'کد تخفیف و کارت هدیه', '{}'),
@@ -2177,7 +2199,9 @@ INSERT INTO `yz4ph_assets` (`id`, `parent_id`, `lft`, `rgt`, `level`, `name`, `t
 (157, 18, 224, 225, 2, 'com_modules.module.95', 'دسته بندی محصولات', '{}'),
 (158, 18, 226, 227, 2, 'com_modules.module.129', 'مشتریان ما', '{}'),
 (159, 18, 228, 229, 2, 'com_modules.module.130', 'کاربرد محصولات', '{}'),
-(160, 18, 230, 231, 2, 'com_modules.module.98', 'جدیدترین محصولات ما', '{}');
+(160, 18, 230, 231, 2, 'com_modules.module.98', 'جدیدترین محصولات ما', '{}'),
+(161, 18, 232, 233, 2, 'com_modules.module.131', 'ماشین حساب میلگرد', '{}'),
+(162, 18, 234, 235, 2, 'com_modules.module.132', 'ماشین حساب پروفیل', '{}');
 
 -- --------------------------------------------------------
 
@@ -2631,7 +2655,7 @@ INSERT INTO `yz4ph_extensions` (`extension_id`, `package_id`, `name`, `type`, `e
 (35, 0, 'com_privacy', 'component', 'com_privacy', '', 1, 1, 1, 1, '{\"name\":\"com_privacy\",\"type\":\"component\",\"creationDate\":\"May 2018\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2005 - 2020 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.9.0\",\"description\":\"COM_PRIVACY_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"privacy\"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (36, 0, 'com_actionlogs', 'component', 'com_actionlogs', '', 1, 1, 1, 1, '{\"name\":\"com_actionlogs\",\"type\":\"component\",\"creationDate\":\"May 2018\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2020 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.9.0\",\"description\":\"COM_ACTIONLOGS_XML_DESCRIPTION\",\"group\":\"\"}', '{\"ip_logging\":0,\"csv_delimiter\":\",\",\"loggable_extensions\":[\"com_banners\",\"com_cache\",\"com_categories\",\"com_checkin\",\"com_config\",\"com_contact\",\"com_content\",\"com_installer\",\"com_media\",\"com_menus\",\"com_messages\",\"com_modules\",\"com_newsfeeds\",\"com_plugins\",\"com_redirect\",\"com_tags\",\"com_templates\",\"com_users\"]}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (102, 0, 'LIB_PHPUTF8', 'library', 'phputf8', '', 0, 1, 1, 1, '{\"name\":\"LIB_PHPUTF8\",\"type\":\"library\",\"creationDate\":\"2006\",\"author\":\"Harry Fuecks\",\"copyright\":\"Copyright various authors\",\"authorEmail\":\"hfuecks@gmail.com\",\"authorUrl\":\"http:\\/\\/sourceforge.net\\/projects\\/phputf8\",\"version\":\"0.5\",\"description\":\"LIB_PHPUTF8_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"phputf8\"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-(103, 0, 'LIB_JOOMLA', 'library', 'joomla', '', 0, 1, 1, 1, '{\"name\":\"LIB_JOOMLA\",\"type\":\"library\",\"creationDate\":\"2008\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2020 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"https:\\/\\/www.joomla.org\",\"version\":\"13.1\",\"description\":\"LIB_JOOMLA_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"joomla\"}', '{\"mediaversion\":\"2a36ab664a105221d6bcd3208f1af81c\"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+(103, 0, 'LIB_JOOMLA', 'library', 'joomla', '', 0, 1, 1, 1, '{\"name\":\"LIB_JOOMLA\",\"type\":\"library\",\"creationDate\":\"2008\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2020 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"https:\\/\\/www.joomla.org\",\"version\":\"13.1\",\"description\":\"LIB_JOOMLA_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"joomla\"}', '{\"mediaversion\":\"3eb05379bd043fbc77b38ab922ef89d2\"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (104, 0, 'LIB_IDNA', 'library', 'idna_convert', '', 0, 1, 1, 1, '{\"name\":\"LIB_IDNA\",\"type\":\"library\",\"creationDate\":\"2004\",\"author\":\"phlyLabs\",\"copyright\":\"2004-2011 phlyLabs Berlin, http:\\/\\/phlylabs.de\",\"authorEmail\":\"phlymail@phlylabs.de\",\"authorUrl\":\"http:\\/\\/phlylabs.de\",\"version\":\"0.8.0\",\"description\":\"LIB_IDNA_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"idna_convert\"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (105, 0, 'FOF', 'library', 'fof', '', 0, 1, 1, 1, '{\"name\":\"FOF\",\"type\":\"library\",\"creationDate\":\"2015-04-22 13:15:32\",\"author\":\"Nicholas K. Dionysopoulos \\/ Akeeba Ltd\",\"copyright\":\"(C)2011-2015 Nicholas K. Dionysopoulos\",\"authorEmail\":\"nicholas@akeebabackup.com\",\"authorUrl\":\"https:\\/\\/www.akeebabackup.com\",\"version\":\"2.4.3\",\"description\":\"LIB_FOF_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"fof\"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (106, 0, 'LIB_PHPASS', 'library', 'phpass', '', 0, 1, 1, 1, '{\"name\":\"LIB_PHPASS\",\"type\":\"library\",\"creationDate\":\"2004-2006\",\"author\":\"Solar Designer\",\"copyright\":\"\",\"authorEmail\":\"solar@openwall.com\",\"authorUrl\":\"http:\\/\\/www.openwall.com\\/phpass\\/\",\"version\":\"0.3\",\"description\":\"LIB_PHPASS_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"phpass\"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
@@ -2728,7 +2752,7 @@ INSERT INTO `yz4ph_extensions` (`extension_id`, `package_id`, `name`, `type`, `e
 (449, 0, 'plg_authentication_cookie', 'plugin', 'cookie', 'authentication', 0, 1, 1, 0, '{\"name\":\"plg_authentication_cookie\",\"type\":\"plugin\",\"creationDate\":\"July 2013\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2020 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.0.0\",\"description\":\"PLG_AUTH_COOKIE_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"cookie\"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (450, 0, 'plg_twofactorauth_yubikey', 'plugin', 'yubikey', 'twofactorauth', 0, 0, 1, 0, '{\"name\":\"plg_twofactorauth_yubikey\",\"type\":\"plugin\",\"creationDate\":\"September 2013\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2020 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.2.0\",\"description\":\"PLG_TWOFACTORAUTH_YUBIKEY_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"yubikey\"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (451, 0, 'plg_search_tags', 'plugin', 'tags', 'search', 0, 1, 1, 0, '{\"name\":\"plg_search_tags\",\"type\":\"plugin\",\"creationDate\":\"March 2014\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2020 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.0.0\",\"description\":\"PLG_SEARCH_TAGS_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"tags\"}', '{\"search_limit\":\"50\",\"show_tagged_items\":\"1\"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-(452, 0, 'plg_system_updatenotification', 'plugin', 'updatenotification', 'system', 0, 1, 1, 0, '{\"name\":\"plg_system_updatenotification\",\"type\":\"plugin\",\"creationDate\":\"May 2015\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2020 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.5.0\",\"description\":\"PLG_SYSTEM_UPDATENOTIFICATION_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"updatenotification\"}', '{\"lastrun\":1625087796}', '', '', 0, '0000-00-00 00:00:00', 26, 0),
+(452, 0, 'plg_system_updatenotification', 'plugin', 'updatenotification', 'system', 0, 1, 1, 0, '{\"name\":\"plg_system_updatenotification\",\"type\":\"plugin\",\"creationDate\":\"May 2015\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2020 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.5.0\",\"description\":\"PLG_SYSTEM_UPDATENOTIFICATION_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"updatenotification\"}', '{\"lastrun\":1625138864}', '', '', 0, '0000-00-00 00:00:00', 26, 0),
 (453, 0, 'plg_editors-xtd_module', 'plugin', 'module', 'editors-xtd', 0, 1, 1, 0, '{\"name\":\"plg_editors-xtd_module\",\"type\":\"plugin\",\"creationDate\":\"October 2015\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2020 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.5.0\",\"description\":\"PLG_MODULE_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"module\"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (454, 0, 'plg_system_stats', 'plugin', 'stats', 'system', 0, 1, 1, 0, '{\"name\":\"plg_system_stats\",\"type\":\"plugin\",\"creationDate\":\"November 2013\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2020 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.5.0\",\"description\":\"PLG_SYSTEM_STATS_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"stats\"}', '{\"mode\":3,\"lastrun\":\"\",\"unique_id\":\"877ded0b7b8af7bfeea1d021a18e4046ed893435\",\"interval\":12}', '', '', 0, '0000-00-00 00:00:00', 25, 0),
 (455, 0, 'plg_installer_packageinstaller', 'plugin', 'packageinstaller', 'installer', 0, 1, 1, 1, '{\"name\":\"plg_installer_packageinstaller\",\"type\":\"plugin\",\"creationDate\":\"May 2016\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2020 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.6.0\",\"description\":\"PLG_INSTALLER_PACKAGEINSTALLER_PLUGIN_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"packageinstaller\"}', '', '', '', 0, '0000-00-00 00:00:00', 1, 0),
@@ -2906,7 +2930,8 @@ INSERT INTO `yz4ph_extensions` (`extension_id`, `package_id`, `name`, `type`, `e
 (10129, 0, 'mod_slideshow', 'module', 'mod_slideshow', '', 0, 1, 1, 0, '{\"name\":\"mod_slideshow\",\"type\":\"module\",\"creationDate\":\"July 2004\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2019 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.0.0\",\"description\":\"SLIDESHOWDESC\",\"group\":\"\",\"filename\":\"mod_slideshow\"}', '{\"cache\":\"1\",\"cache_time\":\"900\",\"cachemode\":\"static\"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (10130, 0, 'mod_clients', 'module', 'mod_clients', '', 0, 1, 1, 0, '{\"name\":\"mod_clients\",\"type\":\"module\",\"creationDate\":\"July 2004\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2020 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.0.0\",\"description\":\"MOD_CUSTOM_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"mod_clients\"}', '{\"prepare_content\":\"0\",\"cache\":\"1\",\"cache_time\":\"900\",\"cachemode\":\"static\"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 (10131, 0, 'mod_applications', 'module', 'mod_applications', '', 0, 1, 1, 0, '{\"name\":\"mod_applications\",\"type\":\"module\",\"creationDate\":\"July 2004\",\"author\":\"Joomla! Project\",\"copyright\":\"Copyright (C) 2005 - 2020 Open Source Matters. All rights reserved.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.0.0\",\"description\":\"MOD_APPLICATIONS_DESCRIPTION\",\"group\":\"\",\"filename\":\"mod_applications\"}', '{\"prepare_content\":\"0\",\"cache\":\"1\",\"cache_time\":\"900\",\"cachemode\":\"static\"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-(10132, 0, 'System - RSForm! Pro', 'plugin', 'rsform', 'system', 0, 1, 1, 0, '{\"name\":\"System - RSForm! Pro\",\"type\":\"plugin\",\"creationDate\":\"June 2020\",\"author\":\"RSJoomla!\",\"copyright\":\"(C) 2007-2020 www.rsjoomla.com\",\"authorEmail\":\"support@rsjoomla.com\",\"authorUrl\":\"www.rsjoomla.com\",\"version\":\"3.0.0\",\"description\":\"PLG_SYSTEM_RSFORM_DESC\",\"group\":\"\",\"filename\":\"rsform\"}', '{}', '', '', 0, '0000-00-00 00:00:00', 0, 0);
+(10132, 0, 'System - RSForm! Pro', 'plugin', 'rsform', 'system', 0, 1, 1, 0, '{\"name\":\"System - RSForm! Pro\",\"type\":\"plugin\",\"creationDate\":\"June 2020\",\"author\":\"RSJoomla!\",\"copyright\":\"(C) 2007-2020 www.rsjoomla.com\",\"authorEmail\":\"support@rsjoomla.com\",\"authorUrl\":\"www.rsjoomla.com\",\"version\":\"3.0.0\",\"description\":\"PLG_SYSTEM_RSFORM_DESC\",\"group\":\"\",\"filename\":\"rsform\"}', '{}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+(10133, 0, 'RSForm! Pro Module', 'module', 'mod_rsform', '', 0, 1, 0, 0, '{\"name\":\"RSForm! Pro Module\",\"type\":\"module\",\"creationDate\":\"November 2012\",\"author\":\"RSJoomla!\",\"copyright\":\"(C) 2007-2015 www.rsjoomla.com\",\"authorEmail\":\"support@rsjoomla.com\",\"authorUrl\":\"www.rsjoomla.com\",\"version\":\"3.0.0\",\"description\":\"MOD_RSFORM_DESC\",\"group\":\"\",\"filename\":\"mod_rsform\"}', '{\"formId\":\"1\",\"moduleclass_sfx\":\"\",\"cache\":\"1\",\"cache_time\":\"900\",\"cachemode\":\"static\"}', '', '', 0, '0000-00-00 00:00:00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -3177,11 +3202,13 @@ INSERT INTO `yz4ph_finder_links` (`link_id`, `url`, `route`, `title`, `descripti
 (9, 'index.php?option=com_hikashop&ctrl=product&task=show&cid=2&name=milgerd-304&category_pathway=13&Itemid=168', 'index.php?option=com_hikashop&ctrl=product&task=show&cid=2&name=milgerd-304&category_pathway=13&Itemid=168', 'میلگرد ۳۰۴', ' لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد. لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبانفارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد. ', '2021-05-11 16:30:50', '7595a8fa992db6d0ae417deba2eb2923', 1, 1, 1, '*', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 1, 0x4f3a31393a2246696e646572496e6465786572526573756c74223a31393a7b733a31313a22002a00656c656d656e7473223b613a32363a7b733a323a226964223b733a313a2232223b733a353a226361746964223b733a323a223133223b733a353a22616c696173223b733a31313a226d696c676572642d333034223b733a343a226c696e6b223b733a303a22223b733a373a2273756d6d617279223b733a323438343a223c703ed984d988d8b1d98520d8a7db8cd9bed8b3d988d98520d985d8aad98620d8b3d8a7d8aed8aadaafdb8c20d8a8d8a720d8aad988d984db8cd8af20d8b3d8a7d8afdaafdb8c20d986d8a7d985d981d987d988d98520d8a7d8b220d8b5d986d8b9d8aa20da86d8a7d9be20d98820d8a8d8a720d8a7d8b3d8aad981d8a7d8afd98720d8a7d8b220d8b7d8b1d8a7d8add8a7d98620daafd8b1d8a7d981db8cdaa920d8a7d8b3d8aa2e20da86d8a7d9bedaafd8b1d987d8a720d98820d985d8aad988d98620d8a8d984daa9d98720d8b1d988d8b2d986d8a7d985d98720d98820d985d8acd984d98720d8afd8b120d8b3d8aad988d98620d98820d8b3d8b7d8b1d8a2d986da86d986d8a7d98620daa9d98720d984d8a7d8b2d98520d8a7d8b3d8aa20d98820d8a8d8b1d8a7db8c20d8b4d8b1d8a7db8cd8b720d981d8b9d984db8c20d8aadaa9d986d988d984d988da98db8c20d985d988d8b1d8af20d986db8cd8a7d8b220d98820daa9d8a7d8b1d8a8d8b1d8afd987d8a7db8c20d985d8aad986d988d8b920d8a8d8a720d987d8afd98120d8a8d987d8a8d988d8af20d8a7d8a8d8b2d8a7d8b1d987d8a7db8c20daa9d8a7d8b1d8a8d8b1d8afdb8c20d985db8c20d8a8d8a7d8b4d8af2e20daa9d8aad8a7d8a8d987d8a7db8c20d8b2db8cd8a7d8afdb8c20d8afd8b120d8b4d8b5d8aa20d98820d8b3d98720d8afd8b1d8b5d8af20daafd8b0d8b4d8aad987d88c20d8add8a7d98420d98820d8a2db8cd986d8afd98720d8b4d986d8a7d8aed8aa20d981d8b1d8a7d988d8a7d98620d8acd8a7d985d8b9d98720d98820d985d8aad8aed8b5d8b5d8a7d98620d8b1d8a720d985db8c20d8b7d984d8a8d8af20d8aad8a720d8a8d8a720d986d8b1d98520d8a7d981d8b2d8a7d8b1d987d8a720d8b4d986d8a7d8aed8aa20d8a8db8cd8b4d8aad8b1db8c20d8b1d8a720d8a8d8b1d8a7db8c20d8b7d8b1d8a7d8add8a7d98620d8b1d8a7db8cd8a7d986d98720d8a7db8c20d8b9d984db8c20d8a7d984d8aed8b5d988d8b520d8b7d8b1d8a7d8add8a7d98620d8aed984d8a7d982db8c20d98820d981d8b1d987d986daaf20d9bedb8cd8b4d8b1d98820d8afd8b120d8b2d8a8d8a7d98620d981d8a7d8b1d8b3db8c20d8a7db8cd8acd8a7d8af20daa9d8b1d8af2e20d8afd8b120d8a7db8cd98620d8b5d988d8b1d8aa20d985db8c20d8aad988d8a7d98620d8a7d985db8cd8af20d8afd8a7d8b4d8aa20daa9d98720d8aad985d8a7d98520d98820d8afd8b4d988d8a7d8b1db8c20d985d988d8acd988d8af20d8afd8b120d8a7d8b1d8a7d8a6d98720d8b1d8a7d987daa9d8a7d8b1d987d8a720d98820d8b4d8b1d8a7db8cd8b720d8b3d8aed8aa20d8aad8a7db8cd9be20d8a8d98720d9bed8a7db8cd8a7d98620d8b1d8b3d8af20d988d8b2d985d8a7d98620d985d988d8b1d8af20d986db8cd8a7d8b220d8b4d8a7d985d98420d8add8b1d988d981da86db8cd986db8c20d8afd8b3d8aad8a7d988d8b1d8afd987d8a7db8c20d8a7d8b5d984db8c20d98820d8acd988d8a7d8a8daafd988db8c20d8b3d988d8a7d984d8a7d8aa20d9bedb8cd988d8b3d8aad98720d8a7d987d98420d8afd986db8cd8a7db8c20d985d988d8acd988d8af20d8b7d8b1d8a7d8addb8c20d8a7d8b3d8a7d8b3d8a720d985d988d8b1d8af20d8a7d8b3d8aad981d8a7d8afd98720d982d8b1d8a7d8b120daafdb8cd8b1d8af2e3c2f703e0d0a3c703ed984d988d8b1d98520d8a7db8cd9bed8b3d988d98520d985d8aad98620d8b3d8a7d8aed8aadaafdb8c20d8a8d8a720d8aad988d984db8cd8af20d8b3d8a7d8afdaafdb8c20d986d8a7d985d981d987d988d98520d8a7d8b220d8b5d986d8b9d8aa20da86d8a7d9be20d98820d8a8d8a720d8a7d8b3d8aad981d8a7d8afd98720d8a7d8b220d8b7d8b1d8a7d8add8a7d98620daafd8b1d8a7d981db8cdaa920d8a7d8b3d8aa2e20da86d8a7d9bedaafd8b1d987d8a720d98820d985d8aad988d98620d8a8d984daa9d98720d8b1d988d8b2d986d8a7d985d98720d98820d985d8acd984d98720d8afd8b120d8b3d8aad988d98620d98820d8b3d8b7d8b1d8a2d986da86d986d8a7d98620daa9d98720d984d8a7d8b2d98520d8a7d8b3d8aa20d98820d8a8d8b1d8a7db8c20d8b4d8b1d8a7db8cd8b720d981d8b9d984db8c20d8aadaa9d986d988d984d988da98db8c20d985d988d8b1d8af20d986db8cd8a7d8b220d98820daa9d8a7d8b1d8a8d8b1d8afd987d8a7db8c20d985d8aad986d988d8b920d8a8d8a720d987d8afd98120d8a8d987d8a8d988d8af20d8a7d8a8d8b2d8a7d8b1d987d8a7db8c20daa9d8a7d8b1d8a8d8b1d8afdb8c20d985db8c20d8a8d8a7d8b4d8af2e20daa9d8aad8a7d8a8d987d8a7db8c20d8b2db8cd8a7d8afdb8c20d8afd8b120d8b4d8b5d8aa20d98820d8b3d98720d8afd8b1d8b5d8af20daafd8b0d8b4d8aad987d88c20d8add8a7d98420d98820d8a2db8cd986d8afd98720d8b4d986d8a7d8aed8aa20d981d8b1d8a7d988d8a7d98620d8acd8a7d985d8b9d98720d98820d985d8aad8aed8b5d8b5d8a7d98620d8b1d8a720d985db8c20d8b7d984d8a8d8af20d8aad8a720d8a8d8a720d986d8b1d98520d8a7d981d8b2d8a7d8b1d987d8a720d8b4d986d8a7d8aed8aa20d8a8db8cd8b4d8aad8b1db8c20d8b1d8a720d8a8d8b1d8a7db8c20d8b7d8b1d8a7d8add8a7d98620d8b1d8a7db8cd8a7d986d98720d8a7db8c20d8b9d984db8c20d8a7d984d8aed8b5d988d8b520d8b7d8b1d8a7d8add8a7d98620d8aed984d8a7d982db8c20d98820d981d8b1d987d986daaf20d9bedb8cd8b4d8b1d98820d8afd8b120d8b2d8a8d8a7d98620d981d8a7d8b1d8b3db8c20d8a7db8cd8acd8a7d8af20daa9d8b1d8af2e20d8afd8b120d8a7db8cd98620d8b5d988d8b1d8aa20d985db8c20d8aad988d8a7d98620d8a7d985db8cd8af20d8afd8a7d8b4d8aa20daa9d98720d8aad985d8a7d98520d98820d8afd8b4d988d8a7d8b1db8c20d985d988d8acd988d8af20d8afd8b120d8a7d8b1d8a7d8a6d98720d8b1d8a7d987daa9d8a7d8b1d987d8a720d98820d8b4d8b1d8a7db8cd8b720d8b3d8aed8aa20d8aad8a7db8cd9be20d8a8d98720d9bed8a7db8cd8a7d98620d8b1d8b3d8af20d988d8b2d985d8a7d98620d985d988d8b1d8af20d986db8cd8a7d8b220d8b4d8a7d985d98420d8add8b1d988d981da86db8cd986db8c20d8afd8b3d8aad8a7d988d8b1d8afd987d8a7db8c20d8a7d8b5d984db8c20d98820d8acd988d8a7d8a8daafd988db8c20d8b3d988d8a7d984d8a7d8aa20d9bedb8cd988d8b3d8aad98720d8a7d987d98420d8afd986db8cd8a7db8c20d985d988d8acd988d8af20d8b7d8b1d8a7d8addb8c20d8a7d8b3d8a7d8b3d8a720d985d988d8b1d8af20d8a7d8b3d8aad981d8a7d8afd98720d982d8b1d8a7d8b120daafdb8cd8b1d8af2e3c2f703e223b733a373a226d6574616b6579223b733a303a22223b733a383a226d65746164657363223b733a303a22223b733a383a226d65746164617461223b4f3a32343a224a6f6f6d6c615c52656769737472795c5265676973747279223a333a7b733a373a22002a0064617461223b4f3a383a22737464436c617373223a303a7b7d733a31343a22002a00696e697469616c697a6564223b623a313b733a393a22736570617261746f72223b733a313a222e223b7d733a31363a22637265617465645f62795f616c696173223b733a303a22223b733a383a226d6f646966696564223b733a31303a2231363230373334343530223b733a31313a226d6f6469666965645f6279223b733a303a22223b733a383a2263617465676f7279223b733a31323a22d985db8cd984daafd8b1d8af223b733a31333a2263617465676f7279616c696173223b733a31303a22726f756e642d62617273223b733a393a226361745f7374617465223b733a313a2231223b733a31303a226361745f616363657373223b733a313a2231223b733a353a226272616e64223b4e3b733a31303a226272616e64616c696173223b4e3b733a31313a226272616e645f7374617465223b4e3b733a31323a226272616e645f616363657373223b733a313a2231223b733a343a22736c7567223b733a31313a226d696c676572642d333034223b733a373a22636174736c7567223b733a31303a22726f756e642d62617273223b733a363a226c61796f7574223b733a373a2270726f64756374223b733a363a22706172616d73223b4f3a32343a224a6f6f6d6c615c52656769737472795c5265676973747279223a333a7b733a373a22002a0064617461223b4f3a383a22737464436c617373223a303a7b7d733a31343a22002a00696e697469616c697a6564223b623a313b733a393a22736570617261746f72223b733a313a222e223b7d733a343a22626f6479223b4e3b733a343a2270617468223b733a33303a22726f756e642d626172732f70726f647563742f6d696c676572642d333034223b733a31303a226d657461617574686f72223b4e3b7d733a31353a22002a00696e737472756374696f6e73223b613a353a7b693a313b613a333a7b693a303b733a353a227469746c65223b693a313b733a383a227375627469746c65223b693a323b733a323a226964223b7d693a323b613a323a7b693a303b733a373a2273756d6d617279223b693a313b733a343a22626f6479223b7d693a333b613a383a7b693a303b733a343a226d657461223b693a313b733a31303a226c6973745f7072696365223b693a323b733a31303a2273616c655f7072696365223b693a333b733a373a226d6574616b6579223b693a343b733a383a226d65746164657363223b693a353b733a31303a226d657461617574686f72223b693a363b733a363a22617574686f72223b693a373b733a31363a22637265617465645f62795f616c696173223b7d693a343b613a323a7b693a303b733a343a2270617468223b693a313b733a353a22616c696173223b7d693a353b613a313a7b693a303b733a383a22636f6d6d656e7473223b7d7d733a31313a22002a007461786f6e6f6d79223b613a343a7b733a343a2254797065223b613a313a7b733a373a2250726f64756374223b4f3a32373a224a6f6f6d6c615c434d535c4f626a6563745c434d534f626a656374223a343a7b733a31303a22002a005f6572726f7273223b613a303a7b7d733a353a227469746c65223b733a373a2250726f64756374223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b7d7d733a383a2243617465676f7279223b613a313a7b733a31323a22d985db8cd984daafd8b1d8af223b4f3a32373a224a6f6f6d6c615c434d535c4f626a6563745c434d534f626a656374223a343a7b733a31303a22002a005f6572726f7273223b613a303a7b7d733a353a227469746c65223b733a31323a22d985db8cd984daafd8b1d8af223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b7d7d733a353a224272616e64223b613a313a7b733a303a22223b4f3a32373a224a6f6f6d6c615c434d535c4f626a6563745c434d534f626a656374223a343a7b733a31303a22002a005f6572726f7273223b613a303a7b7d733a353a227469746c65223b4e3b733a353a227374617465223b693a303b733a363a22616363657373223b693a313b7d7d733a383a224c616e6775616765223b613a313a7b733a313a222a223b4f3a32373a224a6f6f6d6c615c434d535c4f626a6563745c434d534f626a656374223a343a7b733a31303a22002a005f6572726f7273223b613a303a7b7d733a353a227469746c65223b733a313a222a223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b7d7d7d733a333a2275726c223b733a3130363a22696e6465782e7068703f6f7074696f6e3d636f6d5f68696b6173686f70266374726c3d70726f64756374267461736b3d73686f77266369643d32266e616d653d6d696c676572642d3330342663617465676f72795f706174687761793d3133264974656d69643d313638223b733a353a22726f757465223b733a3130363a22696e6465782e7068703f6f7074696f6e3d636f6d5f68696b6173686f70266374726c3d70726f64756374267461736b3d73686f77266369643d32266e616d653d6d696c676572642d3330342663617465676f72795f706174687761793d3133264974656d69643d313638223b733a353a227469746c65223b733a31393a22d985db8cd984daafd8b1d8af20dbb3dbb0dbb4223b733a31313a226465736372697074696f6e223b733a323437303a2220d984d988d8b1d98520d8a7db8cd9bed8b3d988d98520d985d8aad98620d8b3d8a7d8aed8aadaafdb8c20d8a8d8a720d8aad988d984db8cd8af20d8b3d8a7d8afdaafdb8c20d986d8a7d985d981d987d988d98520d8a7d8b220d8b5d986d8b9d8aa20da86d8a7d9be20d98820d8a8d8a720d8a7d8b3d8aad981d8a7d8afd98720d8a7d8b220d8b7d8b1d8a7d8add8a7d98620daafd8b1d8a7d981db8cdaa920d8a7d8b3d8aa2e20da86d8a7d9bedaafd8b1d987d8a720d98820d985d8aad988d98620d8a8d984daa9d98720d8b1d988d8b2d986d8a7d985d98720d98820d985d8acd984d98720d8afd8b120d8b3d8aad988d98620d98820d8b3d8b7d8b1d8a2d986da86d986d8a7d98620daa9d98720d984d8a7d8b2d98520d8a7d8b3d8aa20d98820d8a8d8b1d8a7db8c20d8b4d8b1d8a7db8cd8b720d981d8b9d984db8c20d8aadaa9d986d988d984d988da98db8c20d985d988d8b1d8af20d986db8cd8a7d8b220d98820daa9d8a7d8b1d8a8d8b1d8afd987d8a7db8c20d985d8aad986d988d8b920d8a8d8a720d987d8afd98120d8a8d987d8a8d988d8af20d8a7d8a8d8b2d8a7d8b1d987d8a7db8c20daa9d8a7d8b1d8a8d8b1d8afdb8c20d985db8c20d8a8d8a7d8b4d8af2e20daa9d8aad8a7d8a8d987d8a7db8c20d8b2db8cd8a7d8afdb8c20d8afd8b120d8b4d8b5d8aa20d98820d8b3d98720d8afd8b1d8b5d8af20daafd8b0d8b4d8aad987d88c20d8add8a7d98420d98820d8a2db8cd986d8afd98720d8b4d986d8a7d8aed8aa20d981d8b1d8a7d988d8a7d98620d8acd8a7d985d8b9d98720d98820d985d8aad8aed8b5d8b5d8a7d98620d8b1d8a720d985db8c20d8b7d984d8a8d8af20d8aad8a720d8a8d8a720d986d8b1d98520d8a7d981d8b2d8a7d8b1d987d8a720d8b4d986d8a7d8aed8aa20d8a8db8cd8b4d8aad8b1db8c20d8b1d8a720d8a8d8b1d8a7db8c20d8b7d8b1d8a7d8add8a7d98620d8b1d8a7db8cd8a7d986d98720d8a7db8c20d8b9d984db8c20d8a7d984d8aed8b5d988d8b520d8b7d8b1d8a7d8add8a7d98620d8aed984d8a7d982db8c20d98820d981d8b1d987d986daaf20d9bedb8cd8b4d8b1d98820d8afd8b120d8b2d8a8d8a7d98620d981d8a7d8b1d8b3db8c20d8a7db8cd8acd8a7d8af20daa9d8b1d8af2e20d8afd8b120d8a7db8cd98620d8b5d988d8b1d8aa20d985db8c20d8aad988d8a7d98620d8a7d985db8cd8af20d8afd8a7d8b4d8aa20daa9d98720d8aad985d8a7d98520d98820d8afd8b4d988d8a7d8b1db8c20d985d988d8acd988d8af20d8afd8b120d8a7d8b1d8a7d8a6d98720d8b1d8a7d987daa9d8a7d8b1d987d8a720d98820d8b4d8b1d8a7db8cd8b720d8b3d8aed8aa20d8aad8a7db8cd9be20d8a8d98720d9bed8a7db8cd8a7d98620d8b1d8b3d8af20d988d8b2d985d8a7d98620d985d988d8b1d8af20d986db8cd8a7d8b220d8b4d8a7d985d98420d8add8b1d988d981da86db8cd986db8c20d8afd8b3d8aad8a7d988d8b1d8afd987d8a7db8c20d8a7d8b5d984db8c20d98820d8acd988d8a7d8a8daafd988db8c20d8b3d988d8a7d984d8a7d8aa20d9bedb8cd988d8b3d8aad98720d8a7d987d98420d8afd986db8cd8a7db8c20d985d988d8acd988d8af20d8b7d8b1d8a7d8addb8c20d8a7d8b3d8a7d8b3d8a720d985d988d8b1d8af20d8a7d8b3d8aad981d8a7d8afd98720d982d8b1d8a7d8b120daafdb8cd8b1d8af2e20d984d988d8b1d98520d8a7db8cd9bed8b3d988d98520d985d8aad98620d8b3d8a7d8aed8aadaafdb8c20d8a8d8a720d8aad988d984db8cd8af20d8b3d8a7d8afdaafdb8c20d986d8a7d985d981d987d988d98520d8a7d8b220d8b5d986d8b9d8aa20da86d8a7d9be20d98820d8a8d8a720d8a7d8b3d8aad981d8a7d8afd98720d8a7d8b220d8b7d8b1d8a7d8add8a7d98620daafd8b1d8a7d981db8cdaa920d8a7d8b3d8aa2e20da86d8a7d9bedaafd8b1d987d8a720d98820d985d8aad988d98620d8a8d984daa9d98720d8b1d988d8b2d986d8a7d985d98720d98820d985d8acd984d98720d8afd8b120d8b3d8aad988d98620d98820d8b3d8b7d8b1d8a2d986da86d986d8a7d98620daa9d98720d984d8a7d8b2d98520d8a7d8b3d8aa20d98820d8a8d8b1d8a7db8c20d8b4d8b1d8a7db8cd8b720d981d8b9d984db8c20d8aadaa9d986d988d984d988da98db8c20d985d988d8b1d8af20d986db8cd8a7d8b220d98820daa9d8a7d8b1d8a8d8b1d8afd987d8a7db8c20d985d8aad986d988d8b920d8a8d8a720d987d8afd98120d8a8d987d8a8d988d8af20d8a7d8a8d8b2d8a7d8b1d987d8a7db8c20daa9d8a7d8b1d8a8d8b1d8afdb8c20d985db8c20d8a8d8a7d8b4d8af2e20daa9d8aad8a7d8a8d987d8a7db8c20d8b2db8cd8a7d8afdb8c20d8afd8b120d8b4d8b5d8aa20d98820d8b3d98720d8afd8b1d8b5d8af20daafd8b0d8b4d8aad987d88c20d8add8a7d98420d98820d8a2db8cd986d8afd98720d8b4d986d8a7d8aed8aa20d981d8b1d8a7d988d8a7d98620d8acd8a7d985d8b9d98720d98820d985d8aad8aed8b5d8b5d8a7d98620d8b1d8a720d985db8c20d8b7d984d8a8d8af20d8aad8a720d8a8d8a720d986d8b1d98520d8a7d981d8b2d8a7d8b1d987d8a720d8b4d986d8a7d8aed8aa20d8a8db8cd8b4d8aad8b1db8c20d8b1d8a720d8a8d8b1d8a7db8c20d8b7d8b1d8a7d8add8a7d98620d8b1d8a7db8cd8a7d986d98720d8a7db8c20d8b9d984db8c20d8a7d984d8aed8b5d988d8b520d8b7d8b1d8a7d8add8a7d98620d8aed984d8a7d982db8c20d98820d981d8b1d987d986daaf20d9bedb8cd8b4d8b1d98820d8afd8b120d8b2d8a8d8a7d986d981d8a7d8b1d8b3db8c20d8a7db8cd8acd8a7d8af20daa9d8b1d8af2e20d8afd8b120d8a7db8cd98620d8b5d988d8b1d8aa20d985db8c20d8aad988d8a7d98620d8a7d985db8cd8af20d8afd8a7d8b4d8aa20daa9d98720d8aad985d8a7d98520d98820d8afd8b4d988d8a7d8b1db8c20d985d988d8acd988d8af20d8afd8b120d8a7d8b1d8a7d8a6d98720d8b1d8a7d987daa9d8a7d8b1d987d8a720d98820d8b4d8b1d8a7db8cd8b720d8b3d8aed8aa20d8aad8a7db8cd9be20d8a8d98720d9bed8a7db8cd8a7d98620d8b1d8b3d8af20d988d8b2d985d8a7d98620d985d988d8b1d8af20d986db8cd8a7d8b220d8b4d8a7d985d98420d8add8b1d988d981da86db8cd986db8c20d8afd8b3d8aad8a7d988d8b1d8afd987d8a7db8c20d8a7d8b5d984db8c20d98820d8acd988d8a7d8a8daafd988db8c20d8b3d988d8a7d984d8a7d8aa20d9bedb8cd988d8b3d8aad98720d8a7d987d98420d8afd986db8cd8a7db8c20d985d988d8acd988d8af20d8b7d8b1d8a7d8addb8c20d8a7d8b3d8a7d8b3d8a720d985d988d8b1d8af20d8a7d8b3d8aad981d8a7d8afd98720d982d8b1d8a7d8b120daafdb8cd8b1d8af2e20223b733a393a227075626c6973686564223b4e3b733a353a227374617465223b693a313b733a363a22616363657373223b733a313a2231223b733a383a226c616e6775616765223b733a313a222a223b733a31383a227075626c6973685f73746172745f64617465223b733a31393a22303030302d30302d30302030303a30303a3030223b733a31363a227075626c6973685f656e645f64617465223b733a31393a22303030302d30302d30302030303a30303a3030223b733a31303a2273746172745f64617465223b733a31393a22303030302d30302d30302030303a30303a3030223b733a383a22656e645f64617465223b733a31393a22303030302d30302d30302030303a30303a3030223b733a31303a226c6973745f7072696365223b4e3b733a31303a2273616c655f7072696365223b4e3b733a373a22747970655f6964223b693a313b733a31353a2264656661756c744c616e6775616765223b733a353a2266612d4952223b7d),
 (10, 'index.php?option=com_hikashop&ctrl=product&task=show&cid=1&name=محصول-تست&category_pathway=23', 'index.php?option=com_hikashop&ctrl=product&task=show&cid=1&name=محصول-تست&category_pathway=23', 'محصول فروش وزنی', '', '2021-07-01 02:30:21', 'c878efb022237f99c26f99fed5250b27', 1, 1, 1, '*', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 1, 0x4f3a31393a2246696e646572496e6465786572526573756c74223a31393a7b733a31313a22002a00656c656d656e7473223b613a32363a7b733a323a226964223b733a313a2231223b733a353a226361746964223b733a323a223233223b733a353a22616c696173223b733a31373a22d985d8add8b5d988d98420d8aad8b3d8aa223b733a343a226c696e6b223b733a303a22223b733a373a2273756d6d617279223b733a303a22223b733a373a226d6574616b6579223b733a303a22223b733a383a226d65746164657363223b733a303a22223b733a383a226d65746164617461223b4f3a32343a224a6f6f6d6c615c52656769737472795c5265676973747279223a333a7b733a373a22002a0064617461223b4f3a383a22737464436c617373223a303a7b7d733a31343a22002a00696e697469616c697a6564223b623a313b733a393a22736570617261746f72223b733a313a222e223b7d733a31363a22637265617465645f62795f616c696173223b733a303a22223b733a383a226d6f646966696564223b733a31303a2231363235303930343231223b733a31313a226d6f6469666965645f6279223b733a303a22223b733a383a2263617465676f7279223b733a31363a22d986d981d8aa20d98820daafd8a7d8b2223b733a31333a2263617465676f7279616c696173223b733a31363a22d986d981d8aa2dd9882ddaafd8a7d8b2223b733a393a226361745f7374617465223b733a313a2231223b733a31303a226361745f616363657373223b733a313a2231223b733a353a226272616e64223b4e3b733a31303a226272616e64616c696173223b4e3b733a31313a226272616e645f7374617465223b4e3b733a31323a226272616e645f616363657373223b733a313a2231223b733a343a22736c7567223b733a31373a22d985d8add8b5d988d9842dd8aad8b3d8aa223b733a373a22636174736c7567223b733a31363a22d986d981d8aa2dd9882ddaafd8a7d8b2223b733a363a226c61796f7574223b733a373a2270726f64756374223b733a363a22706172616d73223b4f3a32343a224a6f6f6d6c615c52656769737472795c5265676973747279223a333a7b733a373a22002a0064617461223b4f3a383a22737464436c617373223a303a7b7d733a31343a22002a00696e697469616c697a6564223b623a313b733a393a22736570617261746f72223b733a313a222e223b7d733a343a22626f6479223b4e3b733a343a2270617468223b733a35363a2220737465656c617276696e20636f6d706f6e656e742068696b6173686f702070726f6475637420d985d8add8b5d988d98420d8aad8b3d8aa223b733a31303a226d657461617574686f72223b4e3b7d733a31353a22002a00696e737472756374696f6e73223b613a353a7b693a313b613a333a7b693a303b733a353a227469746c65223b693a313b733a383a227375627469746c65223b693a323b733a323a226964223b7d693a323b613a323a7b693a303b733a373a2273756d6d617279223b693a313b733a343a22626f6479223b7d693a333b613a383a7b693a303b733a343a226d657461223b693a313b733a31303a226c6973745f7072696365223b693a323b733a31303a2273616c655f7072696365223b693a333b733a373a226d6574616b6579223b693a343b733a383a226d65746164657363223b693a353b733a31303a226d657461617574686f72223b693a363b733a363a22617574686f72223b693a373b733a31363a22637265617465645f62795f616c696173223b7d693a343b613a323a7b693a303b733a343a2270617468223b693a313b733a353a22616c696173223b7d693a353b613a313a7b693a303b733a383a22636f6d6d656e7473223b7d7d733a31313a22002a007461786f6e6f6d79223b613a343a7b733a343a2254797065223b613a313a7b733a373a2250726f64756374223b4f3a32373a224a6f6f6d6c615c434d535c4f626a6563745c434d534f626a656374223a343a7b733a31303a22002a005f6572726f7273223b613a303a7b7d733a353a227469746c65223b733a373a2250726f64756374223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b7d7d733a383a2243617465676f7279223b613a313a7b733a31363a22d986d981d8aa20d98820daafd8a7d8b2223b4f3a32373a224a6f6f6d6c615c434d535c4f626a6563745c434d534f626a656374223a343a7b733a31303a22002a005f6572726f7273223b613a303a7b7d733a353a227469746c65223b733a31363a22d986d981d8aa20d98820daafd8a7d8b2223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b7d7d733a353a224272616e64223b613a313a7b733a303a22223b4f3a32373a224a6f6f6d6c615c434d535c4f626a6563745c434d534f626a656374223a343a7b733a31303a22002a005f6572726f7273223b613a303a7b7d733a353a227469746c65223b4e3b733a353a227374617465223b693a303b733a363a22616363657373223b693a313b7d7d733a383a224c616e6775616765223b613a313a7b733a313a222a223b4f3a32373a224a6f6f6d6c615c434d535c4f626a6563745c434d534f626a656374223a343a7b733a31303a22002a005f6572726f7273223b613a303a7b7d733a353a227469746c65223b733a313a222a223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b7d7d7d733a333a2275726c223b733a3130313a22696e6465782e7068703f6f7074696f6e3d636f6d5f68696b6173686f70266374726c3d70726f64756374267461736b3d73686f77266369643d31266e616d653dd985d8add8b5d988d9842dd8aad8b3d8aa2663617465676f72795f706174687761793d3233223b733a353a22726f757465223b733a3130313a22696e6465782e7068703f6f7074696f6e3d636f6d5f68696b6173686f70266374726c3d70726f64756374267461736b3d73686f77266369643d31266e616d653dd985d8add8b5d988d9842dd8aad8b3d8aa2663617465676f72795f706174687761793d3233223b733a353a227469746c65223b733a32383a22d985d8add8b5d988d98420d981d8b1d988d8b420d988d8b2d986db8c223b733a31313a226465736372697074696f6e223b733a303a22223b733a393a227075626c6973686564223b4e3b733a353a227374617465223b693a313b733a363a22616363657373223b733a313a2231223b733a383a226c616e6775616765223b733a313a222a223b733a31383a227075626c6973685f73746172745f64617465223b733a31393a22303030302d30302d30302030303a30303a3030223b733a31363a227075626c6973685f656e645f64617465223b733a31393a22303030302d30302d30302030303a30303a3030223b733a31303a2273746172745f64617465223b733a31393a22303030302d30302d30302030303a30303a3030223b733a383a22656e645f64617465223b733a31393a22303030302d30302d30302030303a30303a3030223b733a31303a226c6973745f7072696365223b4e3b733a31303a2273616c655f7072696365223b4e3b733a373a22747970655f6964223b693a313b733a31353a2264656661756c744c616e6775616765223b733a353a2266612d4952223b7d);
 INSERT INTO `yz4ph_finder_links` (`link_id`, `url`, `route`, `title`, `description`, `indexdate`, `md5sum`, `published`, `state`, `access`, `language`, `publish_start_date`, `publish_end_date`, `start_date`, `end_date`, `list_price`, `sale_price`, `type_id`, `object`) VALUES
-(11, 'index.php?option=com_hikashop&ctrl=product&task=show&cid=1&name=محصول-تست&category_pathway=13', 'index.php?option=com_hikashop&ctrl=product&task=show&cid=1&name=محصول-تست&category_pathway=13', 'محصول فروش وزنی', '', '2021-07-01 03:56:18', '7cf9b5ea8c4d8d22bf24b303636731f4', 1, 1, 1, '*', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 1, 0x4f3a31393a2246696e646572496e6465786572526573756c74223a31393a7b733a31313a22002a00656c656d656e7473223b613a32363a7b733a323a226964223b733a313a2231223b733a353a226361746964223b733a323a223133223b733a353a22616c696173223b733a31373a22d985d8add8b5d988d98420d8aad8b3d8aa223b733a343a226c696e6b223b733a303a22223b733a373a2273756d6d617279223b733a303a22223b733a373a226d6574616b6579223b733a303a22223b733a383a226d65746164657363223b733a303a22223b733a383a226d65746164617461223b4f3a32343a224a6f6f6d6c615c52656769737472795c5265676973747279223a333a7b733a373a22002a0064617461223b4f3a383a22737464436c617373223a303a7b7d733a31343a22002a00696e697469616c697a6564223b623a313b733a393a22736570617261746f72223b733a313a222e223b7d733a31363a22637265617465645f62795f616c696173223b733a303a22223b733a383a226d6f646966696564223b733a31303a2231363235303935353738223b733a31313a226d6f6469666965645f6279223b733a303a22223b733a383a2263617465676f7279223b733a31323a22d985db8cd984daafd8b1d8af223b733a31333a2263617465676f7279616c696173223b733a31303a22726f756e642d62617273223b733a393a226361745f7374617465223b733a313a2231223b733a31303a226361745f616363657373223b733a313a2231223b733a353a226272616e64223b4e3b733a31303a226272616e64616c696173223b4e3b733a31313a226272616e645f7374617465223b4e3b733a31323a226272616e645f616363657373223b733a313a2231223b733a343a22736c7567223b733a31373a22d985d8add8b5d988d9842dd8aad8b3d8aa223b733a373a22636174736c7567223b733a31303a22726f756e642d62617273223b733a363a226c61796f7574223b733a373a2270726f64756374223b733a363a22706172616d73223b4f3a32343a224a6f6f6d6c615c52656769737472795c5265676973747279223a333a7b733a373a22002a0064617461223b4f3a383a22737464436c617373223a303a7b7d733a31343a22002a00696e697469616c697a6564223b623a313b733a393a22736570617261746f72223b733a313a222e223b7d733a343a22626f6479223b4e3b733a343a2270617468223b733a35363a2220737465656c617276696e20636f6d706f6e656e742068696b6173686f702070726f6475637420d985d8add8b5d988d98420d8aad8b3d8aa223b733a31303a226d657461617574686f72223b4e3b7d733a31353a22002a00696e737472756374696f6e73223b613a353a7b693a313b613a333a7b693a303b733a353a227469746c65223b693a313b733a383a227375627469746c65223b693a323b733a323a226964223b7d693a323b613a323a7b693a303b733a373a2273756d6d617279223b693a313b733a343a22626f6479223b7d693a333b613a383a7b693a303b733a343a226d657461223b693a313b733a31303a226c6973745f7072696365223b693a323b733a31303a2273616c655f7072696365223b693a333b733a373a226d6574616b6579223b693a343b733a383a226d65746164657363223b693a353b733a31303a226d657461617574686f72223b693a363b733a363a22617574686f72223b693a373b733a31363a22637265617465645f62795f616c696173223b7d693a343b613a323a7b693a303b733a343a2270617468223b693a313b733a353a22616c696173223b7d693a353b613a313a7b693a303b733a383a22636f6d6d656e7473223b7d7d733a31313a22002a007461786f6e6f6d79223b613a343a7b733a343a2254797065223b613a313a7b733a373a2250726f64756374223b4f3a32373a224a6f6f6d6c615c434d535c4f626a6563745c434d534f626a656374223a343a7b733a31303a22002a005f6572726f7273223b613a303a7b7d733a353a227469746c65223b733a373a2250726f64756374223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b7d7d733a383a2243617465676f7279223b613a313a7b733a31323a22d985db8cd984daafd8b1d8af223b4f3a32373a224a6f6f6d6c615c434d535c4f626a6563745c434d534f626a656374223a343a7b733a31303a22002a005f6572726f7273223b613a303a7b7d733a353a227469746c65223b733a31323a22d985db8cd984daafd8b1d8af223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b7d7d733a353a224272616e64223b613a313a7b733a303a22223b4f3a32373a224a6f6f6d6c615c434d535c4f626a6563745c434d534f626a656374223a343a7b733a31303a22002a005f6572726f7273223b613a303a7b7d733a353a227469746c65223b4e3b733a353a227374617465223b693a303b733a363a22616363657373223b693a313b7d7d733a383a224c616e6775616765223b613a313a7b733a313a222a223b4f3a32373a224a6f6f6d6c615c434d535c4f626a6563745c434d534f626a656374223a343a7b733a31303a22002a005f6572726f7273223b613a303a7b7d733a353a227469746c65223b733a313a222a223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b7d7d7d733a333a2275726c223b733a3130313a22696e6465782e7068703f6f7074696f6e3d636f6d5f68696b6173686f70266374726c3d70726f64756374267461736b3d73686f77266369643d31266e616d653dd985d8add8b5d988d9842dd8aad8b3d8aa2663617465676f72795f706174687761793d3133223b733a353a22726f757465223b733a3130313a22696e6465782e7068703f6f7074696f6e3d636f6d5f68696b6173686f70266374726c3d70726f64756374267461736b3d73686f77266369643d31266e616d653dd985d8add8b5d988d9842dd8aad8b3d8aa2663617465676f72795f706174687761793d3133223b733a353a227469746c65223b733a32383a22d985d8add8b5d988d98420d981d8b1d988d8b420d988d8b2d986db8c223b733a31313a226465736372697074696f6e223b733a303a22223b733a393a227075626c6973686564223b4e3b733a353a227374617465223b693a313b733a363a22616363657373223b733a313a2231223b733a383a226c616e6775616765223b733a313a222a223b733a31383a227075626c6973685f73746172745f64617465223b733a31393a22303030302d30302d30302030303a30303a3030223b733a31363a227075626c6973685f656e645f64617465223b733a31393a22303030302d30302d30302030303a30303a3030223b733a31303a2273746172745f64617465223b733a31393a22303030302d30302d30302030303a30303a3030223b733a383a22656e645f64617465223b733a31393a22303030302d30302d30302030303a30303a3030223b733a31303a226c6973745f7072696365223b4e3b733a31303a2273616c655f7072696365223b4e3b733a373a22747970655f6964223b693a313b733a31353a2264656661756c744c616e6775616765223b733a353a2266612d4952223b7d),
+(11, 'index.php?option=com_hikashop&ctrl=product&task=show&cid=1&name=محصول-تست&category_pathway=13', 'index.php?option=com_hikashop&ctrl=product&task=show&cid=1&name=محصول-تست&category_pathway=13', 'محصول فروش وزنی', '', '2021-07-01 17:19:00', 'cf207062f019eb0d132e7275af0b328a', 1, 1, 1, '*', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 1, 0x4f3a31393a2246696e646572496e6465786572526573756c74223a31393a7b733a31313a22002a00656c656d656e7473223b613a32363a7b733a323a226964223b733a313a2231223b733a353a226361746964223b733a323a223133223b733a353a22616c696173223b733a31373a22d985d8add8b5d988d98420d8aad8b3d8aa223b733a343a226c696e6b223b733a303a22223b733a373a2273756d6d617279223b733a303a22223b733a373a226d6574616b6579223b733a303a22223b733a383a226d65746164657363223b733a303a22223b733a383a226d65746164617461223b4f3a32343a224a6f6f6d6c615c52656769737472795c5265676973747279223a333a7b733a373a22002a0064617461223b4f3a383a22737464436c617373223a303a7b7d733a31343a22002a00696e697469616c697a6564223b623a313b733a393a22736570617261746f72223b733a313a222e223b7d733a31363a22637265617465645f62795f616c696173223b733a303a22223b733a383a226d6f646966696564223b733a31303a2231363235313433373430223b733a31313a226d6f6469666965645f6279223b733a303a22223b733a383a2263617465676f7279223b733a31323a22d985db8cd984daafd8b1d8af223b733a31333a2263617465676f7279616c696173223b733a31303a22726f756e642d62617273223b733a393a226361745f7374617465223b733a313a2231223b733a31303a226361745f616363657373223b733a313a2231223b733a353a226272616e64223b4e3b733a31303a226272616e64616c696173223b4e3b733a31313a226272616e645f7374617465223b4e3b733a31323a226272616e645f616363657373223b733a313a2231223b733a343a22736c7567223b733a31373a22d985d8add8b5d988d9842dd8aad8b3d8aa223b733a373a22636174736c7567223b733a31303a22726f756e642d62617273223b733a363a226c61796f7574223b733a373a2270726f64756374223b733a363a22706172616d73223b4f3a32343a224a6f6f6d6c615c52656769737472795c5265676973747279223a333a7b733a373a22002a0064617461223b4f3a383a22737464436c617373223a303a7b7d733a31343a22002a00696e697469616c697a6564223b623a313b733a393a22736570617261746f72223b733a313a222e223b7d733a343a22626f6479223b4e3b733a343a2270617468223b733a35363a2220737465656c617276696e20636f6d706f6e656e742068696b6173686f702070726f6475637420d985d8add8b5d988d98420d8aad8b3d8aa223b733a31303a226d657461617574686f72223b4e3b7d733a31353a22002a00696e737472756374696f6e73223b613a353a7b693a313b613a333a7b693a303b733a353a227469746c65223b693a313b733a383a227375627469746c65223b693a323b733a323a226964223b7d693a323b613a323a7b693a303b733a373a2273756d6d617279223b693a313b733a343a22626f6479223b7d693a333b613a383a7b693a303b733a343a226d657461223b693a313b733a31303a226c6973745f7072696365223b693a323b733a31303a2273616c655f7072696365223b693a333b733a373a226d6574616b6579223b693a343b733a383a226d65746164657363223b693a353b733a31303a226d657461617574686f72223b693a363b733a363a22617574686f72223b693a373b733a31363a22637265617465645f62795f616c696173223b7d693a343b613a323a7b693a303b733a343a2270617468223b693a313b733a353a22616c696173223b7d693a353b613a313a7b693a303b733a383a22636f6d6d656e7473223b7d7d733a31313a22002a007461786f6e6f6d79223b613a343a7b733a343a2254797065223b613a313a7b733a373a2250726f64756374223b4f3a32373a224a6f6f6d6c615c434d535c4f626a6563745c434d534f626a656374223a343a7b733a31303a22002a005f6572726f7273223b613a303a7b7d733a353a227469746c65223b733a373a2250726f64756374223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b7d7d733a383a2243617465676f7279223b613a313a7b733a31323a22d985db8cd984daafd8b1d8af223b4f3a32373a224a6f6f6d6c615c434d535c4f626a6563745c434d534f626a656374223a343a7b733a31303a22002a005f6572726f7273223b613a303a7b7d733a353a227469746c65223b733a31323a22d985db8cd984daafd8b1d8af223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b7d7d733a353a224272616e64223b613a313a7b733a303a22223b4f3a32373a224a6f6f6d6c615c434d535c4f626a6563745c434d534f626a656374223a343a7b733a31303a22002a005f6572726f7273223b613a303a7b7d733a353a227469746c65223b4e3b733a353a227374617465223b693a303b733a363a22616363657373223b693a313b7d7d733a383a224c616e6775616765223b613a313a7b733a313a222a223b4f3a32373a224a6f6f6d6c615c434d535c4f626a6563745c434d534f626a656374223a343a7b733a31303a22002a005f6572726f7273223b613a303a7b7d733a353a227469746c65223b733a313a222a223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b7d7d7d733a333a2275726c223b733a3130313a22696e6465782e7068703f6f7074696f6e3d636f6d5f68696b6173686f70266374726c3d70726f64756374267461736b3d73686f77266369643d31266e616d653dd985d8add8b5d988d9842dd8aad8b3d8aa2663617465676f72795f706174687761793d3133223b733a353a22726f757465223b733a3130313a22696e6465782e7068703f6f7074696f6e3d636f6d5f68696b6173686f70266374726c3d70726f64756374267461736b3d73686f77266369643d31266e616d653dd985d8add8b5d988d9842dd8aad8b3d8aa2663617465676f72795f706174687761793d3133223b733a353a227469746c65223b733a32383a22d985d8add8b5d988d98420d981d8b1d988d8b420d988d8b2d986db8c223b733a31313a226465736372697074696f6e223b733a303a22223b733a393a227075626c6973686564223b4e3b733a353a227374617465223b693a313b733a363a22616363657373223b733a313a2231223b733a383a226c616e6775616765223b733a313a222a223b733a31383a227075626c6973685f73746172745f64617465223b733a31393a22303030302d30302d30302030303a30303a3030223b733a31363a227075626c6973685f656e645f64617465223b733a31393a22303030302d30302d30302030303a30303a3030223b733a31303a2273746172745f64617465223b733a31393a22303030302d30302d30302030303a30303a3030223b733a383a22656e645f64617465223b733a31393a22303030302d30302d30302030303a30303a3030223b733a31303a226c6973745f7072696365223b4e3b733a31303a2273616c655f7072696365223b4e3b733a373a22747970655f6964223b693a313b733a31353a2264656661756c744c616e6775616765223b733a353a2266612d4952223b7d),
 (12, 'index.php?option=com_hikashop&ctrl=product&task=show&cid=3&name=p4r44r33r3r33&category_pathway=13', 'index.php?option=com_hikashop&ctrl=product&task=show&cid=3&name=p4r44r33r3r33&category_pathway=13', 'محصول تست', '', '2021-07-01 04:31:22', 'f2127cf8ad0e01763a40715cc04f9ea0', 1, 1, 1, '*', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 1, 0x4f3a31393a2246696e646572496e6465786572526573756c74223a31393a7b733a31313a22002a00656c656d656e7473223b613a32363a7b733a323a226964223b733a313a2233223b733a353a226361746964223b733a323a223133223b733a353a22616c696173223b733a31333a2270347234347233337233723333223b733a343a226c696e6b223b733a303a22223b733a373a2273756d6d617279223b733a303a22223b733a373a226d6574616b6579223b733a303a22223b733a383a226d65746164657363223b733a303a22223b733a383a226d65746164617461223b4f3a32343a224a6f6f6d6c615c52656769737472795c5265676973747279223a333a7b733a373a22002a0064617461223b4f3a383a22737464436c617373223a303a7b7d733a31343a22002a00696e697469616c697a6564223b623a313b733a393a22736570617261746f72223b733a313a222e223b7d733a31363a22637265617465645f62795f616c696173223b733a303a22223b733a383a226d6f646966696564223b733a31303a2231363235303937363832223b733a31313a226d6f6469666965645f6279223b733a303a22223b733a383a2263617465676f7279223b733a31323a22d985db8cd984daafd8b1d8af223b733a31333a2263617465676f7279616c696173223b733a31303a22726f756e642d62617273223b733a393a226361745f7374617465223b733a313a2231223b733a31303a226361745f616363657373223b733a313a2231223b733a353a226272616e64223b4e3b733a31303a226272616e64616c696173223b4e3b733a31313a226272616e645f7374617465223b4e3b733a31323a226272616e645f616363657373223b733a313a2231223b733a343a22736c7567223b733a31333a2270347234347233337233723333223b733a373a22636174736c7567223b733a31303a22726f756e642d62617273223b733a363a226c61796f7574223b733a373a2270726f64756374223b733a363a22706172616d73223b4f3a32343a224a6f6f6d6c615c52656769737472795c5265676973747279223a333a7b733a373a22002a0064617461223b4f3a383a22737464436c617373223a303a7b7d733a31343a22002a00696e697469616c697a6564223b623a313b733a393a22736570617261746f72223b733a313a222e223b7d733a343a22626f6479223b4e3b733a343a2270617468223b733a35323a2220737465656c617276696e20636f6d706f6e656e742068696b6173686f702070726f647563742070347234347233337233723333223b733a31303a226d657461617574686f72223b4e3b7d733a31353a22002a00696e737472756374696f6e73223b613a353a7b693a313b613a333a7b693a303b733a353a227469746c65223b693a313b733a383a227375627469746c65223b693a323b733a323a226964223b7d693a323b613a323a7b693a303b733a373a2273756d6d617279223b693a313b733a343a22626f6479223b7d693a333b613a383a7b693a303b733a343a226d657461223b693a313b733a31303a226c6973745f7072696365223b693a323b733a31303a2273616c655f7072696365223b693a333b733a373a226d6574616b6579223b693a343b733a383a226d65746164657363223b693a353b733a31303a226d657461617574686f72223b693a363b733a363a22617574686f72223b693a373b733a31363a22637265617465645f62795f616c696173223b7d693a343b613a323a7b693a303b733a343a2270617468223b693a313b733a353a22616c696173223b7d693a353b613a313a7b693a303b733a383a22636f6d6d656e7473223b7d7d733a31313a22002a007461786f6e6f6d79223b613a343a7b733a343a2254797065223b613a313a7b733a373a2250726f64756374223b4f3a32373a224a6f6f6d6c615c434d535c4f626a6563745c434d534f626a656374223a343a7b733a31303a22002a005f6572726f7273223b613a303a7b7d733a353a227469746c65223b733a373a2250726f64756374223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b7d7d733a383a2243617465676f7279223b613a313a7b733a31323a22d985db8cd984daafd8b1d8af223b4f3a32373a224a6f6f6d6c615c434d535c4f626a6563745c434d534f626a656374223a343a7b733a31303a22002a005f6572726f7273223b613a303a7b7d733a353a227469746c65223b733a31323a22d985db8cd984daafd8b1d8af223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b7d7d733a353a224272616e64223b613a313a7b733a303a22223b4f3a32373a224a6f6f6d6c615c434d535c4f626a6563745c434d534f626a656374223a343a7b733a31303a22002a005f6572726f7273223b613a303a7b7d733a353a227469746c65223b4e3b733a353a227374617465223b693a303b733a363a22616363657373223b693a313b7d7d733a383a224c616e6775616765223b613a313a7b733a313a222a223b4f3a32373a224a6f6f6d6c615c434d535c4f626a6563745c434d534f626a656374223a343a7b733a31303a22002a005f6572726f7273223b613a303a7b7d733a353a227469746c65223b733a313a222a223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b7d7d7d733a333a2275726c223b733a39373a22696e6465782e7068703f6f7074696f6e3d636f6d5f68696b6173686f70266374726c3d70726f64756374267461736b3d73686f77266369643d33266e616d653d703472343472333372337233332663617465676f72795f706174687761793d3133223b733a353a22726f757465223b733a39373a22696e6465782e7068703f6f7074696f6e3d636f6d5f68696b6173686f70266374726c3d70726f64756374267461736b3d73686f77266369643d33266e616d653d703472343472333372337233332663617465676f72795f706174687761793d3133223b733a353a227469746c65223b733a31373a22d985d8add8b5d988d98420d8aad8b3d8aa223b733a31313a226465736372697074696f6e223b733a303a22223b733a393a227075626c6973686564223b4e3b733a353a227374617465223b693a313b733a363a22616363657373223b733a313a2231223b733a383a226c616e6775616765223b733a313a222a223b733a31383a227075626c6973685f73746172745f64617465223b733a31393a22303030302d30302d30302030303a30303a3030223b733a31363a227075626c6973685f656e645f64617465223b733a31393a22303030302d30302d30302030303a30303a3030223b733a31303a2273746172745f64617465223b733a31393a22303030302d30302d30302030303a30303a3030223b733a383a22656e645f64617465223b733a31393a22303030302d30302d30302030303a30303a3030223b733a31303a226c6973745f7072696365223b4e3b733a31303a2273616c655f7072696365223b4e3b733a373a22747970655f6964223b693a313b733a31353a2264656661756c744c616e6775616765223b733a353a2266612d4952223b7d),
 (13, 'index.php?option=com_hikashop&ctrl=product&task=show&cid=4&name=erfreffref&category_pathway=13', 'index.php?option=com_hikashop&ctrl=product&task=show&cid=4&name=erfreffref&category_pathway=13', 'محصول تست', '', '2021-07-01 04:33:22', '979a5bbaf798d50beb73fff81ed217c2', 1, 1, 1, '*', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 1, 0x4f3a31393a2246696e646572496e6465786572526573756c74223a31393a7b733a31313a22002a00656c656d656e7473223b613a32363a7b733a323a226964223b733a313a2234223b733a353a226361746964223b733a323a223133223b733a353a22616c696173223b733a31303a2265726672656666726566223b733a343a226c696e6b223b733a303a22223b733a373a2273756d6d617279223b733a303a22223b733a373a226d6574616b6579223b733a303a22223b733a383a226d65746164657363223b733a303a22223b733a383a226d65746164617461223b4f3a32343a224a6f6f6d6c615c52656769737472795c5265676973747279223a333a7b733a373a22002a0064617461223b4f3a383a22737464436c617373223a303a7b7d733a31343a22002a00696e697469616c697a6564223b623a313b733a393a22736570617261746f72223b733a313a222e223b7d733a31363a22637265617465645f62795f616c696173223b733a303a22223b733a383a226d6f646966696564223b733a31303a2231363235303937383032223b733a31313a226d6f6469666965645f6279223b733a303a22223b733a383a2263617465676f7279223b733a31323a22d985db8cd984daafd8b1d8af223b733a31333a2263617465676f7279616c696173223b733a31303a22726f756e642d62617273223b733a393a226361745f7374617465223b733a313a2231223b733a31303a226361745f616363657373223b733a313a2231223b733a353a226272616e64223b4e3b733a31303a226272616e64616c696173223b4e3b733a31313a226272616e645f7374617465223b4e3b733a31323a226272616e645f616363657373223b733a313a2231223b733a343a22736c7567223b733a31303a2265726672656666726566223b733a373a22636174736c7567223b733a31303a22726f756e642d62617273223b733a363a226c61796f7574223b733a373a2270726f64756374223b733a363a22706172616d73223b4f3a32343a224a6f6f6d6c615c52656769737472795c5265676973747279223a333a7b733a373a22002a0064617461223b4f3a383a22737464436c617373223a303a7b7d733a31343a22002a00696e697469616c697a6564223b623a313b733a393a22736570617261746f72223b733a313a222e223b7d733a343a22626f6479223b4e3b733a343a2270617468223b733a34393a2220737465656c617276696e20636f6d706f6e656e742068696b6173686f702070726f647563742065726672656666726566223b733a31303a226d657461617574686f72223b4e3b7d733a31353a22002a00696e737472756374696f6e73223b613a353a7b693a313b613a333a7b693a303b733a353a227469746c65223b693a313b733a383a227375627469746c65223b693a323b733a323a226964223b7d693a323b613a323a7b693a303b733a373a2273756d6d617279223b693a313b733a343a22626f6479223b7d693a333b613a383a7b693a303b733a343a226d657461223b693a313b733a31303a226c6973745f7072696365223b693a323b733a31303a2273616c655f7072696365223b693a333b733a373a226d6574616b6579223b693a343b733a383a226d65746164657363223b693a353b733a31303a226d657461617574686f72223b693a363b733a363a22617574686f72223b693a373b733a31363a22637265617465645f62795f616c696173223b7d693a343b613a323a7b693a303b733a343a2270617468223b693a313b733a353a22616c696173223b7d693a353b613a313a7b693a303b733a383a22636f6d6d656e7473223b7d7d733a31313a22002a007461786f6e6f6d79223b613a343a7b733a343a2254797065223b613a313a7b733a373a2250726f64756374223b4f3a32373a224a6f6f6d6c615c434d535c4f626a6563745c434d534f626a656374223a343a7b733a31303a22002a005f6572726f7273223b613a303a7b7d733a353a227469746c65223b733a373a2250726f64756374223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b7d7d733a383a2243617465676f7279223b613a313a7b733a31323a22d985db8cd984daafd8b1d8af223b4f3a32373a224a6f6f6d6c615c434d535c4f626a6563745c434d534f626a656374223a343a7b733a31303a22002a005f6572726f7273223b613a303a7b7d733a353a227469746c65223b733a31323a22d985db8cd984daafd8b1d8af223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b7d7d733a353a224272616e64223b613a313a7b733a303a22223b4f3a32373a224a6f6f6d6c615c434d535c4f626a6563745c434d534f626a656374223a343a7b733a31303a22002a005f6572726f7273223b613a303a7b7d733a353a227469746c65223b4e3b733a353a227374617465223b693a303b733a363a22616363657373223b693a313b7d7d733a383a224c616e6775616765223b613a313a7b733a313a222a223b4f3a32373a224a6f6f6d6c615c434d535c4f626a6563745c434d534f626a656374223a343a7b733a31303a22002a005f6572726f7273223b613a303a7b7d733a353a227469746c65223b733a313a222a223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b7d7d7d733a333a2275726c223b733a39343a22696e6465782e7068703f6f7074696f6e3d636f6d5f68696b6173686f70266374726c3d70726f64756374267461736b3d73686f77266369643d34266e616d653d657266726566667265662663617465676f72795f706174687761793d3133223b733a353a22726f757465223b733a39343a22696e6465782e7068703f6f7074696f6e3d636f6d5f68696b6173686f70266374726c3d70726f64756374267461736b3d73686f77266369643d34266e616d653d657266726566667265662663617465676f72795f706174687761793d3133223b733a353a227469746c65223b733a31373a22d985d8add8b5d988d98420d8aad8b3d8aa223b733a31313a226465736372697074696f6e223b733a303a22223b733a393a227075626c6973686564223b4e3b733a353a227374617465223b693a313b733a363a22616363657373223b733a313a2231223b733a383a226c616e6775616765223b733a313a222a223b733a31383a227075626c6973685f73746172745f64617465223b733a31393a22303030302d30302d30302030303a30303a3030223b733a31363a227075626c6973685f656e645f64617465223b733a31393a22303030302d30302d30302030303a30303a3030223b733a31303a2273746172745f64617465223b733a31393a22303030302d30302d30302030303a30303a3030223b733a383a22656e645f64617465223b733a31393a22303030302d30302d30302030303a30303a3030223b733a31303a226c6973745f7072696365223b4e3b733a31303a2273616c655f7072696365223b4e3b733a373a22747970655f6964223b693a313b733a31353a2264656661756c744c616e6775616765223b733a353a2266612d4952223b7d),
 (14, 'index.php?option=com_hikashop&ctrl=product&task=show&cid=5&name=efefeefefrffref&category_pathway=13', 'index.php?option=com_hikashop&ctrl=product&task=show&cid=5&name=efefeefefrffref&category_pathway=13', 'محصول تست', '', '2021-07-01 04:33:35', 'f70cb40fdfad49fee4d827d776a6c10f', 1, 1, 1, '*', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 1, 0x4f3a31393a2246696e646572496e6465786572526573756c74223a31393a7b733a31313a22002a00656c656d656e7473223b613a32363a7b733a323a226964223b733a313a2235223b733a353a226361746964223b733a323a223133223b733a353a22616c696173223b733a31353a22656665666565666566726666726566223b733a343a226c696e6b223b733a303a22223b733a373a2273756d6d617279223b733a303a22223b733a373a226d6574616b6579223b733a303a22223b733a383a226d65746164657363223b733a303a22223b733a383a226d65746164617461223b4f3a32343a224a6f6f6d6c615c52656769737472795c5265676973747279223a333a7b733a373a22002a0064617461223b4f3a383a22737464436c617373223a303a7b7d733a31343a22002a00696e697469616c697a6564223b623a313b733a393a22736570617261746f72223b733a313a222e223b7d733a31363a22637265617465645f62795f616c696173223b733a303a22223b733a383a226d6f646966696564223b733a31303a2231363235303937383134223b733a31313a226d6f6469666965645f6279223b733a303a22223b733a383a2263617465676f7279223b733a31323a22d985db8cd984daafd8b1d8af223b733a31333a2263617465676f7279616c696173223b733a31303a22726f756e642d62617273223b733a393a226361745f7374617465223b733a313a2231223b733a31303a226361745f616363657373223b733a313a2231223b733a353a226272616e64223b4e3b733a31303a226272616e64616c696173223b4e3b733a31313a226272616e645f7374617465223b4e3b733a31323a226272616e645f616363657373223b733a313a2231223b733a343a22736c7567223b733a31353a22656665666565666566726666726566223b733a373a22636174736c7567223b733a31303a22726f756e642d62617273223b733a363a226c61796f7574223b733a373a2270726f64756374223b733a363a22706172616d73223b4f3a32343a224a6f6f6d6c615c52656769737472795c5265676973747279223a333a7b733a373a22002a0064617461223b4f3a383a22737464436c617373223a303a7b7d733a31343a22002a00696e697469616c697a6564223b623a313b733a393a22736570617261746f72223b733a313a222e223b7d733a343a22626f6479223b4e3b733a343a2270617468223b733a35343a2220737465656c617276696e20636f6d706f6e656e742068696b6173686f702070726f6475637420656665666565666566726666726566223b733a31303a226d657461617574686f72223b4e3b7d733a31353a22002a00696e737472756374696f6e73223b613a353a7b693a313b613a333a7b693a303b733a353a227469746c65223b693a313b733a383a227375627469746c65223b693a323b733a323a226964223b7d693a323b613a323a7b693a303b733a373a2273756d6d617279223b693a313b733a343a22626f6479223b7d693a333b613a383a7b693a303b733a343a226d657461223b693a313b733a31303a226c6973745f7072696365223b693a323b733a31303a2273616c655f7072696365223b693a333b733a373a226d6574616b6579223b693a343b733a383a226d65746164657363223b693a353b733a31303a226d657461617574686f72223b693a363b733a363a22617574686f72223b693a373b733a31363a22637265617465645f62795f616c696173223b7d693a343b613a323a7b693a303b733a343a2270617468223b693a313b733a353a22616c696173223b7d693a353b613a313a7b693a303b733a383a22636f6d6d656e7473223b7d7d733a31313a22002a007461786f6e6f6d79223b613a343a7b733a343a2254797065223b613a313a7b733a373a2250726f64756374223b4f3a32373a224a6f6f6d6c615c434d535c4f626a6563745c434d534f626a656374223a343a7b733a31303a22002a005f6572726f7273223b613a303a7b7d733a353a227469746c65223b733a373a2250726f64756374223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b7d7d733a383a2243617465676f7279223b613a313a7b733a31323a22d985db8cd984daafd8b1d8af223b4f3a32373a224a6f6f6d6c615c434d535c4f626a6563745c434d534f626a656374223a343a7b733a31303a22002a005f6572726f7273223b613a303a7b7d733a353a227469746c65223b733a31323a22d985db8cd984daafd8b1d8af223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b7d7d733a353a224272616e64223b613a313a7b733a303a22223b4f3a32373a224a6f6f6d6c615c434d535c4f626a6563745c434d534f626a656374223a343a7b733a31303a22002a005f6572726f7273223b613a303a7b7d733a353a227469746c65223b4e3b733a353a227374617465223b693a303b733a363a22616363657373223b693a313b7d7d733a383a224c616e6775616765223b613a313a7b733a313a222a223b4f3a32373a224a6f6f6d6c615c434d535c4f626a6563745c434d534f626a656374223a343a7b733a31303a22002a005f6572726f7273223b613a303a7b7d733a353a227469746c65223b733a313a222a223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b7d7d7d733a333a2275726c223b733a39393a22696e6465782e7068703f6f7074696f6e3d636f6d5f68696b6173686f70266374726c3d70726f64756374267461736b3d73686f77266369643d35266e616d653d6566656665656665667266667265662663617465676f72795f706174687761793d3133223b733a353a22726f757465223b733a39393a22696e6465782e7068703f6f7074696f6e3d636f6d5f68696b6173686f70266374726c3d70726f64756374267461736b3d73686f77266369643d35266e616d653d6566656665656665667266667265662663617465676f72795f706174687761793d3133223b733a353a227469746c65223b733a31373a22d985d8add8b5d988d98420d8aad8b3d8aa223b733a31313a226465736372697074696f6e223b733a303a22223b733a393a227075626c6973686564223b4e3b733a353a227374617465223b693a313b733a363a22616363657373223b733a313a2231223b733a383a226c616e6775616765223b733a313a222a223b733a31383a227075626c6973685f73746172745f64617465223b733a31393a22303030302d30302d30302030303a30303a3030223b733a31363a227075626c6973685f656e645f64617465223b733a31393a22303030302d30302d30302030303a30303a3030223b733a31303a2273746172745f64617465223b733a31393a22303030302d30302d30302030303a30303a3030223b733a383a22656e645f64617465223b733a31393a22303030302d30302d30302030303a30303a3030223b733a31303a226c6973745f7072696365223b4e3b733a31303a2273616c655f7072696365223b4e3b733a373a22747970655f6964223b693a313b733a31353a2264656661756c744c616e6775616765223b733a353a2266612d4952223b7d),
-(15, 'index.php?option=com_hikashop&ctrl=product&task=show&cid=5&name=efefeefefrffref&category_pathway=16', 'index.php?option=com_hikashop&ctrl=product&task=show&cid=5&name=efefeefefrffref&category_pathway=16', 'محصول تست', '', '2021-07-01 05:00:54', '653aa29293c041a66d5806b70c16bfc8', 1, 1, 1, '*', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 1, 0x4f3a31393a2246696e646572496e6465786572526573756c74223a31393a7b733a31313a22002a00656c656d656e7473223b613a32363a7b733a323a226964223b733a313a2235223b733a353a226361746964223b733a323a223136223b733a353a22616c696173223b733a31353a22656665666565666566726666726566223b733a343a226c696e6b223b733a303a22223b733a373a2273756d6d617279223b733a303a22223b733a373a226d6574616b6579223b733a303a22223b733a383a226d65746164657363223b733a303a22223b733a383a226d65746164617461223b4f3a32343a224a6f6f6d6c615c52656769737472795c5265676973747279223a333a7b733a373a22002a0064617461223b4f3a383a22737464436c617373223a303a7b7d733a31343a22002a00696e697469616c697a6564223b623a313b733a393a22736570617261746f72223b733a313a222e223b7d733a31363a22637265617465645f62795f616c696173223b733a303a22223b733a383a226d6f646966696564223b733a31303a2231363235303939343534223b733a31313a226d6f6469666965645f6279223b733a303a22223b733a383a2263617465676f7279223b733a383a22d984d988d984d987223b733a31333a2263617465676f7279616c696173223b733a353a227069706573223b733a393a226361745f7374617465223b733a313a2231223b733a31303a226361745f616363657373223b733a313a2231223b733a353a226272616e64223b4e3b733a31303a226272616e64616c696173223b4e3b733a31313a226272616e645f7374617465223b4e3b733a31323a226272616e645f616363657373223b733a313a2231223b733a343a22736c7567223b733a31353a22656665666565666566726666726566223b733a373a22636174736c7567223b733a353a227069706573223b733a363a226c61796f7574223b733a373a2270726f64756374223b733a363a22706172616d73223b4f3a32343a224a6f6f6d6c615c52656769737472795c5265676973747279223a333a7b733a373a22002a0064617461223b4f3a383a22737464436c617373223a303a7b7d733a31343a22002a00696e697469616c697a6564223b623a313b733a393a22736570617261746f72223b733a313a222e223b7d733a343a22626f6479223b4e3b733a343a2270617468223b733a35343a2220737465656c617276696e20636f6d706f6e656e742068696b6173686f702070726f6475637420656665666565666566726666726566223b733a31303a226d657461617574686f72223b4e3b7d733a31353a22002a00696e737472756374696f6e73223b613a353a7b693a313b613a333a7b693a303b733a353a227469746c65223b693a313b733a383a227375627469746c65223b693a323b733a323a226964223b7d693a323b613a323a7b693a303b733a373a2273756d6d617279223b693a313b733a343a22626f6479223b7d693a333b613a383a7b693a303b733a343a226d657461223b693a313b733a31303a226c6973745f7072696365223b693a323b733a31303a2273616c655f7072696365223b693a333b733a373a226d6574616b6579223b693a343b733a383a226d65746164657363223b693a353b733a31303a226d657461617574686f72223b693a363b733a363a22617574686f72223b693a373b733a31363a22637265617465645f62795f616c696173223b7d693a343b613a323a7b693a303b733a343a2270617468223b693a313b733a353a22616c696173223b7d693a353b613a313a7b693a303b733a383a22636f6d6d656e7473223b7d7d733a31313a22002a007461786f6e6f6d79223b613a343a7b733a343a2254797065223b613a313a7b733a373a2250726f64756374223b4f3a32373a224a6f6f6d6c615c434d535c4f626a6563745c434d534f626a656374223a343a7b733a31303a22002a005f6572726f7273223b613a303a7b7d733a353a227469746c65223b733a373a2250726f64756374223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b7d7d733a383a2243617465676f7279223b613a313a7b733a383a22d984d988d984d987223b4f3a32373a224a6f6f6d6c615c434d535c4f626a6563745c434d534f626a656374223a343a7b733a31303a22002a005f6572726f7273223b613a303a7b7d733a353a227469746c65223b733a383a22d984d988d984d987223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b7d7d733a353a224272616e64223b613a313a7b733a303a22223b4f3a32373a224a6f6f6d6c615c434d535c4f626a6563745c434d534f626a656374223a343a7b733a31303a22002a005f6572726f7273223b613a303a7b7d733a353a227469746c65223b4e3b733a353a227374617465223b693a303b733a363a22616363657373223b693a313b7d7d733a383a224c616e6775616765223b613a313a7b733a313a222a223b4f3a32373a224a6f6f6d6c615c434d535c4f626a6563745c434d534f626a656374223a343a7b733a31303a22002a005f6572726f7273223b613a303a7b7d733a353a227469746c65223b733a313a222a223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b7d7d7d733a333a2275726c223b733a39393a22696e6465782e7068703f6f7074696f6e3d636f6d5f68696b6173686f70266374726c3d70726f64756374267461736b3d73686f77266369643d35266e616d653d6566656665656665667266667265662663617465676f72795f706174687761793d3136223b733a353a22726f757465223b733a39393a22696e6465782e7068703f6f7074696f6e3d636f6d5f68696b6173686f70266374726c3d70726f64756374267461736b3d73686f77266369643d35266e616d653d6566656665656665667266667265662663617465676f72795f706174687761793d3136223b733a353a227469746c65223b733a31373a22d985d8add8b5d988d98420d8aad8b3d8aa223b733a31313a226465736372697074696f6e223b733a303a22223b733a393a227075626c6973686564223b4e3b733a353a227374617465223b693a313b733a363a22616363657373223b733a313a2231223b733a383a226c616e6775616765223b733a313a222a223b733a31383a227075626c6973685f73746172745f64617465223b733a31393a22303030302d30302d30302030303a30303a3030223b733a31363a227075626c6973685f656e645f64617465223b733a31393a22303030302d30302d30302030303a30303a3030223b733a31303a2273746172745f64617465223b733a31393a22303030302d30302d30302030303a30303a3030223b733a383a22656e645f64617465223b733a31393a22303030302d30302d30302030303a30303a3030223b733a31303a226c6973745f7072696365223b4e3b733a31303a2273616c655f7072696365223b4e3b733a373a22747970655f6964223b693a313b733a31353a2264656661756c744c616e6775616765223b733a353a2266612d4952223b7d);
+(15, 'index.php?option=com_hikashop&ctrl=product&task=show&cid=5&name=efefeefefrffref&category_pathway=16', 'index.php?option=com_hikashop&ctrl=product&task=show&cid=5&name=efefeefefrffref&category_pathway=16', 'محصول تست', '', '2021-07-01 05:00:54', '653aa29293c041a66d5806b70c16bfc8', 1, 1, 1, '*', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 1, 0x4f3a31393a2246696e646572496e6465786572526573756c74223a31393a7b733a31313a22002a00656c656d656e7473223b613a32363a7b733a323a226964223b733a313a2235223b733a353a226361746964223b733a323a223136223b733a353a22616c696173223b733a31353a22656665666565666566726666726566223b733a343a226c696e6b223b733a303a22223b733a373a2273756d6d617279223b733a303a22223b733a373a226d6574616b6579223b733a303a22223b733a383a226d65746164657363223b733a303a22223b733a383a226d65746164617461223b4f3a32343a224a6f6f6d6c615c52656769737472795c5265676973747279223a333a7b733a373a22002a0064617461223b4f3a383a22737464436c617373223a303a7b7d733a31343a22002a00696e697469616c697a6564223b623a313b733a393a22736570617261746f72223b733a313a222e223b7d733a31363a22637265617465645f62795f616c696173223b733a303a22223b733a383a226d6f646966696564223b733a31303a2231363235303939343534223b733a31313a226d6f6469666965645f6279223b733a303a22223b733a383a2263617465676f7279223b733a383a22d984d988d984d987223b733a31333a2263617465676f7279616c696173223b733a353a227069706573223b733a393a226361745f7374617465223b733a313a2231223b733a31303a226361745f616363657373223b733a313a2231223b733a353a226272616e64223b4e3b733a31303a226272616e64616c696173223b4e3b733a31313a226272616e645f7374617465223b4e3b733a31323a226272616e645f616363657373223b733a313a2231223b733a343a22736c7567223b733a31353a22656665666565666566726666726566223b733a373a22636174736c7567223b733a353a227069706573223b733a363a226c61796f7574223b733a373a2270726f64756374223b733a363a22706172616d73223b4f3a32343a224a6f6f6d6c615c52656769737472795c5265676973747279223a333a7b733a373a22002a0064617461223b4f3a383a22737464436c617373223a303a7b7d733a31343a22002a00696e697469616c697a6564223b623a313b733a393a22736570617261746f72223b733a313a222e223b7d733a343a22626f6479223b4e3b733a343a2270617468223b733a35343a2220737465656c617276696e20636f6d706f6e656e742068696b6173686f702070726f6475637420656665666565666566726666726566223b733a31303a226d657461617574686f72223b4e3b7d733a31353a22002a00696e737472756374696f6e73223b613a353a7b693a313b613a333a7b693a303b733a353a227469746c65223b693a313b733a383a227375627469746c65223b693a323b733a323a226964223b7d693a323b613a323a7b693a303b733a373a2273756d6d617279223b693a313b733a343a22626f6479223b7d693a333b613a383a7b693a303b733a343a226d657461223b693a313b733a31303a226c6973745f7072696365223b693a323b733a31303a2273616c655f7072696365223b693a333b733a373a226d6574616b6579223b693a343b733a383a226d65746164657363223b693a353b733a31303a226d657461617574686f72223b693a363b733a363a22617574686f72223b693a373b733a31363a22637265617465645f62795f616c696173223b7d693a343b613a323a7b693a303b733a343a2270617468223b693a313b733a353a22616c696173223b7d693a353b613a313a7b693a303b733a383a22636f6d6d656e7473223b7d7d733a31313a22002a007461786f6e6f6d79223b613a343a7b733a343a2254797065223b613a313a7b733a373a2250726f64756374223b4f3a32373a224a6f6f6d6c615c434d535c4f626a6563745c434d534f626a656374223a343a7b733a31303a22002a005f6572726f7273223b613a303a7b7d733a353a227469746c65223b733a373a2250726f64756374223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b7d7d733a383a2243617465676f7279223b613a313a7b733a383a22d984d988d984d987223b4f3a32373a224a6f6f6d6c615c434d535c4f626a6563745c434d534f626a656374223a343a7b733a31303a22002a005f6572726f7273223b613a303a7b7d733a353a227469746c65223b733a383a22d984d988d984d987223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b7d7d733a353a224272616e64223b613a313a7b733a303a22223b4f3a32373a224a6f6f6d6c615c434d535c4f626a6563745c434d534f626a656374223a343a7b733a31303a22002a005f6572726f7273223b613a303a7b7d733a353a227469746c65223b4e3b733a353a227374617465223b693a303b733a363a22616363657373223b693a313b7d7d733a383a224c616e6775616765223b613a313a7b733a313a222a223b4f3a32373a224a6f6f6d6c615c434d535c4f626a6563745c434d534f626a656374223a343a7b733a31303a22002a005f6572726f7273223b613a303a7b7d733a353a227469746c65223b733a313a222a223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b7d7d7d733a333a2275726c223b733a39393a22696e6465782e7068703f6f7074696f6e3d636f6d5f68696b6173686f70266374726c3d70726f64756374267461736b3d73686f77266369643d35266e616d653d6566656665656665667266667265662663617465676f72795f706174687761793d3136223b733a353a22726f757465223b733a39393a22696e6465782e7068703f6f7074696f6e3d636f6d5f68696b6173686f70266374726c3d70726f64756374267461736b3d73686f77266369643d35266e616d653d6566656665656665667266667265662663617465676f72795f706174687761793d3136223b733a353a227469746c65223b733a31373a22d985d8add8b5d988d98420d8aad8b3d8aa223b733a31313a226465736372697074696f6e223b733a303a22223b733a393a227075626c6973686564223b4e3b733a353a227374617465223b693a313b733a363a22616363657373223b733a313a2231223b733a383a226c616e6775616765223b733a313a222a223b733a31383a227075626c6973685f73746172745f64617465223b733a31393a22303030302d30302d30302030303a30303a3030223b733a31363a227075626c6973685f656e645f64617465223b733a31393a22303030302d30302d30302030303a30303a3030223b733a31303a2273746172745f64617465223b733a31393a22303030302d30302d30302030303a30303a3030223b733a383a22656e645f64617465223b733a31393a22303030302d30302d30302030303a30303a3030223b733a31303a226c6973745f7072696365223b4e3b733a31303a2273616c655f7072696365223b4e3b733a373a22747970655f6964223b693a313b733a31353a2264656661756c744c616e6775616765223b733a353a2266612d4952223b7d),
+(16, 'index.php?option=com_hikashop&ctrl=product&task=show&cid=1&name=milgerd&category_pathway=13', 'index.php?option=com_hikashop&ctrl=product&task=show&cid=1&name=milgerd&category_pathway=13', ' محصول میلگرد', '', '2021-07-01 17:39:06', '056eb8f691fad8471699ff2bb9e930b2', 1, 1, 1, '*', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 1, 0x4f3a31393a2246696e646572496e6465786572526573756c74223a31393a7b733a31313a22002a00656c656d656e7473223b613a32363a7b733a323a226964223b733a313a2231223b733a353a226361746964223b733a323a223133223b733a353a22616c696173223b733a373a226d696c67657264223b733a343a226c696e6b223b733a303a22223b733a373a2273756d6d617279223b733a303a22223b733a373a226d6574616b6579223b733a303a22223b733a383a226d65746164657363223b733a303a22223b733a383a226d65746164617461223b4f3a32343a224a6f6f6d6c615c52656769737472795c5265676973747279223a333a7b733a373a22002a0064617461223b4f3a383a22737464436c617373223a303a7b7d733a31343a22002a00696e697469616c697a6564223b623a313b733a393a22736570617261746f72223b733a313a222e223b7d733a31363a22637265617465645f62795f616c696173223b733a303a22223b733a383a226d6f646966696564223b733a31303a2231363235313434393435223b733a31313a226d6f6469666965645f6279223b733a303a22223b733a383a2263617465676f7279223b733a31323a22d985db8cd984daafd8b1d8af223b733a31333a2263617465676f7279616c696173223b733a31303a22726f756e642d62617273223b733a393a226361745f7374617465223b733a313a2231223b733a31303a226361745f616363657373223b733a313a2231223b733a353a226272616e64223b4e3b733a31303a226272616e64616c696173223b4e3b733a31313a226272616e645f7374617465223b4e3b733a31323a226272616e645f616363657373223b733a313a2231223b733a343a22736c7567223b733a373a226d696c67657264223b733a373a22636174736c7567223b733a31303a22726f756e642d62617273223b733a363a226c61796f7574223b733a373a2270726f64756374223b733a363a22706172616d73223b4f3a32343a224a6f6f6d6c615c52656769737472795c5265676973747279223a333a7b733a373a22002a0064617461223b4f3a383a22737464436c617373223a303a7b7d733a31343a22002a00696e697469616c697a6564223b623a313b733a393a22736570617261746f72223b733a313a222e223b7d733a343a22626f6479223b4e3b733a343a2270617468223b733a34363a2220737465656c617276696e20636f6d706f6e656e742068696b6173686f702070726f64756374206d696c67657264223b733a31303a226d657461617574686f72223b4e3b7d733a31353a22002a00696e737472756374696f6e73223b613a353a7b693a313b613a333a7b693a303b733a353a227469746c65223b693a313b733a383a227375627469746c65223b693a323b733a323a226964223b7d693a323b613a323a7b693a303b733a373a2273756d6d617279223b693a313b733a343a22626f6479223b7d693a333b613a383a7b693a303b733a343a226d657461223b693a313b733a31303a226c6973745f7072696365223b693a323b733a31303a2273616c655f7072696365223b693a333b733a373a226d6574616b6579223b693a343b733a383a226d65746164657363223b693a353b733a31303a226d657461617574686f72223b693a363b733a363a22617574686f72223b693a373b733a31363a22637265617465645f62795f616c696173223b7d693a343b613a323a7b693a303b733a343a2270617468223b693a313b733a353a22616c696173223b7d693a353b613a313a7b693a303b733a383a22636f6d6d656e7473223b7d7d733a31313a22002a007461786f6e6f6d79223b613a343a7b733a343a2254797065223b613a313a7b733a373a2250726f64756374223b4f3a32373a224a6f6f6d6c615c434d535c4f626a6563745c434d534f626a656374223a343a7b733a31303a22002a005f6572726f7273223b613a303a7b7d733a353a227469746c65223b733a373a2250726f64756374223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b7d7d733a383a2243617465676f7279223b613a313a7b733a31323a22d985db8cd984daafd8b1d8af223b4f3a32373a224a6f6f6d6c615c434d535c4f626a6563745c434d534f626a656374223a343a7b733a31303a22002a005f6572726f7273223b613a303a7b7d733a353a227469746c65223b733a31323a22d985db8cd984daafd8b1d8af223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b7d7d733a353a224272616e64223b613a313a7b733a303a22223b4f3a32373a224a6f6f6d6c615c434d535c4f626a6563745c434d534f626a656374223a343a7b733a31303a22002a005f6572726f7273223b613a303a7b7d733a353a227469746c65223b4e3b733a353a227374617465223b693a303b733a363a22616363657373223b693a313b7d7d733a383a224c616e6775616765223b613a313a7b733a313a222a223b4f3a32373a224a6f6f6d6c615c434d535c4f626a6563745c434d534f626a656374223a343a7b733a31303a22002a005f6572726f7273223b613a303a7b7d733a353a227469746c65223b733a313a222a223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b7d7d7d733a333a2275726c223b733a39313a22696e6465782e7068703f6f7074696f6e3d636f6d5f68696b6173686f70266374726c3d70726f64756374267461736b3d73686f77266369643d31266e616d653d6d696c676572642663617465676f72795f706174687761793d3133223b733a353a22726f757465223b733a39313a22696e6465782e7068703f6f7074696f6e3d636f6d5f68696b6173686f70266374726c3d70726f64756374267461736b3d73686f77266369643d31266e616d653d6d696c676572642663617465676f72795f706174687761793d3133223b733a353a227469746c65223b733a32343a2220d985d8add8b5d988d98420d985db8cd984daafd8b1d8af223b733a31313a226465736372697074696f6e223b733a303a22223b733a393a227075626c6973686564223b4e3b733a353a227374617465223b693a313b733a363a22616363657373223b733a313a2231223b733a383a226c616e6775616765223b733a313a222a223b733a31383a227075626c6973685f73746172745f64617465223b733a31393a22303030302d30302d30302030303a30303a3030223b733a31363a227075626c6973685f656e645f64617465223b733a31393a22303030302d30302d30302030303a30303a3030223b733a31303a2273746172745f64617465223b733a31393a22303030302d30302d30302030303a30303a3030223b733a383a22656e645f64617465223b733a31393a22303030302d30302d30302030303a30303a3030223b733a31303a226c6973745f7072696365223b4e3b733a31303a2273616c655f7072696365223b4e3b733a373a22747970655f6964223b693a313b733a31353a2264656661756c744c616e6775616765223b733a353a2266612d4952223b7d),
+(17, 'index.php?option=com_hikashop&ctrl=product&task=show&cid=5&name=profile&category_pathway=15', 'index.php?option=com_hikashop&ctrl=product&task=show&cid=5&name=profile&category_pathway=15', 'محصول پروفیل', '', '2021-07-01 18:12:06', '8a53d8cffc360ea446c3bcfa74ee0601', 1, 1, 1, '*', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 1, 0x4f3a31393a2246696e646572496e6465786572526573756c74223a31393a7b733a31313a22002a00656c656d656e7473223b613a32363a7b733a323a226964223b733a313a2235223b733a353a226361746964223b733a323a223135223b733a353a22616c696173223b733a373a2270726f66696c65223b733a343a226c696e6b223b733a303a22223b733a373a2273756d6d617279223b733a303a22223b733a373a226d6574616b6579223b733a303a22223b733a383a226d65746164657363223b733a303a22223b733a383a226d65746164617461223b4f3a32343a224a6f6f6d6c615c52656769737472795c5265676973747279223a333a7b733a373a22002a0064617461223b4f3a383a22737464436c617373223a303a7b7d733a31343a22002a00696e697469616c697a6564223b623a313b733a393a22736570617261746f72223b733a313a222e223b7d733a31363a22637265617465645f62795f616c696173223b733a303a22223b733a383a226d6f646966696564223b733a31303a2231363235313436393236223b733a31313a226d6f6469666965645f6279223b733a303a22223b733a383a2263617465676f7279223b733a31323a22d9bed8b1d988d981db8cd984223b733a31333a2263617465676f7279616c696173223b733a383a2270726f66696c6573223b733a393a226361745f7374617465223b733a313a2231223b733a31303a226361745f616363657373223b733a313a2231223b733a353a226272616e64223b4e3b733a31303a226272616e64616c696173223b4e3b733a31313a226272616e645f7374617465223b4e3b733a31323a226272616e645f616363657373223b733a313a2231223b733a343a22736c7567223b733a373a2270726f66696c65223b733a373a22636174736c7567223b733a383a2270726f66696c6573223b733a363a226c61796f7574223b733a373a2270726f64756374223b733a363a22706172616d73223b4f3a32343a224a6f6f6d6c615c52656769737472795c5265676973747279223a333a7b733a373a22002a0064617461223b4f3a383a22737464436c617373223a303a7b7d733a31343a22002a00696e697469616c697a6564223b623a313b733a393a22736570617261746f72223b733a313a222e223b7d733a343a22626f6479223b4e3b733a343a2270617468223b733a34363a2220737465656c617276696e20636f6d706f6e656e742068696b6173686f702070726f647563742070726f66696c65223b733a31303a226d657461617574686f72223b4e3b7d733a31353a22002a00696e737472756374696f6e73223b613a353a7b693a313b613a333a7b693a303b733a353a227469746c65223b693a313b733a383a227375627469746c65223b693a323b733a323a226964223b7d693a323b613a323a7b693a303b733a373a2273756d6d617279223b693a313b733a343a22626f6479223b7d693a333b613a383a7b693a303b733a343a226d657461223b693a313b733a31303a226c6973745f7072696365223b693a323b733a31303a2273616c655f7072696365223b693a333b733a373a226d6574616b6579223b693a343b733a383a226d65746164657363223b693a353b733a31303a226d657461617574686f72223b693a363b733a363a22617574686f72223b693a373b733a31363a22637265617465645f62795f616c696173223b7d693a343b613a323a7b693a303b733a343a2270617468223b693a313b733a353a22616c696173223b7d693a353b613a313a7b693a303b733a383a22636f6d6d656e7473223b7d7d733a31313a22002a007461786f6e6f6d79223b613a343a7b733a343a2254797065223b613a313a7b733a373a2250726f64756374223b4f3a32373a224a6f6f6d6c615c434d535c4f626a6563745c434d534f626a656374223a343a7b733a31303a22002a005f6572726f7273223b613a303a7b7d733a353a227469746c65223b733a373a2250726f64756374223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b7d7d733a383a2243617465676f7279223b613a313a7b733a31323a22d9bed8b1d988d981db8cd984223b4f3a32373a224a6f6f6d6c615c434d535c4f626a6563745c434d534f626a656374223a343a7b733a31303a22002a005f6572726f7273223b613a303a7b7d733a353a227469746c65223b733a31323a22d9bed8b1d988d981db8cd984223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b7d7d733a353a224272616e64223b613a313a7b733a303a22223b4f3a32373a224a6f6f6d6c615c434d535c4f626a6563745c434d534f626a656374223a343a7b733a31303a22002a005f6572726f7273223b613a303a7b7d733a353a227469746c65223b4e3b733a353a227374617465223b693a303b733a363a22616363657373223b693a313b7d7d733a383a224c616e6775616765223b613a313a7b733a313a222a223b4f3a32373a224a6f6f6d6c615c434d535c4f626a6563745c434d534f626a656374223a343a7b733a31303a22002a005f6572726f7273223b613a303a7b7d733a353a227469746c65223b733a313a222a223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b7d7d7d733a333a2275726c223b733a39313a22696e6465782e7068703f6f7074696f6e3d636f6d5f68696b6173686f70266374726c3d70726f64756374267461736b3d73686f77266369643d35266e616d653d70726f66696c652663617465676f72795f706174687761793d3135223b733a353a22726f757465223b733a39313a22696e6465782e7068703f6f7074696f6e3d636f6d5f68696b6173686f70266374726c3d70726f64756374267461736b3d73686f77266369643d35266e616d653d70726f66696c652663617465676f72795f706174687761793d3135223b733a353a227469746c65223b733a32333a22d985d8add8b5d988d98420d9bed8b1d988d981db8cd984223b733a31313a226465736372697074696f6e223b733a303a22223b733a393a227075626c6973686564223b4e3b733a353a227374617465223b693a313b733a363a22616363657373223b733a313a2231223b733a383a226c616e6775616765223b733a313a222a223b733a31383a227075626c6973685f73746172745f64617465223b733a31393a22303030302d30302d30302030303a30303a3030223b733a31363a227075626c6973685f656e645f64617465223b733a31393a22303030302d30302d30302030303a30303a3030223b733a31303a2273746172745f64617465223b733a31393a22303030302d30302d30302030303a30303a3030223b733a383a22656e645f64617465223b733a31393a22303030302d30302d30302030303a30303a3030223b733a31303a226c6973745f7072696365223b4e3b733a31303a2273616c655f7072696365223b4e3b733a373a22747970655f6964223b693a313b733a31353a2264656661756c744c616e6775616765223b733a353a2266612d4952223b7d);
 
 -- --------------------------------------------------------
 
@@ -3239,8 +3266,8 @@ INSERT INTO `yz4ph_finder_links_terms0` (`link_id`, `term_id`, `weight`) VALUES
 (5, 262, 0.93324),
 (8, 262, 0.93324),
 (9, 262, 0.93324),
-(8, 263, 1.82),
 (5, 263, 1.82),
+(8, 263, 1.82),
 (9, 263, 1.82),
 (5, 264, 2.05338),
 (8, 264, 2.05338),
@@ -3263,14 +3290,14 @@ INSERT INTO `yz4ph_finder_links_terms0` (`link_id`, `term_id`, `weight`) VALUES
 (5, 270, 0.93324),
 (8, 270, 0.93324),
 (9, 270, 0.93324),
-(8, 271, 1.96),
 (5, 271, 1.96),
+(8, 271, 1.96),
 (9, 271, 1.96),
 (5, 272, 2.1),
 (8, 272, 2.1),
 (9, 272, 2.1),
-(8, 273, 1.96),
 (5, 273, 1.96),
+(8, 273, 1.96),
 (9, 273, 1.96),
 (5, 274, 2.24),
 (8, 274, 2.24),
@@ -3287,8 +3314,8 @@ INSERT INTO `yz4ph_finder_links_terms0` (`link_id`, `term_id`, `weight`) VALUES
 (5, 408, 0.65338),
 (8, 408, 0.65338),
 (9, 408, 0.65338),
-(8, 409, 1.82),
 (5, 409, 1.82),
+(8, 409, 1.82),
 (9, 409, 1.82),
 (5, 410, 2.05338),
 (8, 410, 2.05338),
@@ -3420,21 +3447,21 @@ INSERT INTO `yz4ph_finder_links_terms4` (`link_id`, `term_id`, `weight`) VALUES
 (5, 185, 1.72662),
 (8, 185, 1.72662),
 (9, 185, 1.72662),
-(8, 186, 1.96),
 (5, 186, 1.96),
+(8, 186, 1.96),
 (9, 186, 1.96),
 (5, 187, 0.9331),
-(9, 187, 0.9331),
 (8, 187, 0.9331),
+(9, 187, 0.9331),
 (5, 188, 1.77338),
 (8, 188, 1.77338),
 (9, 188, 1.77338),
-(8, 189, 2.19338),
 (5, 189, 2.19338),
+(8, 189, 2.19338),
 (9, 189, 2.19338),
 (5, 190, 1.68),
-(9, 190, 1.68),
 (8, 190, 1.68),
+(9, 190, 1.68),
 (5, 191, 1.91338),
 (8, 191, 1.91338),
 (9, 191, 1.91338),
@@ -3444,8 +3471,8 @@ INSERT INTO `yz4ph_finder_links_terms4` (`link_id`, `term_id`, `weight`) VALUES
 (5, 193, 1.00331),
 (8, 193, 1.00331),
 (9, 193, 1.00331),
-(8, 194, 0.98),
 (5, 194, 0.98),
+(8, 194, 0.98),
 (9, 194, 0.98),
 (5, 195, 1.12),
 (8, 195, 1.12),
@@ -3453,12 +3480,12 @@ INSERT INTO `yz4ph_finder_links_terms4` (`link_id`, `term_id`, `weight`) VALUES
 (5, 196, 1.72662),
 (8, 196, 1.72662),
 (9, 196, 1.72662),
-(8, 197, 1.82),
 (5, 197, 1.82),
+(8, 197, 1.82),
 (9, 197, 1.82),
 (5, 198, 1.68),
-(9, 198, 1.68),
 (8, 198, 1.68),
+(9, 198, 1.68),
 (5, 199, 1.77338),
 (8, 199, 1.77338),
 (9, 199, 1.77338),
@@ -3477,14 +3504,14 @@ INSERT INTO `yz4ph_finder_links_terms4` (`link_id`, `term_id`, `weight`) VALUES
 (5, 204, 2.1),
 (8, 204, 2.1),
 (9, 204, 2.1),
-(8, 205, 2.19338),
 (5, 205, 2.19338),
+(8, 205, 2.19338),
 (9, 205, 2.19338),
 (5, 206, 0.56),
 (8, 206, 0.56),
 (9, 206, 0.56),
-(8, 207, 1.96),
 (5, 207, 1.96),
+(8, 207, 1.96),
 (9, 207, 1.96),
 (5, 208, 2.1),
 (8, 208, 2.1),
@@ -3499,10 +3526,10 @@ INSERT INTO `yz4ph_finder_links_terms4` (`link_id`, `term_id`, `weight`) VALUES
 (5, 211, 2.19338),
 (9, 211, 2.19338),
 (5, 281, 1.68),
-(9, 281, 1.68),
 (8, 281, 1.68),
-(8, 282, 1.96),
+(9, 281, 1.68),
 (5, 282, 1.96),
+(8, 282, 1.96),
 (9, 282, 1.96),
 (5, 283, 2.05338),
 (8, 283, 2.05338),
@@ -3516,8 +3543,8 @@ INSERT INTO `yz4ph_finder_links_terms4` (`link_id`, `term_id`, `weight`) VALUES
 (5, 286, 2.00662),
 (8, 286, 2.00662),
 (9, 286, 2.00662),
-(8, 287, 2.19338),
 (5, 287, 2.19338),
+(8, 287, 2.19338),
 (9, 287, 2.19338),
 (5, 288, 0.46662),
 (8, 288, 0.46662),
@@ -3564,8 +3591,8 @@ INSERT INTO `yz4ph_finder_links_terms5` (`link_id`, `term_id`, `weight`) VALUES
 (5, 395, 0.46662),
 (8, 395, 0.46662),
 (9, 395, 0.46662),
-(8, 396, 1.82),
 (5, 396, 1.82),
+(8, 396, 1.82),
 (9, 396, 1.82),
 (5, 397, 2.1),
 (8, 397, 2.1),
@@ -3627,13 +3654,14 @@ INSERT INTO `yz4ph_finder_links_terms6` (`link_id`, `term_id`, `weight`) VALUES
 (4, 18, 3.2666),
 (5, 18, 3.2666),
 (6, 18, 3.2666),
+(16, 54, 0.9334),
 (5, 54, 1.8668),
 (9, 54, 1.8668),
 (5, 55, 5.4668),
 (9, 55, 5.4668),
 (5, 212, 0.37324),
-(9, 212, 0.37324),
 (8, 212, 0.37324),
+(9, 212, 0.37324),
 (5, 213, 1.72662),
 (8, 213, 1.72662),
 (9, 213, 1.72662),
@@ -3658,8 +3686,8 @@ INSERT INTO `yz4ph_finder_links_terms6` (`link_id`, `term_id`, `weight`) VALUES
 (5, 220, 0.56),
 (8, 220, 0.56),
 (9, 220, 0.56),
-(8, 221, 1.82),
 (5, 221, 1.82),
+(8, 221, 1.82),
 (9, 221, 1.82),
 (5, 222, 2.00662),
 (8, 222, 2.00662),
@@ -3667,8 +3695,8 @@ INSERT INTO `yz4ph_finder_links_terms6` (`link_id`, `term_id`, `weight`) VALUES
 (5, 223, 0.28),
 (8, 223, 0.28),
 (9, 223, 0.28),
-(8, 224, 1.82),
 (5, 224, 1.82),
+(8, 224, 1.82),
 (9, 224, 1.82),
 (5, 225, 2.05338),
 (8, 225, 2.05338),
@@ -3676,8 +3704,8 @@ INSERT INTO `yz4ph_finder_links_terms6` (`link_id`, `term_id`, `weight`) VALUES
 (5, 226, 0.65338),
 (8, 226, 0.65338),
 (9, 226, 0.65338),
-(8, 227, 1.82),
 (5, 227, 1.82),
+(8, 227, 1.82),
 (9, 227, 1.82),
 (5, 228, 2.05338),
 (8, 228, 2.05338),
@@ -3685,8 +3713,8 @@ INSERT INTO `yz4ph_finder_links_terms6` (`link_id`, `term_id`, `weight`) VALUES
 (5, 428, 0.46662),
 (8, 428, 0.46662),
 (9, 428, 0.46662),
-(8, 429, 1.82),
 (5, 429, 1.82),
+(8, 429, 1.82),
 (9, 429, 1.82),
 (5, 430, 1.91338),
 (8, 430, 1.91338),
@@ -3703,8 +3731,8 @@ INSERT INTO `yz4ph_finder_links_terms6` (`link_id`, `term_id`, `weight`) VALUES
 (5, 434, 0.37338),
 (8, 434, 0.37338),
 (9, 434, 0.37338),
-(8, 435, 0.91),
 (5, 435, 0.91),
+(8, 435, 0.91),
 (9, 435, 0.91),
 (5, 436, 1.07331),
 (8, 436, 1.07331),
@@ -3746,8 +3774,8 @@ INSERT INTO `yz4ph_finder_links_terms7` (`link_id`, `term_id`, `weight`) VALUES
 (8, 231, 1.07331),
 (9, 231, 1.07331),
 (5, 232, 0.42),
-(9, 232, 0.42),
 (8, 232, 0.42),
+(9, 232, 0.42),
 (5, 233, 1.05),
 (8, 233, 1.05),
 (9, 233, 1.05),
@@ -3760,14 +3788,14 @@ INSERT INTO `yz4ph_finder_links_terms7` (`link_id`, `term_id`, `weight`) VALUES
 (5, 236, 1.77338),
 (8, 236, 1.77338),
 (9, 236, 1.77338),
-(8, 237, 1.96),
 (5, 237, 1.96),
+(8, 237, 1.96),
 (9, 237, 1.96),
 (5, 238, 0.56),
 (8, 238, 0.56),
 (9, 238, 0.56),
-(8, 239, 1.82),
 (5, 239, 1.82),
+(8, 239, 1.82),
 (9, 239, 1.82),
 (5, 240, 2.1),
 (8, 240, 2.1),
@@ -3785,8 +3813,8 @@ INSERT INTO `yz4ph_finder_links_terms7` (`link_id`, `term_id`, `weight`) VALUES
 (8, 244, 0.37338),
 (9, 244, 0.37338),
 (5, 245, 1.68),
-(9, 245, 1.68),
 (8, 245, 1.68),
+(9, 245, 1.68),
 (5, 246, 2.14662),
 (8, 246, 2.14662),
 (9, 246, 2.14662),
@@ -3800,17 +3828,17 @@ INSERT INTO `yz4ph_finder_links_terms7` (`link_id`, `term_id`, `weight`) VALUES
 (8, 249, 1.91338),
 (9, 249, 1.91338),
 (5, 250, 0.84),
-(9, 250, 0.84),
 (8, 250, 0.84),
-(8, 251, 1.96),
+(9, 250, 0.84),
 (5, 251, 1.96),
+(8, 251, 1.96),
 (9, 251, 1.96),
-(8, 252, 2.19338),
 (5, 252, 2.19338),
+(8, 252, 2.19338),
 (9, 252, 2.19338),
 (5, 253, 0.18662),
-(9, 253, 0.18662),
 (8, 253, 0.18662),
+(9, 253, 0.18662),
 (5, 254, 1.72662),
 (8, 254, 1.72662),
 (9, 254, 1.72662),
@@ -3903,8 +3931,8 @@ INSERT INTO `yz4ph_finder_links_terms8` (`link_id`, `term_id`, `weight`) VALUES
 (5, 279, 1.72662),
 (8, 279, 1.72662),
 (9, 279, 1.72662),
-(8, 280, 1.96),
 (5, 280, 1.96),
+(8, 280, 1.96),
 (9, 280, 1.96),
 (5, 297, 0.23331),
 (8, 297, 0.23331),
@@ -3918,8 +3946,8 @@ INSERT INTO `yz4ph_finder_links_terms8` (`link_id`, `term_id`, `weight`) VALUES
 (5, 300, 0.56),
 (8, 300, 0.56),
 (9, 300, 0.56),
-(8, 301, 1.96),
 (5, 301, 1.96),
+(8, 301, 1.96),
 (9, 301, 1.96),
 (5, 302, 2.05338),
 (8, 302, 2.05338),
@@ -3943,7 +3971,8 @@ INSERT INTO `yz4ph_finder_links_terms8` (`link_id`, `term_id`, `weight`) VALUES
 (8, 308, 2.24),
 (9, 308, 2.24),
 (7, 437, 0.17),
-(12, 453, 1.7334);
+(12, 453, 1.7334),
+(17, 460, 0.9334);
 
 -- --------------------------------------------------------
 
@@ -3974,8 +4003,8 @@ INSERT INTO `yz4ph_finder_links_terms9` (`link_id`, `term_id`, `weight`) VALUES
 (7, 43, 7.41),
 (4, 49, 0.45339),
 (5, 122, 0.74648),
-(9, 122, 0.74648),
 (8, 122, 0.74648),
+(9, 122, 0.74648),
 (5, 123, 1.86662),
 (8, 123, 1.86662),
 (9, 123, 1.86662),
@@ -3989,22 +4018,22 @@ INSERT INTO `yz4ph_finder_links_terms9` (`link_id`, `term_id`, `weight`) VALUES
 (8, 126, 2.05338),
 (9, 126, 2.05338),
 (5, 127, 1.68),
-(9, 127, 1.68),
 (8, 127, 1.68),
+(9, 127, 1.68),
 (5, 128, 2.05338),
 (8, 128, 2.05338),
 (9, 128, 2.05338),
 (5, 129, 1.68),
-(9, 129, 1.68),
 (8, 129, 1.68),
-(8, 130, 1.96),
+(9, 129, 1.68),
 (5, 130, 1.96),
+(8, 130, 1.96),
 (9, 130, 1.96),
 (5, 131, 0.37338),
 (8, 131, 0.37338),
 (9, 131, 0.37338),
-(8, 132, 1.96),
 (5, 132, 1.96),
+(8, 132, 1.96),
 (9, 132, 1.96),
 (5, 133, 2.24),
 (8, 133, 2.24),
@@ -4027,20 +4056,20 @@ INSERT INTO `yz4ph_finder_links_terms9` (`link_id`, `term_id`, `weight`) VALUES
 (5, 139, 0.37338),
 (8, 139, 0.37338),
 (9, 139, 0.37338),
-(8, 140, 1.96),
 (5, 140, 1.96),
+(8, 140, 1.96),
 (9, 140, 1.96),
 (5, 141, 2.05338),
 (8, 141, 2.05338),
 (9, 141, 2.05338),
 (5, 142, 0.18662),
-(9, 142, 0.18662),
 (8, 142, 0.18662),
+(9, 142, 0.18662),
 (5, 143, 1.77338),
 (8, 143, 1.77338),
 (9, 143, 1.77338),
-(8, 144, 1.96),
 (5, 144, 1.96),
+(8, 144, 1.96),
 (9, 144, 1.96),
 (5, 145, 0.46662),
 (8, 145, 0.46662),
@@ -4054,20 +4083,20 @@ INSERT INTO `yz4ph_finder_links_terms9` (`link_id`, `term_id`, `weight`) VALUES
 (5, 148, 0.56),
 (8, 148, 0.56),
 (9, 148, 0.56),
-(8, 149, 1.82),
 (5, 149, 1.82),
+(8, 149, 1.82),
 (9, 149, 1.82),
 (5, 150, 2.05338),
 (8, 150, 2.05338),
 (9, 150, 2.05338),
 (5, 151, 0.18662),
-(9, 151, 0.18662),
 (8, 151, 0.18662),
+(9, 151, 0.18662),
 (5, 152, 1.63338),
 (8, 152, 1.63338),
 (9, 152, 1.63338),
-(8, 153, 1.82),
 (5, 153, 1.82),
+(8, 153, 1.82),
 (9, 153, 1.82),
 (5, 154, 0.37338),
 (8, 154, 0.37338),
@@ -4082,16 +4111,16 @@ INSERT INTO `yz4ph_finder_links_terms9` (`link_id`, `term_id`, `weight`) VALUES
 (8, 157, 0.37338),
 (9, 157, 0.37338),
 (5, 158, 1.68),
-(9, 158, 1.68),
 (8, 158, 1.68),
+(9, 158, 1.68),
 (5, 159, 2.00662),
 (8, 159, 2.00662),
 (9, 159, 2.00662),
 (5, 160, 0.37338),
 (8, 160, 0.37338),
 (9, 160, 0.37338),
-(8, 161, 1.82),
 (5, 161, 1.82),
+(8, 161, 1.82),
 (9, 161, 1.82),
 (5, 162, 2.05338),
 (8, 162, 2.05338),
@@ -4150,8 +4179,8 @@ INSERT INTO `yz4ph_finder_links_terms9` (`link_id`, `term_id`, `weight`) VALUES
 (5, 317, 2.1),
 (8, 317, 2.1),
 (9, 317, 2.1),
-(8, 365, 1.21394),
 (5, 365, 1.21394),
+(8, 365, 1.21394),
 (9, 365, 1.21394),
 (5, 366, 1.72662),
 (8, 366, 1.72662),
@@ -4162,14 +4191,14 @@ INSERT INTO `yz4ph_finder_links_terms9` (`link_id`, `term_id`, `weight`) VALUES
 (5, 368, 1.58662),
 (8, 368, 1.58662),
 (9, 368, 1.58662),
-(8, 369, 1.96),
 (5, 369, 1.96),
+(8, 369, 1.96),
 (9, 369, 1.96),
 (5, 370, 1.68),
-(9, 370, 1.68),
 (8, 370, 1.68),
-(8, 371, 1.96),
+(9, 370, 1.68),
 (5, 371, 1.96),
+(8, 371, 1.96),
 (9, 371, 1.96),
 (8, 372, 0.91),
 (5, 372, 1.82),
@@ -4192,8 +4221,8 @@ INSERT INTO `yz4ph_finder_links_terms9` (`link_id`, `term_id`, `weight`) VALUES
 (5, 378, 1.58662),
 (8, 378, 1.58662),
 (9, 378, 1.58662),
-(8, 379, 1.82),
 (5, 379, 1.82),
+(8, 379, 1.82),
 (9, 379, 1.82),
 (5, 380, 1.72662),
 (8, 380, 1.72662),
@@ -4207,29 +4236,29 @@ INSERT INTO `yz4ph_finder_links_terms9` (`link_id`, `term_id`, `weight`) VALUES
 (5, 383, 2.00662),
 (8, 383, 2.00662),
 (9, 383, 2.00662),
-(8, 384, 1.82),
 (5, 384, 1.82),
+(8, 384, 1.82),
 (9, 384, 1.82),
-(8, 385, 1.96),
 (5, 385, 1.96),
+(8, 385, 1.96),
 (9, 385, 1.96),
 (5, 386, 1.68),
-(9, 386, 1.68),
 (8, 386, 1.68),
+(9, 386, 1.68),
 (5, 387, 1.91338),
 (8, 387, 1.91338),
 (9, 387, 1.91338),
 (5, 388, 1.68),
-(9, 388, 1.68),
 (8, 388, 1.68),
-(8, 389, 1.82),
+(9, 388, 1.68),
 (5, 389, 1.82),
+(8, 389, 1.82),
 (9, 389, 1.82),
 (5, 390, 1.91338),
 (8, 390, 1.91338),
 (9, 390, 1.91338),
-(8, 391, 2.19338),
 (5, 391, 2.19338),
+(8, 391, 2.19338),
 (9, 391, 2.19338),
 (5, 392, 0.46662),
 (8, 392, 0.46662),
@@ -4241,8 +4270,8 @@ INSERT INTO `yz4ph_finder_links_terms9` (`link_id`, `term_id`, `weight`) VALUES
 (8, 394, 2.1),
 (9, 394, 2.1),
 (5, 411, 0.84),
-(9, 411, 0.84),
 (8, 411, 0.84),
+(9, 411, 0.84),
 (5, 412, 2.1),
 (8, 412, 2.1),
 (9, 412, 2.1),
@@ -4271,19 +4300,19 @@ INSERT INTO `yz4ph_finder_links_terms9` (`link_id`, `term_id`, `weight`) VALUES
 (8, 420, 0.28),
 (9, 420, 0.28),
 (5, 421, 1.68),
-(9, 421, 1.68),
 (8, 421, 1.68),
+(9, 421, 1.68),
 (5, 422, 1.86662),
 (8, 422, 1.86662),
 (9, 422, 1.86662),
 (5, 423, 0.37324),
-(9, 423, 0.37324),
 (8, 423, 0.37324),
+(9, 423, 0.37324),
 (5, 424, 1.72662),
 (8, 424, 1.72662),
 (9, 424, 1.72662),
-(8, 425, 1.82),
 (5, 425, 1.82),
+(8, 425, 1.82),
 (9, 425, 1.82),
 (5, 426, 1.72662),
 (8, 426, 1.72662),
@@ -4341,8 +4370,8 @@ INSERT INTO `yz4ph_finder_links_termsb` (`link_id`, `term_id`, `weight`) VALUES
 (5, 295, 1.86662),
 (8, 295, 1.86662),
 (9, 295, 1.86662),
-(8, 296, 2.19338),
 (5, 296, 2.19338),
+(8, 296, 2.19338),
 (9, 296, 2.19338),
 (5, 309, 0.37338),
 (8, 309, 0.37338),
@@ -4368,29 +4397,29 @@ INSERT INTO `yz4ph_finder_links_termsb` (`link_id`, `term_id`, `weight`) VALUES
 (5, 355, 1.91338),
 (8, 355, 1.91338),
 (9, 355, 1.91338),
-(8, 356, 2.19338),
 (5, 356, 2.19338),
+(8, 356, 2.19338),
 (9, 356, 2.19338),
 (5, 357, 0.74676),
 (8, 357, 0.74676),
 (9, 357, 0.74676),
-(8, 358, 1.82),
 (5, 358, 1.82),
+(8, 358, 1.82),
 (9, 358, 1.82),
 (5, 359, 2.24),
 (8, 359, 2.24),
 (9, 359, 2.24),
 (5, 360, 1.68),
-(9, 360, 1.68),
 (8, 360, 1.68),
+(9, 360, 1.68),
 (5, 361, 2.14662),
 (8, 361, 2.14662),
 (9, 361, 2.14662),
 (5, 362, 0.28),
 (8, 362, 0.28),
 (9, 362, 0.28),
-(8, 363, 1.82),
 (5, 363, 1.82),
+(8, 363, 1.82),
 (9, 363, 1.82),
 (5, 364, 2.24),
 (8, 364, 2.24),
@@ -4417,6 +4446,7 @@ INSERT INTO `yz4ph_finder_links_termsc` (`link_id`, `term_id`, `weight`) VALUES
 (4, 1, 0.17),
 (10, 1, 0.17),
 (11, 1, 0.17),
+(16, 1, 0.17),
 (1, 34, 1.02),
 (6, 34, 3.42),
 (3, 41, 0.17),
@@ -4442,16 +4472,16 @@ INSERT INTO `yz4ph_finder_links_termsc` (`link_id`, `term_id`, `weight`) VALUES
 (8, 76, 2.14662),
 (9, 76, 2.14662),
 (5, 77, 0.37324),
-(9, 77, 0.37324),
 (8, 77, 0.37324),
+(9, 77, 0.37324),
 (5, 78, 1.72662),
 (8, 78, 1.72662),
 (9, 78, 1.72662),
 (5, 79, 1.91338),
 (8, 79, 1.91338),
 (9, 79, 1.91338),
-(8, 80, 1.82),
 (5, 80, 1.82),
+(8, 80, 1.82),
 (9, 80, 1.82),
 (5, 81, 2.14662),
 (8, 81, 2.14662),
@@ -4486,8 +4516,8 @@ INSERT INTO `yz4ph_finder_links_termsc` (`link_id`, `term_id`, `weight`) VALUES
 (5, 91, 1.86662),
 (8, 91, 1.86662),
 (9, 91, 1.86662),
-(8, 92, 2.19338),
 (5, 92, 2.19338),
+(8, 92, 2.19338),
 (9, 92, 2.19338),
 (8, 93, 0.98),
 (5, 93, 1.96),
@@ -4499,8 +4529,8 @@ INSERT INTO `yz4ph_finder_links_termsc` (`link_id`, `term_id`, `weight`) VALUES
 (8, 95, 0.37338),
 (9, 95, 0.37338),
 (5, 96, 1.68),
-(9, 96, 1.68),
 (8, 96, 1.68),
+(9, 96, 1.68),
 (8, 97, 1.02669),
 (5, 97, 2.05338),
 (9, 97, 2.05338),
@@ -4525,11 +4555,11 @@ INSERT INTO `yz4ph_finder_links_termsc` (`link_id`, `term_id`, `weight`) VALUES
 (5, 104, 0.37338),
 (8, 104, 0.37338),
 (9, 104, 0.37338),
-(8, 105, 1.82),
 (5, 105, 1.82),
+(8, 105, 1.82),
 (9, 105, 1.82),
-(8, 106, 1.96),
 (5, 106, 1.96),
+(8, 106, 1.96),
 (9, 106, 1.96),
 (5, 107, 0.28),
 (8, 107, 0.28),
@@ -4541,22 +4571,22 @@ INSERT INTO `yz4ph_finder_links_termsc` (`link_id`, `term_id`, `weight`) VALUES
 (5, 109, 2.1),
 (9, 109, 2.1),
 (5, 110, 0.18662),
-(9, 110, 0.18662),
 (8, 110, 0.18662),
+(9, 110, 0.18662),
 (5, 111, 1.68),
-(9, 111, 1.68),
 (8, 111, 1.68),
+(9, 111, 1.68),
 (5, 112, 2.00662),
 (8, 112, 2.00662),
 (9, 112, 2.00662),
 (5, 113, 0.46662),
 (8, 113, 0.46662),
 (9, 113, 0.46662),
-(8, 114, 1.82),
 (5, 114, 1.82),
+(8, 114, 1.82),
 (9, 114, 1.82),
-(8, 115, 1.96),
 (5, 115, 1.96),
+(8, 115, 1.96),
 (9, 115, 1.96),
 (5, 116, 0.28),
 (8, 116, 0.28),
@@ -4573,8 +4603,8 @@ INSERT INTO `yz4ph_finder_links_termsc` (`link_id`, `term_id`, `weight`) VALUES
 (5, 120, 1.86662),
 (8, 120, 1.86662),
 (9, 120, 1.86662),
-(8, 121, 2.19338),
 (5, 121, 2.19338),
+(8, 121, 2.19338),
 (9, 121, 2.19338);
 
 -- --------------------------------------------------------
@@ -4685,17 +4715,17 @@ INSERT INTO `yz4ph_finder_links_termse` (`link_id`, `term_id`, `weight`) VALUES
 (5, 325, 1.77338),
 (8, 325, 1.77338),
 (9, 325, 1.77338),
-(8, 326, 1.96),
 (5, 326, 1.96),
+(8, 326, 1.96),
 (9, 326, 1.96),
 (5, 327, 0.37338),
 (8, 327, 0.37338),
 (9, 327, 0.37338),
-(8, 328, 1.82),
 (5, 328, 1.82),
+(8, 328, 1.82),
 (9, 328, 1.82),
-(8, 329, 2.19338),
 (5, 329, 2.19338),
+(8, 329, 2.19338),
 (9, 329, 2.19338),
 (5, 330, 0.37338),
 (8, 330, 0.37338),
@@ -4703,8 +4733,8 @@ INSERT INTO `yz4ph_finder_links_termse` (`link_id`, `term_id`, `weight`) VALUES
 (5, 331, 1.72662),
 (8, 331, 1.72662),
 (9, 331, 1.72662),
-(8, 332, 1.96),
 (5, 332, 1.96),
+(8, 332, 1.96),
 (9, 332, 1.96),
 (5, 333, 0.93324),
 (8, 333, 0.93324),
@@ -4730,8 +4760,8 @@ INSERT INTO `yz4ph_finder_links_termse` (`link_id`, `term_id`, `weight`) VALUES
 (8, 340, 1.09669),
 (5, 340, 2.19338),
 (9, 340, 2.19338),
-(8, 341, 3.64),
 (5, 341, 3.64),
+(8, 341, 3.64),
 (9, 341, 3.64),
 (5, 342, 2.05338),
 (8, 342, 2.05338),
@@ -4740,8 +4770,8 @@ INSERT INTO `yz4ph_finder_links_termse` (`link_id`, `term_id`, `weight`) VALUES
 (8, 343, 1.91338),
 (9, 343, 1.91338),
 (5, 344, 0.55986),
-(9, 344, 0.55986),
 (8, 344, 0.55986),
+(9, 344, 0.55986),
 (5, 345, 1.72662),
 (8, 345, 1.72662),
 (9, 345, 1.72662),
@@ -4751,8 +4781,8 @@ INSERT INTO `yz4ph_finder_links_termse` (`link_id`, `term_id`, `weight`) VALUES
 (5, 347, 1.72662),
 (8, 347, 1.72662),
 (9, 347, 1.72662),
-(8, 348, 1.96),
 (5, 348, 1.96),
+(8, 348, 1.96),
 (9, 348, 1.96),
 (5, 349, 1.72662),
 (8, 349, 1.72662),
@@ -4763,6 +4793,7 @@ INSERT INTO `yz4ph_finder_links_termse` (`link_id`, `term_id`, `weight`) VALUES
 (13, 455, 1.3334),
 (14, 457, 0.17),
 (15, 457, 0.17),
+(17, 457, 0.17),
 (14, 458, 2),
 (15, 458, 2);
 
@@ -4808,7 +4839,8 @@ INSERT INTO `yz4ph_finder_taxonomy` (`id`, `parent_id`, `title`, `state`, `acces
 (8, 1, 'Language', 1, 1, 0),
 (9, 8, '*', 1, 1, 0),
 (10, 4, 'نفت و گاز', 1, 1, 0),
-(11, 4, 'لوله', 1, 1, 0);
+(11, 4, 'لوله', 1, 1, 0),
+(12, 4, 'پروفیل', 1, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -4885,7 +4917,15 @@ INSERT INTO `yz4ph_finder_taxonomy_map` (`link_id`, `node_id`) VALUES
 (15, 3),
 (15, 7),
 (15, 9),
-(15, 11);
+(15, 11),
+(16, 3),
+(16, 5),
+(16, 7),
+(16, 9),
+(17, 3),
+(17, 7),
+(17, 9),
+(17, 12);
 
 -- --------------------------------------------------------
 
@@ -4910,7 +4950,7 @@ CREATE TABLE `yz4ph_finder_terms` (
 --
 
 INSERT INTO `yz4ph_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`, `weight`, `soundex`, `links`, `language`) VALUES
-(1, '1', '1', 0, 0, 0.1, '', 33, '*'),
+(1, '1', '1', 0, 0, 0.1, '', 45, '*'),
 (2, '1 محصول', '1 محصول', 0, 1, 1.2333, 'م000', 3, '*'),
 (3, '1 محصول تست', '1 محصول تست', 0, 1, 1.3667, 'م000', 3, '*'),
 (4, 'categories', 'categories', 0, 0, 0.6667, 'C3262', 34, '*'),
@@ -4960,7 +5000,7 @@ INSERT INTO `yz4ph_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (49, 'وزنی', 'وزنی', 0, 0, 0.2667, 'و000', 6, '*'),
 (52, '304', '304', 0, 0, 0.3, '', 37, '*'),
 (53, 'listing product milgerd', 'listing product milgerd', 0, 1, 1.7667, 'L23521632354263', 3, '*'),
-(54, 'milgerd', 'milgerd', 0, 0, 0.4667, 'M4263', 37, '*'),
+(54, 'milgerd', 'milgerd', 0, 0, 0.4667, 'M4263', 38, '*'),
 (55, 'milgerd 304', 'milgerd 304', 0, 1, 1.3667, 'M4263', 37, '*'),
 (56, 'product milgerd', 'product milgerd', 0, 1, 1.5, 'P632354263', 37, '*'),
 (57, 'product milgerd 304', 'product milgerd 304', 0, 1, 1.6333, 'P632354263', 37, '*'),
@@ -5356,8 +5396,9 @@ INSERT INTO `yz4ph_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (453, 'p4r44r33r3r33', 'p4r44r33r3r33', 0, 0, 0.8667, 'P600', 1, '*'),
 (454, '4', '4', 0, 0, 0.1, '', 2, '*'),
 (455, 'erfreffref', 'erfreffref', 0, 0, 0.6667, 'E616161', 2, '*'),
-(457, '5', '5', 0, 0, 0.1, '', 2, '*'),
-(458, 'efefeefefrffref', 'efefeefefrffref', 0, 0, 1, 'E16161', 2, '*');
+(457, '5', '5', 0, 0, 0.1, '', 8, '*'),
+(458, 'efefeefefrffref', 'efefeefefrffref', 0, 0, 1, 'E16161', 2, '*'),
+(460, 'profile', 'profile', 0, 0, 0.4667, 'P614', 6, '*');
 
 -- --------------------------------------------------------
 
@@ -5660,6 +5701,13 @@ CREATE TABLE `yz4ph_hikashop_cart` (
   `cart_ip` varchar(255) NOT NULL DEFAULT ''
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `yz4ph_hikashop_cart`
+--
+
+INSERT INTO `yz4ph_hikashop_cart` (`cart_id`, `user_id`, `session_id`, `cart_modified`, `cart_type`, `cart_coupon`, `cart_currency_id`, `cart_payment_id`, `cart_shipping_ids`, `cart_billing_address_id`, `cart_shipping_address_ids`, `cart_name`, `cart_current`, `cart_share`, `cart_params`, `cart_fields`, `cart_ip`) VALUES
+(24, 44, '92b65f8262111a0e2e53e3e4bd15d9eb', 1625142829, 'cart', '', 183, 3, '2@0', 9, '0', '', 1, 'nobody', '{}', NULL, '127.0.0.1');
+
 -- --------------------------------------------------------
 
 --
@@ -5678,8 +5726,17 @@ CREATE TABLE `yz4ph_hikashop_cart_product` (
   `cart_product_wishlist_product_id` int(11) NOT NULL DEFAULT '0',
   `cart_product_ref_price` decimal(17,5) DEFAULT NULL,
   `desired_weight` text,
-  `desiredweight` text
+  `desiredweight` text,
+  `desiredlength` text,
+  `desireddiameter` text
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `yz4ph_hikashop_cart_product`
+--
+
+INSERT INTO `yz4ph_hikashop_cart_product` (`cart_product_id`, `cart_id`, `product_id`, `cart_product_quantity`, `cart_product_parent_id`, `cart_product_modified`, `cart_product_option_parent_id`, `cart_product_wishlist_id`, `cart_product_wishlist_product_id`, `cart_product_ref_price`, `desired_weight`, `desiredweight`, `desiredlength`, `desireddiameter`) VALUES
+(58, 24, 1, 1, 0, 1625142280, 0, 0, 0, NULL, NULL, '66.55', '27', '20');
 
 -- --------------------------------------------------------
 
@@ -6370,7 +6427,10 @@ INSERT INTO `yz4ph_hikashop_field` (`field_id`, `field_table`, `field_realname`,
 (21, 'product', 'reserve', 'reserve', 'text', '', 0, 4, 'a:21:{s:15:\"limit_to_parent\";s:0:\"\";s:12:\"errormessage\";s:0:\"\";s:5:\"regex\";s:0:\"\";s:9:\"attribute\";s:0:\"\";s:11:\"placeholder\";s:0:\"\";s:6:\"inline\";s:1:\"0\";s:12:\"target_blank\";s:1:\"1\";s:4:\"cols\";s:0:\"\";s:9:\"filtering\";s:1:\"1\";s:9:\"maxlength\";s:1:\"0\";s:4:\"rows\";s:0:\"\";s:9:\"zone_type\";s:7:\"country\";s:12:\"pleaseselect\";s:1:\"0\";s:4:\"size\";s:0:\"\";s:6:\"format\";s:8:\"%Y-%m-%d\";s:5:\"allow\";s:0:\"\";s:18:\"allowed_extensions\";s:0:\"\";s:8:\"multiple\";s:1:\"0\";s:8:\"readonly\";s:1:\"0\";s:12:\"translatable\";s:1:\"0\";s:18:\"datepicker_options\";a:13:{s:5:\"today\";s:1:\"0\";s:6:\"inline\";s:1:\"0\";s:12:\"monday_first\";s:1:\"0\";s:12:\"change_month\";s:1:\"0\";s:11:\"change_year\";s:1:\"0\";s:16:\"year_range_start\";s:0:\"\";s:14:\"year_range_end\";s:0:\"\";s:14:\"show_btn_panel\";s:1:\"0\";s:11:\"show_months\";s:1:\"1\";s:11:\"other_month\";s:1:\"0\";s:19:\"exclude_days_format\";s:3:\"mdY\";s:7:\"waiting\";s:0:\"\";s:14:\"hour_extra_day\";s:0:\"\";}}', 0, 0, '', 'all', 'all', 0, '', '', 0, 1, 0, ';compare=0;front_listing=0;back_invoice=0;back_shipping_invoice=0;order_form=0;back_cart_details=0;front_cart_details=0;checkout=0;mail_order_notif=0;mail_status_notif=0;mail_order_creation=0;mail_admin_notif=0;mail_payment_notif=0;', '', ''),
 (22, 'product', 'ابعاد', 'dimension', 'text', '', 1, 5, 'a:21:{s:15:\"limit_to_parent\";s:0:\"\";s:12:\"errormessage\";s:0:\"\";s:5:\"regex\";s:0:\"\";s:9:\"attribute\";s:0:\"\";s:11:\"placeholder\";s:0:\"\";s:6:\"inline\";s:1:\"0\";s:12:\"target_blank\";s:1:\"1\";s:4:\"cols\";s:0:\"\";s:9:\"filtering\";s:1:\"1\";s:9:\"maxlength\";s:1:\"0\";s:4:\"rows\";s:0:\"\";s:9:\"zone_type\";s:7:\"country\";s:12:\"pleaseselect\";s:1:\"0\";s:4:\"size\";s:0:\"\";s:6:\"format\";s:8:\"%Y-%m-%d\";s:5:\"allow\";s:0:\"\";s:18:\"allowed_extensions\";s:0:\"\";s:8:\"multiple\";s:1:\"0\";s:8:\"readonly\";s:1:\"0\";s:12:\"translatable\";s:1:\"0\";s:18:\"datepicker_options\";a:13:{s:5:\"today\";s:1:\"0\";s:6:\"inline\";s:1:\"0\";s:12:\"monday_first\";s:1:\"0\";s:12:\"change_month\";s:1:\"0\";s:11:\"change_year\";s:1:\"0\";s:16:\"year_range_start\";s:0:\"\";s:14:\"year_range_end\";s:0:\"\";s:14:\"show_btn_panel\";s:1:\"0\";s:11:\"show_months\";s:1:\"1\";s:11:\"other_month\";s:1:\"0\";s:19:\"exclude_days_format\";s:3:\"mdY\";s:7:\"waiting\";s:0:\"\";s:14:\"hour_extra_day\";s:0:\"\";}}', 0, 0, '', 'all', ',2,12,', 1, '', '', 1, 1, 0, ';compare=0;front_listing=0;back_invoice=0;back_shipping_invoice=0;order_form=0;back_cart_details=0;front_cart_details=0;checkout=0;mail_order_notif=0;mail_status_notif=0;mail_order_creation=0;mail_admin_notif=0;mail_payment_notif=0;', '', ''),
 (23, 'product', 'وزن', 'field_weight', 'text', '', 1, 6, 'a:21:{s:15:\"limit_to_parent\";s:0:\"\";s:12:\"errormessage\";s:0:\"\";s:5:\"regex\";s:0:\"\";s:9:\"attribute\";s:0:\"\";s:11:\"placeholder\";s:0:\"\";s:6:\"inline\";s:1:\"0\";s:12:\"target_blank\";s:1:\"1\";s:4:\"cols\";s:0:\"\";s:9:\"filtering\";s:1:\"1\";s:9:\"maxlength\";s:1:\"0\";s:4:\"rows\";s:0:\"\";s:9:\"zone_type\";s:7:\"country\";s:12:\"pleaseselect\";s:1:\"0\";s:4:\"size\";s:0:\"\";s:6:\"format\";s:8:\"%Y-%m-%d\";s:5:\"allow\";s:0:\"\";s:18:\"allowed_extensions\";s:0:\"\";s:8:\"multiple\";s:1:\"0\";s:8:\"readonly\";s:1:\"0\";s:12:\"translatable\";s:1:\"0\";s:18:\"datepicker_options\";a:13:{s:5:\"today\";s:1:\"0\";s:6:\"inline\";s:1:\"0\";s:12:\"monday_first\";s:1:\"0\";s:12:\"change_month\";s:1:\"0\";s:11:\"change_year\";s:1:\"0\";s:16:\"year_range_start\";s:0:\"\";s:14:\"year_range_end\";s:0:\"\";s:14:\"show_btn_panel\";s:1:\"0\";s:11:\"show_months\";s:1:\"1\";s:11:\"other_month\";s:1:\"0\";s:19:\"exclude_days_format\";s:3:\"mdY\";s:7:\"waiting\";s:0:\"\";s:14:\"hour_extra_day\";s:0:\"\";}}', 0, 0, '', 'all', ',2,12,', 1, '', '', 1, 1, 0, ';compare=0;front_listing=0;back_invoice=0;back_shipping_invoice=0;order_form=0;back_cart_details=0;front_cart_details=0;checkout=0;mail_order_notif=0;mail_status_notif=0;mail_order_creation=0;mail_admin_notif=0;mail_payment_notif=0;', '', ''),
-(25, 'item', 'وزن مورد درخواست', 'desiredweight', 'text', '', 1, 1, 'a:19:{s:12:\"errormessage\";s:0:\"\";s:5:\"regex\";s:0:\"\";s:9:\"attribute\";s:0:\"\";s:11:\"placeholder\";s:0:\"\";s:6:\"inline\";s:1:\"0\";s:12:\"target_blank\";s:1:\"1\";s:4:\"cols\";s:0:\"\";s:9:\"filtering\";s:1:\"1\";s:9:\"maxlength\";s:1:\"0\";s:4:\"rows\";s:0:\"\";s:9:\"zone_type\";s:7:\"country\";s:12:\"pleaseselect\";s:1:\"0\";s:4:\"size\";s:0:\"\";s:6:\"format\";s:8:\"%Y-%m-%d\";s:5:\"allow\";s:0:\"\";s:18:\"allowed_extensions\";s:0:\"\";s:8:\"multiple\";s:1:\"0\";s:8:\"readonly\";s:1:\"0\";s:18:\"datepicker_options\";a:13:{s:5:\"today\";s:1:\"0\";s:6:\"inline\";s:1:\"0\";s:12:\"monday_first\";s:1:\"0\";s:12:\"change_month\";s:1:\"0\";s:11:\"change_year\";s:1:\"0\";s:16:\"year_range_start\";s:0:\"\";s:14:\"year_range_end\";s:0:\"\";s:14:\"show_btn_panel\";s:1:\"0\";s:11:\"show_months\";s:1:\"1\";s:11:\"other_month\";s:1:\"0\";s:19:\"exclude_days_format\";s:3:\"mdY\";s:7:\"waiting\";s:0:\"\";s:14:\"hour_extra_day\";s:0:\"\";}}', 0, 0, '', 'all', ',13,', 0, '', '', 1, 1, 1, ';front_product_listing=0;front_order=1;order_edit=1;back_invoice=1;back_shipping_invoice=0;product_cart=0;checkout=0;cart_edit=0;front_cart_details=0;back_cart_details=0;mail_order_notif=0;mail_status_notif=0;mail_order_creation=0;mail_admin_notif=0;mail_payment_notif=0;', '', '');
+(25, 'item', 'وزن مورد درخواست', 'desiredweight', 'text', '', 1, 1, 'a:20:{s:15:\"limit_to_parent\";s:0:\"\";s:12:\"errormessage\";s:0:\"\";s:5:\"regex\";s:0:\"\";s:9:\"attribute\";s:0:\"\";s:11:\"placeholder\";s:0:\"\";s:6:\"inline\";s:1:\"0\";s:12:\"target_blank\";s:1:\"1\";s:4:\"cols\";s:0:\"\";s:9:\"filtering\";s:1:\"1\";s:9:\"maxlength\";s:1:\"0\";s:4:\"rows\";s:0:\"\";s:9:\"zone_type\";s:7:\"country\";s:12:\"pleaseselect\";s:1:\"0\";s:4:\"size\";s:0:\"\";s:6:\"format\";s:8:\"%Y-%m-%d\";s:5:\"allow\";s:0:\"\";s:18:\"allowed_extensions\";s:0:\"\";s:8:\"multiple\";s:1:\"0\";s:8:\"readonly\";s:1:\"0\";s:18:\"datepicker_options\";a:13:{s:5:\"today\";s:1:\"0\";s:6:\"inline\";s:1:\"0\";s:12:\"monday_first\";s:1:\"0\";s:12:\"change_month\";s:1:\"0\";s:11:\"change_year\";s:1:\"0\";s:16:\"year_range_start\";s:0:\"\";s:14:\"year_range_end\";s:0:\"\";s:14:\"show_btn_panel\";s:1:\"0\";s:11:\"show_months\";s:1:\"1\";s:11:\"other_month\";s:1:\"0\";s:19:\"exclude_days_format\";s:3:\"mdY\";s:7:\"waiting\";s:0:\"\";s:14:\"hour_extra_day\";s:0:\"\";}}', 0, 0, '', 'all', ',13,', 0, '', '', 1, 1, 1, ';front_product_listing=0;front_order=1;order_edit=1;back_invoice=1;back_shipping_invoice=0;product_cart=1;checkout=0;cart_edit=0;front_cart_details=0;back_cart_details=0;mail_order_notif=0;mail_status_notif=0;mail_order_creation=0;mail_admin_notif=0;mail_payment_notif=0;', '', ''),
+(26, 'item', 'متراژ مورد درخواست', 'desiredlength', 'text', '', 1, 2, 'a:20:{s:15:\"limit_to_parent\";s:0:\"\";s:12:\"errormessage\";s:0:\"\";s:5:\"regex\";s:0:\"\";s:9:\"attribute\";s:0:\"\";s:11:\"placeholder\";s:0:\"\";s:6:\"inline\";s:1:\"0\";s:12:\"target_blank\";s:1:\"1\";s:4:\"cols\";s:0:\"\";s:9:\"filtering\";s:1:\"1\";s:9:\"maxlength\";s:1:\"0\";s:4:\"rows\";s:0:\"\";s:9:\"zone_type\";s:7:\"country\";s:12:\"pleaseselect\";s:1:\"0\";s:4:\"size\";s:0:\"\";s:6:\"format\";s:8:\"%Y-%m-%d\";s:5:\"allow\";s:0:\"\";s:18:\"allowed_extensions\";s:0:\"\";s:8:\"multiple\";s:1:\"0\";s:8:\"readonly\";s:1:\"0\";s:18:\"datepicker_options\";a:13:{s:5:\"today\";s:1:\"0\";s:6:\"inline\";s:1:\"0\";s:12:\"monday_first\";s:1:\"0\";s:12:\"change_month\";s:1:\"0\";s:11:\"change_year\";s:1:\"0\";s:16:\"year_range_start\";s:0:\"\";s:14:\"year_range_end\";s:0:\"\";s:14:\"show_btn_panel\";s:1:\"0\";s:11:\"show_months\";s:1:\"1\";s:11:\"other_month\";s:1:\"0\";s:19:\"exclude_days_format\";s:3:\"mdY\";s:7:\"waiting\";s:0:\"\";s:14:\"hour_extra_day\";s:0:\"\";}}', 0, 0, '', 'all', ',13,', 0, '', '', 1, 1, 1, ';front_product_listing=0;front_order=1;order_edit=1;back_invoice=1;back_shipping_invoice=0;product_cart=0;checkout=0;cart_edit=0;front_cart_details=0;back_cart_details=0;mail_order_notif=0;mail_status_notif=0;mail_order_creation=0;mail_admin_notif=0;mail_payment_notif=0;', '', ''),
+(27, 'item', 'قطر مورد درخواست', 'desireddiameter', 'text', '', 1, 3, 'a:20:{s:15:\"limit_to_parent\";s:0:\"\";s:12:\"errormessage\";s:0:\"\";s:5:\"regex\";s:0:\"\";s:9:\"attribute\";s:0:\"\";s:11:\"placeholder\";s:0:\"\";s:6:\"inline\";s:1:\"0\";s:12:\"target_blank\";s:1:\"1\";s:4:\"cols\";s:0:\"\";s:9:\"filtering\";s:1:\"1\";s:9:\"maxlength\";s:1:\"0\";s:4:\"rows\";s:0:\"\";s:9:\"zone_type\";s:7:\"country\";s:12:\"pleaseselect\";s:1:\"0\";s:4:\"size\";s:0:\"\";s:6:\"format\";s:8:\"%Y-%m-%d\";s:5:\"allow\";s:0:\"\";s:18:\"allowed_extensions\";s:0:\"\";s:8:\"multiple\";s:1:\"0\";s:8:\"readonly\";s:1:\"0\";s:18:\"datepicker_options\";a:13:{s:5:\"today\";s:1:\"0\";s:6:\"inline\";s:1:\"0\";s:12:\"monday_first\";s:1:\"0\";s:12:\"change_month\";s:1:\"0\";s:11:\"change_year\";s:1:\"0\";s:16:\"year_range_start\";s:0:\"\";s:14:\"year_range_end\";s:0:\"\";s:14:\"show_btn_panel\";s:1:\"0\";s:11:\"show_months\";s:1:\"1\";s:11:\"other_month\";s:1:\"0\";s:19:\"exclude_days_format\";s:3:\"mdY\";s:7:\"waiting\";s:0:\"\";s:14:\"hour_extra_day\";s:0:\"\";}}', 0, 0, '', 'all', ',13,', 0, '', '', 1, 1, 1, ';front_product_listing=0;front_order=1;order_edit=1;back_invoice=1;back_shipping_invoice=0;product_cart=0;checkout=0;cart_edit=0;front_cart_details=0;back_cart_details=0;mail_order_notif=0;mail_status_notif=0;mail_order_creation=0;mail_admin_notif=0;mail_payment_notif=0;', '', ''),
+(28, 'item', 'پیام فروش وزنی', 'customtext_181_15_32_35', 'customtext', '', 1, 4, 'a:21:{s:15:\"limit_to_parent\";s:0:\"\";s:12:\"errormessage\";s:0:\"\";s:5:\"regex\";s:0:\"\";s:9:\"attribute\";s:0:\"\";s:11:\"placeholder\";s:0:\"\";s:6:\"inline\";s:1:\"0\";s:12:\"target_blank\";s:1:\"1\";s:4:\"cols\";s:0:\"\";s:9:\"filtering\";s:1:\"1\";s:9:\"maxlength\";s:1:\"0\";s:4:\"rows\";s:0:\"\";s:9:\"zone_type\";s:7:\"country\";s:12:\"pleaseselect\";s:1:\"0\";s:4:\"size\";s:0:\"\";s:6:\"format\";s:8:\"%Y-%m-%d\";s:5:\"allow\";s:0:\"\";s:18:\"allowed_extensions\";s:0:\"\";s:8:\"multiple\";s:1:\"0\";s:8:\"readonly\";s:1:\"0\";s:18:\"datepicker_options\";a:13:{s:5:\"today\";s:1:\"0\";s:6:\"inline\";s:1:\"0\";s:12:\"monday_first\";s:1:\"0\";s:12:\"change_month\";s:1:\"0\";s:11:\"change_year\";s:1:\"0\";s:16:\"year_range_start\";s:0:\"\";s:14:\"year_range_end\";s:0:\"\";s:14:\"show_btn_panel\";s:1:\"0\";s:11:\"show_months\";s:1:\"1\";s:11:\"other_month\";s:1:\"0\";s:19:\"exclude_days_format\";s:3:\"mdY\";s:7:\"waiting\";s:0:\"\";s:14:\"hour_extra_day\";s:0:\"\";}s:10:\"customtext\";s:28:\"قیمت هر کیلوگرم\";}', 0, 0, '', 'all', ',13,', 0, '', '', 1, 0, 0, ';front_product_listing=0;front_order=0;back_invoice=0;', '', '');
 
 -- --------------------------------------------------------
 
@@ -6693,33 +6753,35 @@ CREATE TABLE `yz4ph_hikashop_order_product` (
   `order_product_height` decimal(12,3) UNSIGNED DEFAULT NULL,
   `order_product_dimension_unit` varchar(255) DEFAULT NULL,
   `desired_weight` text,
-  `desiredweight` text
+  `desiredweight` text,
+  `desiredlength` text,
+  `desireddiameter` text
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `yz4ph_hikashop_order_product`
 --
 
-INSERT INTO `yz4ph_hikashop_order_product` (`order_product_id`, `order_id`, `product_id`, `order_product_quantity`, `order_product_name`, `order_product_code`, `order_product_price`, `order_product_tax`, `order_product_tax_info`, `order_product_options`, `order_product_option_parent_id`, `order_product_status`, `order_product_wishlist_id`, `order_product_wishlist_product_id`, `order_product_shipping_id`, `order_product_shipping_method`, `order_product_shipping_price`, `order_product_shipping_tax`, `order_product_shipping_params`, `order_product_params`, `order_product_weight`, `order_product_weight_unit`, `order_product_width`, `order_product_length`, `order_product_height`, `order_product_dimension_unit`, `desired_weight`, `desiredweight`) VALUES
-(1, 1, 2, 1, 'میلگرد ۳۰۴', 'milgerd-304', '400000.00000', '0.00000', 'a:1:{s:13:\"0000_00000001\";O:8:\"stdClass\":20:{s:11:\"taxation_id\";s:1:\"1\";s:12:\"zone_namekey\";a:1:{i:0;s:16:\"country_Iran_101\";}s:16:\"category_namekey\";s:11:\"default_tax\";s:11:\"tax_namekey\";s:0:\"\";s:18:\"taxation_published\";s:1:\"1\";s:13:\"taxation_type\";s:0:\"\";s:15:\"taxation_access\";s:3:\"all\";s:19:\"taxation_cumulative\";s:1:\"0\";s:18:\"taxation_post_code\";s:0:\"\";s:19:\"taxation_date_start\";s:1:\"0\";s:17:\"taxation_date_end\";s:1:\"0\";s:22:\"taxation_internal_code\";s:1:\"0\";s:13:\"taxation_note\";s:0:\"\";s:16:\"taxation_site_id\";s:0:\"\";s:17:\"taxation_ordering\";s:1:\"0\";s:8:\"tax_rate\";s:7:\"0.00000\";s:9:\"zone_type\";s:7:\"country\";s:9:\"tax_ratio\";i:1;s:10:\"tax_amount\";d:0;s:6:\"amount\";d:400000;}}', '', 0, '', 0, 0, '3@0', 'manual', '0.00000', '0.00000', '', NULL, '1.000', 'kg', '0.000', '0.000', '0.000', 'm', NULL, NULL),
-(2, 2, 2, 1, 'میلگرد ۳۰۴', 'milgerd-304', '400000.00000', '0.00000', 'a:1:{s:13:\"0000_00000001\";O:8:\"stdClass\":20:{s:11:\"taxation_id\";s:1:\"1\";s:12:\"zone_namekey\";a:1:{i:0;s:16:\"country_Iran_101\";}s:16:\"category_namekey\";s:11:\"default_tax\";s:11:\"tax_namekey\";s:0:\"\";s:18:\"taxation_published\";s:1:\"1\";s:13:\"taxation_type\";s:0:\"\";s:15:\"taxation_access\";s:3:\"all\";s:19:\"taxation_cumulative\";s:1:\"0\";s:18:\"taxation_post_code\";s:0:\"\";s:19:\"taxation_date_start\";s:1:\"0\";s:17:\"taxation_date_end\";s:1:\"0\";s:22:\"taxation_internal_code\";s:1:\"0\";s:13:\"taxation_note\";s:0:\"\";s:16:\"taxation_site_id\";s:0:\"\";s:17:\"taxation_ordering\";s:1:\"0\";s:8:\"tax_rate\";s:7:\"0.00000\";s:9:\"zone_type\";s:7:\"country\";s:9:\"tax_ratio\";i:1;s:10:\"tax_amount\";d:0;s:6:\"amount\";d:400000;}}', '', 0, '', 0, 0, '1@0', 'manual', '0.00000', '0.00000', '', NULL, '1.000', 'kg', '0.000', '0.000', '0.000', 'm', NULL, NULL),
-(3, 3, 2, 1, 'میلگرد ۳۰۴', 'milgerd-304', '400000.00000', '0.00000', 'a:1:{s:13:\"0000_00000001\";O:8:\"stdClass\":20:{s:11:\"taxation_id\";s:1:\"1\";s:12:\"zone_namekey\";a:1:{i:0;s:16:\"country_Iran_101\";}s:16:\"category_namekey\";s:11:\"default_tax\";s:11:\"tax_namekey\";s:0:\"\";s:18:\"taxation_published\";s:1:\"1\";s:13:\"taxation_type\";s:0:\"\";s:15:\"taxation_access\";s:3:\"all\";s:19:\"taxation_cumulative\";s:1:\"0\";s:18:\"taxation_post_code\";s:0:\"\";s:19:\"taxation_date_start\";s:1:\"0\";s:17:\"taxation_date_end\";s:1:\"0\";s:22:\"taxation_internal_code\";s:1:\"0\";s:13:\"taxation_note\";s:0:\"\";s:16:\"taxation_site_id\";s:0:\"\";s:17:\"taxation_ordering\";s:1:\"0\";s:8:\"tax_rate\";s:7:\"0.00000\";s:9:\"zone_type\";s:7:\"country\";s:9:\"tax_ratio\";i:1;s:10:\"tax_amount\";d:0;s:6:\"amount\";d:400000;}}', '', 0, '', 0, 0, '2@0', 'manual', '0.00000', '0.00000', '', NULL, '1.000', 'kg', '0.000', '0.000', '0.000', 'm', NULL, NULL),
-(4, 3, 3, 1, 'محصول تست', 'product_1_copy1951764451', '500000.00000', '0.00000', 'a:1:{s:13:\"0000_00000001\";O:8:\"stdClass\":20:{s:11:\"taxation_id\";s:1:\"1\";s:12:\"zone_namekey\";a:1:{i:0;s:16:\"country_Iran_101\";}s:16:\"category_namekey\";s:11:\"default_tax\";s:11:\"tax_namekey\";s:0:\"\";s:18:\"taxation_published\";s:1:\"1\";s:13:\"taxation_type\";s:0:\"\";s:15:\"taxation_access\";s:3:\"all\";s:19:\"taxation_cumulative\";s:1:\"0\";s:18:\"taxation_post_code\";s:0:\"\";s:19:\"taxation_date_start\";s:1:\"0\";s:17:\"taxation_date_end\";s:1:\"0\";s:22:\"taxation_internal_code\";s:1:\"0\";s:13:\"taxation_note\";s:0:\"\";s:16:\"taxation_site_id\";s:0:\"\";s:17:\"taxation_ordering\";s:1:\"0\";s:8:\"tax_rate\";s:7:\"0.00000\";s:9:\"zone_type\";s:7:\"country\";s:9:\"tax_ratio\";i:1;s:10:\"tax_amount\";d:0;s:6:\"amount\";d:500000;}}', '', 0, '', 0, 0, '2@0', 'manual', '0.00000', '0.00000', '', NULL, '0.000', 'kg', '0.000', '0.000', '0.000', 'm', NULL, NULL),
-(5, 3, 1, 3, 'محصول فروش وزنی', 'product_1', '500000.00000', '0.00000', 'a:1:{s:13:\"0000_00000001\";O:8:\"stdClass\":20:{s:11:\"taxation_id\";s:1:\"1\";s:12:\"zone_namekey\";a:1:{i:0;s:16:\"country_Iran_101\";}s:16:\"category_namekey\";s:11:\"default_tax\";s:11:\"tax_namekey\";s:0:\"\";s:18:\"taxation_published\";s:1:\"1\";s:13:\"taxation_type\";s:0:\"\";s:15:\"taxation_access\";s:3:\"all\";s:19:\"taxation_cumulative\";s:1:\"0\";s:18:\"taxation_post_code\";s:0:\"\";s:19:\"taxation_date_start\";s:1:\"0\";s:17:\"taxation_date_end\";s:1:\"0\";s:22:\"taxation_internal_code\";s:1:\"0\";s:13:\"taxation_note\";s:0:\"\";s:16:\"taxation_site_id\";s:0:\"\";s:17:\"taxation_ordering\";s:1:\"0\";s:8:\"tax_rate\";s:7:\"0.00000\";s:9:\"zone_type\";s:7:\"country\";s:9:\"tax_ratio\";i:1;s:10:\"tax_amount\";d:0;s:6:\"amount\";d:500000;}}', '', 0, '', 0, 0, '2@0', 'manual', '0.00000', '0.00000', '', NULL, '0.000', 'kg', '0.000', '0.000', '0.000', 'm', NULL, NULL),
-(6, 4, 2, 1, 'میلگرد ۳۰۴', 'milgerd-304', '400000.00000', '0.00000', 'a:1:{s:13:\"0000_00000001\";O:8:\"stdClass\":20:{s:11:\"taxation_id\";s:1:\"1\";s:12:\"zone_namekey\";a:1:{i:0;s:16:\"country_Iran_101\";}s:16:\"category_namekey\";s:11:\"default_tax\";s:11:\"tax_namekey\";s:0:\"\";s:18:\"taxation_published\";s:1:\"1\";s:13:\"taxation_type\";s:0:\"\";s:15:\"taxation_access\";s:3:\"all\";s:19:\"taxation_cumulative\";s:1:\"0\";s:18:\"taxation_post_code\";s:0:\"\";s:19:\"taxation_date_start\";s:1:\"0\";s:17:\"taxation_date_end\";s:1:\"0\";s:22:\"taxation_internal_code\";s:1:\"0\";s:13:\"taxation_note\";s:0:\"\";s:16:\"taxation_site_id\";s:0:\"\";s:17:\"taxation_ordering\";s:1:\"0\";s:8:\"tax_rate\";s:7:\"0.00000\";s:9:\"zone_type\";s:7:\"country\";s:9:\"tax_ratio\";i:1;s:10:\"tax_amount\";d:0;s:6:\"amount\";d:400000;}}', '', 0, '', 0, 0, '2@0', 'manual', '0.00000', '0.00000', '', NULL, '1.000', 'kg', '0.000', '0.000', '0.000', 'm', NULL, NULL),
-(7, 4, 6, 1, 'محصول تست 888888', 'product_1_copy372244252', '425000.00000', '0.00000', 'a:1:{s:13:\"0000_00000001\";O:8:\"stdClass\":17:{s:11:\"taxation_id\";s:1:\"1\";s:12:\"zone_namekey\";a:1:{i:0;s:16:\"country_Iran_101\";}s:16:\"category_namekey\";s:11:\"default_tax\";s:11:\"tax_namekey\";s:0:\"\";s:18:\"taxation_published\";s:1:\"1\";s:13:\"taxation_type\";s:0:\"\";s:15:\"taxation_access\";s:3:\"all\";s:19:\"taxation_cumulative\";s:1:\"0\";s:18:\"taxation_post_code\";s:0:\"\";s:19:\"taxation_date_start\";s:1:\"0\";s:17:\"taxation_date_end\";s:1:\"0\";s:22:\"taxation_internal_code\";s:1:\"0\";s:13:\"taxation_note\";s:0:\"\";s:16:\"taxation_site_id\";s:0:\"\";s:17:\"taxation_ordering\";s:1:\"0\";s:8:\"tax_rate\";s:7:\"0.00000\";s:9:\"zone_type\";s:7:\"country\";}}', '', 0, '', 0, 0, '2@0', 'manual', '0.00000', '0.00000', '', NULL, '0.000', 'kg', '0.000', '0.000', '0.000', 'm', NULL, NULL),
-(8, 5, 6, 1, 'محصول تست 888888', 'product_1_copy372244252', '425000.00000', '0.00000', 'a:1:{s:13:\"0000_00000001\";O:8:\"stdClass\":17:{s:11:\"taxation_id\";s:1:\"1\";s:12:\"zone_namekey\";a:1:{i:0;s:16:\"country_Iran_101\";}s:16:\"category_namekey\";s:11:\"default_tax\";s:11:\"tax_namekey\";s:0:\"\";s:18:\"taxation_published\";s:1:\"1\";s:13:\"taxation_type\";s:0:\"\";s:15:\"taxation_access\";s:3:\"all\";s:19:\"taxation_cumulative\";s:1:\"0\";s:18:\"taxation_post_code\";s:0:\"\";s:19:\"taxation_date_start\";s:1:\"0\";s:17:\"taxation_date_end\";s:1:\"0\";s:22:\"taxation_internal_code\";s:1:\"0\";s:13:\"taxation_note\";s:0:\"\";s:16:\"taxation_site_id\";s:0:\"\";s:17:\"taxation_ordering\";s:1:\"0\";s:8:\"tax_rate\";s:7:\"0.00000\";s:9:\"zone_type\";s:7:\"country\";}}', '', 0, '', 0, 0, '', '', '0.00000', '0.00000', '', NULL, '0.000', 'kg', '0.000', '0.000', '0.000', 'm', NULL, NULL),
-(9, 6, 2, 1, 'میلگرد ۳۰۴', 'milgerd-304', '400000.00000', '0.00000', 'a:1:{s:13:\"0000_00000001\";O:8:\"stdClass\":20:{s:11:\"taxation_id\";s:1:\"1\";s:12:\"zone_namekey\";a:1:{i:0;s:16:\"country_Iran_101\";}s:16:\"category_namekey\";s:11:\"default_tax\";s:11:\"tax_namekey\";s:0:\"\";s:18:\"taxation_published\";s:1:\"1\";s:13:\"taxation_type\";s:0:\"\";s:15:\"taxation_access\";s:3:\"all\";s:19:\"taxation_cumulative\";s:1:\"0\";s:18:\"taxation_post_code\";s:0:\"\";s:19:\"taxation_date_start\";s:1:\"0\";s:17:\"taxation_date_end\";s:1:\"0\";s:22:\"taxation_internal_code\";s:1:\"0\";s:13:\"taxation_note\";s:0:\"\";s:16:\"taxation_site_id\";s:0:\"\";s:17:\"taxation_ordering\";s:1:\"0\";s:8:\"tax_rate\";s:7:\"0.00000\";s:9:\"zone_type\";s:7:\"country\";s:9:\"tax_ratio\";i:1;s:10:\"tax_amount\";d:0;s:6:\"amount\";d:400000;}}', '', 0, '', 0, 0, '2@0', 'manual', '0.00000', '0.00000', '', NULL, '1.000', 'kg', '0.000', '0.000', '0.000', 'm', NULL, NULL),
-(10, 7, 6, 1, 'محصول تست 888888', 'product_1_copy372244252', '425000.00000', '0.00000', 'a:1:{s:13:\"0000_00000001\";O:8:\"stdClass\":17:{s:11:\"taxation_id\";s:1:\"1\";s:12:\"zone_namekey\";a:1:{i:0;s:16:\"country_Iran_101\";}s:16:\"category_namekey\";s:11:\"default_tax\";s:11:\"tax_namekey\";s:0:\"\";s:18:\"taxation_published\";s:1:\"1\";s:13:\"taxation_type\";s:0:\"\";s:15:\"taxation_access\";s:3:\"all\";s:19:\"taxation_cumulative\";s:1:\"0\";s:18:\"taxation_post_code\";s:0:\"\";s:19:\"taxation_date_start\";s:1:\"0\";s:17:\"taxation_date_end\";s:1:\"0\";s:22:\"taxation_internal_code\";s:1:\"0\";s:13:\"taxation_note\";s:0:\"\";s:16:\"taxation_site_id\";s:0:\"\";s:17:\"taxation_ordering\";s:1:\"0\";s:8:\"tax_rate\";s:7:\"0.00000\";s:9:\"zone_type\";s:7:\"country\";}}', '', 0, '', 0, 0, '', '', '0.00000', '0.00000', '', NULL, '0.000', 'kg', '0.000', '0.000', '0.000', 'm', NULL, NULL),
-(11, 8, 6, 1, 'محصول تست 888888', 'product_1_copy372244252', '425000.00000', '0.00000', 'a:1:{s:13:\"0000_00000001\";O:8:\"stdClass\":17:{s:11:\"taxation_id\";s:1:\"1\";s:12:\"zone_namekey\";a:1:{i:0;s:16:\"country_Iran_101\";}s:16:\"category_namekey\";s:11:\"default_tax\";s:11:\"tax_namekey\";s:0:\"\";s:18:\"taxation_published\";s:1:\"1\";s:13:\"taxation_type\";s:0:\"\";s:15:\"taxation_access\";s:3:\"all\";s:19:\"taxation_cumulative\";s:1:\"0\";s:18:\"taxation_post_code\";s:0:\"\";s:19:\"taxation_date_start\";s:1:\"0\";s:17:\"taxation_date_end\";s:1:\"0\";s:22:\"taxation_internal_code\";s:1:\"0\";s:13:\"taxation_note\";s:0:\"\";s:16:\"taxation_site_id\";s:0:\"\";s:17:\"taxation_ordering\";s:1:\"0\";s:8:\"tax_rate\";s:7:\"0.00000\";s:9:\"zone_type\";s:7:\"country\";}}', '', 0, '', 0, 0, '', '', '0.00000', '0.00000', '', NULL, '0.000', 'kg', '0.000', '0.000', '0.000', 'm', NULL, NULL),
-(12, 9, 6, 1, 'محصول تست 888888', 'product_1_copy372244252', '425000.00000', '0.00000', 'a:1:{s:13:\"0000_00000001\";O:8:\"stdClass\":17:{s:11:\"taxation_id\";s:1:\"1\";s:12:\"zone_namekey\";a:1:{i:0;s:16:\"country_Iran_101\";}s:16:\"category_namekey\";s:11:\"default_tax\";s:11:\"tax_namekey\";s:0:\"\";s:18:\"taxation_published\";s:1:\"1\";s:13:\"taxation_type\";s:0:\"\";s:15:\"taxation_access\";s:3:\"all\";s:19:\"taxation_cumulative\";s:1:\"0\";s:18:\"taxation_post_code\";s:0:\"\";s:19:\"taxation_date_start\";s:1:\"0\";s:17:\"taxation_date_end\";s:1:\"0\";s:22:\"taxation_internal_code\";s:1:\"0\";s:13:\"taxation_note\";s:0:\"\";s:16:\"taxation_site_id\";s:0:\"\";s:17:\"taxation_ordering\";s:1:\"0\";s:8:\"tax_rate\";s:7:\"0.00000\";s:9:\"zone_type\";s:7:\"country\";}}', '', 0, '', 0, 0, '', '', '0.00000', '0.00000', '', NULL, '0.000', 'kg', '0.000', '0.000', '0.000', 'm', NULL, NULL),
-(13, 10, 2, 1, 'میلگرد ۳۰۴', 'milgerd-304', '400000.00000', '0.00000', 'a:1:{s:13:\"0000_00000001\";O:8:\"stdClass\":20:{s:11:\"taxation_id\";s:1:\"1\";s:12:\"zone_namekey\";a:1:{i:0;s:16:\"country_Iran_101\";}s:16:\"category_namekey\";s:11:\"default_tax\";s:11:\"tax_namekey\";s:0:\"\";s:18:\"taxation_published\";s:1:\"1\";s:13:\"taxation_type\";s:0:\"\";s:15:\"taxation_access\";s:3:\"all\";s:19:\"taxation_cumulative\";s:1:\"0\";s:18:\"taxation_post_code\";s:0:\"\";s:19:\"taxation_date_start\";s:1:\"0\";s:17:\"taxation_date_end\";s:1:\"0\";s:22:\"taxation_internal_code\";s:1:\"0\";s:13:\"taxation_note\";s:0:\"\";s:16:\"taxation_site_id\";s:0:\"\";s:17:\"taxation_ordering\";s:1:\"0\";s:8:\"tax_rate\";s:7:\"0.00000\";s:9:\"zone_type\";s:7:\"country\";s:9:\"tax_ratio\";i:1;s:10:\"tax_amount\";d:0;s:6:\"amount\";d:400000;}}', '', 0, '', 0, 0, '1@0', 'manual', '0.00000', '0.00000', '', NULL, '1.000', 'kg', '0.000', '0.000', '0.000', 'm', NULL, NULL),
-(14, 11, 6, 1, 'محصول تست 888888', 'product_1_copy372244252', '425000.00000', '0.00000', 'a:1:{s:13:\"0000_00000001\";O:8:\"stdClass\":17:{s:11:\"taxation_id\";s:1:\"1\";s:12:\"zone_namekey\";a:1:{i:0;s:16:\"country_Iran_101\";}s:16:\"category_namekey\";s:11:\"default_tax\";s:11:\"tax_namekey\";s:0:\"\";s:18:\"taxation_published\";s:1:\"1\";s:13:\"taxation_type\";s:0:\"\";s:15:\"taxation_access\";s:3:\"all\";s:19:\"taxation_cumulative\";s:1:\"0\";s:18:\"taxation_post_code\";s:0:\"\";s:19:\"taxation_date_start\";s:1:\"0\";s:17:\"taxation_date_end\";s:1:\"0\";s:22:\"taxation_internal_code\";s:1:\"0\";s:13:\"taxation_note\";s:0:\"\";s:16:\"taxation_site_id\";s:0:\"\";s:17:\"taxation_ordering\";s:1:\"0\";s:8:\"tax_rate\";s:7:\"0.00000\";s:9:\"zone_type\";s:7:\"country\";}}', '', 0, '', 0, 0, '', '', '0.00000', '0.00000', '', NULL, '0.000', 'kg', '0.000', '0.000', '0.000', 'm', NULL, NULL),
-(15, 12, 2, 1, 'میلگرد ۳۰۴', 'milgerd-304', '400000.00000', '0.00000', 'a:1:{s:13:\"0000_00000001\";O:8:\"stdClass\":20:{s:11:\"taxation_id\";s:1:\"1\";s:12:\"zone_namekey\";a:1:{i:0;s:16:\"country_Iran_101\";}s:16:\"category_namekey\";s:11:\"default_tax\";s:11:\"tax_namekey\";s:0:\"\";s:18:\"taxation_published\";s:1:\"1\";s:13:\"taxation_type\";s:0:\"\";s:15:\"taxation_access\";s:3:\"all\";s:19:\"taxation_cumulative\";s:1:\"0\";s:18:\"taxation_post_code\";s:0:\"\";s:19:\"taxation_date_start\";s:1:\"0\";s:17:\"taxation_date_end\";s:1:\"0\";s:22:\"taxation_internal_code\";s:1:\"0\";s:13:\"taxation_note\";s:0:\"\";s:16:\"taxation_site_id\";s:0:\"\";s:17:\"taxation_ordering\";s:1:\"0\";s:8:\"tax_rate\";s:7:\"0.00000\";s:9:\"zone_type\";s:7:\"country\";s:9:\"tax_ratio\";i:1;s:10:\"tax_amount\";d:0;s:6:\"amount\";d:400000;}}', '', 0, '', 0, 0, '1@0', 'manual', '0.00000', '0.00000', '', NULL, '1.000', 'kg', '0.000', '0.000', '0.000', 'm', NULL, NULL),
-(16, 13, 2, 2, 'میلگرد ۳۰۴', 'milgerd-304', '400000.00000', '0.00000', 'a:1:{s:13:\"0000_00000001\";O:8:\"stdClass\":20:{s:11:\"taxation_id\";s:1:\"1\";s:12:\"zone_namekey\";a:1:{i:0;s:16:\"country_Iran_101\";}s:16:\"category_namekey\";s:11:\"default_tax\";s:11:\"tax_namekey\";s:0:\"\";s:18:\"taxation_published\";s:1:\"1\";s:13:\"taxation_type\";s:0:\"\";s:15:\"taxation_access\";s:3:\"all\";s:19:\"taxation_cumulative\";s:1:\"0\";s:18:\"taxation_post_code\";s:0:\"\";s:19:\"taxation_date_start\";s:1:\"0\";s:17:\"taxation_date_end\";s:1:\"0\";s:22:\"taxation_internal_code\";s:1:\"0\";s:13:\"taxation_note\";s:0:\"\";s:16:\"taxation_site_id\";s:0:\"\";s:17:\"taxation_ordering\";s:1:\"0\";s:8:\"tax_rate\";s:7:\"0.00000\";s:9:\"zone_type\";s:7:\"country\";s:9:\"tax_ratio\";i:1;s:10:\"tax_amount\";d:0;s:6:\"amount\";d:400000;}}', '', 0, '', 0, 0, '1@0', 'manual', '0.00000', '0.00000', '', NULL, '1.000', 'kg', '0.000', '0.000', '0.000', 'm', NULL, NULL),
-(17, 14, 2, 2, 'میلگرد ۳۰۴', 'milgerd-304', '400000.00000', '0.00000', 'a:1:{s:13:\"0000_00000001\";O:8:\"stdClass\":20:{s:11:\"taxation_id\";s:1:\"1\";s:12:\"zone_namekey\";a:1:{i:0;s:16:\"country_Iran_101\";}s:16:\"category_namekey\";s:11:\"default_tax\";s:11:\"tax_namekey\";s:0:\"\";s:18:\"taxation_published\";s:1:\"1\";s:13:\"taxation_type\";s:0:\"\";s:15:\"taxation_access\";s:3:\"all\";s:19:\"taxation_cumulative\";s:1:\"0\";s:18:\"taxation_post_code\";s:0:\"\";s:19:\"taxation_date_start\";s:1:\"0\";s:17:\"taxation_date_end\";s:1:\"0\";s:22:\"taxation_internal_code\";s:1:\"0\";s:13:\"taxation_note\";s:0:\"\";s:16:\"taxation_site_id\";s:0:\"\";s:17:\"taxation_ordering\";s:1:\"0\";s:8:\"tax_rate\";s:7:\"0.00000\";s:9:\"zone_type\";s:7:\"country\";s:9:\"tax_ratio\";i:1;s:10:\"tax_amount\";d:0;s:6:\"amount\";d:400000;}}', '', 0, '', 0, 0, '1@0', 'manual', '0.00000', '0.00000', '', NULL, '1.000', 'kg', '0.000', '0.000', '0.000', 'm', NULL, NULL),
-(18, 15, 1, 1, 'محصول فروش وزنی', 'product_1', '500000.00000', '0.00000', '', '', 0, '', 0, 0, '', '', '0.00000', '0.00000', '', NULL, '0.000', 'kg', '20.000', '20.000', '1.500', 'mm', NULL, ''),
-(19, 16, 1, 1, 'محصول فروش وزنی', 'product_1', '0.00000', '0.00000', '', '', 0, '', 0, 0, '', '', '0.00000', '0.00000', '', NULL, '0.000', 'kg', '20.000', '20.000', '1.500', 'mm', NULL, '81.34');
+INSERT INTO `yz4ph_hikashop_order_product` (`order_product_id`, `order_id`, `product_id`, `order_product_quantity`, `order_product_name`, `order_product_code`, `order_product_price`, `order_product_tax`, `order_product_tax_info`, `order_product_options`, `order_product_option_parent_id`, `order_product_status`, `order_product_wishlist_id`, `order_product_wishlist_product_id`, `order_product_shipping_id`, `order_product_shipping_method`, `order_product_shipping_price`, `order_product_shipping_tax`, `order_product_shipping_params`, `order_product_params`, `order_product_weight`, `order_product_weight_unit`, `order_product_width`, `order_product_length`, `order_product_height`, `order_product_dimension_unit`, `desired_weight`, `desiredweight`, `desiredlength`, `desireddiameter`) VALUES
+(1, 1, 2, 1, 'میلگرد ۳۰۴', 'milgerd-304', '400000.00000', '0.00000', 'a:1:{s:13:\"0000_00000001\";O:8:\"stdClass\":20:{s:11:\"taxation_id\";s:1:\"1\";s:12:\"zone_namekey\";a:1:{i:0;s:16:\"country_Iran_101\";}s:16:\"category_namekey\";s:11:\"default_tax\";s:11:\"tax_namekey\";s:0:\"\";s:18:\"taxation_published\";s:1:\"1\";s:13:\"taxation_type\";s:0:\"\";s:15:\"taxation_access\";s:3:\"all\";s:19:\"taxation_cumulative\";s:1:\"0\";s:18:\"taxation_post_code\";s:0:\"\";s:19:\"taxation_date_start\";s:1:\"0\";s:17:\"taxation_date_end\";s:1:\"0\";s:22:\"taxation_internal_code\";s:1:\"0\";s:13:\"taxation_note\";s:0:\"\";s:16:\"taxation_site_id\";s:0:\"\";s:17:\"taxation_ordering\";s:1:\"0\";s:8:\"tax_rate\";s:7:\"0.00000\";s:9:\"zone_type\";s:7:\"country\";s:9:\"tax_ratio\";i:1;s:10:\"tax_amount\";d:0;s:6:\"amount\";d:400000;}}', '', 0, '', 0, 0, '3@0', 'manual', '0.00000', '0.00000', '', NULL, '1.000', 'kg', '0.000', '0.000', '0.000', 'm', NULL, NULL, NULL, NULL),
+(2, 2, 2, 1, 'میلگرد ۳۰۴', 'milgerd-304', '400000.00000', '0.00000', 'a:1:{s:13:\"0000_00000001\";O:8:\"stdClass\":20:{s:11:\"taxation_id\";s:1:\"1\";s:12:\"zone_namekey\";a:1:{i:0;s:16:\"country_Iran_101\";}s:16:\"category_namekey\";s:11:\"default_tax\";s:11:\"tax_namekey\";s:0:\"\";s:18:\"taxation_published\";s:1:\"1\";s:13:\"taxation_type\";s:0:\"\";s:15:\"taxation_access\";s:3:\"all\";s:19:\"taxation_cumulative\";s:1:\"0\";s:18:\"taxation_post_code\";s:0:\"\";s:19:\"taxation_date_start\";s:1:\"0\";s:17:\"taxation_date_end\";s:1:\"0\";s:22:\"taxation_internal_code\";s:1:\"0\";s:13:\"taxation_note\";s:0:\"\";s:16:\"taxation_site_id\";s:0:\"\";s:17:\"taxation_ordering\";s:1:\"0\";s:8:\"tax_rate\";s:7:\"0.00000\";s:9:\"zone_type\";s:7:\"country\";s:9:\"tax_ratio\";i:1;s:10:\"tax_amount\";d:0;s:6:\"amount\";d:400000;}}', '', 0, '', 0, 0, '1@0', 'manual', '0.00000', '0.00000', '', NULL, '1.000', 'kg', '0.000', '0.000', '0.000', 'm', NULL, NULL, NULL, NULL),
+(3, 3, 2, 1, 'میلگرد ۳۰۴', 'milgerd-304', '400000.00000', '0.00000', 'a:1:{s:13:\"0000_00000001\";O:8:\"stdClass\":20:{s:11:\"taxation_id\";s:1:\"1\";s:12:\"zone_namekey\";a:1:{i:0;s:16:\"country_Iran_101\";}s:16:\"category_namekey\";s:11:\"default_tax\";s:11:\"tax_namekey\";s:0:\"\";s:18:\"taxation_published\";s:1:\"1\";s:13:\"taxation_type\";s:0:\"\";s:15:\"taxation_access\";s:3:\"all\";s:19:\"taxation_cumulative\";s:1:\"0\";s:18:\"taxation_post_code\";s:0:\"\";s:19:\"taxation_date_start\";s:1:\"0\";s:17:\"taxation_date_end\";s:1:\"0\";s:22:\"taxation_internal_code\";s:1:\"0\";s:13:\"taxation_note\";s:0:\"\";s:16:\"taxation_site_id\";s:0:\"\";s:17:\"taxation_ordering\";s:1:\"0\";s:8:\"tax_rate\";s:7:\"0.00000\";s:9:\"zone_type\";s:7:\"country\";s:9:\"tax_ratio\";i:1;s:10:\"tax_amount\";d:0;s:6:\"amount\";d:400000;}}', '', 0, '', 0, 0, '2@0', 'manual', '0.00000', '0.00000', '', NULL, '1.000', 'kg', '0.000', '0.000', '0.000', 'm', NULL, NULL, NULL, NULL),
+(4, 3, 3, 1, 'محصول تست', 'product_1_copy1951764451', '500000.00000', '0.00000', 'a:1:{s:13:\"0000_00000001\";O:8:\"stdClass\":20:{s:11:\"taxation_id\";s:1:\"1\";s:12:\"zone_namekey\";a:1:{i:0;s:16:\"country_Iran_101\";}s:16:\"category_namekey\";s:11:\"default_tax\";s:11:\"tax_namekey\";s:0:\"\";s:18:\"taxation_published\";s:1:\"1\";s:13:\"taxation_type\";s:0:\"\";s:15:\"taxation_access\";s:3:\"all\";s:19:\"taxation_cumulative\";s:1:\"0\";s:18:\"taxation_post_code\";s:0:\"\";s:19:\"taxation_date_start\";s:1:\"0\";s:17:\"taxation_date_end\";s:1:\"0\";s:22:\"taxation_internal_code\";s:1:\"0\";s:13:\"taxation_note\";s:0:\"\";s:16:\"taxation_site_id\";s:0:\"\";s:17:\"taxation_ordering\";s:1:\"0\";s:8:\"tax_rate\";s:7:\"0.00000\";s:9:\"zone_type\";s:7:\"country\";s:9:\"tax_ratio\";i:1;s:10:\"tax_amount\";d:0;s:6:\"amount\";d:500000;}}', '', 0, '', 0, 0, '2@0', 'manual', '0.00000', '0.00000', '', NULL, '0.000', 'kg', '0.000', '0.000', '0.000', 'm', NULL, NULL, NULL, NULL),
+(5, 3, 1, 3, 'محصول فروش وزنی', 'product_1', '500000.00000', '0.00000', 'a:1:{s:13:\"0000_00000001\";O:8:\"stdClass\":20:{s:11:\"taxation_id\";s:1:\"1\";s:12:\"zone_namekey\";a:1:{i:0;s:16:\"country_Iran_101\";}s:16:\"category_namekey\";s:11:\"default_tax\";s:11:\"tax_namekey\";s:0:\"\";s:18:\"taxation_published\";s:1:\"1\";s:13:\"taxation_type\";s:0:\"\";s:15:\"taxation_access\";s:3:\"all\";s:19:\"taxation_cumulative\";s:1:\"0\";s:18:\"taxation_post_code\";s:0:\"\";s:19:\"taxation_date_start\";s:1:\"0\";s:17:\"taxation_date_end\";s:1:\"0\";s:22:\"taxation_internal_code\";s:1:\"0\";s:13:\"taxation_note\";s:0:\"\";s:16:\"taxation_site_id\";s:0:\"\";s:17:\"taxation_ordering\";s:1:\"0\";s:8:\"tax_rate\";s:7:\"0.00000\";s:9:\"zone_type\";s:7:\"country\";s:9:\"tax_ratio\";i:1;s:10:\"tax_amount\";d:0;s:6:\"amount\";d:500000;}}', '', 0, '', 0, 0, '2@0', 'manual', '0.00000', '0.00000', '', NULL, '0.000', 'kg', '0.000', '0.000', '0.000', 'm', NULL, NULL, NULL, NULL),
+(6, 4, 2, 1, 'میلگرد ۳۰۴', 'milgerd-304', '400000.00000', '0.00000', 'a:1:{s:13:\"0000_00000001\";O:8:\"stdClass\":20:{s:11:\"taxation_id\";s:1:\"1\";s:12:\"zone_namekey\";a:1:{i:0;s:16:\"country_Iran_101\";}s:16:\"category_namekey\";s:11:\"default_tax\";s:11:\"tax_namekey\";s:0:\"\";s:18:\"taxation_published\";s:1:\"1\";s:13:\"taxation_type\";s:0:\"\";s:15:\"taxation_access\";s:3:\"all\";s:19:\"taxation_cumulative\";s:1:\"0\";s:18:\"taxation_post_code\";s:0:\"\";s:19:\"taxation_date_start\";s:1:\"0\";s:17:\"taxation_date_end\";s:1:\"0\";s:22:\"taxation_internal_code\";s:1:\"0\";s:13:\"taxation_note\";s:0:\"\";s:16:\"taxation_site_id\";s:0:\"\";s:17:\"taxation_ordering\";s:1:\"0\";s:8:\"tax_rate\";s:7:\"0.00000\";s:9:\"zone_type\";s:7:\"country\";s:9:\"tax_ratio\";i:1;s:10:\"tax_amount\";d:0;s:6:\"amount\";d:400000;}}', '', 0, '', 0, 0, '2@0', 'manual', '0.00000', '0.00000', '', NULL, '1.000', 'kg', '0.000', '0.000', '0.000', 'm', NULL, NULL, NULL, NULL),
+(7, 4, 6, 1, 'محصول تست 888888', 'product_1_copy372244252', '425000.00000', '0.00000', 'a:1:{s:13:\"0000_00000001\";O:8:\"stdClass\":17:{s:11:\"taxation_id\";s:1:\"1\";s:12:\"zone_namekey\";a:1:{i:0;s:16:\"country_Iran_101\";}s:16:\"category_namekey\";s:11:\"default_tax\";s:11:\"tax_namekey\";s:0:\"\";s:18:\"taxation_published\";s:1:\"1\";s:13:\"taxation_type\";s:0:\"\";s:15:\"taxation_access\";s:3:\"all\";s:19:\"taxation_cumulative\";s:1:\"0\";s:18:\"taxation_post_code\";s:0:\"\";s:19:\"taxation_date_start\";s:1:\"0\";s:17:\"taxation_date_end\";s:1:\"0\";s:22:\"taxation_internal_code\";s:1:\"0\";s:13:\"taxation_note\";s:0:\"\";s:16:\"taxation_site_id\";s:0:\"\";s:17:\"taxation_ordering\";s:1:\"0\";s:8:\"tax_rate\";s:7:\"0.00000\";s:9:\"zone_type\";s:7:\"country\";}}', '', 0, '', 0, 0, '2@0', 'manual', '0.00000', '0.00000', '', NULL, '0.000', 'kg', '0.000', '0.000', '0.000', 'm', NULL, NULL, NULL, NULL),
+(8, 5, 6, 1, 'محصول تست 888888', 'product_1_copy372244252', '425000.00000', '0.00000', 'a:1:{s:13:\"0000_00000001\";O:8:\"stdClass\":17:{s:11:\"taxation_id\";s:1:\"1\";s:12:\"zone_namekey\";a:1:{i:0;s:16:\"country_Iran_101\";}s:16:\"category_namekey\";s:11:\"default_tax\";s:11:\"tax_namekey\";s:0:\"\";s:18:\"taxation_published\";s:1:\"1\";s:13:\"taxation_type\";s:0:\"\";s:15:\"taxation_access\";s:3:\"all\";s:19:\"taxation_cumulative\";s:1:\"0\";s:18:\"taxation_post_code\";s:0:\"\";s:19:\"taxation_date_start\";s:1:\"0\";s:17:\"taxation_date_end\";s:1:\"0\";s:22:\"taxation_internal_code\";s:1:\"0\";s:13:\"taxation_note\";s:0:\"\";s:16:\"taxation_site_id\";s:0:\"\";s:17:\"taxation_ordering\";s:1:\"0\";s:8:\"tax_rate\";s:7:\"0.00000\";s:9:\"zone_type\";s:7:\"country\";}}', '', 0, '', 0, 0, '', '', '0.00000', '0.00000', '', NULL, '0.000', 'kg', '0.000', '0.000', '0.000', 'm', NULL, NULL, NULL, NULL),
+(9, 6, 2, 1, 'میلگرد ۳۰۴', 'milgerd-304', '400000.00000', '0.00000', 'a:1:{s:13:\"0000_00000001\";O:8:\"stdClass\":20:{s:11:\"taxation_id\";s:1:\"1\";s:12:\"zone_namekey\";a:1:{i:0;s:16:\"country_Iran_101\";}s:16:\"category_namekey\";s:11:\"default_tax\";s:11:\"tax_namekey\";s:0:\"\";s:18:\"taxation_published\";s:1:\"1\";s:13:\"taxation_type\";s:0:\"\";s:15:\"taxation_access\";s:3:\"all\";s:19:\"taxation_cumulative\";s:1:\"0\";s:18:\"taxation_post_code\";s:0:\"\";s:19:\"taxation_date_start\";s:1:\"0\";s:17:\"taxation_date_end\";s:1:\"0\";s:22:\"taxation_internal_code\";s:1:\"0\";s:13:\"taxation_note\";s:0:\"\";s:16:\"taxation_site_id\";s:0:\"\";s:17:\"taxation_ordering\";s:1:\"0\";s:8:\"tax_rate\";s:7:\"0.00000\";s:9:\"zone_type\";s:7:\"country\";s:9:\"tax_ratio\";i:1;s:10:\"tax_amount\";d:0;s:6:\"amount\";d:400000;}}', '', 0, '', 0, 0, '2@0', 'manual', '0.00000', '0.00000', '', NULL, '1.000', 'kg', '0.000', '0.000', '0.000', 'm', NULL, NULL, NULL, NULL),
+(10, 7, 6, 1, 'محصول تست 888888', 'product_1_copy372244252', '425000.00000', '0.00000', 'a:1:{s:13:\"0000_00000001\";O:8:\"stdClass\":17:{s:11:\"taxation_id\";s:1:\"1\";s:12:\"zone_namekey\";a:1:{i:0;s:16:\"country_Iran_101\";}s:16:\"category_namekey\";s:11:\"default_tax\";s:11:\"tax_namekey\";s:0:\"\";s:18:\"taxation_published\";s:1:\"1\";s:13:\"taxation_type\";s:0:\"\";s:15:\"taxation_access\";s:3:\"all\";s:19:\"taxation_cumulative\";s:1:\"0\";s:18:\"taxation_post_code\";s:0:\"\";s:19:\"taxation_date_start\";s:1:\"0\";s:17:\"taxation_date_end\";s:1:\"0\";s:22:\"taxation_internal_code\";s:1:\"0\";s:13:\"taxation_note\";s:0:\"\";s:16:\"taxation_site_id\";s:0:\"\";s:17:\"taxation_ordering\";s:1:\"0\";s:8:\"tax_rate\";s:7:\"0.00000\";s:9:\"zone_type\";s:7:\"country\";}}', '', 0, '', 0, 0, '', '', '0.00000', '0.00000', '', NULL, '0.000', 'kg', '0.000', '0.000', '0.000', 'm', NULL, NULL, NULL, NULL),
+(11, 8, 6, 1, 'محصول تست 888888', 'product_1_copy372244252', '425000.00000', '0.00000', 'a:1:{s:13:\"0000_00000001\";O:8:\"stdClass\":17:{s:11:\"taxation_id\";s:1:\"1\";s:12:\"zone_namekey\";a:1:{i:0;s:16:\"country_Iran_101\";}s:16:\"category_namekey\";s:11:\"default_tax\";s:11:\"tax_namekey\";s:0:\"\";s:18:\"taxation_published\";s:1:\"1\";s:13:\"taxation_type\";s:0:\"\";s:15:\"taxation_access\";s:3:\"all\";s:19:\"taxation_cumulative\";s:1:\"0\";s:18:\"taxation_post_code\";s:0:\"\";s:19:\"taxation_date_start\";s:1:\"0\";s:17:\"taxation_date_end\";s:1:\"0\";s:22:\"taxation_internal_code\";s:1:\"0\";s:13:\"taxation_note\";s:0:\"\";s:16:\"taxation_site_id\";s:0:\"\";s:17:\"taxation_ordering\";s:1:\"0\";s:8:\"tax_rate\";s:7:\"0.00000\";s:9:\"zone_type\";s:7:\"country\";}}', '', 0, '', 0, 0, '', '', '0.00000', '0.00000', '', NULL, '0.000', 'kg', '0.000', '0.000', '0.000', 'm', NULL, NULL, NULL, NULL),
+(12, 9, 6, 1, 'محصول تست 888888', 'product_1_copy372244252', '425000.00000', '0.00000', 'a:1:{s:13:\"0000_00000001\";O:8:\"stdClass\":17:{s:11:\"taxation_id\";s:1:\"1\";s:12:\"zone_namekey\";a:1:{i:0;s:16:\"country_Iran_101\";}s:16:\"category_namekey\";s:11:\"default_tax\";s:11:\"tax_namekey\";s:0:\"\";s:18:\"taxation_published\";s:1:\"1\";s:13:\"taxation_type\";s:0:\"\";s:15:\"taxation_access\";s:3:\"all\";s:19:\"taxation_cumulative\";s:1:\"0\";s:18:\"taxation_post_code\";s:0:\"\";s:19:\"taxation_date_start\";s:1:\"0\";s:17:\"taxation_date_end\";s:1:\"0\";s:22:\"taxation_internal_code\";s:1:\"0\";s:13:\"taxation_note\";s:0:\"\";s:16:\"taxation_site_id\";s:0:\"\";s:17:\"taxation_ordering\";s:1:\"0\";s:8:\"tax_rate\";s:7:\"0.00000\";s:9:\"zone_type\";s:7:\"country\";}}', '', 0, '', 0, 0, '', '', '0.00000', '0.00000', '', NULL, '0.000', 'kg', '0.000', '0.000', '0.000', 'm', NULL, NULL, NULL, NULL),
+(13, 10, 2, 1, 'میلگرد ۳۰۴', 'milgerd-304', '400000.00000', '0.00000', 'a:1:{s:13:\"0000_00000001\";O:8:\"stdClass\":20:{s:11:\"taxation_id\";s:1:\"1\";s:12:\"zone_namekey\";a:1:{i:0;s:16:\"country_Iran_101\";}s:16:\"category_namekey\";s:11:\"default_tax\";s:11:\"tax_namekey\";s:0:\"\";s:18:\"taxation_published\";s:1:\"1\";s:13:\"taxation_type\";s:0:\"\";s:15:\"taxation_access\";s:3:\"all\";s:19:\"taxation_cumulative\";s:1:\"0\";s:18:\"taxation_post_code\";s:0:\"\";s:19:\"taxation_date_start\";s:1:\"0\";s:17:\"taxation_date_end\";s:1:\"0\";s:22:\"taxation_internal_code\";s:1:\"0\";s:13:\"taxation_note\";s:0:\"\";s:16:\"taxation_site_id\";s:0:\"\";s:17:\"taxation_ordering\";s:1:\"0\";s:8:\"tax_rate\";s:7:\"0.00000\";s:9:\"zone_type\";s:7:\"country\";s:9:\"tax_ratio\";i:1;s:10:\"tax_amount\";d:0;s:6:\"amount\";d:400000;}}', '', 0, '', 0, 0, '1@0', 'manual', '0.00000', '0.00000', '', NULL, '1.000', 'kg', '0.000', '0.000', '0.000', 'm', NULL, NULL, NULL, NULL),
+(14, 11, 6, 1, 'محصول تست 888888', 'product_1_copy372244252', '425000.00000', '0.00000', 'a:1:{s:13:\"0000_00000001\";O:8:\"stdClass\":17:{s:11:\"taxation_id\";s:1:\"1\";s:12:\"zone_namekey\";a:1:{i:0;s:16:\"country_Iran_101\";}s:16:\"category_namekey\";s:11:\"default_tax\";s:11:\"tax_namekey\";s:0:\"\";s:18:\"taxation_published\";s:1:\"1\";s:13:\"taxation_type\";s:0:\"\";s:15:\"taxation_access\";s:3:\"all\";s:19:\"taxation_cumulative\";s:1:\"0\";s:18:\"taxation_post_code\";s:0:\"\";s:19:\"taxation_date_start\";s:1:\"0\";s:17:\"taxation_date_end\";s:1:\"0\";s:22:\"taxation_internal_code\";s:1:\"0\";s:13:\"taxation_note\";s:0:\"\";s:16:\"taxation_site_id\";s:0:\"\";s:17:\"taxation_ordering\";s:1:\"0\";s:8:\"tax_rate\";s:7:\"0.00000\";s:9:\"zone_type\";s:7:\"country\";}}', '', 0, '', 0, 0, '', '', '0.00000', '0.00000', '', NULL, '0.000', 'kg', '0.000', '0.000', '0.000', 'm', NULL, NULL, NULL, NULL),
+(15, 12, 2, 1, 'میلگرد ۳۰۴', 'milgerd-304', '400000.00000', '0.00000', 'a:1:{s:13:\"0000_00000001\";O:8:\"stdClass\":20:{s:11:\"taxation_id\";s:1:\"1\";s:12:\"zone_namekey\";a:1:{i:0;s:16:\"country_Iran_101\";}s:16:\"category_namekey\";s:11:\"default_tax\";s:11:\"tax_namekey\";s:0:\"\";s:18:\"taxation_published\";s:1:\"1\";s:13:\"taxation_type\";s:0:\"\";s:15:\"taxation_access\";s:3:\"all\";s:19:\"taxation_cumulative\";s:1:\"0\";s:18:\"taxation_post_code\";s:0:\"\";s:19:\"taxation_date_start\";s:1:\"0\";s:17:\"taxation_date_end\";s:1:\"0\";s:22:\"taxation_internal_code\";s:1:\"0\";s:13:\"taxation_note\";s:0:\"\";s:16:\"taxation_site_id\";s:0:\"\";s:17:\"taxation_ordering\";s:1:\"0\";s:8:\"tax_rate\";s:7:\"0.00000\";s:9:\"zone_type\";s:7:\"country\";s:9:\"tax_ratio\";i:1;s:10:\"tax_amount\";d:0;s:6:\"amount\";d:400000;}}', '', 0, '', 0, 0, '1@0', 'manual', '0.00000', '0.00000', '', NULL, '1.000', 'kg', '0.000', '0.000', '0.000', 'm', NULL, NULL, NULL, NULL),
+(16, 13, 2, 2, 'میلگرد ۳۰۴', 'milgerd-304', '400000.00000', '0.00000', 'a:1:{s:13:\"0000_00000001\";O:8:\"stdClass\":20:{s:11:\"taxation_id\";s:1:\"1\";s:12:\"zone_namekey\";a:1:{i:0;s:16:\"country_Iran_101\";}s:16:\"category_namekey\";s:11:\"default_tax\";s:11:\"tax_namekey\";s:0:\"\";s:18:\"taxation_published\";s:1:\"1\";s:13:\"taxation_type\";s:0:\"\";s:15:\"taxation_access\";s:3:\"all\";s:19:\"taxation_cumulative\";s:1:\"0\";s:18:\"taxation_post_code\";s:0:\"\";s:19:\"taxation_date_start\";s:1:\"0\";s:17:\"taxation_date_end\";s:1:\"0\";s:22:\"taxation_internal_code\";s:1:\"0\";s:13:\"taxation_note\";s:0:\"\";s:16:\"taxation_site_id\";s:0:\"\";s:17:\"taxation_ordering\";s:1:\"0\";s:8:\"tax_rate\";s:7:\"0.00000\";s:9:\"zone_type\";s:7:\"country\";s:9:\"tax_ratio\";i:1;s:10:\"tax_amount\";d:0;s:6:\"amount\";d:400000;}}', '', 0, '', 0, 0, '1@0', 'manual', '0.00000', '0.00000', '', NULL, '1.000', 'kg', '0.000', '0.000', '0.000', 'm', NULL, NULL, NULL, NULL),
+(17, 14, 2, 2, 'میلگرد ۳۰۴', 'milgerd-304', '400000.00000', '0.00000', 'a:1:{s:13:\"0000_00000001\";O:8:\"stdClass\":20:{s:11:\"taxation_id\";s:1:\"1\";s:12:\"zone_namekey\";a:1:{i:0;s:16:\"country_Iran_101\";}s:16:\"category_namekey\";s:11:\"default_tax\";s:11:\"tax_namekey\";s:0:\"\";s:18:\"taxation_published\";s:1:\"1\";s:13:\"taxation_type\";s:0:\"\";s:15:\"taxation_access\";s:3:\"all\";s:19:\"taxation_cumulative\";s:1:\"0\";s:18:\"taxation_post_code\";s:0:\"\";s:19:\"taxation_date_start\";s:1:\"0\";s:17:\"taxation_date_end\";s:1:\"0\";s:22:\"taxation_internal_code\";s:1:\"0\";s:13:\"taxation_note\";s:0:\"\";s:16:\"taxation_site_id\";s:0:\"\";s:17:\"taxation_ordering\";s:1:\"0\";s:8:\"tax_rate\";s:7:\"0.00000\";s:9:\"zone_type\";s:7:\"country\";s:9:\"tax_ratio\";i:1;s:10:\"tax_amount\";d:0;s:6:\"amount\";d:400000;}}', '', 0, '', 0, 0, '1@0', 'manual', '0.00000', '0.00000', '', NULL, '1.000', 'kg', '0.000', '0.000', '0.000', 'm', NULL, NULL, NULL, NULL),
+(18, 15, 1, 1, 'محصول فروش وزنی', 'product_1', '500000.00000', '0.00000', '', '', 0, '', 0, 0, '', '', '0.00000', '0.00000', '', NULL, '0.000', 'kg', '20.000', '20.000', '1.500', 'mm', NULL, '', NULL, NULL),
+(19, 16, 1, 1, 'محصول فروش وزنی', 'product_1', '0.00000', '0.00000', '', '', 0, '', 0, 0, '', '', '0.00000', '0.00000', '', NULL, '0.000', 'kg', '20.000', '20.000', '1.500', 'mm', NULL, '81.34', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -6858,11 +6920,11 @@ CREATE TABLE `yz4ph_hikashop_product` (
 --
 
 INSERT INTO `yz4ph_hikashop_product` (`product_id`, `product_parent_id`, `product_name`, `product_description`, `product_quantity`, `product_code`, `product_published`, `product_hit`, `product_created`, `product_sale_start`, `product_sale_end`, `product_delay_id`, `product_tax_id`, `product_type`, `product_vendor_id`, `product_manufacturer_id`, `product_url`, `product_weight`, `product_keywords`, `product_weight_unit`, `product_modified`, `product_meta_description`, `product_dimension_unit`, `product_width`, `product_length`, `product_height`, `product_max_per_order`, `product_access`, `product_group_after_purchase`, `product_min_per_order`, `product_contact`, `product_display_quantity_field`, `product_last_seen_date`, `product_sales`, `product_waitlist`, `product_layout`, `product_average_score`, `product_total_vote`, `product_page_title`, `product_alias`, `product_price_percentage`, `product_msrp`, `product_canonical`, `product_warehouse_id`, `product_quantity_layout`, `product_sort_price`, `product_description_raw`, `product_description_type`, `product_option_method`, `product_condition`, `short_desc`, `aparat_id`, `sell_unit`, `reserve`, `dimension`, `field_weight`) VALUES
-(1, 0, 'محصول فروش وزنی', '', -1, 'product_1', 1, 129, 1615160828, 0, 0, 0, 11, 'main', 0, 0, '', '0.000', '', 'kg', 1625095578, '', 'mm', '20.000', '20.000', '1.500', 0, 'all', '', 0, 0, 0, 1625098953, 5, 0, '', 0, 0, '', 'محصول-تست', '0.0000000', '0.0000000', '', 0, '', '0.00000', NULL, 'html', '', 'NewCondition', '', '', 'wght', NULL, '', ''),
+(1, 0, ' محصول میلگرد', '', -1, 'product-01', 1, 160, 1615160828, 0, 0, 0, 11, 'main', 0, 0, '', '1.000', '', 'kg', 1625144945, '', 'mm', '20.000', '20.000', '1.500', 0, 'all', '', 0, 0, 0, 1625144957, 5, 0, '', 0, 0, '', 'milgerd', '0.0000000', '0.0000000', '', 0, 'show_none', '0.00000', NULL, 'html', '', 'NewCondition', '<p>{loadmoduleid 131}</p>', '', 'wght', NULL, '', ''),
 (2, 0, 'میلگرد ۳۰۴', '<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>\r\n<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>', 5, 'milgerd-304', 1, 742, 1615250738, 0, 0, 0, 11, 'main', 0, 0, '', '1.000', '', 'kg', 1625097666, '', 'm', '0.000', '0.000', '0.000', 0, 'all', '', 0, 0, 0, 1625090781, 8, 0, '', 5, 1, '', 'milgerd-304', '0.0000000', '0.0000000', '', 0, '', '0.00000', '', '', '', 'NewCondition', '<p>متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</p>', 'sHNtL', 'qty', NULL, '25*23*10', '۱۲۰ کیلوگرم'),
 (3, 0, 'محصول تست', '', -1, 'product_1_copy1951764451', 1, 2, 1615250739, 0, 0, 0, 11, 'main', 0, 0, '', '0.000', '', 'kg', 1625097682, '', 'm', '0.000', '0.000', '0.000', 0, 'all', '', 0, 0, 0, 1619565880, 1, 0, '', 0, 0, '', 'p4r44r33r3r33', '0.0000000', '0.0000000', '', 0, '', '0.00000', '', '', '', 'NewCondition', '', '', 'qty', NULL, '', ''),
 (4, 0, 'محصول تست', '', -1, 'product_1_copy369781097', 1, 0, 1615250741, 0, 0, 0, 11, 'main', 0, 0, '', '0.000', '', 'kg', 1625097802, '', 'm', '0.000', '0.000', '0.000', 0, 'all', '', 0, 0, 0, 0, 0, 0, '', 0, 0, '', 'erfreffref', '0.0000000', '0.0000000', '', 0, '', '0.00000', '', '', '', 'NewCondition', '', '', 'qty', NULL, '', ''),
-(5, 0, 'محصول تست', '', -1, 'product_1_copy734355235', 1, 5, 1615250742, 0, 0, 0, 11, 'main', 0, 0, '', '0.000', '', 'kg', 1625099454, '', 'm', '0.000', '0.000', '0.000', 0, 'all', '', 0, 0, 0, 1625099864, 0, 0, '', 0, 0, '', 'efefeefefrffref', '0.0000000', '0.0000000', '', 0, '', '0.00000', '', '', '', 'NewCondition', '', '', 'qty', NULL, '', '');
+(5, 0, 'محصول پروفیل', '', -1, 'product-02', 1, 24, 1615250742, 0, 0, 0, 11, 'main', 0, 0, '', '0.000', '', 'kg', 1625146926, '', 'm', '789.000', '567.000', '0.000', 0, 'all', '', 0, 0, 0, 1625147633, 0, 0, '', 0, 0, '', 'profile', '0.0000000', '0.0000000', '', 0, 'show_none', '0.00000', '', '', '', 'NewCondition', '<p>{loadmoduleid 132}</p>', '', 'qty', NULL, '', '');
 
 -- --------------------------------------------------------
 
@@ -6882,12 +6944,12 @@ CREATE TABLE `yz4ph_hikashop_product_category` (
 --
 
 INSERT INTO `yz4ph_hikashop_product_category` (`product_category_id`, `category_id`, `product_id`, `ordering`) VALUES
-(111, 13, 1, 1),
+(141, 13, 1, 1),
 (112, 13, 2, 2),
 (113, 13, 3, 3),
 (115, 13, 4, 4),
-(117, 16, 5, 1),
-(110, 23, 1, 1);
+(147, 15, 5, 1),
+(140, 23, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -15692,7 +15754,7 @@ CREATE TABLE `yz4ph_menu` (
 --
 
 INSERT INTO `yz4ph_menu` (`id`, `menutype`, `title`, `alias`, `note`, `path`, `link`, `type`, `published`, `parent_id`, `level`, `component_id`, `checked_out`, `checked_out_time`, `browserNav`, `access`, `img`, `template_style_id`, `params`, `lft`, `rgt`, `home`, `language`, `client_id`) VALUES
-(1, '', 'Menu_Item_Root', 'root', '', '', '', '', 1, 0, 0, 0, 0, '0000-00-00 00:00:00', 0, 0, '', 0, '', 0, 269, 0, '*', 0),
+(1, '', 'Menu_Item_Root', 'root', '', '', '', '', 1, 0, 0, 0, 0, '0000-00-00 00:00:00', 0, 0, '', 0, '', 0, 267, 0, '*', 0),
 (2, 'main', 'com_banners', 'Banners', '', 'Banners', 'index.php?option=com_banners', 'component', 1, 1, 1, 4, 0, '0000-00-00 00:00:00', 0, 0, 'class:banners', 0, '', 1, 10, 0, '*', 1),
 (3, 'main', 'com_banners', 'Banners', '', 'Banners/Banners', 'index.php?option=com_banners', 'component', 1, 2, 2, 4, 0, '0000-00-00 00:00:00', 0, 0, 'class:banners', 0, '', 2, 3, 0, '*', 1),
 (4, 'main', 'com_banners_categories', 'Categories', '', 'Banners/Categories', 'index.php?option=com_categories&extension=com_banners', 'component', 1, 2, 2, 6, 0, '0000-00-00 00:00:00', 0, 0, 'class:banners-cat', 0, '', 4, 5, 0, '*', 1),
@@ -15826,8 +15888,7 @@ INSERT INTO `yz4ph_menu` (`id`, `menutype`, `title`, `alias`, `note`, `path`, `l
 (222, 'main', 'COM_RSFORM_MANAGE_DIRECTORY_SUBMISSIONS', 'com_rsform_manage_directory_submissions', '', 'rsformpro/com_rsform_manage_directory_submissions', 'index.php?option=com_rsform&view=directory', 'component', 1, 218, 2, 10114, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 258, 259, 0, '', 1),
 (223, 'main', 'COM_RSFORM_CONFIGURATION', 'com_rsform_configuration', '', 'rsformpro/com_rsform_configuration', 'index.php?option=com_rsform&view=configuration', 'component', 1, 218, 2, 10114, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 260, 261, 0, '', 1),
 (224, 'main', 'COM_RSFORM_BACKUP_SCREEN', 'com_rsform_backup_screen', '', 'rsformpro/com_rsform_backup_screen', 'index.php?option=com_rsform&view=backupscreen', 'component', 1, 218, 2, 10114, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 262, 263, 0, '', 1),
-(225, 'main', 'COM_RSFORM_RESTORE_SCREEN', 'com_rsform_restore_screen', '', 'rsformpro/com_rsform_restore_screen', 'index.php?option=com_rsform&view=restorescreen', 'component', 1, 218, 2, 10114, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 264, 265, 0, '', 1),
-(226, 'footermenu', 'فروش وزنی', 'sales', '', 'sales', 'index.php?option=com_rsform&view=rsform&layout=steelarvin:cooperation&formId=9', 'component', 1, 1, 1, 10114, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{\"gridsize\":\"uk-container uk-container-xsmall\",\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_image_css\":\"\",\"menu_text\":1,\"menu_show\":1,\"page_title\":\"\",\"show_page_heading\":\"\",\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"menu-meta_keywords\":\"\",\"robots\":\"\",\"secure\":0}', 267, 268, 0, '*', 0);
+(225, 'main', 'COM_RSFORM_RESTORE_SCREEN', 'com_rsform_restore_screen', '', 'rsformpro/com_rsform_restore_screen', 'index.php?option=com_rsform&view=restorescreen', 'component', 1, 218, 2, 10114, 0, '0000-00-00 00:00:00', 0, 1, 'class:component', 0, '{}', 264, 265, 0, '', 1);
 
 -- --------------------------------------------------------
 
@@ -15976,7 +16037,9 @@ INSERT INTO `yz4ph_modules` (`id`, `asset_id`, `title`, `note`, `content`, `orde
 (127, 155, 'اسلاید شو', '', NULL, 1, 'pagetop', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_slideshow', 1, 0, '{\"slides\":\"{\\\"media\\\":[\\\"images\\/banners\\/slide_1.jpg\\\",\\\"images\\/banners\\/slide_2.jpg\\\",\\\"images\\/banners\\/slide_3.jpg\\\",\\\"images\\/banners\\/slide_4.jpg\\\"],\\\"video\\\":[\\\"\\\",\\\"\\\",\\\"\\\",\\\"\\\"],\\\"title\\\":[\\\"\\\",\\\"\\\",\\\"\\\",\\\"\\\"],\\\"text\\\":[\\\"\\\",\\\"\\\",\\\"\\\",\\\"\\\"],\\\"btnlabel\\\":[\\\"\\\",\\\"\\\",\\\"\\\",\\\"\\\"],\\\"link\\\":[\\\"\\\",\\\"\\\",\\\"\\\",\\\"\\\"],\\\"align\\\":[\\\"-left\\\",\\\"-left\\\",\\\"-left\\\",\\\"-left\\\"],\\\"target\\\":[\\\"self\\\",\\\"self\\\",\\\"self\\\",\\\"self\\\"],\\\"cover\\\":[\\\"1\\\",\\\"1\\\",\\\"1\\\",\\\"1\\\"]}\",\"layout\":\"_:default\",\"moduleclass_sfx\":\"\",\"cache\":1,\"cache_time\":900,\"cachemode\":\"static\",\"module_tag\":\"section\",\"bootstrap_size\":\"0\",\"header_tag\":\"h3\",\"header_class\":\"\",\"style\":\"System-none\"}', 0, 'fa-IR'),
 (128, 156, 'عنوان صفحه اول', '', '<h1 class=\"uk-text-primary font uk-margin-top uk-margin-small-bottom\">استیل آروین پایتخت</h1>\r\n<p class=\"uk-text-secondary font f600\">با بیش از ۲۵ سال سابقه فعالیت در زمینه واردات محصولات استنلس استیل</p>', 1, 'bodytop', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_custom', 1, 0, '{\"prepare_content\":0,\"backgroundimage\":\"\",\"layout\":\"steelarvin:sacustom\",\"moduleclass_sfx\":\" homeTitle uk-margin-medium-bottom\",\"cache\":1,\"cache_time\":900,\"cachemode\":\"static\",\"module_tag\":\"section\",\"bootstrap_size\":\"0\",\"header_tag\":\"h3\",\"header_class\":\"\",\"style\":\"0\"}', 0, 'fa-IR'),
 (129, 158, 'مشتریان ما', '', NULL, 5, 'bodytop', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_clients', 1, 1, '{\"clients\":\"{\\\"logo\\\":[\\\"images\\/clients\\/abtin-sanat.png\\\",\\\"images\\/clients\\/damirchi.png\\\",\\\"images\\/clients\\/kharazmi.png\\\",\\\"images\\/clients\\/mobarakeh.png\\\",\\\"images\\/clients\\/pegah.png\\\",\\\"images\\/clients\\/tehranwagon.png\\\",\\\"images\\/clients\\/zob-ahan.png\\\"],\\\"url\\\":[\\\"http:\\/\\/www.abtinsanat-asm.com\\/fa\\\",\\\"https:\\/\\/damirchi.com\\\",\\\"http:\\/\\/khwarizmico.com\\\",\\\"https:\\/\\/www.msc.ir\\\",\\\"https:\\/\\/infant.pegah.ir\\/\\\",\\\"http:\\/\\/www.tehranwagon.com\\\",\\\"http:\\/\\/www.esfahansteel.ir\\\"],\\\"title\\\":[\\\"\\u0634\\u0631\\u06a9\\u062a \\u0622\\u0628\\u062a\\u06cc\\u0646 \\u0635\\u0646\\u0639\\u062a \\u0645\\u0639\\u06cc\\u0646\\\",\\\"\\u0634\\u0631\\u06a9\\u062a \\u062a\\u0648\\u0644\\u06cc\\u062f\\u06cc \\u0635\\u0646\\u0639\\u062a \\u062f\\u0645\\u06cc\\u0631\\u0686\\u06cc\\\",\\\"\\u0634\\u0631\\u06a9\\u062a \\u06af\\u0633\\u062a\\u0631\\u0634 \\u0641\\u0646\\u0627\\u0648\\u0631\\u06cc \\u062e\\u0648\\u0627\\u0631\\u0632\\u0645\\u06cc\\\",\\\"\\u0634\\u0631\\u06a9\\u062a \\u0641\\u0648\\u0644\\u0627\\u062f \\u0645\\u0628\\u0627\\u0631\\u06a9\\u0647 \\u0627\\u0635\\u0641\\u0647\\u0627\\u0646\\\",\\\"\\u0634\\u0631\\u06a9\\u062a \\u0634\\u06cc\\u0631 \\u062e\\u0634\\u06a9 \\u067e\\u06af\\u0627\\u0647\\\",\\\"\\u0634\\u0631\\u06a9\\u062a \\u0648\\u0627\\u06af\\u0646 \\u0633\\u0627\\u0632\\u06cc \\u062a\\u0647\\u0631\\u0627\\u0646\\\",\\\"\\u0634\\u0631\\u06a9\\u062a \\u0630\\u0648\\u0628 \\u0622\\u0647\\u0646 \\u0627\\u0635\\u0641\\u0647\\u0627\\u0646\\\"]}\",\"prepare_content\":0,\"backgroundimage\":\"\",\"layout\":\"_:default\",\"moduleclass_sfx\":\" ourClients uk-margin-large-bottom\",\"cache\":1,\"cache_time\":900,\"cachemode\":\"static\",\"module_tag\":\"section\",\"bootstrap_size\":\"0\",\"header_tag\":\"h3\",\"header_class\":\"uk-text-center uk-text-accent uk-h4 uk-margin-bottom f600 font\",\"style\":\"0\"}', 0, 'fa-IR'),
-(130, 159, 'کاربرد محصولات', '', NULL, 4, 'bodytop', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_applications', 1, 0, '{\"applications\":\"{\\\"bg\\\":[\\\"images\\/applications\\/food-industries.jpg\\\",\\\"images\\/applications\\/pharmaceutical-industries.jpg\\\",\\\"images\\/applications\\/chemicals-industries.jpg\\\",\\\"images\\/applications\\/oil-gas-industries.jpg\\\"],\\\"menuitem\\\":[\\\"182\\\",\\\"198\\\",\\\"184\\\",\\\"185\\\"],\\\"title\\\":[\\\"\\u0635\\u0646\\u0627\\u06cc\\u0639 \\u063a\\u0630\\u0627\\u06cc\\u06cc\\\",\\\"\\u0635\\u0646\\u0627\\u06cc\\u0639 \\u062f\\u0627\\u0631\\u0648\\u06cc\\u06cc\\\",\\\"\\u0635\\u0646\\u0627\\u06cc\\u0639 \\u0634\\u06cc\\u0645\\u06cc\\u0627\\u06cc\\u06cc\\\",\\\"\\u0635\\u0646\\u0627\\u06cc\\u0639 \\u0646\\u0641\\u062a \\u0648 \\u06af\\u0627\\u0632\\\"]}\",\"prepare_content\":0,\"backgroundimage\":\"\",\"layout\":\"_:default\",\"moduleclass_sfx\":\"applications uk-margin-large-bottom\",\"cache\":1,\"cache_time\":900,\"cachemode\":\"static\",\"module_tag\":\"div\",\"bootstrap_size\":\"0\",\"header_tag\":\"h3\",\"header_class\":\"\",\"style\":\"0\"}', 0, 'fa-IR');
+(130, 159, 'کاربرد محصولات', '', NULL, 4, 'bodytop', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_applications', 1, 0, '{\"applications\":\"{\\\"bg\\\":[\\\"images\\/applications\\/food-industries.jpg\\\",\\\"images\\/applications\\/pharmaceutical-industries.jpg\\\",\\\"images\\/applications\\/chemicals-industries.jpg\\\",\\\"images\\/applications\\/oil-gas-industries.jpg\\\"],\\\"menuitem\\\":[\\\"182\\\",\\\"198\\\",\\\"184\\\",\\\"185\\\"],\\\"title\\\":[\\\"\\u0635\\u0646\\u0627\\u06cc\\u0639 \\u063a\\u0630\\u0627\\u06cc\\u06cc\\\",\\\"\\u0635\\u0646\\u0627\\u06cc\\u0639 \\u062f\\u0627\\u0631\\u0648\\u06cc\\u06cc\\\",\\\"\\u0635\\u0646\\u0627\\u06cc\\u0639 \\u0634\\u06cc\\u0645\\u06cc\\u0627\\u06cc\\u06cc\\\",\\\"\\u0635\\u0646\\u0627\\u06cc\\u0639 \\u0646\\u0641\\u062a \\u0648 \\u06af\\u0627\\u0632\\\"]}\",\"prepare_content\":0,\"backgroundimage\":\"\",\"layout\":\"_:default\",\"moduleclass_sfx\":\"applications uk-margin-large-bottom\",\"cache\":1,\"cache_time\":900,\"cachemode\":\"static\",\"module_tag\":\"div\",\"bootstrap_size\":\"0\",\"header_tag\":\"h3\",\"header_class\":\"\",\"style\":\"0\"}', 0, 'fa-IR'),
+(131, 161, 'ماشین حساب میلگرد', '', '', 1, '', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_rsform', 1, 0, '{\"formId\":\"9\",\"moduleclass_sfx\":\"\",\"cache\":\"1\",\"cache_time\":\"900\",\"cachemode\":\"static\",\"module_tag\":\"div\",\"bootstrap_size\":\"0\",\"header_tag\":\"h3\",\"header_class\":\"\",\"style\":\"System-none\"}', 0, '*'),
+(132, 162, 'ماشین حساب پروفیل', '', NULL, 1, '', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_rsform', 1, 0, '{\"formId\":\"10\",\"moduleclass_sfx\":\"\",\"cache\":\"1\",\"cache_time\":\"900\",\"cachemode\":\"static\",\"module_tag\":\"div\",\"bootstrap_size\":\"0\",\"header_tag\":\"h3\",\"header_class\":\"\",\"style\":\"System-none\"}', 0, '*');
 
 -- --------------------------------------------------------
 
@@ -16068,7 +16131,9 @@ INSERT INTO `yz4ph_modules_menu` (`moduleid`, `menuid`) VALUES
 (127, 104),
 (128, 104),
 (129, 104),
-(130, 104);
+(130, 104),
+(131, 0),
+(132, 0);
 
 -- --------------------------------------------------------
 
@@ -16234,7 +16299,9 @@ CREATE TABLE `yz4ph_rsform_calculations` (
 
 INSERT INTO `yz4ph_rsform_calculations` (`id`, `formId`, `total`, `expression`, `ordering`) VALUES
 (2, 9, 'each', '{externaldiameter:value} * {externaldiameter:value} * 3.14 * 7.85 / 4000', 1),
-(3, 9, 'total', '{externaldiameter:value} * {externaldiameter:value} * 3.14 * 7.85 / 4000 *  {meters:value}', 2);
+(3, 9, 'total', '{externaldiameter:value} * {externaldiameter:value} * 3.14 * 7.85 / 4000 *  {meters:value}', 2),
+(4, 10, 'each', '(20+20) * 2 * {thickness:value} * 7.85 / 1000', 1),
+(5, 10, 'total', '(20+20) * 2 * {thickness:value} *  {meters:value} * 7.85 / 1000', 2);
 
 -- --------------------------------------------------------
 
@@ -16305,7 +16372,11 @@ INSERT INTO `yz4ph_rsform_components` (`ComponentId`, `FormId`, `ComponentTypeId
 (120, 9, 355, 1, 1),
 (121, 9, 1, 3, 1),
 (125, 9, 1, 2, 1),
-(126, 9, 355, 0, 1);
+(126, 9, 355, 0, 1),
+(128, 10, 355, 0, 1),
+(129, 10, 355, 1, 1),
+(130, 10, 1, 2, 1),
+(131, 10, 1, 3, 1);
 
 -- --------------------------------------------------------
 
@@ -16709,7 +16780,7 @@ INSERT INTO `yz4ph_rsform_config` (`SettingName`, `SettingValue`) VALUES
 ('calculations.nodecimals', '2'),
 ('calculations.thousands', ','),
 ('deleteafter.interval', '10'),
-('deleteafter.last_run', '1625099864'),
+('deleteafter.last_run', '1625212612'),
 ('disposable_domains', ''),
 ('export.limit', '500'),
 ('export.mask', 'export-{formId}-{domain}-{date}'),
@@ -16897,7 +16968,8 @@ INSERT INTO `yz4ph_rsform_forms` (`FormId`, `FormName`, `FormLayout`, `GridLayou
 (5, 'registration', '<div class=\"uk-hidden\">{error}</div>\r\n<!-- Do not remove this ID, it is used to identify the page so that the pagination script can work correctly -->\r\n<fieldset class=\"formContainer uk-form-stacked uk-margin-remove uk-padding\" id=\"rsform_{global:formid}_page_0\">\r\n<div class=\"uk-hidden\">{usergroup:body}</div>\r\n    <div class=\"uk-flex-center\" data-uk-grid>\r\n        <div class=\"uk-width-1-1 uk-width-2-3@m\">\r\n            <div>\r\n                <div class=\"uk-child-width-1-1\" data-uk-grid>\r\n                    <div class=\"rsform-block rsform-block-accounttype\">\r\n                        <div class=\"uk-form-controls formControls\">\r\n                            {accounttype:body}\r\n                            <span class=\"formValidation uk-text-center uk-display-block\">{accounttype:validation}</span>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"rsform-block rsform-block-page-break-1uk-margin-medium-top\">\r\n                        <div class=\"uk-form-controls formControls\">{page_break_1:body}</div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</fieldset>\r\n<!-- Do not remove this ID, it is used to identify the page so that the pagination script can work correctly -->\r\n<fieldset class=\"formContainer uk-form-stacked uk-margin-remove uk-padding\" id=\"rsform_{global:formid}_page_1\">\r\n    <div class=\"uk-grid-small\" data-uk-grid>\r\n        <div class=\"rsform-block rsform-block-name uk-width-1-1 uk-width-1-3@m\">\r\n            {yourname:body}{companyname:body}\r\n            <div class=\"uk-form-controls formControls\">\r\n                {name:body}\r\n                <span class=\"formValidation\">{name:validation}</span>\r\n            </div>\r\n        </div>\r\n        <div class=\"rsform-block rsform-block-nationalid uk-width-1-1 uk-width-1-3@m\">\r\n            <label class=\"uk-form-label formControlLabel\" for=\"nationalid\"{if {nationalid:descriptionhtml}} data-uk-tooltip=\"{pos:\'top-left\'}\" title=\"{nationalid:descriptionhtml}\"{/if}>{nationalid:caption}<strong class=\"formRequired\">&ensp;<span class=\"uk-text-danger\">*</span></strong></label>\r\n            <div class=\"uk-form-controls formControls\">\r\n                {nationalid:body}\r\n                <span class=\"formValidation\">{nationalid:validation}</span>\r\n            </div>\r\n        </div>\r\n        <div class=\"rsform-block rsform-block-shenasemelli uk-width-1-1 uk-width-1-3@m\">\r\n            <label class=\"uk-form-label formControlLabel\" for=\"shenasemelli\"{if {shenasemelli:descriptionhtml}} data-uk-tooltip=\"{pos:\'top-left\'}\" title=\"{shenasemelli:descriptionhtml}\"{/if}>{shenasemelli:caption}<strong class=\"formRequired\">&ensp;<span class=\"uk-text-danger\">*</span></strong></label>\r\n            <div class=\"uk-form-controls formControls\">\r\n                {shenasemelli:body}\r\n                <span class=\"formValidation\">{shenasemelli:validation}</span>\r\n            </div>\r\n        </div>\r\n        <div class=\"rsform-block rsform-block-financialcode uk-width-1-1 uk-width-1-3@m\">\r\n            <label class=\"uk-form-label formControlLabel\" for=\"financialcode\"{if {financialcode:descriptionhtml}} data-uk-tooltip=\"{pos:\'top-left\'}\" title=\"{financialcode:descriptionhtml}\"{/if}>{financialcode:caption}<strong class=\"formRequired\">&ensp;<span class=\"uk-text-danger\">*</span></strong></label>\r\n            <div class=\"uk-form-controls formControls\">\r\n                {financialcode:body}\r\n                <span class=\"formValidation\">{financialcode:validation}</span>\r\n            </div>\r\n        </div>\r\n        <div class=\"rsform-block rsform-block-page-break-2 uk-width-1-1 uk-margin-medium-top\">\r\n            <div class=\"uk-form-controls formControls uk-grid-small uk-child-width-1-2\" data-uk-grid>{page_break_2:body}</div>\r\n        </div>\r\n    </div>\r\n</fieldset>\r\n<!-- Do not remove this ID, it is used to identify the page so that the pagination script can work correctly -->\r\n<fieldset class=\"formContainer uk-form-stacked uk-margin-remove uk-padding\" id=\"rsform_{global:formid}_page_2\">\r\n    <div class=\"rsform-block rsform-block-mobiletext\">\r\n        <div class=\"uk-form-controls formControls\">\r\n            <div class=\"uk-alert uk-alert-warning uk-border-rounded uk-margin-medium-bottom\">{mobiletext:body}</div>\r\n        </div>\r\n    </div>\r\n\r\n    <div class=\"uk-grid-small\" data-uk-grid>\r\n        <div class=\"rsform-block rsform-block-cellphone uk-width-1-1 uk-width-1-3@m\">\r\n            <label class=\"uk-form-label formControlLabel\" for=\"cellphone\"{if {cellphone:descriptionhtml}} data-uk-tooltip=\"{pos:\'top-left\'}\" title=\"{cellphone:descriptionhtml}\"{/if}>{cellphone:caption}<strong class=\"formRequired\">&ensp;<span class=\"uk-text-danger\">*</span></strong></label>\r\n            <div class=\"uk-form-controls formControls\">\r\n                {cellphone:body}\r\n                <span class=\"formValidation\">{cellphone:validation}</span>\r\n            </div>\r\n        </div>\r\n        <div class=\"rsform-block rsform-block-landline uk-width-1-1 uk-width-1-3@m\">\r\n            <label class=\"uk-form-label formControlLabel\" for=\"landline\"{if {landline:descriptionhtml}} data-uk-tooltip=\"{pos:\'top-left\'}\" title=\"{landline:descriptionhtml}\"{/if}>{landline:caption}</label>\r\n            <div class=\"uk-form-controls formControls\">\r\n                {landline:body}\r\n                <span class=\"formValidation\">{landline:validation}</span>\r\n            </div>\r\n        </div>\r\n        <div class=\"rsform-block rsform-block-email uk-width-1-1 uk-width-1-3@m\">\r\n            <label class=\"uk-form-label formControlLabel\" for=\"email\"{if {email:descriptionhtml}} data-uk-tooltip=\"{pos:\'top-left\'}\" title=\"{email:descriptionhtml}\"{/if}>{email:caption}<strong class=\"formRequired\">&ensp;<span class=\"uk-text-danger\">*</span></strong></label>\r\n            <div class=\"uk-form-controls formControls\">\r\n                {email:body}\r\n                <span class=\"formValidation\">{email:validation}</span>\r\n            </div>\r\n        </div>\r\n        <div class=\"rsform-block rsform-block-submit uk-width-1-1 uk-margin-medium-top\">\r\n            <div class=\"uk-form-controls formControls\">\r\n                <div class=\"uk-grid-small uk-child-width-1-2\" data-uk-grid>{submit:body}</div>\r\n                <span class=\"formValidation\">{submit:validation}</span>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</fieldset>\r\n{password:body}', '[[{\"columns\":[[\"30\"]],\"sizes\":[\"12\"]},{\"columns\":[[\"31\"]],\"sizes\":[\"12\"]},{\"columns\":[[\"32\",\"34\",\"36\",\"44\"]],\"sizes\":[\"12\"]},{\"columns\":[[\"37\"]],\"sizes\":[\"12\"]},{\"columns\":[[\"38\",\"39\",\"40\",\"43\",\"48\",\"49\",\"87\",\"88\"]],\"sizes\":[\"12\"]}],[\"47\"]]', 'uikit3', 0, 0, 1, 0, 0, '', '<script>\r\njQuery(document).ready(function () {\r\n    jQuery(\'input[name=\"form[accounttype]\"]\').on(\'change\', function () {\r\n        jQuery(\'select#usergroup\').val(jQuery(this).val());\r\n    });\r\n});\r\n</script>', 'Registration Form', 0, 1, 'en-GB', '', 1, 1, 0, 0, '<p>تبریک !</p>\r\n<p>حساب کاربری شما با موفقیت ساخته شد.</p>\r\n<p>رمز عبور شما به شماره موبالیتان پیامک شد.</p>', 0, '', '', '', '', '{global:mailfrom}', '', '', '{global:fromname}', '', 1, 0, '', '', '', '', '', '', '', '', '', '', 1, '', '', '', '', '{global:mailfrom}', '', '', '{global:fromname}', '', 1, '', 'list($replace, $with) = RSFormProHelper::getReplacements($SubmissionId);\r\n$userID = str_replace($replace, $with, \'{global:userid}\');\r\nJUserHelper::setUserGroups($userID, $_POST[\'form\'][\'usergroup\']);', '', '', '', '', '', '', 0, '', '', '&ensp;<span class=\"uk-text-danger\">*</span>', '<p class=\"formRed\">Please complete all required fields!</p>', '\\n', 1, 'uk-margin-remove regForm', 'userForm', '', '', '', 1, 0, 1, 1, 0, 0, 0, '', '', 0),
 (6, 'contact', '<h2 class=\"uk-margin-bottom uk-text-accent uk-text-bold uk-h4 font\">{global:formtitle}</h2>\r\n<div class=\"uk-hidden\">{error}</div>\r\n<!-- Do not remove this ID, it is used to identify the page so that the pagination script can work correctly -->\r\n<fieldset class=\"formContainer uk-form-stacked uk-margin-remove uk-padding-remove\" id=\"rsform_{global:formid}_page_0\">\r\n<div class=\"uk-grid-medium\" data-uk-grid>\r\n    <div class=\"rsform-block rsform-block-fullname uk-width-1-1 uk-width-1-2@m\">\r\n        <label class=\"uk-form-label formControlLabel\" for=\"fullname\"{if {fullname:descriptionhtml}} data-uk-tooltip=\"{pos:\'top-left\'}\" title=\"{fullname:descriptionhtml}\"{/if}>{fullname:caption}<strong class=\"formRequired\">&ensp;<span class=\"uk-text-danger\">*</span></strong></label>\r\n        <div class=\"uk-form-controls formControls\">\r\n            {fullname:body}\r\n            <span class=\"formValidation\">{fullname:validation}</span>\r\n        </div>\r\n    </div>\r\n\r\n<div class=\"rsform-block rsform-block-subject uk-width-1-1 uk-width-1-2@m\">\r\n    <label class=\"uk-form-label formControlLabel\" for=\"subject\"{if {subject:descriptionhtml}} data-uk-tooltip=\"{pos:\'top-left\'}\" title=\"{subject:descriptionhtml}\"{/if}>{subject:caption}</label>\r\n    <div class=\"uk-form-controls formControls\">\r\n        {subject:body}\r\n        <span class=\"formValidation\">{subject:validation}</span>\r\n    </div>\r\n</div>\r\n\r\n    <div class=\"rsform-block rsform-block-cellphone uk-width-1-1 uk-width-1-2@m\">\r\n        <label class=\"uk-form-label formControlLabel\" for=\"cellphone\"{if {cellphone:descriptionhtml}} data-uk-tooltip=\"{pos:\'top-left\'}\" title=\"{cellphone:descriptionhtml}\"{/if}>{cellphone:caption}<strong class=\"formRequired\">&ensp;<span class=\"uk-text-danger\">*</span></strong></label>\r\n        <div class=\"uk-form-controls formControls\">\r\n            {cellphone:body}\r\n            <span class=\"formValidation\">{cellphone:validation}</span>\r\n        </div>\r\n    </div>\r\n    <div class=\"rsform-block rsform-block-email uk-width-1-1 uk-width-1-2@m\">\r\n        <label class=\"uk-form-label formControlLabel\" for=\"email\"{if {email:descriptionhtml}} data-uk-tooltip=\"{pos:\'top-left\'}\" title=\"{email:descriptionhtml}\"{/if}>{email:caption}</label>\r\n        <div class=\"uk-form-controls formControls\">\r\n            {email:body}\r\n            <span class=\"formValidation\">{email:validation}</span>\r\n        </div>\r\n    </div>\r\n    <div class=\"rsform-block rsform-block-message uk-width-1-1\">\r\n        <label class=\"uk-form-label formControlLabel\" for=\"message\"{if {message:descriptionhtml}} data-uk-tooltip=\"{pos:\'top-left\'}\" title=\"{message:descriptionhtml}\"{/if}>{message:caption}<strong class=\"formRequired\">&ensp;<span class=\"uk-text-danger\">*</span></strong></label>\r\n        <div class=\"uk-form-controls formControls\">\r\n            {message:body}\r\n            <span class=\"formValidation\">{message:validation}</span>\r\n        </div>\r\n    </div>\r\n    <div class=\"rsform-block rsform-block-submit uk-width-1-1 uk-width-1-3@m\">\r\n        <div class=\"uk-form-controls formControls\">{submit:body}</div>\r\n    </div>\r\n</div>\r\n</fieldset>', '[[{\"columns\":[[\"50\",\"89\",\"51\",\"52\",\"53\",\"54\"]],\"sizes\":[\"12\"]}],[]]', 'uikit3', 0, 0, 0, 0, 0, '', '', 'Contact Form', 1, 1, 'en-GB', '', 1, 1, 0, 0, '<p>ffffff</p>', 0, '', '', '', '', '{global:mailfrom}', '', '', '{global:fromname}', '', 1, 0, '', '', '', '', '', '', '', '', '', '', 1, '', '', '', '', '{global:mailfrom}', '', '', '{global:fromname}', '', 1, '', '', '', '', '', '', '', '', 0, '', '', '&ensp;<span class=\"uk-text-danger\">*</span>', '<p class=\"formRed\">Please complete all required fields!</p>', '\\n', 1, 'uk-margin-remove regForm', 'userForm', '', '', '', 0, 0, 1, 1, 0, 0, 0, '', '', 0),
 (8, 'cooperation', '<div class=\"uk-hidden\">{error}</div>\r\n<!-- Do not remove this ID, it is used to identify the page so that the pagination script can work correctly -->\r\n<fieldset class=\"formContainer uk-form-stacked uk-margin-remove uk-padding\" id=\"rsform_{global:formid}_page_0\">\r\n    <div class=\"uk-flex-center\" data-uk-grid>\r\n        <div class=\"uk-width-1-1 uk-width-2-3@m\">\r\n            <div>\r\n                <div class=\"uk-child-width-1-1\" data-uk-grid>\r\n                    <div class=\"rsform-block rsform-block-cooperationtype\">\r\n                        <div class=\"uk-form-controls formControls\">\r\n                            {cooperationtype:body}\r\n                            <span class=\"formValidation uk-text-center uk-display-block\">{cooperationtype:validation}</span>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"rsform-block rsform-block-page-break-1uk-margin-medium-top\">\r\n                        <div class=\"uk-form-controls formControls\">{page_break_1:body}</div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</fieldset>\r\n<!-- Do not remove this ID, it is used to identify the page so that the pagination script can work correctly -->\r\n<fieldset class=\"formContainer uk-form-stacked uk-margin-remove uk-padding\" id=\"rsform_{global:formid}_page_1\">\r\n    <div class=\"uk-grid-medium\" data-uk-grid>\r\n        <div class=\"rsform-block rsform-block-name uk-width-1-1 uk-width-1-3@m\">\r\n            <label class=\"uk-form-label formControlLabel\" for=\"name\"{if {name:descriptionhtml}} data-uk-tooltip=\"{pos:\'top-left\'}\" title=\"{name:descriptionhtml}\"{/if}>{name:caption}<strong class=\"formRequired\">&ensp;<span class=\"uk-text-danger\">*</span></strong></label>\r\n            <div class=\"uk-form-controls formControls\">\r\n                {name:body}\r\n                <span class=\"formValidation\">{name:validation}</span>\r\n            </div>\r\n        </div>\r\n        <div class=\"rsform-block rsform-block-companyname uk-width-1-1 uk-width-1-3@m\">\r\n            <label class=\"uk-form-label formControlLabel\" for=\"companyname\"{if {companyname:descriptionhtml}} data-uk-tooltip=\"{pos:\'top-left\'}\" title=\"{companyname:descriptionhtml}\"{/if}>{companyname:caption}<strong class=\"formRequired\">&ensp;<span class=\"uk-text-danger\">*</span></strong></label>\r\n            <div class=\"uk-form-controls formControls\">\r\n                {companyname:body}\r\n                <span class=\"formValidation\">{companyname:validation}</span>\r\n            </div>\r\n        </div>\r\n        <div class=\"rsform-block rsform-block-birthdayfa uk-width-1-1 uk-width-1-3@m\">\r\n            <label class=\"uk-form-label formControlLabel\" for=\"birthdayfa\"{if {birthdayfa:descriptionhtml}} data-uk-tooltip=\"{pos:\'top-left\'}\" title=\"{birthdayfa:descriptionhtml}\"{/if}>{birthdayfa:caption}<strong class=\"formRequired\">&ensp;<span class=\"uk-text-danger\">*</span></strong></label>\r\n            <div class=\"uk-form-controls formControls\">\r\n                <div class=\"uk-flex\">{birthdayfa:body}</div>\r\n                <span class=\"formValidation\">{birthdayfa:validation}</span>\r\n            </div>\r\n        </div>\r\n        <div class=\"rsform-block rsform-block-model uk-width-1-1 uk-width-1-3@m\">\r\n            <label class=\"uk-form-label formControlLabel\" for=\"model\"{if {model:descriptionhtml}} data-uk-tooltip=\"{pos:\'top-left\'}\" title=\"{model:descriptionhtml}\"{/if}>{model:caption}<strong class=\"formRequired\">&ensp;<span class=\"uk-text-danger\">*</span></strong></label>\r\n            <div class=\"uk-form-controls formControls\">\r\n                {model:body}\r\n                <span class=\"formValidation\">{model:validation}</span>\r\n            </div>\r\n        </div>\r\n        <div class=\"rsform-block rsform-block-degree uk-width-1-1 uk-width-1-3@m\">\r\n            <label class=\"uk-form-label formControlLabel\" for=\"degree\"{if {degree:descriptionhtml}} data-uk-tooltip=\"{pos:\'top-left\'}\" title=\"{degree:descriptionhtml}\"{/if}>{degree:caption}<strong class=\"formRequired\">&ensp;<span class=\"uk-text-danger\">*</span></strong></label>\r\n            <div class=\"uk-form-controls formControls\">\r\n                {degree:body}\r\n                <span class=\"formValidation\">{degree:validation}</span>\r\n            </div>\r\n        </div>\r\n        <div class=\"rsform-block rsform-block-reshte uk-width-1-1 uk-width-1-3@m\">\r\n            <label class=\"uk-form-label formControlLabel\" for=\"reshte\"{if {reshte:descriptionhtml}} data-uk-tooltip=\"{pos:\'top-left\'}\" title=\"{reshte:descriptionhtml}\"{/if}>{reshte:caption}<strong class=\"formRequired\">&ensp;<span class=\"uk-text-danger\">*</span></strong></label>\r\n            <div class=\"uk-form-controls formControls\">\r\n                {reshte:body}\r\n                <span class=\"formValidation\">{reshte:validation}</span>\r\n            </div>\r\n        </div>\r\n        <div class=\"rsform-block rsform-block-job uk-width-1-1 uk-width-1-3@m\">\r\n            <label class=\"uk-form-label formControlLabel\" for=\"job\"{if {job:descriptionhtml}} data-uk-tooltip=\"{pos:\'top-left\'}\" title=\"{job:descriptionhtml}\"{/if}>{job:caption}<strong class=\"formRequired\">&ensp;<span class=\"uk-text-danger\">*</span></strong></label>\r\n            <div class=\"uk-form-controls formControls\">\r\n                {job:body}\r\n                <span class=\"formValidation\">{job:validation}</span>\r\n            </div>\r\n        </div>\r\n        <div class=\"rsform-block rsform-block-marital uk-width-1-1 uk-width-1-3@m\">\r\n            <label class=\"uk-form-label formControlLabel\" for=\"marital\"{if {marital:descriptionhtml}} data-uk-tooltip=\"{pos:\'top-left\'}\" title=\"{marital:descriptionhtml}\"{/if}>{marital:caption}<strong class=\"formRequired\">&ensp;<span class=\"uk-text-danger\">*</span></strong></label>\r\n            <div class=\"uk-form-controls formControls\">\r\n                {marital:body}\r\n                <span class=\"formValidation\">{marital:validation}</span>\r\n            </div>\r\n        </div>\r\n        <div class=\"rsform-block rsform-block-gender uk-width-1-1 uk-width-1-3@m\">\r\n            <label class=\"uk-form-label formControlLabel\" for=\"gender\"{if {gender:descriptionhtml}} data-uk-tooltip=\"{pos:\'top-left\'}\" title=\"{gender:descriptionhtml}\"{/if}>{gender:caption}<strong class=\"formRequired\">&ensp;<span class=\"uk-text-danger\">*</span></strong></label>\r\n            <div class=\"uk-form-controls formControls\">\r\n                {gender:body}\r\n                <span class=\"formValidation\">{gender:validation}</span>\r\n            </div>\r\n        </div>\r\n        <div class=\"rsform-block rsform-block-military uk-width-1-1 uk-width-1-3@m\">\r\n            <label class=\"uk-form-label formControlLabel\" for=\"military\"{if {military:descriptionhtml}} data-uk-tooltip=\"{pos:\'top-left\'}\" title=\"{military:descriptionhtml}\"{/if}>{military:caption}<strong class=\"formRequired\">&ensp;<span class=\"uk-text-danger\">*</span></strong></label>\r\n            <div class=\"uk-form-controls formControls\">\r\n                {military:body}\r\n                <span class=\"formValidation\">{military:validation}</span>\r\n            </div>\r\n        </div>\r\n        <div class=\"rsform-block rsform-block-shenasemelli uk-width-1-1 uk-width-1-3@m\">\r\n            <label class=\"uk-form-label formControlLabel\" for=\"shenasemelli\"{if {shenasemelli:descriptionhtml}} data-uk-tooltip=\"{pos:\'top-left\'}\" title=\"{shenasemelli:descriptionhtml}\"{/if}>{shenasemelli:caption}<strong class=\"formRequired\">&ensp;<span class=\"uk-text-danger\">*</span></strong></label>\r\n            <div class=\"uk-form-controls formControls\">\r\n                {shenasemelli:body}\r\n                <span class=\"formValidation\">{shenasemelli:validation}</span>\r\n            </div>\r\n        </div>\r\n        <div class=\"rsform-block rsform-block-financialcode uk-width-1-1 uk-width-1-3@m\">\r\n            <label class=\"uk-form-label formControlLabel\" for=\"financialcode\"{if {financialcode:descriptionhtml}} data-uk-tooltip=\"{pos:\'top-left\'}\" title=\"{financialcode:descriptionhtml}\"{/if}>{financialcode:caption}<strong class=\"formRequired\">&ensp;<span class=\"uk-text-danger\">*</span></strong></label>\r\n            <div class=\"uk-form-controls formControls\">\r\n                {financialcode:body}\r\n                <span class=\"formValidation\">{financialcode:validation}</span>\r\n            </div>\r\n        </div>\r\n        <div class=\"rsform-block rsform-block-activity uk-width-1-1 uk-width-2-3@m\">\r\n            <label class=\"uk-form-label formControlLabel\" for=\"activity\"{if {activity:descriptionhtml}} data-uk-tooltip=\"{pos:\'top-left\'}\" title=\"{activity:descriptionhtml}\"{/if}>{activity:caption}<strong class=\"formRequired\">&ensp;<span class=\"uk-text-danger\">*</span></strong></label>\r\n            <div class=\"uk-form-controls formControls\">\r\n                {activity:body}\r\n                <span class=\"formValidation\">{activity:validation}</span>\r\n            </div>\r\n        </div>\r\n        <div class=\"uk-width-1-1\"><hr></div>\r\n        <div class=\"rsform-block rsform-block-file uk-width-1-1\">\r\n            <label class=\"uk-form-label formControlLabel\" for=\"file\"{if {file:descriptionhtml}} data-uk-tooltip=\"{pos:\'top-left\'}\" title=\"{file:descriptionhtml}\"{/if}>{file:caption}<strong class=\"formRequired\">&ensp;<span class=\"uk-text-danger\">*</span></strong></label>\r\n            <div class=\"uk-form-controls formControls\">\r\n                {file:body}\r\n                <span class=\"formValidation\">{file:validation}</span>\r\n            </div>\r\n        </div>\r\n        <div class=\"rsform-block rsform-block-description uk-width-1-1\">\r\n            <label class=\"uk-form-label formControlLabel\" for=\"description\"{if {description:descriptionhtml}} data-uk-tooltip=\"{pos:\'top-left\'}\" title=\"{description:descriptionhtml}\"{/if}>{description:caption}<strong class=\"formRequired\">&ensp;<span class=\"uk-text-danger\">*</span></strong></label>\r\n            <div class=\"uk-form-controls formControls\">\r\n                {description:body}\r\n                <span class=\"formValidation\">{description:validation}</span>\r\n            </div>\r\n        </div>\r\n        <div class=\"rsform-block rsform-block-page-break-2 uk-width-1-1 uk-margin-medium-top\">\r\n            <div class=\"uk-form-controls formControls uk-grid-small uk-child-width-1-2\" data-uk-grid>{page_break_2:body}</div>\r\n        </div>\r\n    </div>\r\n</fieldset>\r\n<!-- Do not remove this ID, it is used to identify the page so that the pagination script can work correctly -->\r\n<fieldset class=\"formContainer uk-form-stacked uk-margin-remove uk-padding\" id=\"rsform_{global:formid}_page_2\">\r\n    <div class=\"uk-grid-medium\" data-uk-grid>\r\n        <div class=\"rsform-block rsform-block-cellphone uk-width-1-1 uk-width-1-3@m\">\r\n            <label class=\"uk-form-label formControlLabel\" for=\"cellphone\"{if {cellphone:descriptionhtml}} data-uk-tooltip=\"{pos:\'top-left\'}\" title=\"{cellphone:descriptionhtml}\"{/if}>{cellphone:caption}<strong class=\"formRequired\">&ensp;<span class=\"uk-text-danger\">*</span></strong></label>\r\n            <div class=\"uk-form-controls formControls\">\r\n                {cellphone:body}\r\n                <span class=\"formValidation\">{cellphone:validation}</span>\r\n            </div>\r\n        </div>\r\n        <div class=\"rsform-block rsform-block-landline uk-width-1-1 uk-width-1-3@m\">\r\n            <label class=\"uk-form-label formControlLabel\" for=\"landline\"{if {landline:descriptionhtml}} data-uk-tooltip=\"{pos:\'top-left\'}\" title=\"{landline:descriptionhtml}\"{/if}>{landline:caption}</label>\r\n            <div class=\"uk-form-controls formControls\">\r\n                {landline:body}\r\n                <span class=\"formValidation\">{landline:validation}</span>\r\n            </div>\r\n        </div>\r\n        <div class=\"rsform-block rsform-block-email uk-width-1-1 uk-width-1-3@m\">\r\n            <label class=\"uk-form-label formControlLabel\" for=\"email\"{if {email:descriptionhtml}} data-uk-tooltip=\"{pos:\'top-left\'}\" title=\"{email:descriptionhtml}\"{/if}>{email:caption}<strong class=\"formRequired\">&ensp;<span class=\"uk-text-danger\">*</span></strong></label>\r\n            <div class=\"uk-form-controls formControls\">\r\n                {email:body}\r\n                <span class=\"formValidation\">{email:validation}</span>\r\n            </div>\r\n        </div>\r\n        <div class=\"rsform-block rsform-block-province uk-width-1-1 uk-width-1-3@m\">\r\n            <label class=\"uk-form-label formControlLabel\" for=\"province\"{if {province:descriptionhtml}} data-uk-tooltip=\"{pos:\'top-left\'}\" title=\"{province:descriptionhtml}\"{/if}>{province:caption}<strong class=\"formRequired\">&ensp;<span class=\"uk-text-danger\">*</span></strong></label>\r\n            <div class=\"uk-form-controls formControls\">\r\n                {province:body}\r\n                <span class=\"formValidation\">{province:validation}</span>\r\n            </div>\r\n        </div>\r\n        <div class=\"rsform-block rsform-block-address uk-width-1-1 uk-width-2-3@m\">\r\n            <label class=\"uk-form-label formControlLabel\" for=\"address\"{if {address:descriptionhtml}} data-uk-tooltip=\"{pos:\'top-left\'}\" title=\"{address:descriptionhtml}\"{/if}>{address:caption}<strong class=\"formRequired\">&ensp;<span class=\"uk-text-danger\">*</span></strong></label>\r\n            <div class=\"uk-form-controls formControls\">\r\n                {address:body}\r\n                <span class=\"formValidation\">{address:validation}</span>\r\n            </div>\r\n        </div>\r\n        <div class=\"rsform-block rsform-block-submit uk-width-1-1 uk-margin-medium-top\">\r\n            <div class=\"uk-form-controls formControls\">\r\n                <div class=\"uk-grid-small uk-child-width-1-1 uk-child-width-1-2@m\" data-uk-grid>{submit:body}</div>\r\n                <span class=\"formValidation\">{submit:validation}</span>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</fieldset>', '[[{\"columns\":[[\"61\"]],\"sizes\":[\"12\"]},{\"columns\":[[\"62\"]],\"sizes\":[\"12\"]},{\"columns\":[[\"63\",\"90\",\"77\",\"75\",\"76\",\"78\",\"82\",\"81\",\"83\",\"79\",\"80\",\"65\",\"66\",\"84\",\"91\"]],\"sizes\":[\"12\"]},{\"columns\":[[\"67\"]],\"sizes\":[\"12\"]},{\"columns\":[[\"68\",\"69\",\"70\",\"86\",\"85\",\"71\",\"92\"]],\"sizes\":[\"12\"]}],[]]', 'uikit3', 0, 0, 1, 0, 0, '', '', 'Cooperation Form', 0, 1, 'en-GB', '', 1, 1, 0, 0, '<p>تبریک !</p>\r\n<p>حساب کاربری شما با موفقیت ساخته شد.</p>', 0, '', '', '', '', '{global:mailfrom}', '', '', '{global:fromname}', '', 1, 0, '', '', '', '', '', '', '', '', '', '', 1, '', '', '', '', '{global:mailfrom}', '', '', '{global:fromname}', '', 1, '', '/*\r\nini_set(\"soap.wsdl_cache_enabled\", \"0\");\r\ntry {\r\n    $client = new SoapClient(\'http://api.payamak-panel.com/post/send.asmx?wsdl\', array(\'encoding\'=>\'UTF-8\'));\r\n    $parameters[\'username\'] = \"steelarvin\";\r\n    $parameters[\'password\'] = \"1248\";\r\n    $parameters[\'from\'] = \"30007290000733\";\r\n    $parameters[\'to\'] = array($_POST[\'form\'][\'cellphone\']);\r\n    $parameters[\'text\'] =\"درخواست همکاری شما دریافت و بزودی به آن رسیدگی خواهد شد.\\nبا سپاس از شما\\nاستیل آروین\";\r\n    $parameters[\'isflash\'] = true;\r\n    $parameters[\'udh\'] = \"\";\r\n    $parameters[\'recId\'] = array(0);\r\n    $parameters[\'status\'] = 0x0;\r\n    echo $client->GetCredit(array(\"username\"=>\"wsdemo\",\"password\"=>\"wsdemo\"))->GetCreditResult;\r\n    echo $client->SendSms($parameters)->SendSmsResult;\r\n}\r\ncatch (SoapFault $ex) {\r\n    echo $ex->faultstring;\r\n}\r\n*/', '', '', '', '', '', '', 0, '', '', '&ensp;<span class=\"uk-text-danger\">*</span>', '<p class=\"formRed\">Please complete all required fields!</p>', '\\n', 1, 'uk-margin-remove regForm', 'userForm', '', '', '', 1, 0, 1, 1, 0, 0, 0, '', '', 0),
-(9, 'roundbars', '<div class=\"uk-hidden\">{error}</div>\r\n<!-- Do not remove this ID, it is used to identify the page so that the pagination script can work correctly -->\r\n<fieldset class=\"formContainer uk-form-stacked uk-margin-remove-top uk-margin-medium-bottom uk-padding-remove\" id=\"rsform_{global:formid}_page_0\">\r\n    <div class=\"uk-grid-medium\" data-uk-grid>\r\n        <div class=\"rsform-block rsform-block-externaldiameter uk-width-1-1 uk-width-1-2@m\">\r\n            <label class=\"uk-form-label formControlLabel uk-margin-bottom\" for=\"externaldiameter\"{if {externaldiameter:externaldiameterhtml}} data-uk-tooltip=\"{pos:\'top-left\'}\" title=\"{externaldiameter:externaldiameterhtml}\"{/if}>{externaldiameter:caption}<strong class=\"formRequired\">&ensp;<span class=\"uk-text-danger\">*</span></strong></label>\r\n            <div class=\"uk-form-controls formControls\">\r\n                {externaldiameter:body}\r\n                <span class=\"formValidation\">{externaldiameter:validation}</span>\r\n            </div>\r\n        </div>\r\n        <div class=\"rsform-block rsform-block-meters uk-width-1-1 uk-width-1-2@m\">\r\n            <label class=\"uk-form-label formControlLabel uk-margin-bottom\" for=\"meters\"{if {meters:metershtml}} data-uk-tooltip=\"{pos:\'top-left\'}\" title=\"{meters:metershtml}\"{/if}>{meters:caption}<strong class=\"formRequired\">&ensp;<span class=\"uk-text-danger\">*</span></strong></label>\r\n            <div class=\"uk-form-controls formControls\">\r\n                {meters:body}\r\n                <span class=\"formValidation\">{meters:validation}</span>\r\n            </div>\r\n        </div>\r\n        <div class=\"uk-width-1-1\">\r\n            <div>\r\n                <div class=\"uk-card uk-card-default uk-box-shadow-small uk-border-rounded uk-padding-small\">\r\n                    <div>\r\n                        <div class=\"uk-grid-medium uk-grid-divider\" data-uk-grid>\r\n                            <div class=\"rsform-block rsform-block-each uk-width-1-1 uk-width-1-2@m\">\r\n                                <label class=\"uk-form-label formControlLabel uk-text-center uk-text-muted uk-margin-small-top\" for=\"each\"{if {each:eachhtml}} data-uk-tooltip=\"{pos:\'top-left\'}\" title=\"{each:eachhtml}\"{/if}>{each:caption}</label>\r\n                                <div class=\"uk-form-controls formControls\">\r\n                                    {each:body}\r\n                                    <span class=\"formValidation\">{each:validation}</span>\r\n                                </div>\r\n                            </div>\r\n                            <div class=\"rsform-block rsform-block-total uk-width-1-1 uk-width-1-2@m\">\r\n                                <label class=\"uk-form-label formControlLabel uk-text-center uk-text-muted uk-margin-small-top\" for=\"total\"{if {total:totalhtml}} data-uk-tooltip=\"{pos:\'top-left\'}\" title=\"{total:totalhtml}\"{/if}>{total:caption}</label>\r\n                                <div class=\"uk-form-controls formControls\">\r\n                                    {total:body}\r\n                                    <span class=\"formValidation\">{total:validation}</span>\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</fieldset>', '[[{\"columns\":[[\"126\",\"120\",\"125\",\"121\"]],\"sizes\":[\"12\"]}],[]]', 'uikit3', 0, 0, 1, 0, 0, '', '<script>\r\njQuery(document).ready(function(){\r\n    jQuery(\"#rs-range-slider9_0\").on(\"change\", function(){\r\n        jQuery(\"span.totalWeight\").text(jQuery(this).val());\r\n    });\r\n    jQuery(\"#rs-range-slider9_1\").on(\"change\", function(){\r\n        jQuery(\"span.diameter\").text(jQuery(this).val());\r\n    });\r\n    jQuery(\"#rs-range-slider9_0,#rs-range-slider9_1\").on(\"change\", function(){\r\nsetTimeout(function(){jQuery(\"input#desiredweight\").val(jQuery(\"input#total\").val());}, 1000);\r\n    });\r\n})\r\n</script>', 'ماشین حساب میلگرد', 0, 1, 'en-GB', '', 1, 1, 0, 0, '<p>تبریک !</p>\r\n<p>حساب کاربری شما با موفقیت ساخته شد.</p>', 0, '', '', '', '', '{global:mailfrom}', '', '', '{global:fromname}', '', 1, 0, '', '', '', '', '', '', '', '', '', '', 1, '', '', '', '', '{global:mailfrom}', '', '', '{global:fromname}', '', 1, '', '', '', '', '', '', '', '', 0, '', '', '&ensp;<span class=\"uk-text-danger\">*</span>', '<p class=\"formRed\">Please complete all required fields!</p>', '\\n', 1, 'uk-margin-remove regForm', 'userForm', '', '', '', 1, 0, 1, 1, 0, 0, 0, '', '', 0);
+(9, 'roundbars', '<div class=\"uk-hidden\">{error}</div>\r\n<!-- Do not remove this ID, it is used to identify the page so that the pagination script can work correctly -->\r\n<fieldset class=\"formContainer uk-form-stacked uk-margin-remove-top uk-margin-medium-bottom uk-padding-remove\" id=\"rsform_{global:formid}_page_0\">\r\n    <div class=\"uk-grid-medium\" data-uk-grid>\r\n        <div class=\"rsform-block rsform-block-externaldiameter uk-width-1-1 uk-width-1-2@m\">\r\n            <label class=\"uk-form-label formControlLabel uk-margin-bottom\" for=\"externaldiameter\"{if {externaldiameter:externaldiameterhtml}} data-uk-tooltip=\"{pos:\'top-left\'}\" title=\"{externaldiameter:externaldiameterhtml}\"{/if}>{externaldiameter:caption}<strong class=\"formRequired\">&ensp;<span class=\"uk-text-danger\">*</span></strong></label>\r\n            <div class=\"uk-form-controls formControls\">\r\n                {externaldiameter:body}\r\n                <span class=\"formValidation\">{externaldiameter:validation}</span>\r\n            </div>\r\n        </div>\r\n        <div class=\"rsform-block rsform-block-meters uk-width-1-1 uk-width-1-2@m\">\r\n            <label class=\"uk-form-label formControlLabel uk-margin-bottom\" for=\"meters\"{if {meters:metershtml}} data-uk-tooltip=\"{pos:\'top-left\'}\" title=\"{meters:metershtml}\"{/if}>{meters:caption}<strong class=\"formRequired\">&ensp;<span class=\"uk-text-danger\">*</span></strong></label>\r\n            <div class=\"uk-form-controls formControls\">\r\n                {meters:body}\r\n                <span class=\"formValidation\">{meters:validation}</span>\r\n            </div>\r\n        </div>\r\n        <div class=\"uk-width-1-1\">\r\n            <div>\r\n                <div class=\"uk-card uk-card-default uk-box-shadow-small uk-border-rounded uk-padding-small\">\r\n                    <div>\r\n                        <div class=\"uk-grid-medium uk-grid-divider\" data-uk-grid>\r\n                            <div class=\"rsform-block rsform-block-each uk-width-1-1 uk-width-1-2@m\">\r\n                                <label class=\"uk-form-label formControlLabel uk-text-center uk-text-muted uk-margin-small-top\" for=\"each\"{if {each:eachhtml}} data-uk-tooltip=\"{pos:\'top-left\'}\" title=\"{each:eachhtml}\"{/if}>{each:caption}</label>\r\n                                <div class=\"uk-form-controls formControls\">\r\n                                    {each:body}\r\n                                    <span class=\"formValidation\">{each:validation}</span>\r\n                                </div>\r\n                            </div>\r\n                            <div class=\"rsform-block rsform-block-total uk-width-1-1 uk-width-1-2@m\">\r\n                                <label class=\"uk-form-label formControlLabel uk-text-center uk-text-muted uk-margin-small-top\" for=\"total\"{if {total:totalhtml}} data-uk-tooltip=\"{pos:\'top-left\'}\" title=\"{total:totalhtml}\"{/if}>{total:caption}</label>\r\n                                <div class=\"uk-form-controls formControls\">\r\n                                    {total:body}\r\n                                    <span class=\"formValidation\">{total:validation}</span>\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</fieldset>', '[[{\"columns\":[[\"126\",\"120\",\"125\",\"121\"]],\"sizes\":[\"12\"]}],[]]', 'uikit3', 0, 0, 1, 0, 0, '', '<script>\r\njQuery(document).ready(function(){\r\n    jQuery(\"#rs-range-slider9_0\").on(\"change\", function(){\r\n        jQuery(\"span.totalWeight\").text(jQuery(this).val());\r\n    });\r\n    jQuery(\"#rs-range-slider9_1\").on(\"change\", function(){\r\n        jQuery(\"span.diameter\").text(jQuery(this).val());\r\n    });\r\n    jQuery(\"#rs-range-slider9_0,#rs-range-slider9_1\").on(\"change\", function(){\r\n        setTimeout(function(){jQuery(\"input#desiredweight\").val(jQuery(\"input#total\").val());}, 1000);\r\n    });\r\n    jQuery(\"#rs-range-slider9_0\").on(\"change\", function(){\r\n        setTimeout(function(){jQuery(\"input#desiredlength\").val(jQuery(\"#rs-range-slider9_0\").val());}, 1000);\r\n    });\r\n    jQuery(\"#rs-range-slider9_1\").on(\"change\", function(){\r\n        setTimeout(function(){jQuery(\"input#desireddiameter\").val(jQuery(\"#rs-range-slider9_1\").val());}, 1000);\r\n    });\r\n})\r\n</script>', 'ماشین حساب میلگرد', 0, 1, 'en-GB', '', 1, 1, 0, 0, '<p>تبریک !</p>\r\n<p>حساب کاربری شما با موفقیت ساخته شد.</p>', 0, '', '', '', '', '{global:mailfrom}', '', '', '{global:fromname}', '', 1, 0, '', '', '', '', '', '', '', '', '', '', 1, '', '', '', '', '{global:mailfrom}', '', '', '{global:fromname}', '', 1, '', '', '', '', '', '', '', '', 0, '', '', '&ensp;<span class=\"uk-text-danger\">*</span>', '<p class=\"formRed\">Please complete all required fields!</p>', '\\n', 1, 'uk-margin-remove regForm', 'userForm', '', '', '', 1, 0, 1, 1, 0, 0, 0, '', '', 0),
+(10, 'profiles', '<div class=\"uk-hidden\">{error}</div>\r\n<!-- Do not remove this ID, it is used to identify the page so that the pagination script can work correctly -->\r\n<fieldset class=\"formContainer uk-form-stacked uk-margin-remove-top uk-margin-medium-bottom uk-padding-remove\" id=\"rsform_{global:formid}_page_0\">\r\n    <div class=\"uk-grid-medium\" data-uk-grid>\r\n        <div class=\"rsform-block rsform-block-thickness uk-width-1-1 uk-width-1-2@m\">\r\n            <label class=\"uk-form-label formControlLabel uk-margin-bottom\" for=\"thickness\"{if {thickness:thicknesshtml}} data-uk-tooltip=\"{pos:\'top-left\'}\" title=\"{thickness:thicknesshtml}\"{/if}>{thickness:caption}<strong class=\"formRequired\">&ensp;<span class=\"uk-text-danger\">*</span></strong></label>\r\n            <div class=\"uk-form-controls formControls\">\r\n                {thickness:body}\r\n                <span class=\"formValidation\">{thickness:validation}</span>\r\n            </div>\r\n        </div>\r\n        <div class=\"rsform-block rsform-block-meters uk-width-1-1 uk-width-1-2@m\">\r\n            <label class=\"uk-form-label formControlLabel uk-margin-bottom\" for=\"meters\"{if {meters:metershtml}} data-uk-tooltip=\"{pos:\'top-left\'}\" title=\"{meters:metershtml}\"{/if}>{meters:caption}<strong class=\"formRequired\">&ensp;<span class=\"uk-text-danger\">*</span></strong></label>\r\n            <div class=\"uk-form-controls formControls\">\r\n                {meters:body}\r\n                <span class=\"formValidation\">{meters:validation}</span>\r\n            </div>\r\n        </div>\r\n        <div class=\"uk-width-1-1\">\r\n            <div>\r\n                <div class=\"uk-card uk-card-default uk-box-shadow-small uk-border-rounded uk-padding-small\">\r\n                    <div>\r\n                        <div class=\"uk-grid-medium uk-grid-divider\" data-uk-grid>\r\n                            <div class=\"rsform-block rsform-block-each uk-width-1-1 uk-width-1-2@m\">\r\n                                <label class=\"uk-form-label formControlLabel uk-text-center uk-text-muted uk-margin-small-top\" for=\"each\"{if {each:eachhtml}} data-uk-tooltip=\"{pos:\'top-left\'}\" title=\"{each:eachhtml}\"{/if}>{each:caption}</label>\r\n                                <div class=\"uk-form-controls formControls\">\r\n                                    {each:body}\r\n                                    <span class=\"formValidation\">{each:validation}</span>\r\n                                </div>\r\n                            </div>\r\n                            <div class=\"rsform-block rsform-block-total uk-width-1-1 uk-width-1-2@m\">\r\n                                <label class=\"uk-form-label formControlLabel uk-text-center uk-text-muted uk-margin-small-top\" for=\"total\"{if {total:totalhtml}} data-uk-tooltip=\"{pos:\'top-left\'}\" title=\"{total:totalhtml}\"{/if}>{total:caption}</label>\r\n                                <div class=\"uk-form-controls formControls\">\r\n                                    {total:body}\r\n                                    <span class=\"formValidation\">{total:validation}</span>\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</fieldset>', '[[{\"columns\":[[\"128\",\"129\",\"130\",\"131\"]],\"sizes\":[\"12\"]}],[]]', 'uikit3', 0, 0, 1, 0, 0, '', '<script>\r\njQuery(document).ready(function(){\r\n    jQuery(\"#rs-range-slider9_0\").on(\"change\", function(){\r\n        jQuery(\"span.totalWeight\").text(jQuery(this).val());\r\n    });\r\n    jQuery(\"#rs-range-slider9_1\").on(\"change\", function(){\r\n        jQuery(\"span.diameter\").text(jQuery(this).val());\r\n    });\r\n    jQuery(\"#rs-range-slider9_0,#rs-range-slider9_1\").on(\"change\", function(){\r\n        setTimeout(function(){jQuery(\"input#desiredweight\").val(jQuery(\"input#total\").val());}, 1000);\r\n    });\r\n    jQuery(\"#rs-range-slider9_0\").on(\"change\", function(){\r\n        setTimeout(function(){jQuery(\"input#desiredlength\").val(jQuery(\"#rs-range-slider9_0\").val());}, 1000);\r\n    });\r\n    jQuery(\"#rs-range-slider9_1\").on(\"change\", function(){\r\n        setTimeout(function(){jQuery(\"input#desireddiameter\").val(jQuery(\"#rs-range-slider9_1\").val());}, 1000);\r\n    });\r\n})\r\n</script>', 'Profiles Calculator', 0, 1, 'en-GB', '', 1, 1, 0, 0, '<p>تبریک !</p>\r\n<p>حساب کاربری شما با موفقیت ساخته شد.</p>', 0, '', '', '', '', '{global:mailfrom}', '', '', '{global:fromname}', '', 1, 0, '', '', '', '', '', '', '', '', '', '', 1, '', '', '', '', '{global:mailfrom}', '', '', '{global:fromname}', '', 1, '', '', '', '', 'print_r($app);', '', '', '', 0, '', '', '&ensp;<span class=\"uk-text-danger\">*</span>', '<p class=\"formRed\">Please complete all required fields!</p>', '\\n', 1, 'uk-margin-remove regForm', 'userForm', '', '', '', 1, 0, 1, 1, 0, 0, 0, '', '', 0);
 
 -- --------------------------------------------------------
 
@@ -16948,7 +17020,8 @@ INSERT INTO `yz4ph_rsform_posts` (`form_id`, `enabled`, `method`, `fields`, `hea
 (5, 0, 1, '[]', '[]', 1, 'http://'),
 (6, 0, 1, '[]', '[]', 1, 'http://'),
 (8, 0, 1, '[]', '[]', 1, 'http://'),
-(9, 0, 1, '[]', '[]', 1, 'http://');
+(9, 0, 1, '[]', '[]', 1, 'http://'),
+(10, 0, 1, '[]', '[]', 1, 'http://');
 
 -- --------------------------------------------------------
 
@@ -17673,7 +17746,83 @@ INSERT INTO `yz4ph_rsform_properties` (`PropertyId`, `ComponentId`, `PropertyNam
 (1572, 126, 'TOFIXED', 'NO'),
 (1573, 126, 'KEYBOARD', 'NO'),
 (1574, 126, 'READONLY', 'NO'),
-(1575, 126, 'TEXT', '');
+(1575, 126, 'TEXT', ''),
+(1578, 128, 'NAME', 'thickness'),
+(1579, 128, 'CAPTION', 'ضخامت'),
+(1580, 128, 'DEFAULTVALUE', ''),
+(1581, 128, 'DESCRIPTION', ''),
+(1582, 128, 'REQUIRED', 'YES'),
+(1583, 128, 'VALIDATIONMESSAGE', 'Invalid Input'),
+(1584, 128, 'SLIDERTYPE', 'SINGLE'),
+(1585, 128, 'SKIN', 'HTML5'),
+(1586, 128, 'USEVALUES', 'YES'),
+(1587, 128, 'VALUES', '1\r\n1.5\r\n2\r\n2.5\r\n3\r\n3.5\r\n4\r\n4.5\r\n5'),
+(1588, 128, 'MINVALUE', '0'),
+(1589, 128, 'MAXVALUE', '100'),
+(1590, 128, 'GRID', 'YES'),
+(1591, 128, 'GRIDSNAP', 'NO'),
+(1592, 128, 'GRIDSTEP', '10'),
+(1593, 128, 'FORCEEDGES', 'YES'),
+(1594, 128, 'FROMFIXED', 'NO'),
+(1595, 128, 'TOFIXED', 'NO'),
+(1596, 128, 'KEYBOARD', 'NO'),
+(1597, 128, 'READONLY', 'NO'),
+(1598, 128, 'TEXT', ''),
+(1599, 129, 'NAME', 'meters'),
+(1600, 129, 'CAPTION', 'متراژ درخواستی'),
+(1601, 129, 'DEFAULTVALUE', '1'),
+(1602, 129, 'DESCRIPTION', ''),
+(1603, 129, 'REQUIRED', 'YES'),
+(1604, 129, 'VALIDATIONMESSAGE', 'Invalid Input'),
+(1605, 129, 'SLIDERTYPE', 'SINGLE'),
+(1606, 129, 'SKIN', 'HTML5'),
+(1607, 129, 'USEVALUES', 'NO'),
+(1608, 129, 'VALUES', ''),
+(1609, 129, 'MINVALUE', '1'),
+(1610, 129, 'MAXVALUE', '100'),
+(1611, 129, 'GRID', 'YES'),
+(1612, 129, 'GRIDSNAP', 'NO'),
+(1613, 129, 'GRIDSTEP', '1'),
+(1614, 129, 'FORCEEDGES', 'YES'),
+(1615, 129, 'FROMFIXED', 'NO'),
+(1616, 129, 'TOFIXED', 'NO'),
+(1617, 129, 'KEYBOARD', 'NO'),
+(1618, 129, 'READONLY', 'NO'),
+(1619, 129, 'TEXT', ''),
+(1620, 130, 'NAME', 'each'),
+(1621, 130, 'CAPTION', 'مبلغ نهایی'),
+(1622, 130, 'DEFAULTVALUE', ''),
+(1623, 130, 'DESCRIPTION', ''),
+(1624, 130, 'REQUIRED', 'YES'),
+(1625, 130, 'VALIDATIONRULE', 'none'),
+(1626, 130, 'VALIDATIONEXTRA', ''),
+(1627, 130, 'VALIDATIONMESSAGE', 'Invalid Input'),
+(1628, 130, 'INPUTTYPE', 'text'),
+(1629, 130, 'ATTRMIN', ''),
+(1630, 130, 'ATTRMAX', ''),
+(1631, 130, 'ATTRSTEP', '1'),
+(1632, 130, 'SIZE', '20'),
+(1633, 130, 'MAXSIZE', ''),
+(1634, 130, 'PLACEHOLDER', ''),
+(1635, 130, 'ADDITIONALATTRIBUTES', 'class=\"uk-width-1-1 uk-border-rounded font uk-form-blank uk-text-center priceCalcInput\" readonly'),
+(1636, 130, 'TEXT', ''),
+(1637, 131, 'NAME', 'total'),
+(1638, 131, 'CAPTION', 'مبلغ نهایی'),
+(1639, 131, 'DEFAULTVALUE', ''),
+(1640, 131, 'DESCRIPTION', ''),
+(1641, 131, 'REQUIRED', 'YES'),
+(1642, 131, 'VALIDATIONRULE', 'none'),
+(1643, 131, 'VALIDATIONEXTRA', ''),
+(1644, 131, 'VALIDATIONMESSAGE', 'Invalid Input'),
+(1645, 131, 'INPUTTYPE', 'text'),
+(1646, 131, 'ATTRMIN', ''),
+(1647, 131, 'ATTRMAX', ''),
+(1648, 131, 'ATTRSTEP', '1'),
+(1649, 131, 'SIZE', '20'),
+(1650, 131, 'MAXSIZE', ''),
+(1651, 131, 'PLACEHOLDER', ''),
+(1652, 131, 'ADDITIONALATTRIBUTES', 'class=\"uk-width-1-1 uk-border-rounded uk-text-center uk-form-blank font priceCalcInput\" readonly'),
+(1653, 131, 'TEXT', '');
 
 -- --------------------------------------------------------
 
@@ -17711,7 +17860,8 @@ INSERT INTO `yz4ph_rsform_registration` (`form_id`, `itemid`, `action`, `action_
 (5, 0, 1, '', 'a:6:{s:4:\"name\";s:4:\"name\";s:8:\"username\";s:9:\"cellphone\";s:6:\"email1\";s:5:\"email\";s:6:\"email2\";s:5:\"email\";s:9:\"password1\";s:8:\"password\";s:9:\"password2\";s:8:\"password\";}', 'a:6:{s:4:\"type\";s:11:\"accounttype\";s:9:\"codemelli\";s:10:\"nationalid\";s:9:\"cellphone\";s:9:\"cellphone\";s:8:\"landline\";s:8:\"landline\";s:12:\"shenasemelli\";s:12:\"shenasemelli\";s:13:\"financialcode\";s:13:\"financialcode\";}', '', '2', 0, 1, 0, 0, 0, '', '', '', '', 0, 1),
 (6, 0, 1, '', 'a:6:{s:4:\"name\";s:8:\"fullname\";s:8:\"username\";s:8:\"fullname\";s:6:\"email1\";s:8:\"fullname\";s:6:\"email2\";s:8:\"fullname\";s:9:\"password1\";s:8:\"fullname\";s:9:\"password2\";s:8:\"fullname\";}', 'a:6:{s:4:\"type\";s:0:\"\";s:9:\"codemelli\";s:0:\"\";s:9:\"cellphone\";s:0:\"\";s:8:\"landline\";s:0:\"\";s:12:\"shenasemelli\";s:0:\"\";s:13:\"financialcode\";s:0:\"\";}', '', '2', 0, 1, 0, 0, 0, '', '', '', '', 0, 0),
 (8, 0, 1, '', 'a:6:{s:4:\"name\";s:4:\"name\";s:8:\"username\";s:9:\"cellphone\";s:6:\"email1\";s:5:\"email\";s:6:\"email2\";s:5:\"email\";s:9:\"password1\";s:15:\"cooperationtype\";s:9:\"password2\";s:15:\"cooperationtype\";}', 'a:6:{s:4:\"type\";s:0:\"\";s:9:\"codemelli\";s:0:\"\";s:9:\"cellphone\";s:0:\"\";s:8:\"landline\";s:0:\"\";s:12:\"shenasemelli\";s:0:\"\";s:13:\"financialcode\";s:0:\"\";}', '', '2', 0, 1, 0, 0, 0, '', '', '', '', 0, 0),
-(9, 0, 1, '', 'a:6:{s:4:\"name\";s:16:\"externaldiameter\";s:8:\"username\";s:16:\"externaldiameter\";s:6:\"email1\";s:16:\"externaldiameter\";s:6:\"email2\";s:16:\"externaldiameter\";s:9:\"password1\";s:16:\"externaldiameter\";s:9:\"password2\";s:16:\"externaldiameter\";}', 'a:6:{s:4:\"type\";s:0:\"\";s:9:\"codemelli\";s:0:\"\";s:9:\"cellphone\";s:0:\"\";s:8:\"landline\";s:0:\"\";s:12:\"shenasemelli\";s:0:\"\";s:13:\"financialcode\";s:0:\"\";}', '', '2', 0, 1, 0, 0, 0, '', '', '', '', 0, 0);
+(9, 0, 1, '', 'a:6:{s:4:\"name\";s:16:\"externaldiameter\";s:8:\"username\";s:16:\"externaldiameter\";s:6:\"email1\";s:16:\"externaldiameter\";s:6:\"email2\";s:16:\"externaldiameter\";s:9:\"password1\";s:16:\"externaldiameter\";s:9:\"password2\";s:16:\"externaldiameter\";}', 'a:6:{s:4:\"type\";s:0:\"\";s:9:\"codemelli\";s:0:\"\";s:9:\"cellphone\";s:0:\"\";s:8:\"landline\";s:0:\"\";s:12:\"shenasemelli\";s:0:\"\";s:13:\"financialcode\";s:0:\"\";}', '', '2', 0, 1, 0, 0, 0, '', '', '', '', 0, 0),
+(10, 0, 1, '', 'a:6:{s:4:\"name\";s:9:\"thickness\";s:8:\"username\";s:9:\"thickness\";s:6:\"email1\";s:9:\"thickness\";s:6:\"email2\";s:9:\"thickness\";s:9:\"password1\";s:9:\"thickness\";s:9:\"password2\";s:9:\"thickness\";}', 'a:6:{s:4:\"type\";s:0:\"\";s:9:\"codemelli\";s:0:\"\";s:9:\"cellphone\";s:0:\"\";s:8:\"landline\";s:0:\"\";s:12:\"shenasemelli\";s:0:\"\";s:13:\"financialcode\";s:0:\"\";}', '', '2', 0, 1, 0, 0, 0, '', '', '', '', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -18238,7 +18388,43 @@ INSERT INTO `yz4ph_rsform_translations` (`id`, `form_id`, `lang_code`, `referenc
 (493, 9, 'fa-IR', 'properties', '126.DESCRIPTION', ''),
 (494, 9, 'fa-IR', 'properties', '126.VALIDATIONMESSAGE', 'Invalid Input'),
 (495, 9, 'fa-IR', 'properties', '126.DEFAULTVALUE', '10'),
-(496, 9, 'fa-IR', 'properties', '126.TEXT', '');
+(496, 9, 'fa-IR', 'properties', '126.TEXT', ''),
+(497, 10, 'fa-IR', 'forms', 'FormTitle', 'ماشین حساب پروفیل'),
+(498, 10, 'fa-IR', 'forms', 'UserEmailFromName', '{global:fromname}'),
+(499, 10, 'fa-IR', 'forms', 'UserEmailSubject', ''),
+(500, 10, 'fa-IR', 'forms', 'AdminEmailFromName', ''),
+(501, 10, 'fa-IR', 'forms', 'AdminEmailSubject', ''),
+(502, 10, 'fa-IR', 'forms', 'DeletionEmailFromName', '{global:fromname}'),
+(503, 10, 'fa-IR', 'forms', 'DeletionEmailSubject', ''),
+(504, 10, 'fa-IR', 'forms', 'DeletionEmailReplyToName', ''),
+(505, 10, 'fa-IR', 'forms', 'MetaDesc', ''),
+(506, 10, 'fa-IR', 'forms', 'MetaKeywords', ''),
+(507, 10, 'fa-IR', 'forms', 'UserEmailReplyToName', ''),
+(508, 10, 'fa-IR', 'forms', 'AdminEmailReplyToName', ''),
+(509, 10, 'fa-IR', 'forms', 'ReturnUrl', ''),
+(510, 10, 'fa-IR', 'forms', 'Thankyou', '<div>\r\n<div class=\"rsformProgress\">\r\n<div class=\"uk-text-zero uk-visible@m progressBar\">\r\n<div class=\"uk-grid-collapse uk-child-width-1-3\" data-uk-grid=\"\" data-total=\"3\" data-step=\"4\" data-percent=\"100\">\r\n<div>\r\n<div class=\"uk-text-center\"><span class=\"uk-display-block\"><img src=\"images/sprite.svg#check-circle\" width=\"24\" height=\"24\" data-uk-svg=\"\" /></span><span class=\"uk-display-block uk-text-small uk-margin-small-top uk-visible@m font\">نوع همکاری</span></div>\r\n</div>\r\n<div>\r\n<div class=\"uk-text-center\"><span class=\"uk-display-block\"><img src=\"images/sprite.svg#check-circle\" width=\"24\" height=\"24\" data-uk-svg=\"\" /></span><span class=\"uk-display-block uk-text-small uk-margin-small-top uk-visible@m font\">مشخصات شما</span></div>\r\n</div>\r\n<div>\r\n<div class=\"uk-text-center\"><span class=\"uk-display-block\"><img src=\"images/sprite.svg#check-circle\" width=\"24\" height=\"24\" data-uk-svg=\"\" /></span><span class=\"uk-display-block uk-text-small uk-margin-small-top uk-visible@m font\">اطلاعات تماس</span></div>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n<div class=\"uk-padding\">\r\n<div class=\"uk-text-center uk-margin-medium-bottom uk-text-success\"><img src=\"images/sprite.svg#check-circle\" width=\"48\" height=\"48\" data-uk-svg=\"\" /></div>\r\n<div class=\"uk-text-center uk-text-zero thankYou\">\r\n<p>سپاس !</p>\r\n<p>درخواست همکاری شما با موفقیت دریافت شد.</p>\r\n</div>\r\n</div>\r\n</div>'),
+(511, 10, 'fa-IR', 'properties', '128.CAPTION', 'ضخامت (میلیمتر)'),
+(512, 10, 'fa-IR', 'properties', '128.DESCRIPTION', ''),
+(513, 10, 'fa-IR', 'properties', '128.VALIDATIONMESSAGE', 'Invalid Input'),
+(514, 10, 'fa-IR', 'properties', '128.DEFAULTVALUE', '1'),
+(515, 10, 'fa-IR', 'properties', '128.TEXT', ''),
+(516, 10, 'fa-IR', 'properties', '129.CAPTION', 'طول (متر)'),
+(517, 10, 'fa-IR', 'properties', '129.DESCRIPTION', ''),
+(518, 10, 'fa-IR', 'properties', '129.VALIDATIONMESSAGE', 'Invalid Input'),
+(519, 10, 'fa-IR', 'properties', '129.DEFAULTVALUE', '1'),
+(520, 10, 'fa-IR', 'properties', '129.TEXT', ''),
+(521, 10, 'fa-IR', 'properties', '130.CAPTION', 'وزن 1 شاخه قوطی  <span class=\"length\">10</span>*<span class=\"width\">10</span> ضخامت <span class=\"thickness\">1.5</span>  میلیمتر (کیلوگرم)'),
+(522, 10, 'fa-IR', 'properties', '130.DESCRIPTION', ''),
+(523, 10, 'fa-IR', 'properties', '130.VALIDATIONMESSAGE', 'Invalid Input'),
+(524, 10, 'fa-IR', 'properties', '130.DEFAULTVALUE', ''),
+(525, 10, 'fa-IR', 'properties', '130.TEXT', ''),
+(526, 10, 'fa-IR', 'properties', '130.PLACEHOLDER', ''),
+(527, 10, 'fa-IR', 'properties', '131.CAPTION', 'وزن <span class=\"totalWeight\">1</span> متر میلگرد با قطر <span class=\"diameter\">10</span>  میلیمتر (کیلوگرم)'),
+(528, 10, 'fa-IR', 'properties', '131.DESCRIPTION', ''),
+(529, 10, 'fa-IR', 'properties', '131.VALIDATIONMESSAGE', 'Invalid Input'),
+(530, 10, 'fa-IR', 'properties', '131.DEFAULTVALUE', ''),
+(531, 10, 'fa-IR', 'properties', '131.TEXT', ''),
+(532, 10, 'fa-IR', 'properties', '131.PLACEHOLDER', '');
 
 -- --------------------------------------------------------
 
@@ -18279,8 +18465,9 @@ CREATE TABLE `yz4ph_session` (
 --
 
 INSERT INTO `yz4ph_session` (`session_id`, `client_id`, `guest`, `time`, `data`, `userid`, `username`) VALUES
-(0x3136626e6d683836376c356c39377338346d6a706e716e643762, 1, 0, 1625087795, NULL, 65, 'developer'),
-(0x6e746d6e71657130737635396a323566746b31617362656d6d62, 0, 0, 1625087803, NULL, 108, '09223815503');
+(0x3066386566336361363536616237363835366631656665343434613562386437, 1, 1, 1625212612, NULL, 0, ''),
+(0x3161366635386161346132306536643339343830303131366238356234613930, 1, 0, 1625144841, NULL, 65, 'developer'),
+(0x3235376636326330366438396434633361663231633962373562343932306166, 1, 1, 1625168314, NULL, 0, '');
 
 -- --------------------------------------------------------
 
@@ -18549,6 +18736,90 @@ CREATE TABLE `yz4ph_updates` (
   `extra_query` varchar(1000) COLLATE utf8mb4_unicode_ci DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Available Updates';
 
+--
+-- Dumping data for table `yz4ph_updates`
+--
+
+INSERT INTO `yz4ph_updates` (`update_id`, `update_site_id`, `extension_id`, `name`, `description`, `element`, `type`, `folder`, `client_id`, `version`, `data`, `detailsurl`, `infourl`, `extra_query`) VALUES
+(79, 2, 0, 'Armenian', '', 'pkg_hy-AM', 'package', '', 0, '3.4.4.1', '', 'https://update.joomla.org/language/details3/hy-AM_details.xml', '', ''),
+(80, 2, 0, 'Malay', '', 'pkg_ms-MY', 'package', '', 0, '3.4.1.2', '', 'https://update.joomla.org/language/details3/ms-MY_details.xml', '', ''),
+(81, 2, 0, 'Romanian', '', 'pkg_ro-RO', 'package', '', 0, '3.9.25.1', '', 'https://update.joomla.org/language/details3/ro-RO_details.xml', '', ''),
+(82, 2, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/nl-BE_details.xml', '', ''),
+(83, 2, 0, 'Chinese Traditional', '', 'pkg_zh-TW', 'package', '', 0, '3.8.0.1', '', 'https://update.joomla.org/language/details3/zh-TW_details.xml', '', ''),
+(84, 2, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/fr-FR_details.xml', '', ''),
+(85, 2, 0, 'Galician', '', 'pkg_gl-ES', 'package', '', 0, '3.3.1.2', '', 'https://update.joomla.org/language/details3/gl-ES_details.xml', '', ''),
+(86, 2, 0, 'Georgian', '', 'pkg_ka-GE', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/ka-GE_details.xml', '', ''),
+(87, 2, 0, 'Greek', '', 'pkg_el-GR', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/el-GR_details.xml', '', ''),
+(88, 2, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/ja-JP_details.xml', '', ''),
+(89, 2, 0, 'Hebrew', '', 'pkg_he-IL', 'package', '', 0, '3.1.1.2', '', 'https://update.joomla.org/language/details3/he-IL_details.xml', '', ''),
+(90, 2, 0, 'Bengali', '', 'pkg_bn-BD', 'package', '', 0, '3.8.10.1', '', 'https://update.joomla.org/language/details3/bn-BD_details.xml', '', ''),
+(91, 2, 0, 'Hungarian', '', 'pkg_hu-HU', 'package', '', 0, '3.9.19.1', '', 'https://update.joomla.org/language/details3/hu-HU_details.xml', '', ''),
+(92, 2, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/af-ZA_details.xml', '', ''),
+(93, 2, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/ar-AA_details.xml', '', ''),
+(94, 2, 0, 'Belarusian', '', 'pkg_be-BY', 'package', '', 0, '3.2.1.2', '', 'https://update.joomla.org/language/details3/be-BY_details.xml', '', ''),
+(95, 2, 0, 'Bulgarian', '', 'pkg_bg-BG', 'package', '', 0, '3.6.5.2', '', 'https://update.joomla.org/language/details3/bg-BG_details.xml', '', ''),
+(96, 2, 0, 'Catalan', '', 'pkg_ca-ES', 'package', '', 0, '3.9.23.1', '', 'https://update.joomla.org/language/details3/ca-ES_details.xml', '', ''),
+(97, 2, 0, 'Chinese Simplified', '', 'pkg_zh-CN', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/zh-CN_details.xml', '', ''),
+(98, 2, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/hr-HR_details.xml', '', ''),
+(99, 2, 0, 'Czech', '', 'pkg_cs-CZ', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/cs-CZ_details.xml', '', ''),
+(100, 2, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/da-DK_details.xml', '', ''),
+(101, 2, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/nl-NL_details.xml', '', ''),
+(102, 2, 0, 'Esperanto', '', 'pkg_eo-XX', 'package', '', 0, '3.8.11.1', '', 'https://update.joomla.org/language/details3/eo-XX_details.xml', '', ''),
+(103, 2, 0, 'Estonian', '', 'pkg_et-EE', 'package', '', 0, '3.9.21.1', '', 'https://update.joomla.org/language/details3/et-EE_details.xml', '', ''),
+(104, 2, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/it-IT_details.xml', '', ''),
+(105, 2, 0, 'Khmer', '', 'pkg_km-KH', 'package', '', 0, '3.4.5.1', '', 'https://update.joomla.org/language/details3/km-KH_details.xml', '', ''),
+(106, 2, 0, 'Korean', '', 'pkg_ko-KR', 'package', '', 0, '3.8.9.1', '', 'https://update.joomla.org/language/details3/ko-KR_details.xml', '', ''),
+(107, 2, 0, 'Latvian', '', 'pkg_lv-LV', 'package', '', 0, '3.9.25.2', '', 'https://update.joomla.org/language/details3/lv-LV_details.xml', '', ''),
+(108, 2, 0, 'Lithuanian', '', 'pkg_lt-LT', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/lt-LT_details.xml', '', ''),
+(109, 2, 0, 'Macedonian', '', 'pkg_mk-MK', 'package', '', 0, '3.6.5.1', '', 'https://update.joomla.org/language/details3/mk-MK_details.xml', '', ''),
+(110, 2, 0, 'Norwegian Bokmal', '', 'pkg_nb-NO', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/nb-NO_details.xml', '', ''),
+(111, 2, 0, 'Norwegian Nynorsk', '', 'pkg_nn-NO', 'package', '', 0, '3.4.2.1', '', 'https://update.joomla.org/language/details3/nn-NO_details.xml', '', ''),
+(112, 2, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '3.9.25.2', '', 'https://update.joomla.org/language/details3/pl-PL_details.xml', '', ''),
+(113, 2, 0, 'Portuguese', '', 'pkg_pt-PT', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/pt-PT_details.xml', '', ''),
+(114, 2, 0, 'Russian', '', 'pkg_ru-RU', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/ru-RU_details.xml', '', ''),
+(115, 2, 0, 'English AU', '', 'pkg_en-AU', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/en-AU_details.xml', '', ''),
+(116, 2, 0, 'Slovak', '', 'pkg_sk-SK', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/sk-SK_details.xml', '', ''),
+(117, 2, 0, 'English US', '', 'pkg_en-US', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/en-US_details.xml', '', ''),
+(118, 2, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/sv-SE_details.xml', '', ''),
+(119, 2, 0, 'Syriac', '', 'pkg_sy-IQ', 'package', '', 0, '3.4.5.1', '', 'https://update.joomla.org/language/details3/sy-IQ_details.xml', '', ''),
+(120, 2, 0, 'Tamil', '', 'pkg_ta-IN', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/ta-IN_details.xml', '', ''),
+(121, 2, 0, 'Thai', '', 'pkg_th-TH', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/th-TH_details.xml', '', ''),
+(122, 2, 0, 'Turkish', '', 'pkg_tr-TR', 'package', '', 0, '3.9.4.1', '', 'https://update.joomla.org/language/details3/tr-TR_details.xml', '', ''),
+(123, 2, 0, 'Ukrainian', '', 'pkg_uk-UA', 'package', '', 0, '3.9.24.1', '', 'https://update.joomla.org/language/details3/uk-UA_details.xml', '', ''),
+(124, 2, 0, 'Uyghur', '', 'pkg_ug-CN', 'package', '', 0, '3.7.5.2', '', 'https://update.joomla.org/language/details3/ug-CN_details.xml', '', ''),
+(125, 2, 0, 'Albanian', '', 'pkg_sq-AL', 'package', '', 0, '3.1.1.2', '', 'https://update.joomla.org/language/details3/sq-AL_details.xml', '', ''),
+(126, 2, 0, 'Basque', '', 'pkg_eu-ES', 'package', '', 0, '3.9.24.1', '', 'https://update.joomla.org/language/details3/eu-ES_details.xml', '', ''),
+(127, 2, 0, 'Hindi', '', 'pkg_hi-IN', 'package', '', 0, '3.3.6.2', '', 'https://update.joomla.org/language/details3/hi-IN_details.xml', '', ''),
+(128, 2, 0, 'German DE', '', 'pkg_de-DE', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/de-DE_details.xml', '', ''),
+(129, 2, 0, 'Portuguese Brazil', '', 'pkg_pt-BR', 'package', '', 0, '3.9.21.1', '', 'https://update.joomla.org/language/details3/pt-BR_details.xml', '', ''),
+(130, 2, 0, 'Serbian Latin', '', 'pkg_sr-YU', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/sr-YU_details.xml', '', ''),
+(131, 2, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '3.9.18.1', '', 'https://update.joomla.org/language/details3/es-ES_details.xml', '', ''),
+(132, 2, 0, 'Bosnian', '', 'pkg_bs-BA', 'package', '', 0, '3.9.24.1', '', 'https://update.joomla.org/language/details3/bs-BA_details.xml', '', ''),
+(133, 2, 0, 'Serbian Cyrillic', '', 'pkg_sr-RS', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/sr-RS_details.xml', '', ''),
+(134, 2, 0, 'Vietnamese', '', 'pkg_vi-VN', 'package', '', 0, '3.2.1.2', '', 'https://update.joomla.org/language/details3/vi-VN_details.xml', '', ''),
+(135, 2, 0, 'Bahasa Indonesia', '', 'pkg_id-ID', 'package', '', 0, '3.6.2.1', '', 'https://update.joomla.org/language/details3/id-ID_details.xml', '', ''),
+(136, 2, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '3.9.16.1', '', 'https://update.joomla.org/language/details3/fi-FI_details.xml', '', ''),
+(137, 2, 0, 'Swahili', '', 'pkg_sw-KE', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/sw-KE_details.xml', '', ''),
+(138, 2, 0, 'Montenegrin', '', 'pkg_srp-ME', 'package', '', 0, '3.3.1.2', '', 'https://update.joomla.org/language/details3/srp-ME_details.xml', '', ''),
+(139, 2, 0, 'English CA', '', 'pkg_en-CA', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/en-CA_details.xml', '', ''),
+(140, 2, 0, 'French CA', '', 'pkg_fr-CA', 'package', '', 0, '3.6.5.1', '', 'https://update.joomla.org/language/details3/fr-CA_details.xml', '', ''),
+(141, 2, 0, 'Welsh', '', 'pkg_cy-GB', 'package', '', 0, '3.9.27.2', '', 'https://update.joomla.org/language/details3/cy-GB_details.xml', '', ''),
+(142, 2, 0, 'Sinhala', '', 'pkg_si-LK', 'package', '', 0, '3.3.1.2', '', 'https://update.joomla.org/language/details3/si-LK_details.xml', '', ''),
+(143, 2, 0, 'Dari Persian', '', 'pkg_prs-AF', 'package', '', 0, '3.4.4.3', '', 'https://update.joomla.org/language/details3/prs-AF_details.xml', '', ''),
+(144, 2, 0, 'Turkmen', '', 'pkg_tk-TM', 'package', '', 0, '3.5.0.2', '', 'https://update.joomla.org/language/details3/tk-TM_details.xml', '', ''),
+(145, 2, 0, 'Irish', '', 'pkg_ga-IE', 'package', '', 0, '3.8.13.1', '', 'https://update.joomla.org/language/details3/ga-IE_details.xml', '', ''),
+(146, 2, 0, 'Dzongkha', '', 'pkg_dz-BT', 'package', '', 0, '3.6.2.1', '', 'https://update.joomla.org/language/details3/dz-BT_details.xml', '', ''),
+(147, 2, 0, 'Slovenian', '', 'pkg_sl-SI', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/sl-SI_details.xml', '', ''),
+(148, 2, 0, 'Spanish CO', '', 'pkg_es-CO', 'package', '', 0, '3.9.15.1', '', 'https://update.joomla.org/language/details3/es-CO_details.xml', '', ''),
+(149, 2, 0, 'German CH', '', 'pkg_de-CH', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/de-CH_details.xml', '', ''),
+(150, 2, 0, 'German AT', '', 'pkg_de-AT', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/de-AT_details.xml', '', ''),
+(151, 2, 0, 'German LI', '', 'pkg_de-LI', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/de-LI_details.xml', '', ''),
+(152, 2, 0, 'German LU', '', 'pkg_de-LU', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/de-LU_details.xml', '', ''),
+(153, 2, 0, 'English NZ', '', 'pkg_en-NZ', 'package', '', 0, '3.9.27.1', '', 'https://update.joomla.org/language/details3/en-NZ_details.xml', '', ''),
+(154, 2, 0, 'Kazakh', '', 'pkg_kk-KZ', 'package', '', 0, '3.9.23.1', '', 'https://update.joomla.org/language/details3/kk-KZ_details.xml', '', ''),
+(155, 6, 10114, 'RSForm! Pro 3.0.4', '', 'com_rsform', 'component', '', 1, '3.0.4', '', 'https://www.rsjoomla.com/updates/com_rsform/Component/com_rsform.xml', 'https://www.rsjoomla.com/support/documentation/rsform-pro/changelog/rsform-pro-changelog.html', ''),
+(156, 10, 10127, 'System - Minitek System Messages', 'An unobtrusive notification system for Joomla system messages.', 'miniteksystemmessages', 'plugin', 'system', 0, '3.0.4', '', 'http://update.minitek.gr/joomla-extensions/plg_system_miniteksystemmessages.xml', 'https://www.minitek.gr/support/changelogs/joomla/minitek-system-messages', '');
+
 -- --------------------------------------------------------
 
 --
@@ -18570,15 +18841,16 @@ CREATE TABLE `yz4ph_update_sites` (
 --
 
 INSERT INTO `yz4ph_update_sites` (`update_site_id`, `name`, `type`, `location`, `enabled`, `last_check_timestamp`, `extra_query`) VALUES
-(1, 'Joomla! Core', 'collection', 'https://update.joomla.org/core/list.xml', 1, 1625097206, ''),
-(2, 'Accredited Joomla! Translations', 'collection', 'https://update.joomla.org/language/translationlist_3.xml', 1, 1625087801, ''),
-(3, 'Joomla! Update Component Update Site', 'extension', 'https://update.joomla.org/core/extensions/com_joomlaupdate.xml', 1, 1625087801, ''),
-(4, 'Accredited Joomla! Translations', 'collection', 'http://update.joomla.org/language/translationlist_3.xml', 1, 1625087801, ''),
+(1, 'Joomla! Core', 'collection', 'https://update.joomla.org/core/list.xml', 1, 1625138868, ''),
+(2, 'Accredited Joomla! Translations', 'collection', 'https://update.joomla.org/language/translationlist_3.xml', 1, 1625140410, ''),
+(3, 'Joomla! Update Component Update Site', 'extension', 'https://update.joomla.org/core/extensions/com_joomlaupdate.xml', 1, 1625140410, ''),
+(4, 'Accredited Joomla! Translations', 'collection', 'http://update.joomla.org/language/translationlist_3.xml', 1, 1625140411, ''),
 (5, 'Hikashop', 'extension', 'http://www.hikashop.com/component/updateme/updatexml/component-hikashop/version-4.4.1/level-Business/li-aHR0cDovL2xvY2FsaG9zdC9zdGVlbGFydmluLw%3D%3D/file-extension.xml', 0, 0, ''),
-(6, 'RSForm! Pro', 'extension', 'https://www.rsjoomla.com/updates/com_rsform/Component/com_rsform.xml', 1, 1625087801, ''),
+(6, 'RSForm! Pro', 'extension', 'https://www.rsjoomla.com/updates/com_rsform/Component/com_rsform.xml', 1, 1625140413, ''),
 (8, 'RSForm! Pro - Registration Plugin', 'extension', 'https://www.rsjoomla.com/updates/com_rsform/Plugins/plg_rsfpregistration.xml', 0, 0, ''),
-(10, 'System - Minitek System Messages', 'extension', 'http://update.minitek.gr/joomla-extensions/plg_system_miniteksystemmessages.xml', 1, 1625087801, ''),
-(11, 'RSForm! Pro - System Plugin', 'extension', 'https://www.rsjoomla.com/updates/com_rsform/Plugins/plg_rsform.xml', 1, 1625087801, '');
+(10, 'System - Minitek System Messages', 'extension', 'http://update.minitek.gr/joomla-extensions/plg_system_miniteksystemmessages.xml', 1, 1625140414, ''),
+(11, 'RSForm! Pro - System Plugin', 'extension', 'https://www.rsjoomla.com/updates/com_rsform/Plugins/plg_rsform.xml', 1, 1625140419, ''),
+(12, 'RSForm! Pro - Module', 'extension', 'https://www.rsjoomla.com/updates/com_rsform/Modules/mod_rsform.xml', 1, 0, '');
 
 -- --------------------------------------------------------
 
@@ -18604,7 +18876,8 @@ INSERT INTO `yz4ph_update_sites_extensions` (`update_site_id`, `extension_id`) V
 (6, 10114),
 (8, 10123),
 (10, 10127),
-(11, 10132);
+(11, 10132),
+(12, 10133);
 
 -- --------------------------------------------------------
 
@@ -18667,8 +18940,8 @@ CREATE TABLE `yz4ph_users` (
 --
 
 INSERT INTO `yz4ph_users` (`id`, `name`, `username`, `email`, `password`, `block`, `sendEmail`, `registerDate`, `lastvisitDate`, `activation`, `params`, `lastResetTime`, `resetCount`, `otpKey`, `otep`, `requireReset`) VALUES
-(65, 'Super User', 'developer', 'pouradaby@gmail.com', '$2y$10$w6jbBHQAroC.ChFbzZ62Ae19CUKZapaFa1YW2soSPoWXCASgFtGc6', 0, 1, '2021-02-21 22:04:01', '2021-06-30 21:16:39', '0', '', '0000-00-00 00:00:00', 0, '', '', 0),
-(108, 'خشایار پورادبی', '09223815503', 'bilizbab@yahoo.com', '$2y$10$4/txPGOwsTJ5Z85CH8fYveFjja3gPN55wv91qH2TB6Sx75tePQkvC', 0, 0, '2021-04-19 02:01:14', '2021-06-30 23:36:55', '', '{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"timezone\":\"\"}', '0000-00-00 00:00:00', 0, '', '', 0);
+(65, 'Super User', 'developer', 'pouradaby@gmail.com', '$2y$10$w6jbBHQAroC.ChFbzZ62Ae19CUKZapaFa1YW2soSPoWXCASgFtGc6', 0, 1, '2021-02-21 22:04:01', '2021-07-01 13:07:21', '0', '', '0000-00-00 00:00:00', 0, '', '', 0),
+(108, 'خشایار پورادبی', '09223815503', 'bilizbab@yahoo.com', '$2y$10$4/txPGOwsTJ5Z85CH8fYveFjja3gPN55wv91qH2TB6Sx75tePQkvC', 0, 0, '2021-04-19 02:01:14', '2021-07-01 12:29:24', '', '{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"timezone\":\"\"}', '0000-00-00 00:00:00', 0, '', '', 0);
 
 -- --------------------------------------------------------
 
@@ -18692,7 +18965,8 @@ CREATE TABLE `yz4ph_user_keys` (
 
 INSERT INTO `yz4ph_user_keys` (`id`, `user_id`, `token`, `series`, `invalid`, `time`, `uastring`) VALUES
 (20, '09223815503', '$2y$10$jUjg200ndNg/LcKyHWd23uc2Cy1nf3k4F0eECdFF88008YuTU16sq', 'kWs2vFSKQsnnQ2bc2GvI', 0, '1626201076', 'joomla_remember_me_9fd11ca3a2d04879d246c3a26ec9756c'),
-(21, '09223815503', '$2y$10$xg.LKNm0p4E8GDl9dO4dmekv9jvsNAA4dUS96Jl33jS1FKsu6Fz8u', 'pWQmbNbApXI3MzT3NwQN', 0, '1630280215', 'joomla_remember_me_b6e8a044fcf7814035f2de8ae367b46a');
+(21, '09223815503', '$2y$10$xg.LKNm0p4E8GDl9dO4dmekv9jvsNAA4dUS96Jl33jS1FKsu6Fz8u', 'pWQmbNbApXI3MzT3NwQN', 0, '1630280215', 'joomla_remember_me_b6e8a044fcf7814035f2de8ae367b46a'),
+(22, '09223815503', '$2y$10$qpf4E8A3ciJBQ5l0P0WDbODKA/MhCft8YYHuFarJbD3wEUqLVWzp.', 'tYpLMFGnDSnyXy6lOYip', 0, '1630326564', 'joomla_remember_me_9fd11ca3a2d04879d246c3a26ec9756c');
 
 -- --------------------------------------------------------
 
@@ -19885,7 +20159,7 @@ ALTER TABLE `yz4ph_viewlevels`
 -- AUTO_INCREMENT for table `yz4ph_action_logs`
 --
 ALTER TABLE `yz4ph_action_logs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1867;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1881;
 
 --
 -- AUTO_INCREMENT for table `yz4ph_action_logs_extensions`
@@ -19903,7 +20177,7 @@ ALTER TABLE `yz4ph_action_log_config`
 -- AUTO_INCREMENT for table `yz4ph_assets`
 --
 ALTER TABLE `yz4ph_assets`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Primary Key', AUTO_INCREMENT=161;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Primary Key', AUTO_INCREMENT=163;
 
 --
 -- AUTO_INCREMENT for table `yz4ph_banners`
@@ -19945,7 +20219,7 @@ ALTER TABLE `yz4ph_content_types`
 -- AUTO_INCREMENT for table `yz4ph_extensions`
 --
 ALTER TABLE `yz4ph_extensions`
-  MODIFY `extension_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10133;
+  MODIFY `extension_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10134;
 
 --
 -- AUTO_INCREMENT for table `yz4ph_falang_content`
@@ -19981,19 +20255,19 @@ ALTER TABLE `yz4ph_finder_filters`
 -- AUTO_INCREMENT for table `yz4ph_finder_links`
 --
 ALTER TABLE `yz4ph_finder_links`
-  MODIFY `link_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `link_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `yz4ph_finder_taxonomy`
 --
 ALTER TABLE `yz4ph_finder_taxonomy`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `yz4ph_finder_terms`
 --
 ALTER TABLE `yz4ph_finder_terms`
-  MODIFY `term_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=460;
+  MODIFY `term_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=461;
 
 --
 -- AUTO_INCREMENT for table `yz4ph_finder_types`
@@ -20023,13 +20297,13 @@ ALTER TABLE `yz4ph_hikashop_banner`
 -- AUTO_INCREMENT for table `yz4ph_hikashop_cart`
 --
 ALTER TABLE `yz4ph_hikashop_cart`
-  MODIFY `cart_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `cart_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `yz4ph_hikashop_cart_product`
 --
 ALTER TABLE `yz4ph_hikashop_cart_product`
-  MODIFY `cart_product_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
+  MODIFY `cart_product_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
 
 --
 -- AUTO_INCREMENT for table `yz4ph_hikashop_category`
@@ -20077,7 +20351,7 @@ ALTER TABLE `yz4ph_hikashop_entry`
 -- AUTO_INCREMENT for table `yz4ph_hikashop_field`
 --
 ALTER TABLE `yz4ph_hikashop_field`
-  MODIFY `field_id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `field_id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `yz4ph_hikashop_file`
@@ -20149,7 +20423,7 @@ ALTER TABLE `yz4ph_hikashop_plugin`
 -- AUTO_INCREMENT for table `yz4ph_hikashop_price`
 --
 ALTER TABLE `yz4ph_hikashop_price`
-  MODIFY `price_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `price_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `yz4ph_hikashop_product`
@@ -20161,7 +20435,7 @@ ALTER TABLE `yz4ph_hikashop_product`
 -- AUTO_INCREMENT for table `yz4ph_hikashop_product_category`
 --
 ALTER TABLE `yz4ph_hikashop_product_category`
-  MODIFY `product_category_id` int(255) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=118;
+  MODIFY `product_category_id` int(255) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=148;
 
 --
 -- AUTO_INCREMENT for table `yz4ph_hikashop_shipping`
@@ -20245,7 +20519,7 @@ ALTER TABLE `yz4ph_messages`
 -- AUTO_INCREMENT for table `yz4ph_modules`
 --
 ALTER TABLE `yz4ph_modules`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=131;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=133;
 
 --
 -- AUTO_INCREMENT for table `yz4ph_newsfeeds`
@@ -20287,13 +20561,13 @@ ALTER TABLE `yz4ph_redirect_links`
 -- AUTO_INCREMENT for table `yz4ph_rsform_calculations`
 --
 ALTER TABLE `yz4ph_rsform_calculations`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `yz4ph_rsform_components`
 --
 ALTER TABLE `yz4ph_rsform_components`
-  MODIFY `ComponentId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=128;
+  MODIFY `ComponentId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=132;
 
 --
 -- AUTO_INCREMENT for table `yz4ph_rsform_component_types`
@@ -20323,7 +20597,7 @@ ALTER TABLE `yz4ph_rsform_emails`
 -- AUTO_INCREMENT for table `yz4ph_rsform_forms`
 --
 ALTER TABLE `yz4ph_rsform_forms`
-  MODIFY `FormId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `FormId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `yz4ph_rsform_mappings`
@@ -20335,7 +20609,7 @@ ALTER TABLE `yz4ph_rsform_mappings`
 -- AUTO_INCREMENT for table `yz4ph_rsform_properties`
 --
 ALTER TABLE `yz4ph_rsform_properties`
-  MODIFY `PropertyId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1578;
+  MODIFY `PropertyId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1654;
 
 --
 -- AUTO_INCREMENT for table `yz4ph_rsform_submissions`
@@ -20353,7 +20627,7 @@ ALTER TABLE `yz4ph_rsform_submission_values`
 -- AUTO_INCREMENT for table `yz4ph_rsform_translations`
 --
 ALTER TABLE `yz4ph_rsform_translations`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=497;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=533;
 
 --
 -- AUTO_INCREMENT for table `yz4ph_tags`
@@ -20383,13 +20657,13 @@ ALTER TABLE `yz4ph_ucm_history`
 -- AUTO_INCREMENT for table `yz4ph_updates`
 --
 ALTER TABLE `yz4ph_updates`
-  MODIFY `update_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+  MODIFY `update_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=157;
 
 --
 -- AUTO_INCREMENT for table `yz4ph_update_sites`
 --
 ALTER TABLE `yz4ph_update_sites`
-  MODIFY `update_site_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `update_site_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `yz4ph_usergroups`
@@ -20407,7 +20681,7 @@ ALTER TABLE `yz4ph_users`
 -- AUTO_INCREMENT for table `yz4ph_user_keys`
 --
 ALTER TABLE `yz4ph_user_keys`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `yz4ph_user_notes`
@@ -20420,3 +20694,8 @@ ALTER TABLE `yz4ph_user_notes`
 --
 ALTER TABLE `yz4ph_viewlevels`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Primary Key', AUTO_INCREMENT=9;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

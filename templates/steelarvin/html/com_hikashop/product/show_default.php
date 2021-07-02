@@ -69,11 +69,11 @@ defined('_JEXEC') or die('Restricted access');
             </div>
             <?php $this->setLayout('show_block_short'); echo $this->loadTemplate(); ?>
             <div id="hikashop_product_right_part">
-                <?php if ($this->element->category_id == 13) { ?>
+                <?php /* if ($this->element->category_id == 13) { ?>
                     {rsform 9}
                 <?php } elseif ($this->element->category_id == 16) { ?>
                     {rsform 9}
-                <?php } ?>
+                <?php } */ ?>
                 <?php if(!empty($this->element->extraData->rightBegin)) { echo implode("\r\n",$this->element->extraData->rightBegin); } ?>
                 <div class="productPrice uk-margin-bottom">
                     <?php $itemprop_offer = ''; if (!empty($this->element->prices)) $itemprop_offer = 'itemprop="offers" itemscope itemtype="https://schema.org/Offer"'; ?>

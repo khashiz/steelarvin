@@ -26,7 +26,7 @@ ob_start();
         <?php if ($oneExtraField->field_namekey == 'short_desc') { ?>
             <div class="uk-margin-medium-bottom">
                 <span id="hikashop_product_custom_value_<?php echo $oneExtraField->field_id;?>" class="uk-display-block">
-                    <div class="uk-text-justify uk-text-secondary font" id="<?php echo $oneExtraField->field_id;?>"><?php echo $this->fieldsClass->show($oneExtraField,$value); ?></div>
+                    <div class="uk-text-justify uk-text-secondary" id="<?php echo $oneExtraField->field_id;?>"><?php echo $this->fieldsClass->show($oneExtraField,$value); ?></div>
                 </span>
             </div>
         <?php } ?>

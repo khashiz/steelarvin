@@ -60,9 +60,7 @@ hikashop_loadJslib('translations');
 switch($quantityLayout) {
 	case 'show_none':
 ?>
-		<div class="hikashop_product_quantity_div hikashop_product_quantity_add_to_cart_div"><?php
-			echo $html;
-		?></div>
+		<?php echo $html; ?>
 <?php
 		break;
 
@@ -90,7 +88,8 @@ switch($quantityLayout) {
 			$max_quantity = (int)$increment * $this->config->get('quantity_select_max_default_value', 15);
 		}
 ?>
-		<div class="hikashop_product_quantity_div hikashop_product_quantity_input_div_select"><?php
+		<div class="hikashop_product_quantity_div hikashop_product_quantity_input_div_select frfrrfrfrfrf">
+            <?php
 			$r = range($min_quantity, $max_quantity, $increment);
 			if(!in_array($max_quantity, $r))
 				$r[] = $max_quantity;
@@ -100,9 +99,9 @@ switch($quantityLayout) {
 			?>
 			<input id="<?php echo $id; ?>" type="hidden" value="<?php echo $current_quantity; ?>" class="hikashop_product_quantity_field" name="<?php echo $name; ?>" data-hk-qty-min="<?php echo $min_quantity; ?>" data-hk-qty-max="<?php echo $max_quantity; ?>" onchange="window.hikashop.checkQuantity(this);" />
 		</div>
-		<div class="hikashop_product_quantity_div hikashop_product_quantity_add_to_cart_div hikashop_product_quantity_add_to_cart_div_select uk-hidden"><?php
-			echo $html;
-		?></div>
+		<div class="hikashop_product_quantity_div hikashop_product_quantity_add_to_cart_div hikashop_product_quantity_add_to_cart_div_select uk-hidden">
+            <?php echo $html; ?>
+        </div>
 <?php
 		break;
 
