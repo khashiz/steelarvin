@@ -7,7 +7,7 @@
  * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
  */
 defined('_JEXEC') or die('Restricted access');
-?><div id="hikashop_product_custom_item_info" class="hikashop_product_custom_item_info">
+?><div id="hikashop_product_custom_item_info" class="hikashop_product_custom_item_info uk-hidden">
 	<table class="hikashop_product_custom_item_info_table">
 <?php
 	foreach ($this->itemFields as $fieldName => $oneExtraField) {
