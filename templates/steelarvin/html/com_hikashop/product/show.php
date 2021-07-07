@@ -45,7 +45,7 @@ function hikashop_product_form_check() {
 	return false;
 }
 </script>
-    <form action="<?php echo hikashop_completeLink('product&task=updatecart'); ?>" method="post" name="hikashop_product_form" onsubmit="return hikashop_product_form_check();" enctype="multipart/form-data" class="uk-margin-medium-bottom regForm">
+    <form action="<?php echo hikashop_completeLink('product&task=updatecart'); ?>" method="post" name="hikashop_product_form" onsubmit="return hikashop_product_form_check();" enctype="multipart/form-data" class="regForm">
         <?php
         $this->variant_name ='';
         if(!empty($this->element->variants) && $this->config->get('variant_increase_perf', 1) && !empty($this->element->main)) {
@@ -89,42 +89,42 @@ if($this->productlayout != 'show_tabular') {
 	if(in_array($enable_status_vote, array('comment', 'two', 'both'))) {
 ?>
 
-        <div class="uk-margin-medium-bottom">
-        <ul class="uk-tab uk-margin-remove-top uk-child-width-1-5 uk-child-width-auto@m" data-uk-switcher="animation: uk-animation-fade; connect: .productsTabs">
-            <li>
-                <a href="#">
-                    <span class="uk-visible@m"><?php echo JText::sprintf('PRODUCT_DESCRIPTION'); ?></span>
-                    <span class="uk-hidden@m"><img src="<?php echo JUri::base().'images/sprite.svg#home'; ?>" width="16" height="16" data-uk-svg></span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="uk-visible@m"><?php echo JText::sprintf('PRODUCT_SPECIFICATIONS'); ?></span>
-                    <span class="uk-hidden@m"><img src="<?php echo JUri::base().'images/sprite.svg#home'; ?>" width="16" height="16" data-uk-svg></span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="uk-visible@m"><?php echo JText::sprintf('PRODUCT_COMMENTS'); ?></span>
-                    <span class="uk-hidden@m"><img src="<?php echo JUri::base().'images/sprite.svg#commentTab'; ?>" width="16" height="16" data-uk-svg></span>
-                </a>
-            </li>
-            <?php if(!empty($this->fields['aparat_id'])) { ?>
+        <div class="uk-margin-medium-bottom uk-hidden">
+            <ul class="uk-tab uk-margin-remove-top uk-child-width-1-5 uk-child-width-auto@m" data-uk-switcher="animation: uk-animation-fade; connect: .productsTabs">
                 <li>
                     <a href="#">
-                        <span class="uk-visible@m"><?php echo JText::sprintf('PRODUCT_VIDEO'); ?></span>
-                        <span class="uk-hidden@m"><img src="<?php echo JUri::base().'images/sprite.svg#videoTab'; ?>" width="16" height="16" data-uk-svg></span>
+                        <span class="uk-visible@m"><?php echo JText::sprintf('PRODUCT_DESCRIPTION'); ?></span>
+                        <span class="uk-hidden@m"><img src="<?php echo JUri::base().'images/sprite.svg#home'; ?>" width="16" height="16" data-uk-svg></span>
                     </a>
                 </li>
-            <?php } ?>
-            <li>
-                <a href="#">
-                    <span class="uk-visible@m"><?php echo JText::sprintf('PRODUCT_DOWNLOADS'); ?></span>
-                    <span class="uk-hidden@m"><img src="<?php echo JUri::base().'images/sprite.svg#home'; ?>" width="16" height="16" data-uk-svg></span>
-                </a>
-            </li>
-        </ul>
-        <div class="uk-switcher productsTabs">
+                <li>
+                    <a href="#">
+                        <span class="uk-visible@m"><?php echo JText::sprintf('PRODUCT_SPECIFICATIONS'); ?></span>
+                        <span class="uk-hidden@m"><img src="<?php echo JUri::base().'images/sprite.svg#home'; ?>" width="16" height="16" data-uk-svg></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="uk-visible@m"><?php echo JText::sprintf('PRODUCT_COMMENTS'); ?></span>
+                        <span class="uk-hidden@m"><img src="<?php echo JUri::base().'images/sprite.svg#commentTab'; ?>" width="16" height="16" data-uk-svg></span>
+                    </a>
+                </li>
+                <?php if(!empty($this->fields['aparat_id'])) { ?>
+                    <li>
+                        <a href="#">
+                            <span class="uk-visible@m"><?php echo JText::sprintf('PRODUCT_VIDEO'); ?></span>
+                            <span class="uk-hidden@m"><img src="<?php echo JUri::base().'images/sprite.svg#videoTab'; ?>" width="16" height="16" data-uk-svg></span>
+                        </a>
+                    </li>
+                <?php } ?>
+                <li>
+                    <a href="#">
+                        <span class="uk-visible@m"><?php echo JText::sprintf('PRODUCT_DOWNLOADS'); ?></span>
+                        <span class="uk-hidden@m"><img src="<?php echo JUri::base().'images/sprite.svg#home'; ?>" width="16" height="16" data-uk-svg></span>
+                    </a>
+                </li>
+            </ul>
+            <div class="uk-switcher productsTabs">
             <div>
                 <div id="hikashop_product_bottom_part">
                     <?php if(!empty($this->element->extraData->bottomBegin)) { echo implode("\r\n",$this->element->extraData->bottomBegin); } ?>
@@ -445,7 +445,7 @@ $this->product = $this->element;
 
 ?>
 
-    <div>
+    <div class="uk-hidden">
         <ul class="uk-tab uk-margin-remove-top uk-child-width-1-2 uk-child-width-auto@m" data-uk-switcher="animation: uk-animation-fade; connect: .productsSubmodules">
             <li><a href="#"><?php echo JText::sprintf('RELATED_PRODUCTS'); ?></a></li>
             <li><a href="#"><?php echo JText::sprintf('SAME_CATEGORY'); ?></a></li>

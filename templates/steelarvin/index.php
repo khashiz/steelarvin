@@ -47,6 +47,11 @@ $total = count($socialsicons['icon']);
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <meta name="theme-color" content="<?php echo $params->get('presetcolor'); ?>">
     <jdoc:include type="head" />
+    <script type="text/javascript">
+        jQuery(document).ready(function(){
+            jQuery('.fnum').persiaNumber('fa');
+        });
+    </script>
 </head>
 <body class="<?php echo $view.' '.$layout.' '.$task; ?>">
 <?php if ($pageclass != 'checkout') { ?>

@@ -69,13 +69,13 @@ defined('_JEXEC') or die('Restricted access');
             </div>
             <?php $this->setLayout('show_block_short'); echo $this->loadTemplate(); ?>
             <div id="hikashop_product_right_part">
-                <?php /* if ($this->element->category_id == 13) { ?>
+                <?php if ($this->element->category_id == 13) { ?>
                     {rsform 9}
                 <?php } elseif ($this->element->category_id == 16) { ?>
                     {rsform 9}
-                <?php } */ ?>
+                <?php } ?>
                 <?php if(!empty($this->element->extraData->rightBegin)) { echo implode("\r\n",$this->element->extraData->rightBegin); } ?>
-                <div class="productPrice uk-margin-bottom">
+                <div class="productPrice">
                     <?php $itemprop_offer = ''; if (!empty($this->element->prices)) $itemprop_offer = 'itemprop="offers" itemscope itemtype="https://schema.org/Offer"'; ?>
                     <span class="uk-display-block" id="hikashop_product_price_main" <?php echo $itemprop_offer; ?>>
                         <?php
@@ -174,6 +174,11 @@ defined('_JEXEC') or die('Restricted access');
                     </span>
                     <?php if(!empty($this->element->extraData->rightEnd)) { echo implode("\r\n",$this->element->extraData->rightEnd); } ?>
                 </div>
+            </div>
+        </div>
+        <div class="uk-width-1-1">
+            <div>
+                <div class="uk-alert uk-alert-warning uk-text-center uk-border-rounded uk-box-shadow-small uk-padding-small uk-text-small f600 font uk-margin-medium-bottom">کاربر گرامی لطفا توجه داشته باشید که محصولاتی بصورت وزنی بفروش میرسند ، پس از ثبت سفارش قیمت گذاری خواهند شد.</div>
             </div>
         </div>
     </div>

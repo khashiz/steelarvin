@@ -70,7 +70,7 @@ if(!empty($this->row->extraData->top)) { echo implode("\r\n",$this->row->extraDa
     <!-- EO PRODUCT NAME -->
 
 	<!-- PRODUCT PRICE -->
-<?php
+<?php /*
 	if($this->params->get('show_price','-1')=='-1'){
 		$config =& hikashop_config();
 		$this->params->set('show_price',$config->get('show_price'));
@@ -79,7 +79,7 @@ if(!empty($this->row->extraData->top)) { echo implode("\r\n",$this->row->extraDa
 		$this->setLayout('listing_price');
 		echo $this->loadTemplate();
 	}
-?>
+*/ ?>
 	<!-- EO PRODUCT PRICE -->
 
 	<!-- PRODUCT CODE -->

@@ -133,6 +133,10 @@ defined('_JEXEC') or die('Restricted access');
         $title = $params->get('show_page_heading');
     }
     ?>
+
+    <div class="uk-width-1-1 uk-width-expand@m">
+
+
     <?php
 
 
@@ -141,24 +145,25 @@ defined('_JEXEC') or die('Restricted access');
 
     if(($this->params->get('show_image') && !empty($this->element->file_path)) || ($this->params->get('show_description', !$this->module) && !empty($this->element->category_description))) {
         ?>
-        <div class="hikashop_category_description">
-            <?php
-            if($this->params->get('show_image') && !empty($this->element->file_path)){
-                jimport('joomla.filesystem.file');
-                if(JFile::exists($this->image->getPath($this->element->file_path,false))){
-                    ?>
-                    <img src="<?php echo $this->image->getPath($this->element->file_path); ?>" class="hikashop_category_image" title="<?php echo $this->escape(@$this->element->file_description); ?>" alt="<?php echo $this->escape(@$this->element->file_name); ?>"/>
-                    <?php
-                }
-            }
-            if($this->params->get('show_description',!$this->module)&&!empty($this->element->category_description)){
-                ?>
-                <div class="hikashop_category_description_content"><?php
-                    echo JHTML::_('content.prepare',$this->element->category_description);
-                    ?></div>
-                <?php
-            }
-            ?>
+        <div class="hikashop_category_description uk-card uk-card-default uk-border-rounded uk-overflow-hidden uk-box-shadow-small uk-margin-medium-bottom">
+            <div class="uk-padding">
+                <div class="uk-text-justify uk-text-secondary uk-text-small font f500" itemprop="articleBody">
+                    <?php if($this->params->get('show_image') && !empty($this->element->file_path)) {
+                        jimport('joomla.filesystem.file');
+                        if(JFile::exists($this->image->getPath($this->element->file_path,false))){
+                            ?>
+                            <img src="<?php echo $this->image->getPath($this->element->file_path); ?>" class="hikashop_category_image" title="<?php echo $this->escape(@$this->element->file_description); ?>" alt="<?php echo $this->escape(@$this->element->file_name); ?>"/>
+                            <?php
+                        }
+                    }
+                    if($this->params->get('show_description',!$this->module)&&!empty($this->element->category_description)){
+                        ?>
+                        <div class="hikashop_category_description_content">
+                            <?php echo JHTML::_('content.prepare',$this->element->category_description); ?>
+                        </div>
+                    <?php } ?>
+                </div>
+            </div>
         </div>
         <?php
     }
@@ -375,6 +380,8 @@ defined('_JEXEC') or die('Restricted access');
         <?php
     }
     ?>
+
+    </div>
 
     <?php if(!$this->module) { ?>
         <div class="hikashop_submodules">
