@@ -19,9 +19,9 @@
 	<config>
 		<fields name="params">
 			<fieldset name="basic">
-				<field name="clients" type="repeatable" icon="list" label="TPL_ARVIN_CLIENTS">
+				<field name="clients" type="repeatable" icon="list" label="TPL_ARVIN_ITEMS">
 					<fieldset hidden="true" name="clients" repeat="true">
-						<field name="logo" type="media" label="TPL_ARVIN_LOGO" />
+						<field name="logo" type="media" label="TPL_ARVIN_IMAGE" />
 						<field name="url" type="text" label="TPL_ARVIN_URL" />
 						<field name="title" type="text" label="TPL_ARVIN_TITLE" />
 					</fieldset>

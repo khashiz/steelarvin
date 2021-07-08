@@ -19,7 +19,7 @@
 	<config>
 		<fields name="params">
 			<fieldset name="basic">
-				<field name="applications" type="repeatable" icon="list" label="TPL_ARVIN_CLIENTS">
+				<field name="applications" type="repeatable" icon="list" label="TPL_ARVIN_ITEMS">
 					<fieldset hidden="true" name="applications" repeat="true">
 						<field name="bg" type="media" label="TPL_ARVIN_BACKGRAOUND" />
 						<field name="menuitem" type="menuitem" label="TPL_ARVIN_MENUITEM" />
