@@ -552,7 +552,7 @@ if(!empty($this->element->main->characteristics)) {
 	if($this->params->get('show_price','-1') == '-1') {
 		$this->params->set('show_price', $this->config->get('show_price'));
 	}
-	if($this->params->get('show_price') && @$this->displayVariants['prices']) { $columns++; ?>
+	if($this->params->get('show_price')) { $columns++; ?>
         <th class="hikashop_product_price title hikashop_variants_table_th uk-width-small uk-text-center">
             <?php echo JText::_('CONDITION'); ?>
         </th>
@@ -648,7 +648,7 @@ if(!empty($this->element->main->characteristics)) {
 				?></td>
 <?php 	}
 
-		if($this->params->get('show_price') && @$this->displayVariants['prices']){
+		if($this->params->get('show_price')){
 ?>
             <td class="uk-text-center uk-text-small uk-text-secondary f600">۶ متری</td>
             <td class="uk-text-center uk-text-small uk-text-secondary f600"><?php echo JText::sprintf('KG'); ?></td>
@@ -657,14 +657,19 @@ if(!empty($this->element->main->characteristics)) {
             <td class="uk-text-center uk-text-small uk-text-secondary f600"><?php // echo $variant->characteristics[19]->characteristic_value; ?></td>
             -->
 				<td class="hikashop_product_price_row hikashop_variants_table_td uk-text-center fnum" data-label="<?php echo JText::_( 'PRICE' ); ?>">
-<?php
-			if ( ($this->row->product_msrp) == ($this->element->main->product_msrp) )
-				$this->params->set('from_module',1);
-
-			$this->setLayout('table_price');
-			echo $this->loadTemplate();
-			$this->params->set('from_module',0);
-?>
+                <?php if (!empty($variant->price_per_kg)) { ?>
+                    <span class="hikashop_product_price_full uk-text-small uk-text-accent uk-display-block font ">
+                        <span class="hikashop_product_price hikashop_product_price_0"><?php echo number_format($variant->price_per_kg).' '.JText::sprintf('TOOMAN'); ?></span>
+                    </span>
+                <?php } else { ?>
+                <?php } ?>
+                <? /*
+                if ( ($this->row->product_msrp) == ($this->element->main->product_msrp) )
+                    $this->params->set('from_module',1);
+                $this->setLayout('table_price');
+                echo $this->loadTemplate();
+                $this->params->set('from_module',0);
+                 */ ?>
 				</td>
             <td class="uk-text-small uk-text-secondary uk-text-center f600 ltr fnum"><?php echo JHtml::date($variant->product_modified, 'Y/n/j - H:i'); ?></td>
 <?php	}
@@ -692,9 +697,9 @@ if(!empty($this->element->main->characteristics)) {
 
 				else if($start_date > 0 && $start_date > $now) {
 				?>
-					<span class="hikashop_product_sale_start"><?php
-					echo JText::sprintf('ITEM_SOLD_ON_DATE', hikashop_getDate($start_date, $this->params->get('date_format', '%d %B %Y')));
-					?></span>
+					<span class="hikashop_product_sale_start">
+                        <?php echo JText::sprintf('ITEM_SOLD_ON_DATE', hikashop_getDate($start_date, $this->params->get('date_format', '%d %B %Y'))); ?>
+                    </span>
 				<?php
 				}
 				else {
@@ -748,9 +753,10 @@ if(!empty($this->element->main->characteristics)) {
 			}
 ?>
 				</td>
-<?php
-		}
-?>
+        <?php } ?>
+
+
+
 			</tr>
 <?php
 	}
