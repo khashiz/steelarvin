@@ -24,10 +24,12 @@ ob_start();
 		$displayTitle = true;
 	?>
         <?php if ($oneExtraField->field_namekey == 'short_desc') { ?>
-            <div class="tgttgrtrtg">
-                <span id="hikashop_product_custom_value_<?php echo $oneExtraField->field_id;?>" class="uk-display-block">
-                    <div class="uk-text-justify uk-text-secondary" id="<?php echo $oneExtraField->field_id;?>"><?php echo $this->fieldsClass->show($oneExtraField,$value); ?></div>
-                </span>
+            <div class="uk-width-1-1">
+                <div class="hikashop_category_description uk-card uk-card-default uk-border-rounded uk-overflow-hidden uk-box-shadow-small">
+                    <span id="hikashop_product_custom_value_<?php echo $oneExtraField->field_id;?>" class="uk-display-block uk-padding">
+                        <div class="uk-text-secondary font f500 uk-text-justify uk-text-small" itemprop="articleBody" id="<?php echo $oneExtraField->field_id;?>"><?php echo $this->fieldsClass->show($oneExtraField,$value); ?></div>
+                    </span>
+                </div>
             </div>
         <?php } ?>
     <?php } ?>

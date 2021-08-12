@@ -308,6 +308,7 @@ defined('_JEXEC') or die('Restricted access');
         }
 
         $main_div_name = $this->params->get('main_div_name');
+        echo '<div class="uk-child-width-1-1" data-uk-grid>';
         foreach($this->categories as $category) {
             if(empty($category['products']))
                 continue;
@@ -326,8 +327,9 @@ defined('_JEXEC') or die('Restricted access');
                 if(!empty($htmlFilter) && $ctrl == 'category')
                     echo $htmlFilter;
                 ?>
-                <h2><?php echo $category['category']->category_name; ?></h2>
-                <div id="<?php echo $main_div_name.'_'.$category['category']->category_id; ?>" class="hikashop_products_listing">
+                <div>
+                <h2 class="uk-margin-bottom uk-text-accent uk-text-bold uk-h4 font"><?php echo $category['category']->category_name; ?></h2>
+                <div id="<?php echo $main_div_name.'_'.$category['category']->category_id; ?>" class="hikashop_products_listing uk-card uk-card-default uk-border-rounded uk-overflow-hidden uk-box-shadow-small">
                     <?php
                     if(hikaInput::get()->getVar('hikashop_front_end_main',0) && hikaInput::get()->getVar('task') == 'listing' && $this->params->get('show_compare')) {
                         $css_button = $this->config->get('css_button', 'hikabtn');
@@ -343,9 +345,11 @@ defined('_JEXEC') or die('Restricted access');
                     echo $html;
                     ?>
                 </div>
+                </div>
                 <?php
             }
         }
+        echo '</div>';
         $this->params->set('main_div_name', $main_div_name);
         $this->config->set('pagination', $pagination);
         if((!empty($allrows) || !$this->module || hikaInput::get()->getVar('hikashop_front_end_main',0)) && in_array($pagination,array('bottom','both')) && $this->params->get('show_limit') && $this->pageInfo->elements->total) {

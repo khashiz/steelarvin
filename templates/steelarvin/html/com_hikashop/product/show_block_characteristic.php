@@ -12,7 +12,7 @@ if(empty($this->element->characteristics))
 	return;
 
 ?>
-<div id="hikashop_product_characteristics" class="hikashop_product_characteristics uk-margin-medium-bottom">
+<div id="hikashop_product_characteristics" class="hikashop_product_characteristics">
 <?php
 if($this->params->get('characteristic_display') != 'list') {
 
@@ -539,7 +539,7 @@ if(!empty($this->element->main->characteristics)) {
 				?></th>
 <?php
 	foreach($this->element->main->characteristics as $characteristic) { $columns++; ?>
-				<th class="hikashop_product_characteristic hikashop_product_characteristic_<?php echo $characteristic->characteristic_id; ?> title hikashop_variants_table_th"><?php
+				<th class="uk-text-center hikashop_product_characteristic hikashop_product_characteristic_<?php echo $characteristic->characteristic_id; ?> title hikashop_variants_table_th"><?php
 					echo hikashop_translate($characteristic->characteristic_value);
 				?></th>
 <?php }
@@ -553,19 +553,8 @@ if(!empty($this->element->main->characteristics)) {
 		$this->params->set('show_price', $this->config->get('show_price'));
 	}
 	if($this->params->get('show_price')) { $columns++; ?>
-        <th class="hikashop_product_price title hikashop_variants_table_th uk-width-small uk-text-center">
-            <?php echo JText::_('CONDITION'); ?>
-        </th>
-        <th class="hikashop_product_price title hikashop_variants_table_th uk-width-small uk-text-center">
-            <?php echo JText::_('UNIT'); ?>
-        </th>
-        <!--
-        <th class="hikashop_product_price title hikashop_variants_table_th uk-width-small uk-text-center">
-            <?php // echo JText::_('SIZE'); ?>
-        </th>
-        -->
 				<th class="hikashop_product_price title hikashop_variants_table_th uk-width-small uk-text-center">
-                    <?php echo JText::_('PRICE').' ('.JText::_('EACHKG').')'; ?>
+                    <?php echo JText::_('PRICE'); ?>
                 </th>
         <th class=" uk-width-small uk-text-center">بروز رسانی</th>
 <?php }
@@ -625,7 +614,7 @@ if(!empty($this->element->main->characteristics)) {
 
 		foreach($this->element->main->characteristics as $characteristic) {
 ?>
-				<td class="hikashop_product_characteristic_row hikashop_product_characteristic_<?php echo $characteristic->characteristic_id; ?>_row hikashop_variants_table_td uk-text-small uk-text-secondary f600" data-label="<?php echo $characteristic->characteristic_value; ?>">
+				<td class="uk-text-center hikashop_product_characteristic_row hikashop_product_characteristic_<?php echo $characteristic->characteristic_id; ?>_row hikashop_variants_table_td uk-text-small uk-text-secondary f600" data-label="<?php echo $characteristic->characteristic_value; ?>">
 <?php
 			if(!empty($characteristic->values)) {
 				foreach($characteristic->values as $k => $value) {
@@ -650,12 +639,7 @@ if(!empty($this->element->main->characteristics)) {
 
 		if($this->params->get('show_price')){
 ?>
-            <td class="uk-text-center uk-text-small uk-text-secondary f600">۶ متری</td>
-            <td class="uk-text-center uk-text-small uk-text-secondary f600"><?php echo JText::sprintf('KG'); ?></td>
 
-            <!--
-            <td class="uk-text-center uk-text-small uk-text-secondary f600"><?php // echo $variant->characteristics[19]->characteristic_value; ?></td>
-            -->
 				<td class="hikashop_product_price_row hikashop_variants_table_td uk-text-center fnum" data-label="<?php echo JText::_( 'PRICE' ); ?>">
                 <?php if (!empty($variant->price_per_kg)) { ?>
                     <span class="hikashop_product_price_full uk-text-small uk-text-accent uk-display-block font ">
@@ -663,19 +647,19 @@ if(!empty($this->element->main->characteristics)) {
                     </span>
                 <?php } else { ?>
                 <?php } ?>
-                <? /*
+                <?
                 if ( ($this->row->product_msrp) == ($this->element->main->product_msrp) )
                     $this->params->set('from_module',1);
                 $this->setLayout('table_price');
                 echo $this->loadTemplate();
                 $this->params->set('from_module',0);
-                 */ ?>
+                ?>
 				</td>
             <td class="uk-text-small uk-text-secondary uk-text-center f600 ltr fnum"><?php echo JHtml::date($variant->product_modified, 'Y/n/j - H:i'); ?></td>
 <?php	}
 		if(!$this->params->get('catalogue')) {
 ?>
-				<td class="hikashop_product_add_to_cart_row hikashop_variants_table_td">
+				<td class="hikashop_product_add_to_cart_row hikashop_variants_table_td uk-text-nowrap">
 <?php
 			if ($this->config->get('show_quantity_field') < 2) {
 				$this->params->set('main_div_name','variants');

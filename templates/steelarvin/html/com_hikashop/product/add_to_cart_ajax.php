@@ -94,6 +94,7 @@ if($waitlist_btn) {
 if(($add_to_cart || $add_to_wishlist) && (($has_fields && $display_fields) || $display_quantity_field) && !$has_options && !$global_on_listing) {
 ?>
 	<form action="<?php echo hikashop_completeLink($classical_url); ?>" method="post" name="hikashop_product_form_<?php echo $this->row->product_id.'_'.$this->params->get('main_div_name'); ?>" enctype="multipart/form-data">
+    <div class="uk-flex">
 <?php
 }
 
@@ -135,7 +136,8 @@ if(($add_to_cart || $add_to_wishlist) && (($has_fields && $display_fields) || $d
 
 if($add_to_cart && !$has_options && !$global_on_listing) {
 ?>
-	<a class="<?php echo $css_button . ' ' . $css_button_cart; ?>" rel="nofollow" href="<?php echo hikashop_completeLink($classical_url); ?>" onclick="if(window.hikashop.addToCart) { return window.hikashop.addToCart(this); }" data-addToCart="<?php echo $this->row->product_id; ?>" data-addTo-div="<?php echo $this->params->get('main_div_name'); ?>"<?php if(!empty($extra_div_name)){ echo ' data-addTo-extra="' . $extra_div_name. '"'; } ?> data-addTo-class="add_in_progress"><span><?php
+    <div class="uk-width-expand">
+	<a class="uk-height-1-1 <?php echo $css_button . ' ' . $css_button_cart; ?>" rel="nofollow" href="<?php echo hikashop_completeLink($classical_url); ?>" onclick="if(window.hikashop.addToCart) { return window.hikashop.addToCart(this); }" data-addToCart="<?php echo $this->row->product_id; ?>" data-addTo-div="<?php echo $this->params->get('main_div_name'); ?>"<?php if(!empty($extra_div_name)){ echo ' data-addTo-extra="' . $extra_div_name. '"'; } ?> data-addTo-class="add_in_progress"><span><?php
 		if(!empty($this->row->product_addtocart_message))
 			echo JText::_($this->row->product_addtocart_message);
 		else if(!empty($this->row->main->product_addtocart_message))
@@ -148,7 +150,7 @@ if($add_to_cart && !$has_options && !$global_on_listing) {
 
 if($add_to_wishlist && !$has_options && !$global_on_listing) {
 ?>
-	<a class="<?php echo $css_button . ' ' . $css_button_wishlist; ?>" rel="nofollow" href="<?php echo hikashop_completeLink($classical_url.'&cart_type=wishlist'); ?>" onclick="if(window.hikashop.addToWishlist) { return window.hikashop.addToWishlist(this); }" data-addToWishlist="<?php echo $this->row->product_id; ?>" data-addTo-div="<?php echo $this->params->get('main_div_name'); ?>"<?php if(!empty($extra_div_name)){ echo ' data-addTo-extra="' . $extra_div_name. '"'; } ?> data-addTo-class="add_in_progress"><span><?php
+	<a class="uk-height-1-1 <?php echo $css_button . ' ' . $css_button_wishlist; ?>" rel="nofollow" href="<?php echo hikashop_completeLink($classical_url.'&cart_type=wishlist'); ?>" onclick="if(window.hikashop.addToWishlist) { return window.hikashop.addToWishlist(this); }" data-addToWishlist="<?php echo $this->row->product_id; ?>" data-addTo-div="<?php echo $this->params->get('main_div_name'); ?>"<?php if(!empty($extra_div_name)){ echo ' data-addTo-extra="' . $extra_div_name. '"'; } ?> data-addTo-class="add_in_progress"><span><?php
 		if(!empty($this->row->product_addtowishlist_message))
 			echo JText::_($this->row->product_addtowishlist_message);
 		else
@@ -165,12 +167,13 @@ if(($add_to_cart || $add_to_wishlist) && $has_options) {
 			echo JText::_($this->row->product_chooseoptions_message);
 		else
 			echo JText::_('CHOOSE_OPTIONS');
-	?></span></a>
+	?></span></a></div>
 <?php
 }
 
 if(($add_to_cart || $add_to_wishlist) && (($has_fields && $display_fields) || $display_quantity_field) && !$has_options && !$global_on_listing) {
 ?>
+    </div>
 	</form>
 <?php
 }

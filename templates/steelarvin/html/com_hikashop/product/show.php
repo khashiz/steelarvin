@@ -89,7 +89,8 @@ if($this->productlayout != 'show_tabular') {
 	if(in_array($enable_status_vote, array('comment', 'two', 'both'))) {
 ?>
 
-        <div class="uk-margin-medium-bottom uk-hidden">
+
+        <div class="uk-margin-medium-bottom">
             <ul class="uk-tab uk-margin-remove-top uk-child-width-1-5 uk-child-width-auto@m" data-uk-switcher="animation: uk-animation-fade; connect: .productsTabs">
                 <li>
                     <a href="#">
@@ -128,9 +129,7 @@ if($this->productlayout != 'show_tabular') {
             <div>
                 <div id="hikashop_product_bottom_part">
                     <?php if(!empty($this->element->extraData->bottomBegin)) { echo implode("\r\n",$this->element->extraData->bottomBegin); } ?>
-                    <div id="hikashop_product_description_main" class="uk-text-justify uk-text-small uk-text-secondary font" itemprop="description">
-                        <?php echo JHTML::_('content.prepare',preg_replace('#<hr *id="system-readmore" */>#i','',$this->element->product_description)); ?>
-                    </div>
+
                     <span id="hikashop_product_url_main" class="hikashop_product_url_main">
                         <?php
                         if(!empty($this->element->product_url)) {

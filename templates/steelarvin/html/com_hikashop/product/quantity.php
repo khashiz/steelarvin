@@ -94,7 +94,7 @@ if($start_date > 0 && $start_date > $now) {
         <span class="uk-text-tiny uk-text-danger uk-display-block uk-margin-small-bottom font stockAvailability"><?php echo JText::sprintf('LESSTHANFIVEINSTOCK'); ?></span>
     <?php } ?>
 <?php } elseif(!$in_stock) { ?>
-    <span class="uk-text-tiny uk-text-danger uk-display-block uk-margin-small-bottom font stockAvailability"><?php echo JText::_('NO_STOCK'); ?></span>
+    <span class="uk-text-tiny uk-text-danger uk-display-block uk-margin-small-bottom font stockAvailability uk-hidden"><?php echo JText::_('NO_STOCK'); ?></span>
 <?php } ?>
 </div>
 

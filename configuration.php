@@ -53,12 +53,12 @@ class JConfig {
 	public $robots = '';
 	public $sef = '1';
 	public $sef_rewrite = '1';
-	public $sef_suffix = '1';
+	public $sef_suffix = '0';
 	public $unicodeslugs = '1';
 	public $feed_limit = '10';
 	public $feed_email = 'none';
-    public $log_path = '/Applications/MAMP/htdocs/steelarvin/administrator/logs';
-    public $tmp_path = '/Applications/MAMP/htdocs/steelarvin/tmp';
+	public $log_path = '/Applications/MAMP/htdocs/steelarvin/administrator/logs';
+	public $tmp_path = '/Applications/MAMP/htdocs/steelarvin/tmp';
 	public $lifetime = '15';
 	public $session_handler = 'none';
 	public $shared_session = '0';
@@ -97,4 +97,5 @@ class JConfig {
 	public $cookie_path = '';
 	public $asset_id = '1';
 	public $behind_loadbalancer = '0';
+	public $block_floc = '1';
 }

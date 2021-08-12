@@ -88,7 +88,7 @@ switch($quantityLayout) {
 			$max_quantity = (int)$increment * $this->config->get('quantity_select_max_default_value', 15);
 		}
 ?>
-		<div class="hikashop_product_quantity_div hikashop_product_quantity_input_div_select frfrrfrfrfrf">
+		<div class="hikashop_product_quantity_div hikashop_product_quantity_input_div_select uk-width-auto uk-margin-small-left">
             <?php
 			$r = range($min_quantity, $max_quantity, $increment);
 			if(!in_array($max_quantity, $r))

@@ -8,10 +8,10 @@
  */
 defined('_JEXEC') or die('Restricted access');
 ?>
-<div>
+<div class="uk-margin-medium-bottom">
     <div data-uk-grid>
         <div class="uk-width-1-1 uk-width-2-5@m">
-            <div id="hikashop_product_left_part">
+            <div id="hikashop_product_left_part" data-uk-sticky="offset: 110; bottom: true;">
                 <?php if(!empty($this->element->extraData->leftBegin)) { echo implode("\r\n",$this->element->extraData->leftBegin); } ?>
                 <?php $this->row =& $this->element; $this->setLayout('show_block_img'); echo $this->loadTemplate(); ?>
                 <?php if(!empty($this->element->extraData->leftEnd)) { echo implode("\r\n",$this->element->extraData->leftEnd); } ?>
@@ -67,13 +67,10 @@ defined('_JEXEC') or die('Restricted access');
                 </div>
                 <?php if(!empty($this->element->extraData->topEnd)) { echo implode("\r\n", $this->element->extraData->topEnd); } ?>
             </div>
-            <?php $this->setLayout('show_block_short'); echo $this->loadTemplate(); ?>
+            <div id="hikashop_product_description_main" class="hikashop_category_description uk-text-justify uk-text-small uk-text-secondary font" itemprop="description">
+                <?php echo JHTML::_('content.prepare',preg_replace('#<hr *id="system-readmore" */>#i','',$this->element->product_description)); ?>
+            </div>
             <div id="hikashop_product_right_part">
-                <?php if ($this->element->category_id == 13) { ?>
-                    {rsform 9}
-                <?php } elseif ($this->element->category_id == 16) { ?>
-                    {rsform 9}
-                <?php } ?>
                 <?php if(!empty($this->element->extraData->rightBegin)) { echo implode("\r\n",$this->element->extraData->rightBegin); } ?>
                 <div class="productPrice">
                     <?php $itemprop_offer = ''; if (!empty($this->element->prices)) $itemprop_offer = 'itemprop="offers" itemscope itemtype="https://schema.org/Offer"'; ?>
@@ -176,10 +173,13 @@ defined('_JEXEC') or die('Restricted access');
                 </div>
             </div>
         </div>
-        <div class="uk-width-1-1">
-            <div>
-                <div class="uk-alert uk-alert-warning uk-text-center uk-border-rounded uk-box-shadow-small uk-padding-small uk-text-small f600 font uk-margin-medium-bottom">کاربر گرامی لطفا توجه داشته باشید که محصولاتی بصورت وزنی بفروش میرسند ، پس از ثبت سفارش قیمت گذاری خواهند شد.</div>
+        <?php $this->setLayout('show_block_short'); echo $this->loadTemplate(); ?>
+        <?php if ($this->element->kgproductmsg) { ?>
+            <div class="uk-width-1-1">
+                <div>
+                    <div class="uk-alert uk-alert-warning uk-text-center uk-border-rounded uk-box-shadow-small uk-padding-small uk-text-small f600 font uk-margin-remove">کاربر گرامی لطفا توجه داشته باشید که محصولاتی بصورت وزنی بفروش میرسند ، پس از ثبت سفارش قیمت گذاری خواهند شد.</div>
+                </div>
             </div>
-        </div>
+        <?php } ?>
     </div>
 </div>
